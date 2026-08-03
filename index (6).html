@@ -1163,6 +1163,25 @@ const PRODUCTS = {
           {label:'Rotor Devri (devir/dk)', values:['283/341','283/341','283/341']},
           {label:'Paker Merdane Ağırlığı Ø550 mm (kg)', values:['3710','4130','4550']}
         ]
+      },
+      {
+        title:'HR160 (Tek Gövde, 3,00 m)',
+        columns:null,
+        rows:[
+          {label:'Çalışma Genişliği (m)', value:'3,00'},
+          {label:'Güç İhtiyacı (HP)', value:'160'},
+          {label:'Rotor Sayısı', value:'12'},
+          {label:'Ağırlık – Paker Merdaneli (kg)', value:'1367'},
+          {label:'Bağlantı Kategorisi', value:'Kat. II'}
+        ]
+      },
+      {
+        title:'Rotor Devri Seçenekleri – HR Series 160 (1000 devir/dk PTO girişinde)',
+        columns:['Standart (29/36)','Opsiyon (26/39)','Opsiyon (32/33)'],
+        rows:[
+          {label:'Dişli (Sprocket) Oranı', values:['29/36','26/39','32/33']},
+          {label:'Rotor Devri (devir/dk)', values:['341','283','411']}
+        ]
       }
     ],
     parts:[
@@ -1346,11 +1365,77 @@ const PRODUCTS = {
       'P20, P30 ve P100 olmak üzere 3 farklı ekim ünitesiyle uyumlu',
       '3 ila 6 metre arası çalışma genişliği, 20-40 sıra seçeneği'
     ],
-    specs:[
-      {label:'Çalışma Genişliği', value:'3-6 m'},
-      {label:'Sıra Sayısı', value:'20-40 sıra'},
-      {label:'Dozaj Aralığı', value:'1-450 kg/ha (ADS sistemi)'},
-      {label:'Ekim Ünitesi Seçenekleri', value:'P20, P30, P100'}
+    specGroups:[
+      {
+        title:'Genel Hazne Bilgileri',
+        columns:null,
+        rows:[
+          {label:'Hazne Sayısı', value:'2'},
+          {label:'Toplam Hazne Kapasitesi (L)', value:'1100 + 1100'},
+          {label:'Ek Hazne Kapasitesi (L)', value:'100 (x2)'},
+          {label:'Ağırlık (kg)', value:'850'},
+          {label:'Hazne Ölçüleri (cm)', value:'110 x 170'},
+          {label:'Ölçekli Kepçeyle Yükleme Yüksekliği (cm)', value:'175'}
+        ]
+      },
+      {
+        title:'P20 veya P30 – Sabit Gömme Hattı (Seeder M)',
+        columns:['20 sıra','24 sıra'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['3,00','3,00']},
+          {label:'Hazne Kapasitesi (L)', values:['1000','1000']},
+          {label:'Sıra Sayısı', values:['20','24']},
+          {label:'Sıra Aralığı (cm)', values:['15','12,5']},
+          {label:'Ağırlık', values:['720 kg (P20 ekim ünitesi)','760 kg (P30 elektrikli ekim ünitesi)']},
+          {label:'Doldurma Yüksekliği (cm)', values:['189','189']},
+          {label:'Yükleme Ölçüleri (cm)', values:['124 x 184','124 x 184']}
+        ]
+      },
+      {
+        title:'P50 – Sabit Gömme Hattı',
+        columns:['3,00 m (20 sıra)','3,00 m (24 sıra)','3,50 m (24 sıra)','3,50 m (28 sıra)','4,00 m (28 sıra)','4,00 m (32 sıra)'],
+        rows:[
+          {label:'Sıra Sayısı', values:['20','24','24','28','28','32']},
+          {label:'Sıra Aralığı (cm)', values:['15','12,5','14,6','12,5','14,2','12,5']},
+          {label:'Maks. Ağırlık (kg)', values:['750','810','830','890','910','970']}
+        ]
+      },
+      {
+        title:'P100 – Sabit Gömme Hattı',
+        columns:['3,00 m','3,50 m','4,00 m'],
+        rows:[
+          {label:'Sıra Sayısı', values:['20','24','28']},
+          {label:'Sıra Aralığı (cm)', values:['15','14,5','14,3']},
+          {label:'Ağırlık (kg)', values:['1190','1400','1565']}
+        ]
+      },
+      {
+        title:'P20 veya P30 – Katlanır Gömme Hattı',
+        columns:['4,00 m (28 sıra)','4,00 m (32 sıra)','4,50 m (32 sıra)','4,50 m (36 sıra)','5,00 m (32 sıra)','5,00 m (40 sıra)','6,00 m (40 sıra)'],
+        rows:[
+          {label:'Sıra Sayısı', values:['28','32','32','36','32','40','40']},
+          {label:'Sıra Aralığı (cm)', values:['14,3','12,5','14','12,5','15,6','12,5','15']},
+          {label:'Ağırlık (kg)', values:['1035','1035','1100','1100','1170','1170','1200']}
+        ]
+      },
+      {
+        title:'P50 – Katlanır Gömme Hattı',
+        columns:['4,00 m (28 sıra)','4,00 m (32 sıra)','4,50 m (32 sıra)','4,50 m (36 sıra)','5,00 m (32 sıra)','5,00 m (40 sıra)','6,00 m (40 sıra)'],
+        rows:[
+          {label:'Sıra Sayısı', values:['28','32','32','36','32','40','40']},
+          {label:'Sıra Aralığı (cm)', values:['14,3','12,5','14','12,5','15,6','12,5','15']},
+          {label:'Ağırlık (kg)', values:['930','995','1010','1075','1020','1150','1170']}
+        ]
+      },
+      {
+        title:'P100 – Katlanır Gömme Hattı (Toplam genişlik > 3,50 m)',
+        columns:['4,00 m','4,50 m','5,00 m','6,00 m'],
+        rows:[
+          {label:'Sıra Sayısı', values:['28','30','32','40']},
+          {label:'Sıra Aralığı (cm)', values:['14,3','15','15,6','15']},
+          {label:'Ağırlık (kg)', values:['1600','1700','1750','2000']}
+        ]
+      }
     ],
     parts:[
       {name:'Ön Monteli Hazne', desc:'Traktörde daha iyi yük dengesi ve daha az toprak sıkışması sağlar.'},
@@ -1506,10 +1591,36 @@ const PRODUCTS = {
       '2 ayrı hava devresiyle tohum ve gübrenin birbirine karışmadan uygulanması',
       'Çift teker düzeniyle delinme durumunda saniyeler içinde teker değişimi'
     ],
-    specs:[
-      {label:'Hazne Sayısı', value:'4 hazne'},
-      {label:'Hava Devresi', value:'2 ayrı devre (tohum / gübre)'},
-      {label:'Teker Düzeni', value:'Çift teker'}
+    specGroups:[
+      {
+        columns:['P120 3m','P120 4m','P120 4m W','P120 6m W'],
+        rows:[
+          {label:'Çalışma Genişliği', values:['3 m','4 m','4 m','6 m']},
+          {label:'Nakliye Genişliği', values:['3 m','4 m','3 m','3 m']},
+          {label:'Dağıtım Sistemi', values:['Pnömatik','Pnömatik','Pnömatik','Pnömatik']},
+          {label:'Hazne Kapasitesi', values:['3.000 L','3.000 L','3.000 L','4.100 L']},
+          {label:'Hazne Dağılımı (Fertisem ile)', values:[
+            '60/40: 1.760 L + 1.240 L<br>45/55: 1.440 L + 1.560 L<br>95/5: 2.900 L + 100 L',
+            '60/40: 1.760 L + 1.240 L<br>45/55: 1.440 L + 1.560 L<br>95/5: 2.900 L + 100 L',
+            '60/40: 1.760 L + 1.240 L<br>45/55: 1.440 L + 1.560 L<br>95/5: 2.900 L + 100 L',
+            '60/40: 2.450 L + 1.650 L<br>45/55: 1.800 L + 2.300 L<br>95/5: 4.000 L + 100 L'
+          ]},
+          {label:'Hazne Kapasitesi Pro', values:['120 L','120 L','120 L','120 L']},
+          {label:'Sıra Aralığı', values:['15 cm','14,3 cm','14,3 cm','15 cm']},
+          {label:'Opsiyonsuz Ağırlık', values:['4.200 kg','5.550 kg','6.750 kg','8.350 kg']},
+          {label:'Sıra Sayısı', values:['20 sıra','28 sıra','28 sıra','40 sıra']},
+          {label:'Takım Diski Sayısı', values:['24 disk','32 disk','32 disk','48 disk']},
+          {label:'Güç İhtiyacı', values:['105-150 HP','120-180 HP','140-200 HP','210-300 HP']},
+          {label:'Lastikler', values:['–','–','600/50 R22,5','700/40 R22,5']},
+          {label:'Dağıtıcı (Hidrolik Çıkış) Sayısı', values:[
+            '1 SE + türbin için serbest dönüş<br>1 ED ayar ve kaldırma için<br>1 SE tracker (iz işaretleyici) için',
+            '1 SE + türbin için serbest dönüş<br>1 ED ayar ve kaldırma için<br>1 SE tracker (iz işaretleyici) için',
+            '1 SE + türbin için serbest dönüş<br>1 DE katlama için<br>1 DE tracker (iz işaretleyici) için<br>1 DE aks için',
+            '1 SE + türbin için serbest dönüş<br>1 DE katlama için<br>1 DE tracker (iz işaretleyici) için<br>1 DE aks için'
+          ]},
+          {label:'Yükleme Yüksekliği', values:['248 cm','260 cm','260 cm','290 cm']}
+        ]
+      }
     ],
     parts:[
       {name:'4 Hazneli Dozaj Sistemi', desc:'Tek geçişte 4 farklı ürünü 4 farklı dozda eker.'},
