@@ -1368,10 +1368,35 @@ const PRODUCTS = {
       '2 büyük teker doğrudan dozajlama sistemini tahrik eder, sapanda dahi hassasiyet korunur',
       'Big Bag ile kolay dolum yapılabilen geniş, alçak hazne ağzı'
     ],
-    specs:[
-      {label:'Dozaj Hassasiyeti', value:'1,5-400 kg/ha (SKY lug)'},
-      {label:'Şase Tipi', value:'Çift kirişli ağır hizmet şasisi'},
-      {label:'Tahrik Sistemi', value:'2 büyük teker, doğrudan tahrik'}
+    specGroups:[
+      {
+        title:'Tramline SE',
+        columns:['SE (21 sıra)','SE (25 sıra)'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['3,00','3,00']},
+          {label:'Hazne Kapasitesi (L)', values:['450 (opsiyonel 700)','450 (opsiyonel 700)']},
+          {label:'Sıra Sayısı', values:['21','25']},
+          {label:'Sıra Aralığı (cm)', values:['14,2','12']},
+          {label:'Kullanılabilir Yükleme Ölçüleri (cm)', values:['48 x 225','48 x 225']},
+          {label:'Yükleme Yüksekliği (cm)', values:['125','125']},
+          {label:'Yükleme Yüksekliği – Uzatmalı (cm)', values:['143','143']},
+          {label:'Tahmini Ağırlık', values:['550 kg, standart donanım (21 sıra bıçak)','550 kg, standart donanım (21 sıra bıçak)']}
+        ]
+      },
+      {
+        title:'Tramline SX',
+        columns:['SX 3,00 m (21 sıra)','SX 3,00 m (25 sıra)','SX 4,00 m (29 sıra)','SX 4,00 m (33 sıra)'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['3,00','3,00','4,00','4,00']},
+          {label:'Hazne Kapasitesi (L)', values:['800 (opsiyonel 1000)','800 (opsiyonel 1000)','1100 (opsiyonel 1350)','1100 (opsiyonel 1350)']},
+          {label:'Sıra Sayısı', values:['21','25','29','33']},
+          {label:'Sıra Aralığı (cm)', values:['14,2','12','13,7','12']},
+          {label:'Kullanılabilir Yükleme Ölçüleri (cm)', values:['64 x 225','64 x 225','64 x 325','64 x 325']},
+          {label:'Yükleme Yüksekliği (cm)', values:['143','143','143','143']},
+          {label:'Yükleme Yüksekliği – Uzatmalı (cm)', values:['152','152','152','152']},
+          {label:'Tahmini Ağırlık', values:['650 kg, standart donanım (21 sıra bıçak)','650 kg, standart donanım (21 sıra bıçak)','850 kg, standart donanım (29 sıra bıçak)','850 kg, standart donanım (29 sıra bıçak)']}
+        ]
+      }
     ],
     parts:[
       {name:'SKY Lug Dozajlama Ünitesi', desc:'1,5-400 kg/ha hassasiyetinde ekim yapar.'},
@@ -1389,10 +1414,20 @@ const PRODUCTS = {
       'SKY lug dozajlama ile 1,5-400 kg/ha hassasiyetinde ekim',
       'P20/P30 çift etkili yaylı gömme ünitesiyle bitki kalıntısı üzerinde geniş açıklık'
     ],
-    specs:[
-      {label:'Dozaj Hassasiyeti', value:'1,5-400 kg/ha (SKY lug)'},
-      {label:'Gömme Ünitesi', value:'P20/P30, çift etkili yaylı'},
-      {label:'Montaj Tipi', value:'Toprak işleme aletine entegre'}
+    specGroups:[
+      {
+        columns:['CX 3,00 m (20 sıra)','CX 3,00 m (24 sıra)','CX 4,00 m (28 sıra)','CX 4,00 m (32 sıra)'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['3,00','3,00','4,00','4,00']},
+          {label:'Hazne Kapasitesi (L)', values:['800 (opsiyonel 1000)','800 (opsiyonel 1000)','1100 (opsiyonel 1350)','1100 (opsiyonel 1350)']},
+          {label:'Sıra Sayısı', values:['20','24','28','32']},
+          {label:'Sıra Aralığı (cm)', values:['15','12,5','14,3','12,5']},
+          {label:'Kullanılabilir Yükleme Ölçüleri (cm)', values:['64 x 225','64 x 225','64 x 325','64 x 325']},
+          {label:'Yükleme Yüksekliği (cm)', values:['160','160','160','160']},
+          {label:'Yükleme Yüksekliği – Uzatmalı (cm)', values:['169','169','169','169']},
+          {label:'Tahmini Ağırlık', values:['700 kg, standart donanım (20 sıra, 3,00 m bıçak sistemi)','700 kg, standart donanım (20 sıra, 3,00 m bıçak sistemi)','900 kg, standart donanım (28 sıra, 4,00 m bıçak sistemi)','900 kg, standart donanım (28 sıra, 4,00 m bıçak sistemi)']}
+        ]
+      }
     ],
     parts:[
       {name:'Entegrasyon Ünitesi', desc:'Toprak işleme aletine tam entegre olarak minimum çıkıntı ve maksimum kaldırma gücü kullanımı sağlar.'},
@@ -1410,10 +1445,49 @@ const PRODUCTS = {
       'P20, P50 ve P100 olmak üzere 3 farklı gömme ünitesi seçeneği',
       'E-Drive akıllı dağıtım başlığıyla tam ISOBUS uyumlu, otomatik sıra kesme'
     ],
-    specs:[
-      {label:'Hazne Sayısı', value:'3 hazneye kadar'},
-      {label:'Gömme Ünitesi Seçenekleri', value:'P20, P50, P100'},
-      {label:'Kontrol Sistemi', value:'Tam ISOBUS, E-Drive otomatik sıra kesme'}
+    specGroups:[
+      {
+        title:'P20 Gömme Ünitesi',
+        columns:['3,00 m (20 sıra)','3,00 m (24 sıra)','3,50 m (24 sıra)','3,50 m (28 sıra)','4,00 m (28 sıra)','4,00 m (32 sıra)'],
+        rows:[
+          {label:'Sıra Sayısı', values:['20','24','24','28','28','32']},
+          {label:'Ağırlık – 1250 L Hazne (kg)', values:['975','996','1027','1045','1081','1102']},
+          {label:'Ağırlık – 1750 L Hazne (kg)', values:['1006','1027','1058','1077','1112','1133']},
+          {label:'Ağırlık – 2000 L Hazne (kg)', values:['1057','1079','1110','1128','1164','1185']}
+        ]
+      },
+      {
+        title:'P50 Gömme Ünitesi',
+        columns:['3,00 m (20 sıra)','3,00 m (24 sıra)','3,50 m (24 sıra)','3,50 m (28 sıra)','4,00 m (28 sıra)','4,00 m (32 sıra)'],
+        rows:[
+          {label:'Sıra Sayısı', values:['20','24','24','28','28','32']},
+          {label:'Ağırlık – 1250 L Hazne (kg)', values:['1124','1187','1205','1266','1284','1347']},
+          {label:'Ağırlık – 1750 L Hazne (kg)', values:['1155','1218','1236','1297','1315','1378']},
+          {label:'Ağırlık – 2000 L Hazne (kg)', values:['1207','1270','1288','1349','1367','1430']}
+        ]
+      },
+      {
+        title:'P100 Gömme Ünitesi',
+        columns:['3,00 m','3,50 m','4,00 m'],
+        rows:[
+          {label:'Sıra Sayısı', values:['20','24','28']},
+          {label:'Ağırlık – 1250 L Hazne (kg)', values:['1457','1574','1705']},
+          {label:'Ağırlık – 1750 L Hazne (kg)', values:['1488','1605','1736']},
+          {label:'Ağırlık – 2000 L Hazne (kg)', values:['1540','1657','1788']}
+        ]
+      },
+      {
+        title:'Hazne Ağzı Ölçüleri (Tüm Gömme Üniteleri İçin Ortak)',
+        columns:null,
+        rows:[
+          {label:'Hazne Ağzı Yüksekliği – 1250 L (m)', value:'2,02'},
+          {label:'Hazne Ağzı Yüksekliği – 1750 L (m)', value:'2,22'},
+          {label:'Hazne Ağzı Ölçüleri – 1250 L (m)', value:'1,84 x 1,24'},
+          {label:'Hazne Ağzı Ölçüleri – 1750 L (m)', value:'1,84 x 1,24'},
+          {label:'Hazne Ağzı Ölçüleri – 2000 L (1200 L bölme) (m)', value:'1,06 x 1,24'},
+          {label:'Hazne Ağzı Ölçüleri – 2000 L (800 L bölme) (m)', value:'0,77 x 1,24'}
+        ]
+      }
     ],
     parts:[
       {name:'Çoklu Hazne Sistemi', desc:'3 hazneye kadar genişleyerek örtü bitkisi, gübre ve tohumu tek pasoda eker.'},
