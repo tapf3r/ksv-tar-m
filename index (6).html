@@ -412,6 +412,26 @@
   .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   @media (max-width:760px){.related-grid{grid-template-columns:1fr;}}
 
+  .spec-heading{font-size:1.4rem;font-weight:800;margin:76px 0 22px;padding-top:44px;border-top:1px solid var(--line);}
+  .spec-table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:.95rem;}
+  .spec-table tr td{padding:14px 18px;border-bottom:1px solid var(--line);}
+  .spec-table tr td:first-child{width:36%;font-weight:700;color:var(--ink-soft);}
+  .spec-table tr:hover td{background:var(--green-pale);}
+  .spec-note{font-size:.82rem;color:var(--ink-soft);margin-bottom:20px;}
+
+  .parts-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center;}
+  @media (max-width:900px){.parts-layout{grid-template-columns:1fr;}}
+  .parts-media{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#f3f6f4;}
+  .parts-media img{width:100%;display:block;object-fit:cover;}
+  .parts-list{display:flex;flex-direction:column;gap:20px;}
+  .parts-list li{display:flex;gap:15px;align-items:flex-start;}
+  .parts-list .num{
+    flex:0 0 30px;height:30px;border-radius:50%;background:var(--green);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;
+  }
+  .parts-list .txt b{font-size:.98rem;}
+  .parts-list .txt p{font-size:.92rem;color:var(--ink-soft);margin-top:3px;}
+
   .sticky-mobile-cta{
     display:none;position:fixed;bottom:0;left:0;right:0;z-index:80;
     background:var(--card-bg);border-top:1px solid var(--line);
@@ -968,6 +988,20 @@
       </div>
     </div>
 
+    <section class="spec-section" id="spec-section">
+      <h2 class="spec-heading">Teknik Özellikler</h2>
+      <table class="spec-table"><tbody id="spec-table-body"></tbody></table>
+      <p class="spec-note">Sertifikalı tam teknik veri seti için ürünün resmi broşürünü indirebilirsiniz.</p>
+    </section>
+
+    <section class="parts-section" id="parts-section">
+      <h2 class="spec-heading">Ürün Bileşenleri</h2>
+      <div class="parts-layout">
+        <div class="parts-media"><img id="parts-image" src="" alt=""></div>
+        <ul class="parts-list" id="parts-list"></ul>
+      </div>
+    </section>
+
     <div id="related-wrap"></div>
   </div>
 
@@ -1079,6 +1113,15 @@ const PRODUCTS = {
       'Yüklü haznenin ön ağırlığı traktöre aktarılarak maksimum çekiş sağlanır',
       'Boş haldeyken bile üstün denge ve sürüş konforu'
     ],
+    specs:[
+      {label:'Rotor Yoğunluğu', value:'4 rotor / m'},
+      {label:'Rulman Markaları', value:'Walterscheid, Timken, SKF'}
+    ],
+    parts:[
+      {name:'Rotor Grupları', desc:'Metrede 4 rotor yoğunluğuyla toprağı devirmeden dikine işler.'},
+      {name:'Konik Makaralı Rulmanlar', desc:'Fabrika ayarlı, takoz gerektirmeyen Walterscheid, Timken ve SKF rulman sistemi.'},
+      {name:'Hazne ve Şase Dengesi', desc:'Yüklü haznenin ön ağırlığını traktöre aktararak maksimum çekiş sağlar.'}
+    ],
     brochure:'https://sky-agriculture.com/pdf/hr-406-507.pdf'
   },
   'methys-hds': {
@@ -1089,6 +1132,16 @@ const PRODUCTS = {
       'Ön ve arka teker sistemiyle şasi her koşulda toprağa paralel kalır',
       'Klasik çelik merdaneye göre %20-25 daha az güç tüketimi',
       '3 ila 12 metre arası, 6m ve 8m dahil geniş çalışma genişliği seçenekleri'
+    ],
+    specs:[
+      {label:'Çalışma Genişliği', value:'3-12 m (6 m ve 8 m dahil)'},
+      {label:'Çalışma Derinliği', value:'4-7 cm'},
+      {label:'Güç Tasarrufu', value:'Klasik merdaneye göre %20-25 daha az'}
+    ],
+    parts:[
+      {name:'İşleme Ayakları', desc:'4-7 cm sığ derinlikte hassas anız işleme yapar.'},
+      {name:'Ön ve Arka Teker Sistemi', desc:'Şasiyi her koşulda toprağa paralel tutar.'},
+      {name:'Merdane', desc:'Klasik çelik merdaneye göre %20-25 daha az güç tüketimi sağlar.'}
     ],
     brochure:'https://sky-agriculture.com/pdf/methys-hds-406-504.pdf'
   },
@@ -1101,6 +1154,16 @@ const PRODUCTS = {
       'Geniş açıklık sayesinde yoğun bitki örtüsünde tıkanma yapmaz',
       'Gerçek römork tipi çekişle traktör hareketlerinden etkilenmez'
     ],
+    specs:[
+      {label:'Sabit Sıyırma Derinliği', value:'3 cm'},
+      {label:'Derinlik Ayar Aralığı', value:'2-11 cm (7 noktalı zemin takibi)'},
+      {label:'Yakıt Tüketimi', value:'İlk paso 6,5 L/ha · İkinci paso 3 L/ha'}
+    ],
+    parts:[
+      {name:'Sıyırma Bıçakları', desc:'Tüm genişlik boyunca 3 cm sabit derinlikte çalışarak nemi korur.'},
+      {name:'7 Noktalı Zemin Takip Sistemi', desc:'2-11 cm arası hassas derinlik ayarı sunar.'},
+      {name:'Römork Tipi Çeki Oku', desc:'Traktör hareketlerinden etkilenmeden gerçek römork tipi çekiş sağlar.'}
+    ],
     brochure:'https://sky-agriculture.com/pdf/methys-pcs-406-503.pdf'
   },
   'sonic': {
@@ -1111,6 +1174,18 @@ const PRODUCTS = {
       'Elemana kadar 350 kg\'a varan hidrolik baskı ve yük transferi silindiri',
       'Paralelogram üstü döner çöp temizleyici ile temiz, dengeli açma',
       'ISOBUS UT, TC-SC bölüm kesme ve TC-GEO doz modülasyonu standart'
+    ],
+    specs:[
+      {label:'Sıra Sayısı', value:'6-12 sıra'},
+      {label:'Sıra Aralığı Değişimi', value:'Aletsiz, 15 dakikada (RowMotion)'},
+      {label:'Baskı Kuvveti', value:'Elemana kadar 350 kg (hidrolik)'},
+      {label:'Kontrol Sistemi', value:'ISOBUS UT, TC-SC, TC-GEO'}
+    ],
+    parts:[
+      {name:'RowMotion Sıra Değişim Sistemi', desc:'Aletsiz, 15 dakikada sıra aralığı değişimine imkan tanır.'},
+      {name:'Paralelogram Ekim Ünitesi', desc:'Elemana kadar 350 kg\'a varan hidrolik baskı ve yük transferi uygular.'},
+      {name:'Döner Çöp Temizleyici', desc:'Paralelogram üstünde temiz ve dengeli açma sağlar.'},
+      {name:'ISOBUS Kontrol Ünitesi', desc:'TC-SC bölüm kesme ve TC-GEO doz modülasyonunu yönetir.'}
     ],
     brochure:'https://sky-agriculture.com/content/uploads/2025/10/SONIC_2025_bd.pdf'
   },
@@ -1123,6 +1198,17 @@ const PRODUCTS = {
       'P20, P30 ve P100 olmak üzere 3 farklı ekim ünitesiyle uyumlu',
       '3 ila 6 metre arası çalışma genişliği, 20-40 sıra seçeneği'
     ],
+    specs:[
+      {label:'Çalışma Genişliği', value:'3-6 m'},
+      {label:'Sıra Sayısı', value:'20-40 sıra'},
+      {label:'Dozaj Aralığı', value:'1-450 kg/ha (ADS sistemi)'},
+      {label:'Ekim Ünitesi Seçenekleri', value:'P20, P30, P100'}
+    ],
+    parts:[
+      {name:'Ön Monteli Hazne', desc:'Traktörde daha iyi yük dengesi ve daha az toprak sıkışması sağlar.'},
+      {name:'ADS Dozaj Sistemi', desc:'1-450 kg/ha arası rekor genişlikte ayar aralığı sunar.'},
+      {name:'Ekim Üniteleri (P20/P30/P100)', desc:'3 farklı gömme ünitesiyle uyumlu çalışır.'}
+    ],
     brochure:'https://sky-agriculture.com/pdf/tf-406-509.pdf'
   },
   'tramline-se-sx': {
@@ -1133,6 +1219,16 @@ const PRODUCTS = {
       'Kolzadan bakla fasulyesine geniş ürün yelpazesiyle uyumluluk',
       '2 büyük teker doğrudan dozajlama sistemini tahrik eder, sapanda dahi hassasiyet korunur',
       'Big Bag ile kolay dolum yapılabilen geniş, alçak hazne ağzı'
+    ],
+    specs:[
+      {label:'Dozaj Hassasiyeti', value:'1,5-400 kg/ha (SKY lug)'},
+      {label:'Şase Tipi', value:'Çift kirişli ağır hizmet şasisi'},
+      {label:'Tahrik Sistemi', value:'2 büyük teker, doğrudan tahrik'}
+    ],
+    parts:[
+      {name:'SKY Lug Dozajlama Ünitesi', desc:'1,5-400 kg/ha hassasiyetinde ekim yapar.'},
+      {name:'Çift Kirişli Ağır Hizmet Şasisi', desc:'Tek parça hazneyle uzun ömür sağlar.'},
+      {name:'Tahrik Tekerlekleri', desc:'2 büyük teker dozajlama sistemini doğrudan tahrik eder.'}
     ],
     brochure:'https://sky-agriculture.com/pdf/tramline-406-506.pdf'
   },
@@ -1145,6 +1241,16 @@ const PRODUCTS = {
       'SKY lug dozajlama ile 1,5-400 kg/ha hassasiyetinde ekim',
       'P20/P30 çift etkili yaylı gömme ünitesiyle bitki kalıntısı üzerinde geniş açıklık'
     ],
+    specs:[
+      {label:'Dozaj Hassasiyeti', value:'1,5-400 kg/ha (SKY lug)'},
+      {label:'Gömme Ünitesi', value:'P20/P30, çift etkili yaylı'},
+      {label:'Montaj Tipi', value:'Toprak işleme aletine entegre'}
+    ],
+    parts:[
+      {name:'Entegrasyon Ünitesi', desc:'Toprak işleme aletine tam entegre olarak minimum çıkıntı ve maksimum kaldırma gücü kullanımı sağlar.'},
+      {name:'SKY Lug Dozajlama Ünitesi', desc:'1,5-400 kg/ha hassasiyetinde ekim yapar.'},
+      {name:'P20/P30 Gömme Ünitesi', desc:'Çift etkili yaylı yapıyla bitki kalıntısı üzerinde geniş açıklık bırakır.'}
+    ],
     brochure:'https://sky-agriculture.com/pdf/tramline-406-506.pdf'
   },
   'progress': {
@@ -1155,6 +1261,17 @@ const PRODUCTS = {
       'Kolzadan bakla fasulyesine uyumlu, 100% SKY teknolojili üniversal dozajlama üniteleri',
       'P20, P50 ve P100 olmak üzere 3 farklı gömme ünitesi seçeneği',
       'E-Drive akıllı dağıtım başlığıyla tam ISOBUS uyumlu, otomatik sıra kesme'
+    ],
+    specs:[
+      {label:'Hazne Sayısı', value:'3 hazneye kadar'},
+      {label:'Gömme Ünitesi Seçenekleri', value:'P20, P50, P100'},
+      {label:'Kontrol Sistemi', value:'Tam ISOBUS, E-Drive otomatik sıra kesme'}
+    ],
+    parts:[
+      {name:'Çoklu Hazne Sistemi', desc:'3 hazneye kadar genişleyerek örtü bitkisi, gübre ve tohumu tek pasoda eker.'},
+      {name:'Üniversal Dozajlama Üniteleri', desc:'%100 SKY teknolojisiyle kolzadan bakla fasulyesine uyum sağlar.'},
+      {name:'Gömme Üniteleri (P20/P50/P100)', desc:'Toprak tipine göre 3 farklı seçenek sunar.'},
+      {name:'E-Drive Dağıtım Başlığı', desc:'Tam ISOBUS uyumlu otomatik sıra kesme yapar.'}
     ],
     brochure:'https://sky-agriculture.com/pdf/progress-406-505.pdf'
   },
@@ -1167,6 +1284,16 @@ const PRODUCTS = {
       '2 ayrı hava devresiyle tohum ve gübrenin birbirine karışmadan uygulanması',
       'Çift teker düzeniyle delinme durumunda saniyeler içinde teker değişimi'
     ],
+    specs:[
+      {label:'Hazne Sayısı', value:'4 hazne'},
+      {label:'Hava Devresi', value:'2 ayrı devre (tohum / gübre)'},
+      {label:'Teker Düzeni', value:'Çift teker'}
+    ],
+    parts:[
+      {name:'4 Hazneli Dozaj Sistemi', desc:'Tek geçişte 4 farklı ürünü 4 farklı dozda eker.'},
+      {name:'Ayrık Taşıma / Balast Aksı', desc:'Çalışırken aksın toprağa temasını önler.'},
+      {name:'Çift Hava Devresi', desc:'Tohum ve gübrenin birbirine karışmadan uygulanmasını sağlar.'}
+    ],
     brochure:'https://sky-agriculture.com/pdf/maxidrill-406-502.pdf'
   },
   'easydrill': {
@@ -1177,6 +1304,16 @@ const PRODUCTS = {
       'İşlenmiş toprak, doğrudan ekim veya canlı örtü üstünde aynı performans',
       'Disk başına 0-250 kg arası ayarlanabilir baskı gücü',
       '4 hazneye kadar genişleyebilen, tek kumanda üzerinden yönetilen yapı'
+    ],
+    specs:[
+      {label:'Disk Baskı Aralığı', value:'0-250 kg (disk başına)'},
+      {label:'Hazne Sayısı', value:'4 hazneye kadar'},
+      {label:'Derinlik Kontrolü', value:'Ön ve arka teker, pancar mibzeri hassasiyetinde'}
+    ],
+    parts:[
+      {name:'Ön/Arka Teker Derinlik Kontrolü', desc:'Pancar mibzeri hassasiyetinde ekim derinliği sağlar.'},
+      {name:'Tekli Disk Ekici Ayaklar', desc:'Disk başına 0-250 kg arası ayarlanabilir baskı uygular.'},
+      {name:'Çoklu Hazne Yapısı', desc:'4 hazneye kadar genişleyip tek kumandayla yönetilir.'}
     ],
     brochure:'https://sky-agriculture.com/pdf/easydrill-406-501.pdf'
   },
@@ -1189,6 +1326,16 @@ const PRODUCTS = {
       'Dik hazne duvarları eğimli arazide dahi düzenli ve sabit gübre akışı sağlar',
       '1 Eylül 2019 sonrası üretilen DX, X ve XT serisi için 7 yıl delinmeye karşı korozyon garantisi'
     ],
+    specs:[
+      {label:'Çalışma Genişliği', value:'9-24 m'},
+      {label:'Hazne Kapasitesi', value:'900-2.100 L'},
+      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    ],
+    parts:[
+      {name:'Eğimli Oluk Sistemi', desc:'Disk devrini veya kanatları değiştirmeden hassas açıklık kontrolü sağlar.'},
+      {name:'Çift Konili Hazne Tabanı', desc:'Yabancı cisme bağlı akış düzensizliğini anında fark ettirir.'},
+      {name:'Dik Hazne Duvarları', desc:'Eğimli arazide dahi düzenli ve sabit gübre akışı sağlar.'}
+    ],
     brochure:'https://sky-agriculture.com/en/products/fertilisation/dx20/'
   },
   'dx30': {
@@ -1199,6 +1346,17 @@ const PRODUCTS = {
       '%100 elektrikli kontrol: hidrolik dağıtıcı gerektirmeden kabinden açma/kapama, kırık tane riski yok',
       'ECONOV 6 bölümlü kesme donanımı tarla kenarı ve köşelerde aşırı dozlamayı önler',
       'Ağırlık ölçümü ve elektrikli kapak kontrolüyle ISOBUS terminaline tam uyum'
+    ],
+    specs:[
+      {label:'Çalışma Genişliği', value:'28-36 m'},
+      {label:'Hazne Kapasitesi', value:'1.500-3.000 L'},
+      {label:'Bölüm Kesme', value:'ECONOV, 6 bölüm'},
+      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    ],
+    parts:[
+      {name:'Tam Boşaltma Sistemi', desc:'Sıfır ölü hacimle haznenin tamamının boşalmasını sağlar.'},
+      {name:'Elektrikli Kabin Kontrolü', desc:'Hidrolik dağıtıcı gerektirmeden kabinden açma/kapama yapılır, kırık tane riski yoktur.'},
+      {name:'ECONOV 6 Bölümlü Kesme Donanımı', desc:'Tarla kenarı ve köşelerde aşırı dozlamayı önler.'}
     ],
     brochure:'https://sky-agriculture.com/en/products/fertilisation/dx30/'
   },
@@ -1211,6 +1369,16 @@ const PRODUCTS = {
       '12 ila 50 metre arası geniş çalışma genişliği aralığı',
       '1 Eylül 2019 sonrası üretim için 7 yıl delinmeye karşı korozyon garantisi'
     ],
+    specs:[
+      {label:'Çalışma Genişliği', value:'12-50 m'},
+      {label:'Hazne Kapasitesi', value:'1.900-4.200 L'},
+      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    ],
+    parts:[
+      {name:'Açıklık Kontrol Sistemi', desc:'DX serisiyle aynı kanıtlanmış teknolojinin yüksek kapasiteli versiyonudur.'},
+      {name:'Büyük Hacimli Hazne', desc:'1.900-4.200 litre arası seçeneklerle uzun kesintisiz çalışma sağlar.'},
+      {name:'Korozyon Korumalı Gövde', desc:'7 yıl delinmeye karşı korozyon garantisi sunar.'}
+    ],
     brochure:'https://sky-agriculture.com/en/products/fertilisation/x40-plus-and-x50-plus/'
   },
   'x40-x50-econov': {
@@ -1221,6 +1389,18 @@ const PRODUCTS = {
       'Bağımsız değerlendirme çalışmalarında %7 gübre tasarrufu ve hatalı dozlanan alanlarda %20’den fazla azalma',
       '12 ila 50 metre arası çalışma genişliği, 1.900-4.200 litre hazne kapasitesi',
       'ISOBUS uyumlu elektronik kontrol ile GPS destekli tarla kenarı optimizasyonu'
+    ],
+    specs:[
+      {label:'Çalışma Genişliği', value:'12-50 m'},
+      {label:'Hazne Kapasitesi', value:'1.900-4.200 L'},
+      {label:'Gübre Tasarrufu', value:'%7 (bağımsız değerlendirme)'},
+      {label:'Hatalı Dozlama Azalması', value:'%20\'den fazla'},
+      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    ],
+    parts:[
+      {name:'ECONOV Bölümlü Kesme Sistemi', desc:'Tarla sınırlarında aşırı dozlamayı engeller.'},
+      {name:'ISOBUS Elektronik Kontrol', desc:'GPS destekli tarla kenarı optimizasyonu sağlar.'},
+      {name:'Büyük Hacimli Hazne', desc:'1.900-4.200 litre hazne kapasitesi sunar.'}
     ],
     brochure:'https://sky-agriculture.com/en/products/fertilisation/x40-and-x50-econov/'
   },
@@ -1233,6 +1413,16 @@ const PRODUCTS = {
       '18 ila 50 metre arası geniş çalışma genişliği',
       '1 Eylül 2019 sonrası üretim için 7 yıl delinmeye karşı korozyon garantisi'
     ],
+    specs:[
+      {label:'Çalışma Genişliği', value:'18-50 m'},
+      {label:'Hazne Kapasitesi', value:'7.200 / 9.500 / 13.000 L'},
+      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    ],
+    parts:[
+      {name:'Mekanik Tahrik Sistemi', desc:'Sağlam yapı ve düşük bakım maliyeti sunar.'},
+      {name:'Çok Seçenekli Hazne', desc:'7.200, 9.500 veya 13.000 litre kapasite seçenekleri sunar.'},
+      {name:'Korozyon Korumalı Gövde', desc:'7 yıl delinmeye karşı korozyon garantisi sunar.'}
+    ],
     brochure:'https://sky-agriculture.com/en/products/fertilisation/xt100-130-160/'
   },
   'xt160h-240h': {
@@ -1243,6 +1433,17 @@ const PRODUCTS = {
       '12 veya 14 metre bum genişliği, granül gübrede 50 metreye kadar atım mesafesi',
       '13.000-15.500 litre arası hazne seçenekleriyle geniş işletmeler için uzun çalışma süresi',
       '1 Eylül 2019 sonrası üretim için 7 yıl delinmeye karşı korozyon garantisi'
+    ],
+    specs:[
+      {label:'Bum Genişliği', value:'12 veya 14 m'},
+      {label:'Atım Mesafesi', value:'50 m\'ye kadar (granül gübre)'},
+      {label:'Hazne Kapasitesi', value:'13.000-15.500 L'},
+      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    ],
+    parts:[
+      {name:'Hidrolik Tahrikli Disk Sistemi', desc:'Büyük hazne kapasitesinde kesintisiz yüksek kapasiteli çalışma sağlar.'},
+      {name:'Geniş Bum Sistemi', desc:'12 veya 14 metre bum genişliğiyle granül gübrede 50 metreye kadar atım yapar.'},
+      {name:'Büyük Hacimli Hazne', desc:'13.000-15.500 litre arası kapasite seçenekleri sunar.'}
     ],
     brochure:'https://sky-agriculture.com/en/products/fertilisation/xt160h-240h/'
   }
@@ -1423,6 +1624,26 @@ function showProduct(id, fromPopstate){
       li.innerHTML = checkIcon + '<span>' + f + '</span>';
       featuresEl.appendChild(li);
     });
+
+    const specBody = document.getElementById('spec-table-body');
+    specBody.innerHTML = '';
+    (p.specs || []).forEach(row => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + row.label + '</td><td>' + row.value + '</td>';
+      specBody.appendChild(tr);
+    });
+    document.getElementById('spec-section').style.display = (p.specs && p.specs.length) ? '' : 'none';
+
+    document.getElementById('parts-image').src = src;
+    document.getElementById('parts-image').alt = p.title + ' bileşenleri';
+    const partsListEl = document.getElementById('parts-list');
+    partsListEl.innerHTML = '';
+    (p.parts || []).forEach((part, i) => {
+      const li = document.createElement('li');
+      li.innerHTML = '<span class="num">' + (i + 1) + '</span><span class="txt"><b>' + part.name + '</b><p>' + part.desc + '</p></span>';
+      partsListEl.appendChild(li);
+    });
+    document.getElementById('parts-section').style.display = (p.parts && p.parts.length) ? '' : 'none';
 
     document.getElementById('product-brochure-btn').href = p.brochure;
     document.getElementById('sticky-brochure-btn').href = p.brochure;
