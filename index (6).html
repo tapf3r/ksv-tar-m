@@ -364,6 +364,13 @@
   .breadcrumb a{font-weight:700;color:var(--ink-soft);transition:color .2s;}
   .breadcrumb a:hover{color:var(--green-dark);}
   .breadcrumb .current{color:var(--ink);font-weight:700;}
+
+  .category-back-bar{display:none;max-width:1280px;margin:0 auto;padding:28px 40px 0;}
+  #view-home.category-mode > .hero,
+  #view-home.category-mode > .stats-bar{display:none;}
+  #view-home.category-mode > section.category{display:none;}
+  #view-home.category-mode > section.category.active-category{display:block;}
+  #view-home.category-mode > .category-back-bar{display:block;}
   .breadcrumb .sep{opacity:.5;}
 
   .product-grid{
@@ -671,12 +678,22 @@
 
 <div id="view-home">
 
+  <div class="category-back-bar">
+    <button class="back-btn" onclick="showHome()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M19 12H5m0 0 6 6m-6-6 6-6"/></svg>
+      Tüm kategoriler
+    </button>
+    <div class="breadcrumb">
+      <a onclick="showHome()">Ana Sayfa</a><span class="sep">/</span><span class="current" id="category-back-title"></span>
+    </div>
+  </div>
+
   <section class="hero">
     <span class="eyebrow"><span class="dot"></span>SKY Agriculture Türkiye</span>
     <h1>Yüksek verimlilik, düşük yakıt tüketimi ve doğayı koruyan yenilikçi toprak işleme ve ekim sistemleri.</h1>
     <p>KSV Tarım Teknolojileri, SKY Agriculture'ın toprak işleme, ekim ve gübreleme makinelerini Türk çiftçisiyle buluşturur. Bir kategori seçin veya doğrudan bir ürüne göz atın.</p>
     <div class="hero-actions">
-      <button class="btn-primary" onclick="document.getElementById('toprak-isleme').scrollIntoView({behavior:'smooth'})">
+      <button class="btn-primary" onclick="showCategory('toprak-isleme')">
         Ürün Koleksiyonu
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg>
       </button>
@@ -1041,9 +1058,9 @@
     <div class="footer-col">
       <h4>Kategoriler</h4>
       <ul>
-        <li><a onclick="document.getElementById('toprak-isleme').scrollIntoView({behavior:'smooth'})">Toprak İşleme</a></li>
-        <li><a onclick="document.getElementById('ekim-sistemleri').scrollIntoView({behavior:'smooth'})">Ekim Sistemleri</a></li>
-        <li><a onclick="document.getElementById('gubreleme').scrollIntoView({behavior:'smooth'})">Gübreleme</a></li>
+        <li><a onclick="showCategory('toprak-isleme')">Toprak İşleme</a></li>
+        <li><a onclick="showCategory('ekim-sistemleri')">Ekim Sistemleri</a></li>
+        <li><a onclick="showCategory('gubreleme')">Gübreleme</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1996,20 +2013,65 @@ function closeAllDropdowns(){
     el.querySelector('.nav-trigger').setAttribute('aria-expanded','false');
   });
 }
+const CATEGORY_TITLES = {
+  'toprak-isleme': 'Toprak İşleme Makineleri',
+  'ekim-sistemleri': 'Ekim Sistemleri',
+  'gubreleme': 'Gübreleme Makineleri'
+};
+
+function showCategory(anchor, fromPopstate){
+  if(!CATEGORY_TITLES[anchor]) return;
+  if(!fromPopstate && !(history.state && history.state.view === 'category' && history.state.anchor === anchor)){
+    history.pushState({view:'category', anchor:anchor}, '', '#kategori-' + anchor);
+  }
+  triggerProgressBar();
+  closeAllDropdowns();
+  closeDrawer();
+  closeSearch();
+  currentProductId = null;
+
+  const home = document.getElementById('view-home');
+  const detail = document.getElementById('view-product');
+  detail.classList.remove('mobile-cta-visible');
+
+  function fillAndShow(){
+    detail.classList.add('view-hidden');
+    detail.style.display = 'none';
+    home.classList.remove('view-hidden');
+    home.style.display = 'block';
+    home.classList.add('category-mode');
+    document.querySelectorAll('#view-home > section.category').forEach(sec => {
+      sec.classList.toggle('active-category', sec.id === anchor);
+    });
+    document.getElementById('category-back-title').textContent = CATEGORY_TITLES[anchor];
+    if(reduceMotion){
+      window.scrollTo(0,0);
+    } else {
+      home.classList.add('view-enter');
+      requestAnimationFrame(() => {
+        home.classList.add('view-enter-active');
+        window.scrollTo({top:0, behavior:'auto'});
+      });
+      setTimeout(() => home.classList.remove('view-enter','view-enter-active'), 320);
+    }
+  }
+
+  if(detail.style.display !== 'none' && !reduceMotion){
+    detail.classList.add('view-exit');
+    setTimeout(() => {
+      detail.classList.remove('view-exit');
+      fillAndShow();
+    }, 180);
+  } else {
+    fillAndShow();
+  }
+}
+
 function goToCategory(anchor){
   closeAllDropdowns();
   closeDrawer();
   closeSearch();
-  if(currentProductId){
-    showHome();
-    setTimeout(() => {
-      const el = document.getElementById(anchor);
-      if(el) el.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth'});
-    }, 220);
-  } else {
-    const el = document.getElementById(anchor);
-    if(el) el.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth'});
-  }
+  showCategory(anchor);
 }
 document.querySelectorAll('.nav-item > .nav-trigger').forEach(trigger => {
   trigger.addEventListener('click', function(e){
@@ -2115,7 +2177,7 @@ function showProduct(id, fromPopstate){
   function fillAndShow(){
     document.getElementById('product-breadcrumb').innerHTML =
       '<a onclick="showHome()">Ana Sayfa</a><span class="sep">/</span>' +
-      '<a onclick="showHome(); setTimeout(function(){document.getElementById(\''+p.anchor+'\').scrollIntoView({behavior:\'smooth\'});},50)">'+p.category+'</a>' +
+      '<a onclick="showCategory(\''+p.anchor+'\')">'+p.category+'</a>' +
       '<span class="sep">/</span><span class="current">'+p.title+'</span>';
     document.getElementById('product-tag').textContent = p.tag;
     document.getElementById('product-title').textContent = p.title;
@@ -2247,7 +2309,7 @@ function renderRelated(id){
 
 function showHome(fromPopstate){
   if(!fromPopstate){
-    if(history.state && history.state.view === 'product'){
+    if(history.state && (history.state.view === 'product' || history.state.view === 'category')){
       history.pushState({view:'home'}, '', location.pathname + location.search);
     } else if(!history.state){
       history.replaceState({view:'home'}, '', location.pathname + location.search);
@@ -2261,6 +2323,7 @@ function showHome(fromPopstate){
 
   const home = document.getElementById('view-home');
   const detail = document.getElementById('view-product');
+  home.classList.remove('category-mode');
   detail.classList.remove('mobile-cta-visible');
 
   function fillAndShow(){
@@ -2425,6 +2488,8 @@ window.addEventListener('popstate', (e) => {
   const state = e.state;
   if(state && state.view === 'product' && PRODUCTS[state.id]){
     showProduct(state.id, true);
+  } else if(state && state.view === 'category' && CATEGORY_TITLES[state.anchor]){
+    showCategory(state.anchor, true);
   } else {
     showHome(true);
   }
@@ -2438,9 +2503,13 @@ document.addEventListener('DOMContentLoaded', () => {
   buildDrawer();
 
   const initialId = location.hash ? location.hash.slice(1) : '';
+  const initialCategoryAnchor = initialId.indexOf('kategori-') === 0 ? initialId.slice('kategori-'.length) : '';
   if(initialId && PRODUCTS[initialId]){
     history.replaceState({view:'product', id:initialId}, '', '#'+initialId);
     showProduct(initialId, true);
+  } else if(initialCategoryAnchor && CATEGORY_TITLES[initialCategoryAnchor]){
+    history.replaceState({view:'category', anchor:initialCategoryAnchor}, '', '#kategori-'+initialCategoryAnchor);
+    showCategory(initialCategoryAnchor, true);
   } else {
     history.replaceState({view:'home'}, '', location.pathname + location.search);
   }
