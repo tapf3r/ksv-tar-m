@@ -599,7 +599,7 @@
     </button>
 
     <nav id="main-nav" aria-label="Ana menü">
-      <div class="nav-item">
+      <div class="nav-item" data-anchor="toprak-isleme">
         <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">TOPRAK İŞLEME
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
@@ -610,7 +610,7 @@
         </div>
       </div>
 
-      <div class="nav-item">
+      <div class="nav-item" data-anchor="ekim-sistemleri">
         <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">EKİM SİSTEMLERİ
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
@@ -625,7 +625,7 @@
         </div>
       </div>
 
-      <div class="nav-item">
+      <div class="nav-item" data-anchor="gubreleme">
         <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">GÜBRELEME
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
@@ -1495,16 +1495,26 @@ function closeAllDropdowns(){
     el.querySelector('.nav-trigger').setAttribute('aria-expanded','false');
   });
 }
+function goToCategory(anchor){
+  closeAllDropdowns();
+  closeDrawer();
+  closeSearch();
+  if(currentProductId){
+    showHome();
+    setTimeout(() => {
+      const el = document.getElementById(anchor);
+      if(el) el.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth'});
+    }, 220);
+  } else {
+    const el = document.getElementById(anchor);
+    if(el) el.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth'});
+  }
+}
 document.querySelectorAll('.nav-item > .nav-trigger').forEach(trigger => {
   trigger.addEventListener('click', function(e){
     e.stopPropagation();
-    const parent = trigger.parentElement;
-    const isOpen = parent.classList.contains('open');
-    closeAllDropdowns();
-    if(!isOpen){
-      parent.classList.add('open');
-      trigger.setAttribute('aria-expanded','true');
-    }
+    const anchor = trigger.parentElement.getAttribute('data-anchor');
+    if(anchor) goToCategory(anchor);
   });
 });
 document.addEventListener('click', closeAllDropdowns);
@@ -1786,7 +1796,12 @@ function selectSearchResult(id){
   closeSearch();
   showProduct(id);
 }
-document.getElementById('search-input').addEventListener('input', (e) => renderSearchResults(e.target.value));
+let searchDebounceTimer = null;
+document.getElementById('search-input').addEventListener('input', (e) => {
+  const value = e.target.value;
+  clearTimeout(searchDebounceTimer);
+  searchDebounceTimer = setTimeout(() => renderSearchResults(value), 150);
+});
 document.getElementById('search-input').addEventListener('keydown', (e) => {
   if(e.key === 'Enter'){
     const first = document.querySelector('.search-result-item');
