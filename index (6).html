@@ -1638,10 +1638,36 @@ const PRODUCTS = {
       'Disk başına 0-250 kg arası ayarlanabilir baskı gücü',
       '4 hazneye kadar genişleyebilen, tek kumanda üzerinden yönetilen yapı'
     ],
-    specs:[
-      {label:'Disk Baskı Aralığı', value:'0-250 kg (disk başına)'},
-      {label:'Hazne Sayısı', value:'4 hazneye kadar'},
-      {label:'Derinlik Kontrolü', value:'Ön ve arka teker, pancar mibzeri hassasiyetinde'}
+    specGroups:[
+      {
+        columns:['3020 Fertisem','4020 Fertisem','W4020 Fertisem','W6020 Fertisem','W8020 Fertisem'],
+        rows:[
+          {label:'Nakliye Genişliği', values:['3 m','4 m','3 m','3 m','3 m']},
+          {label:'Dağıtım Sistemi', values:['Mekanik','Mekanik','Pnömatik','Pnömatik','Pnömatik']},
+          {label:'Hazne Kapasitesi', values:['2.250 L','3.100 L','3.000 L','4.100 L','5.100 L']},
+          {label:'Hacim Dağılımı', values:[
+            '60/40: 1.350 L + 900 L<br>90/10: 2.000 L + 250 L',
+            '60/40: 1.850 L + 1.250 L<br>90/10: 2.800 L + 300 L',
+            '60/40: 1.760 L + 1.240 L<br>45/55: 1.440 L + 1.560 L<br>95/5: 2.900 L + 100 L',
+            '60/40: 2.450 L + 1.650 L<br>45/55: 1.800 L + 2.300 L<br>95/5: 4.000 L + 100 L',
+            '60/40: 3.060 L + 2.040 L<br>45/55: 2.805 L + 2.995 L<br>95/5: 5.000 L + 100 L'
+          ]},
+          {label:'Pro Hazne Kapasitesi', values:['130 L','–','120 L','120 L','120 L']},
+          {label:'Sıra Aralığı', values:['16,6 cm','16,6 cm','16,6 cm','16,6 cm','16,6 cm']},
+          {label:'Opsiyonsuz Ağırlık', values:['3.500 kg','4.450 kg','6.360 kg','7.780 kg','9.250 kg']},
+          {label:'Sıra Sayısı', values:['18 sıra','24 sıra','24 sıra','36 sıra','48 sıra']},
+          {label:'Güç İhtiyacı', values:['75-105 HP','100-140 HP','100-140 HP','150-210 HP','250-360 HP']},
+          {label:'Lastikler', values:['500/50 R17','500/60 R17','700/40 R22,5','700/40 R22,5','710/50 R26,5']},
+          {label:'Dağıtıcı (Hidrolik Çıkış) Sayısı', values:[
+            '1 DE aks ve yük transferi için<br>1 SE iz işaretleyici için (opsiyonel)',
+            '1 DE aks ve yük transferi için<br>1 SE iz işaretleyici için (opsiyonel)',
+            '1 SE + türbin için serbest dönüş<br>1 DE katlama için<br>1 DE iz işaretleyici için<br>1 DE aks için',
+            '1 SE + türbin için serbest dönüş<br>1 DE katlama için<br>1 DE iz işaretleyici için<br>1 DE aks için',
+            '1 SE + türbin için serbest dönüş<br>1 DE katlama için<br>1 DE iz işaretleyici için<br>1 DE aks için'
+          ]},
+          {label:'Yükleme Yüksekliği', values:['204 cm','207 cm','250 cm','280 cm','320 cm']}
+        ]
+      }
     ],
     parts:[
       {name:'Ön/Arka Teker Derinlik Kontrolü', desc:'Pancar mibzeri hassasiyetinde ekim derinliği sağlar.'},
@@ -1659,10 +1685,33 @@ const PRODUCTS = {
       'Dik hazne duvarları eğimli arazide dahi düzenli ve sabit gübre akışı sağlar',
       '1 Eylül 2019 sonrası üretilen DX, X ve XT serisi için 7 yıl delinmeye karşı korozyon garantisi'
     ],
-    specs:[
-      {label:'Çalışma Genişliği', value:'9-24 m'},
-      {label:'Hazne Kapasitesi', value:'900-2.100 L'},
-      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    specGroups:[
+      {
+        title:'DX20',
+        columns:['900 L','1500 L'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['9-18','9-18']},
+          {label:'Hazne Kapasitesi (L)', values:['900','1500']},
+          {label:'Toplam Genişlik (m)', values:['2,29','2,29']},
+          {label:'Yükleme Ölçüleri (m)', values:['1,23 x 2,21','1,23 x 2,21']},
+          {label:'Yükleme Yüksekliği (m)', values:['0,91','1,12']},
+          {label:'Tahmini Ağırlık (kg)', values:['300','340']},
+          {label:'Taşıma Kapasitesi (kg)', values:['1.500','1.500']}
+        ]
+      },
+      {
+        title:'DX20+',
+        columns:['900 L','1500 L','2100 L'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['12-24','12-24','12-24']},
+          {label:'Hazne Kapasitesi (L)', values:['900','1500','2100']},
+          {label:'Toplam Genişlik (m)', values:['2,29','2,29','2,29']},
+          {label:'Yükleme Ölçüleri (m)', values:['1,23 x 2,21','1,23 x 2,21','1,23 x 2,21']},
+          {label:'Yükleme Yüksekliği (m)', values:['0,91','1,12','1,32']},
+          {label:'Tahmini Ağırlık (kg)', values:['300','345','385']},
+          {label:'Taşıma Kapasitesi (kg)', values:['2.100','2.100','2.100']}
+        ]
+      }
     ],
     parts:[
       {name:'Eğimli Oluk Sistemi', desc:'Disk devrini veya kanatları değiştirmeden hassas açıklık kontrolü sağlar.'},
@@ -1680,11 +1729,19 @@ const PRODUCTS = {
       'ECONOV 6 bölümlü kesme donanımı tarla kenarı ve köşelerde aşırı dozlamayı önler',
       'Ağırlık ölçümü ve elektrikli kapak kontrolüyle ISOBUS terminaline tam uyum'
     ],
-    specs:[
-      {label:'Çalışma Genişliği', value:'28-36 m'},
-      {label:'Hazne Kapasitesi', value:'1.500-3.000 L'},
-      {label:'Bölüm Kesme', value:'ECONOV, 6 bölüm'},
-      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    specGroups:[
+      {
+        columns:['1500 L','2150 L','2350 L','3000 L'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['12-36','12-36','12-36','12-36']},
+          {label:'Hazne Kapasitesi (L)', values:['1500','2150','2350','3000']},
+          {label:'Toplam Genişlik (m)', values:['2,48','2,48','2,98','2,98']},
+          {label:'Yükleme Ölçüleri (m)', values:['1,23 x 2,40','1,23 x 2,40','1,23 x 2,80','1,23 x 2,80']},
+          {label:'Yükleme Yüksekliği (m)', values:['1,06','1,27','1,29','1,49']},
+          {label:'Tahmini Ağırlık – Tartılı Versiyon (kg)', values:['305','350','355','400']},
+          {label:'Taşıma Kapasitesi (kg)', values:['3.000','3.000','3.000','3.000']}
+        ]
+      }
     ],
     parts:[
       {name:'Tam Boşaltma Sistemi', desc:'Sıfır ölü hacimle haznenin tamamının boşalmasını sağlar.'},
@@ -1702,10 +1759,35 @@ const PRODUCTS = {
       '12 ila 50 metre arası geniş çalışma genişliği aralığı',
       '1 Eylül 2019 sonrası üretim için 7 yıl delinmeye karşı korozyon garantisi'
     ],
-    specs:[
-      {label:'Çalışma Genişliği', value:'12-50 m'},
-      {label:'Hazne Kapasitesi', value:'1.900-4.200 L'},
-      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    specGroups:[
+      {
+        title:'X40+ (Bıçak Seti: EV 12-18 m, EV 18-28 m veya EV 24-36 m)',
+        columns:['1900/2050 L','2500/2650 L','3000/3200 L'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['12-44','12-44','12-44']},
+          {label:'Hazne Kapasitesi (L)', values:['1900 / 2050','2500 / 2650','3000 / 3200']},
+          {label:'Toplam Genişlik (m)', values:['2,70','2,70','2,98']},
+          {label:'Kullanılabilir Yükleme Genişliği (m)', values:['2,31','2,31','2,81']},
+          {label:'Yükleme Yüksekliği (m)', values:['1,23','1,41','1,52']},
+          {label:'Yükleme Derinliği (m)', values:['1,17','1,17','1,17']},
+          {label:'Tahmini Ağırlık – Tartılı Versiyon (kg)', values:['540','570','585']},
+          {label:'Taşıma Kapasitesi (kg)', values:['3000','3000','3000']}
+        ]
+      },
+      {
+        title:'X50+ (Bıçak Seti: EV 24-36 m, EV 32-44 m veya EV 40-50 m)',
+        columns:['2400/2600 L','3200/3400 L','4000/4200 L'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['24-50','24-50','24-50']},
+          {label:'Hazne Kapasitesi (L)', values:['2400 / 2600','3200 / 3400','4000 / 4200']},
+          {label:'Toplam Genişlik (m)', values:['2,98','2,98','2,98']},
+          {label:'Kullanılabilir Yükleme Genişliği (m)', values:['2,81','2,81','2,81']},
+          {label:'Yükleme Yüksekliği (m)', values:['1,26','1,44','1,62']},
+          {label:'Yükleme Derinliği (m)', values:['1,17','1,17','1,17']},
+          {label:'Tahmini Ağırlık – Tartılı Versiyon (kg)', values:['670','705','730']},
+          {label:'Taşıma Kapasitesi (kg)', values:['4000','4000','4000']}
+        ]
+      }
     ],
     parts:[
       {name:'Açıklık Kontrol Sistemi', desc:'DX serisiyle aynı kanıtlanmış teknolojinin yüksek kapasiteli versiyonudur.'},
@@ -1723,12 +1805,35 @@ const PRODUCTS = {
       '12 ila 50 metre arası çalışma genişliği, 1.900-4.200 litre hazne kapasitesi',
       'ISOBUS uyumlu elektronik kontrol ile GPS destekli tarla kenarı optimizasyonu'
     ],
-    specs:[
-      {label:'Çalışma Genişliği', value:'12-50 m'},
-      {label:'Hazne Kapasitesi', value:'1.900-4.200 L'},
-      {label:'Gübre Tasarrufu', value:'%7 (bağımsız değerlendirme)'},
-      {label:'Hatalı Dozlama Azalması', value:'%20\'den fazla'},
-      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    specGroups:[
+      {
+        title:'X40+ Econov (Bıçak Seti: EV 18-28 m, EV 24-36 m veya EV 32-44 m)',
+        columns:['1900/2050 L','2500/2650 L','3000/3200 L'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['12-44','12-44','12-44']},
+          {label:'Hazne Kapasitesi (L)', values:['1900 / 2050','2500 / 2650','3000 / 3200']},
+          {label:'Toplam Genişlik (m)', values:['2,70 (haznede 2,55)','2,70 (haznede 2,55)','2,98']},
+          {label:'Kullanılabilir Yükleme Genişliği (m)', values:['2,31','2,31','2,81']},
+          {label:'Yükleme Yüksekliği (m)', values:['1,23','1,41','1,52']},
+          {label:'Yükleme Derinliği (m)', values:['1,17','1,17','1,17']},
+          {label:'Tahmini Ağırlık – Tartılı Versiyon (kg)', values:['540','570','585']},
+          {label:'Taşıma Kapasitesi (kg)', values:['3000','3000','3000']}
+        ]
+      },
+      {
+        title:'X50+ Econov (Bıçak Seti: EV 24-36 m, EV 32-44 m veya EV 40-50 m)',
+        columns:['2400/2600 L','3200/3400 L','4000/4200 L'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['24-50','24-50','24-50']},
+          {label:'Hazne Kapasitesi (L)', values:['2400 / 2600','3200 / 3400','4000 / 4200']},
+          {label:'Toplam Genişlik (m)', values:['2,98','2,98','2,98']},
+          {label:'Kullanılabilir Yükleme Genişliği (m)', values:['2,81','2,81','2,81']},
+          {label:'Yükleme Yüksekliği (m)', values:['1,26','1,44','1,62']},
+          {label:'Yükleme Derinliği (m)', values:['1,17','1,17','1,17']},
+          {label:'Tahmini Ağırlık – Tartılı Versiyon (kg)', values:['670','705','730']},
+          {label:'Taşıma Kapasitesi (kg)', values:['4000','4000','4000']}
+        ]
+      }
     ],
     parts:[
       {name:'ECONOV Bölümlü Kesme Sistemi', desc:'Tarla sınırlarında aşırı dozlamayı engeller.'},
@@ -1746,10 +1851,45 @@ const PRODUCTS = {
       '18 ila 50 metre arası geniş çalışma genişliği',
       '1 Eylül 2019 sonrası üretim için 7 yıl delinmeye karşı korozyon garantisi'
     ],
-    specs:[
-      {label:'Çalışma Genişliği', value:'18-50 m'},
-      {label:'Hazne Kapasitesi', value:'7.200 / 9.500 / 13.000 L'},
-      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    specGroups:[
+      {
+        title:'Taşıyıcı Şase (T100/T130/T160)',
+        columns:['T100','T130','T160'],
+        rows:[
+          {label:'Azami Yüklü Ağırlık – GVW (kg)', values:['10.000','14.000','14.000']},
+          {label:'Hazne Kapasitesi (L)', values:['7.500','10.000','13.500']},
+          {label:'Toplam Uzunluk (m)', values:['6,63','6,63','6,63']},
+          {label:'Toplam Genişlik (m)', values:['2,55-2,85','2,55-2,85','2,55-2,85']},
+          {label:'Yükleme Yüksekliği (m)', values:['2,32-2,69','2,50-3,00','2,78-2,94']},
+          {label:'Hazne Ölçüleri (m)', values:['4,00 - 2,06','4,00 - 2,06','5,35 - 2,06']},
+          {label:'Güç İhtiyacı (HP)', values:['100-120','110-130','120-180']},
+          {label:'Dingil Mesafesi (mm)', values:['130','130','150']},
+          {label:'Lastik Ölçüsü', values:['18.4 x 30','620/75 R26','620/75 R26']},
+          {label:'Ağırlık (kg)', values:['3000','3200','4900']}
+        ]
+      },
+      {
+        title:'XT100 / XT130 / XT160 Performans Özellikleri',
+        columns:['XT100','XT130','XT160'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['18-50','18-50','18-50']},
+          {label:'Hazne Kapasitesi (L)', values:['7200','9500','13000']},
+          {label:'Toplam Genişlik (m)', values:['2,50-3,00','2,50-3,00','2,50-3,00']},
+          {label:'Yükleme Yüksekliği (m)', values:['2,32-2,69','2,55-2,85','2,78-2,94']},
+          {label:'Güç İhtiyacı, min. (HP)', values:['80-100','90-110','120-140']},
+          {label:'Boş Ağırlık, min. (kg)', values:['2500','2800','3900']},
+          {label:'Dingil / Dingil Sayısı', values:['90 mm / 10','100 mm / 10','140 mm / 10']},
+          {label:'Lastikler', values:['18,4 x 30','23.1 x 26','600/60 x 30,5']},
+          {label:'Azami Yüklü Ağırlık – GVW (kg)', values:['10.000','12.000 / 12.500*','15.900']}
+        ]
+      },
+      {
+        title:'Not',
+        columns:null,
+        rows:[
+          {label:'*', value:'Lastik tipine göre değişir'}
+        ]
+      }
     ],
     parts:[
       {name:'Mekanik Tahrik Sistemi', desc:'Sağlam yapı ve düşük bakım maliyeti sunar.'},
@@ -1767,11 +1907,39 @@ const PRODUCTS = {
       '13.000-15.500 litre arası hazne seçenekleriyle geniş işletmeler için uzun çalışma süresi',
       '1 Eylül 2019 sonrası üretim için 7 yıl delinmeye karşı korozyon garantisi'
     ],
-    specs:[
-      {label:'Bum Genişliği', value:'12 veya 14 m'},
-      {label:'Atım Mesafesi', value:'50 m\'ye kadar (granül gübre)'},
-      {label:'Hazne Kapasitesi', value:'13.000-15.500 L'},
-      {label:'Korozyon Garantisi', value:'7 yıl (1 Eylül 2019 sonrası üretim)'}
+    specGroups:[
+      {
+        title:'Taşıyıcı Şase (T160/T240)',
+        columns:['T160','T240'],
+        rows:[
+          {label:'Azami Yüklü Ağırlık – GVW (kg)', values:['14.000','22.000']},
+          {label:'Hazne Kapasitesi (L)', values:['13.500','16.000']},
+          {label:'Toplam Uzunluk (m)', values:['6,63','8,39']},
+          {label:'Toplam Genişlik (m)', values:['2,55-2,85','2,55-3,00']},
+          {label:'Yükleme Yüksekliği (m)', values:['2,78-2,94','3,16-3,24']},
+          {label:'Hazne Ölçüleri (m)', values:['5,35 - 2,06','5,35 - 2,06']},
+          {label:'Güç İhtiyacı (HP)', values:['120-180','180-320']},
+          {label:'Dingil Mesafesi (mm)', values:['150','2 x 150 Tandem']},
+          {label:'Lastik Ölçüsü', values:['620/75 R26','650/55 R26,5']},
+          {label:'Ağırlık (kg)', values:['4900','6900']}
+        ]
+      },
+      {
+        title:'XT160H / XT240H Performans Özellikleri',
+        columns:['XT160H','XT240H'],
+        rows:[
+          {label:'Hazne Kapasitesi (L)', values:['13000','15500']},
+          {label:'Toplam Genişlik (m)', values:['2,55-3,00','2,55-3,00']},
+          {label:'Yükleme Yüksekliği (m)', values:['2,78-2,94','3,06-3,14']},
+          {label:'Güç İhtiyacı (HP)', values:['130-150','180-220']},
+          {label:'Tahmini Ağırlık – Tartılı Versiyon (kg)', values:['4900','6900']},
+          {label:'Dingil', values:['140 mm','2 x 140 Tandem (Arr. follower)']},
+          {label:'Lastikler', values:['2 x 600/60 x R30,5','4 x 650/55-R26,5']},
+          {label:'Azami Yüklü Ağırlık – GVW (kg)', values:['15.900','23.900']},
+          {label:'Hazne Ölçüleri (m)', values:['5,35 x 2,06','5,35 x 2,06']},
+          {label:'Toplam Uzunluk (m)', values:['8,39','8,39']}
+        ]
+      }
     ],
     parts:[
       {name:'Hidrolik Tahrikli Disk Sistemi', desc:'Büyük hazne kapasitesinde kesintisiz yüksek kapasiteli çalışma sağlar.'},
