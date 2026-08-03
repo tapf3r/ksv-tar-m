@@ -413,11 +413,19 @@
   @media (max-width:760px){.related-grid{grid-template-columns:1fr;}}
 
   .spec-heading{font-size:1.4rem;font-weight:800;margin:76px 0 22px;padding-top:44px;border-top:1px solid var(--line);}
-  .spec-table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:.95rem;}
-  .spec-table tr td{padding:14px 18px;border-bottom:1px solid var(--line);}
-  .spec-table tr td:first-child{width:36%;font-weight:700;color:var(--ink-soft);}
-  .spec-table tr:hover td{background:var(--green-pale);}
+  .spec-table-scroll{width:100%;overflow-x:auto;margin-bottom:14px;border-radius:12px;border:1px solid var(--line);}
+  .spec-table{width:100%;border-collapse:collapse;font-size:.92rem;}
+  .spec-table thead th{
+    background:var(--green);color:#fff;font-weight:700;text-align:left;
+    padding:13px 18px;white-space:nowrap;
+  }
+  .spec-table tr td{padding:13px 18px;border-bottom:1px solid var(--line);white-space:nowrap;}
+  .spec-table tr td:first-child{font-weight:700;color:var(--ink);background:var(--green-pale);white-space:normal;}
+  .spec-table tbody tr:hover td{background:var(--green-pale);}
+  .spec-table tbody tr:hover td:first-child{background:var(--green-pale);}
   .spec-note{font-size:.82rem;color:var(--ink-soft);margin-bottom:20px;}
+  .spec-subheading{font-size:1rem;font-weight:800;margin:24px 0 12px;color:var(--ink);}
+  .spec-subheading:first-child{margin-top:0;}
 
   .parts-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center;}
   @media (max-width:900px){.parts-layout{grid-template-columns:1fr;}}
@@ -990,7 +998,7 @@
 
     <section class="spec-section" id="spec-section">
       <h2 class="spec-heading">Teknik Özellikler</h2>
-      <table class="spec-table"><tbody id="spec-table-body"></tbody></table>
+      <div id="spec-tables-container"></div>
       <p class="spec-note">Sertifikalı tam teknik veri seti için ürünün resmi broşürünü indirebilirsiniz.</p>
     </section>
 
@@ -1113,9 +1121,49 @@ const PRODUCTS = {
       'Yüklü haznenin ön ağırlığı traktöre aktarılarak maksimum çekiş sağlanır',
       'Boş haldeyken bile üstün denge ve sürüş konforu'
     ],
-    specs:[
-      {label:'Rotor Yoğunluğu', value:'4 rotor / m'},
-      {label:'Rulman Markaları', value:'Walterscheid, Timken, SKF'}
+    specGroups:[
+      {
+        title:'Kompakt Seri (HRV)',
+        columns:['HRV 100.9','HRV 130.9','HRV 150.9','HRV 180.9','HRV 200.9'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['1,00','1,30','1,50','1,80','2,00']},
+          {label:'Toplam Genişlik (m)', values:['1,13','1,39','1,63','1,88','2,12']},
+          {label:'Rotor Sayısı', values:['4','5','6','7','8']},
+          {label:'Güç İhtiyacı (HP)', values:['30-70','30-75','35-80','40-85','45-90']},
+          {label:'Kardan (PTO) Devri (devir/dk)', values:['540','540','540','540','540']},
+          {label:'Şanzıman Tipi', values:['Tek kademeli','Tek kademeli','Tek kademeli','Tek kademeli','Tek kademeli']},
+          {label:'Rotor Devri (devir/dk)', values:['290','290','290','290','290']},
+          {label:'Kafes Merdane Ağırlığı Ø400 mm (kg)', values:['410','450','490','540','570']},
+          {label:'Paker Merdane Ağırlığı Ø460 mm (kg)', values:['480','535','590','645','700']}
+        ]
+      },
+      {
+        title:'Orta-Geniş Seri (HRW .28)',
+        columns:['HRW 4000.28','HRW 4500.28','HRW 5000.28','HRW 6000.28'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['4,00','4,50','5,00','6,00']},
+          {label:'Rotor Sayısı', values:['16','18','20','24']},
+          {label:'Güç İhtiyacı (HP)', values:['120-280','120-280','120-280','120-280']},
+          {label:'Kardan (PTO) Devri (devir/dk)', values:['1000','1000','1000','1000']},
+          {label:'Şanzıman Tipi', values:['Zincir-dişli tahrikli','Zincir-dişli tahrikli','Zincir-dişli tahrikli','Zincir-dişli tahrikli']},
+          {label:'Rotor Devri (devir/dk)', values:['283/341','283/341','283/341','283/341']},
+          {label:'Kafes Merdane Ağırlığı Ø500 mm (kg)', values:['2430','2610','2790','3150']},
+          {label:'Paker Merdane Ağırlığı Ø550 mm (kg)', values:['2770','2980','3190','3610']}
+        ]
+      },
+      {
+        title:'Ekstra Geniş Seri (HRW .36)',
+        columns:['HRW 6000.36','HRW 7000.36','HRW 8000.36'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['6,00','7,00','8,00']},
+          {label:'Rotor Sayısı', values:['24','28','32']},
+          {label:'Güç İhtiyacı (HP)', values:['180-360','210-360','240-360']},
+          {label:'Kardan (PTO) Devri (devir/dk)', values:['1000','1000','1000']},
+          {label:'Şanzıman Tipi', values:['Zincir-dişli tahrikli','Zincir-dişli tahrikli','Zincir-dişli tahrikli']},
+          {label:'Rotor Devri (devir/dk)', values:['283/341','283/341','283/341']},
+          {label:'Paker Merdane Ağırlığı Ø550 mm (kg)', values:['3710','4130','4550']}
+        ]
+      }
     ],
     parts:[
       {name:'Rotor Grupları', desc:'Metrede 4 rotor yoğunluğuyla toprağı devirmeden dikine işler.'},
@@ -1133,10 +1181,20 @@ const PRODUCTS = {
       'Klasik çelik merdaneye göre %20-25 daha az güç tüketimi',
       '3 ila 12 metre arası, 6m ve 8m dahil geniş çalışma genişliği seçenekleri'
     ],
-    specs:[
-      {label:'Çalışma Genişliği', value:'3-12 m (6 m ve 8 m dahil)'},
-      {label:'Çalışma Derinliği', value:'4-7 cm'},
-      {label:'Güç Tasarrufu', value:'Klasik merdaneye göre %20-25 daha az'}
+    specGroups:[
+      {
+        columns:['VR 3000','VR 3500','VR 4000'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['3,00','3,50','4,00']},
+          {label:'Diş Sıra Sayısı', values:['3','3','3']},
+          {label:'Diş Sayısı', values:['24','28','32']},
+          {label:'Diş Tipi', values:['Vibro (titreşimli), 32×12 mm','Vibro (titreşimli), 32×12 mm','Vibro (titreşimli), 32×12 mm']},
+          {label:'Güç İhtiyacı (HP)', values:['70-170','90-200','120-260']},
+          {label:'Kafes Merdane Ağırlığı Ø500 mm (kg)', values:['660','740','820']},
+          {label:'Paker Merdane Ağırlığı Ø550 mm (kg)', values:['860','950','1040']},
+          {label:'Tracker Merdane Ağırlığı Ø550 mm (kg)', values:['1048','1181','1297']}
+        ]
+      }
     ],
     parts:[
       {name:'İşleme Ayakları', desc:'4-7 cm sığ derinlikte hassas anız işleme yapar.'},
@@ -1154,10 +1212,20 @@ const PRODUCTS = {
       'Geniş açıklık sayesinde yoğun bitki örtüsünde tıkanma yapmaz',
       'Gerçek römork tipi çekişle traktör hareketlerinden etkilenmez'
     ],
-    specs:[
-      {label:'Sabit Sıyırma Derinliği', value:'3 cm'},
-      {label:'Derinlik Ayar Aralığı', value:'2-11 cm (7 noktalı zemin takibi)'},
-      {label:'Yakıt Tüketimi', value:'İlk paso 6,5 L/ha · İkinci paso 3 L/ha'}
+    specGroups:[
+      {
+        columns:['XR 3000','XR 3500','XR 4000'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['3,00','3,50','4,00']},
+          {label:'Disk Sıra Sayısı', values:['2','2','2']},
+          {label:'Disk Sayısı', values:['22','26','30']},
+          {label:'Disk Tipi', values:['Tırtıklı disk (Niaux 200)','Tırtıklı disk (Niaux 200)','Tırtıklı disk (Niaux 200)']},
+          {label:'Güç İhtiyacı (HP)', values:['150-210 (XEOS Pro ile kombine)','175-240 (XEOS Pro ile kombine)','220-300 (XEOS Pro ile kombine)']},
+          {label:'Paker Merdane Ağırlığı Ø550 mm (kg)', values:['1441','1620','1816']},
+          {label:'Tracker Merdane Ağırlığı Ø550 mm, 150 mm aralık (kg)', values:['1587','1806','2023']},
+          {label:'Gravity Merdane Ağırlığı Ø520 mm (kg)', values:['1420','1527','1723']}
+        ]
+      }
     ],
     parts:[
       {name:'Sıyırma Bıçakları', desc:'Tüm genişlik boyunca 3 cm sabit derinlikte çalışarak nemi korur.'},
@@ -1635,14 +1703,7 @@ function showProduct(id, fromPopstate){
       featuresEl.appendChild(li);
     });
 
-    const specBody = document.getElementById('spec-table-body');
-    specBody.innerHTML = '';
-    (p.specs || []).forEach(row => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = '<td>' + row.label + '</td><td>' + row.value + '</td>';
-      specBody.appendChild(tr);
-    });
-    document.getElementById('spec-section').style.display = (p.specs && p.specs.length) ? '' : 'none';
+    renderSpecTables(p);
 
     document.getElementById('parts-image').src = src;
     document.getElementById('parts-image').alt = p.title + ' bileşenleri';
@@ -1688,6 +1749,50 @@ function showProduct(id, fromPopstate){
       fillAndShow();
     }, 180);
   }
+}
+
+function renderSpecTables(p){
+  const container = document.getElementById('spec-tables-container');
+  container.innerHTML = '';
+  let groups = [];
+  if(p.specGroups && p.specGroups.length){
+    groups = p.specGroups;
+  } else if(p.specColumns && p.specColumns.length){
+    groups = [{columns:p.specColumns, rows:p.specs}];
+  } else if(p.specs && p.specs.length){
+    groups = [{columns:null, rows:p.specs}];
+  }
+  document.getElementById('spec-section').style.display = groups.length ? '' : 'none';
+  groups.forEach(g => {
+    if(g.title){
+      const h = document.createElement('h3');
+      h.className = 'spec-subheading';
+      h.textContent = g.title;
+      container.appendChild(h);
+    }
+    const scroll = document.createElement('div');
+    scroll.className = 'spec-table-scroll';
+    const table = document.createElement('table');
+    table.className = 'spec-table';
+    if(g.columns && g.columns.length){
+      const thead = document.createElement('thead');
+      thead.innerHTML = '<tr><th></th>' + g.columns.map(c => '<th>' + c + '</th>').join('') + '</tr>';
+      table.appendChild(thead);
+    }
+    const tbody = document.createElement('tbody');
+    (g.rows || []).forEach(row => {
+      const tr = document.createElement('tr');
+      if(g.columns && g.columns.length){
+        tr.innerHTML = '<td>' + row.label + '</td>' + row.values.map(v => '<td>' + (v == null ? '–' : v) + '</td>').join('');
+      } else {
+        tr.innerHTML = '<td>' + row.label + '</td><td>' + row.value + '</td>';
+      }
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    scroll.appendChild(table);
+    container.appendChild(scroll);
+  });
 }
 
 function renderRelated(id){
