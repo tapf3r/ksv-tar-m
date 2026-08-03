@@ -434,6 +434,23 @@
   .spec-subheading{font-size:1rem;font-weight:800;margin:24px 0 12px;color:var(--ink);}
   .spec-subheading:first-child{margin-top:0;}
 
+  .highlight-block{
+    display:grid;grid-template-columns:1fr 1.3fr;gap:32px;align-items:center;
+    margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--line);
+  }
+  .highlight-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+  .highlight-block.text-only{grid-template-columns:1fr;}
+  @media(max-width:800px){.highlight-block{grid-template-columns:1fr;}}
+  .highlight-photo{
+    border-radius:16px;border:1px dashed var(--line);background:var(--green-pale);
+    min-height:170px;display:flex;align-items:center;justify-content:center;
+    color:var(--ink-soft);font-size:.78rem;text-align:center;padding:16px;line-height:1.5;
+  }
+  .highlight-text h3{font-size:1.05rem;font-weight:800;margin-bottom:8px;}
+  .highlight-text p{font-size:.92rem;color:var(--ink-soft);margin-bottom:8px;}
+  .highlight-text ul{margin:8px 0 0;padding-left:18px;}
+  .highlight-text ul li{font-size:.9rem;color:var(--ink-soft);margin-bottom:6px;}
+
   .parts-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center;}
   @media (max-width:900px){.parts-layout{grid-template-columns:1fr;}}
   .parts-media{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#f3f6f4;}
@@ -622,6 +639,9 @@
           <a role="menuitem" onclick="showProduct('hr')"><b>Rotatif Tırmık</b><span class="sub">HR Serisi &middot; Tohum yatağı hazırlama</span></a>
           <a role="menuitem" onclick="showProduct('methys-hds')"><b>Anız Kültivatörü</b><span class="sub">Methys HDS</span></a>
           <a role="menuitem" onclick="showProduct('methys-pcs')"><b>Yüzey Sıyırıcı (Scalper)</b><span class="sub">Methys PCS</span></a>
+          <a role="menuitem" onclick="showProduct('vr')"><b>Vibrokültivatör</b><span class="sub">VR</span></a>
+          <a role="menuitem" onclick="showProduct('xr')"><b>Diskli Toprak Hazırlama Modülü</b><span class="sub">XR</span></a>
+          <a role="menuitem" onclick="showProduct('faca-roller')"><b>Malç Ezici Merdane</b><span class="sub">FACA Roller</span></a>
         </div>
       </div>
 
@@ -637,6 +657,7 @@
           <a role="menuitem" onclick="showProduct('progress')"><b>Kombine Pnömatik Ekim Makinesi</b><span class="sub">Progress</span></a>
           <a role="menuitem" onclick="showProduct('maxidrill')"><b>Hızlı Ekim Makinesi</b><span class="sub">Maxidrill</span></a>
           <a role="menuitem" onclick="showProduct('easydrill')"><b>Doğrudan Ekim Mibzeri</b><span class="sub">Easydrill &middot; Sıfır toprak işleme</span></a>
+          <a role="menuitem" onclick="showProduct('progress-m')"><b>Mekanik Kombine Ekim Ünitesi</b><span class="sub">Progress M</span></a>
         </div>
       </div>
 
@@ -705,7 +726,7 @@
   </section>
 
   <div class="stats-bar reveal cols-3">
-    <div class="stat"><div class="num" data-count="16">0</div><div class="label">Ekipman Serisi</div></div>
+    <div class="stat"><div class="num" data-count="20">0</div><div class="label">Ekipman Serisi</div></div>
     <div class="stat"><div class="num" data-count="3">0</div><div class="label">Ürün Kategorisi</div></div>
     <div class="stat"><div class="num" data-count="7" data-suffix="/24">0</div><div class="label">Teknik Destek</div></div>
   </div>
@@ -759,6 +780,48 @@
           <span class="tag">Methys PCS</span>
           <h3>Yüzey Sıyırıcı (Scalper)</h3>
           <p>Düşük yakıt tüketimiyle yüzeyi 2-11 cm arasında sıyırarak ot kontrolü ve anız bozma sağlayan sıyırıcı.</p>
+          <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </div>
+      <div class="card reveal" data-id="vr" onclick="showProduct('vr')">
+        <div class="card-media">
+          <button class="fav-btn" onclick="toggleFavorite(event,'vr')" aria-label="Favorilere ekle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          </button>
+          <img class="lazy-img" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%23e9f7ef'/%3E%3Ctext x='300' y='210' font-family='Arial, sans-serif' font-size='40' font-weight='800' fill='%2316a34a' text-anchor='middle'%3EVR%3C/text%3E%3Ctext x='300' y='245' font-family='Arial, sans-serif' font-size='15' fill='%235b6b62' text-anchor='middle'%3EFotograf eklenecek%3C/text%3E%3C/svg%3E" alt="SKY VR Vibrokültivatör">
+        </div>
+        <div class="card-body">
+          <span class="tag">VR</span>
+          <h3>Vibrokültivatör</h3>
+          <p>Hafif ve mükemmel hazırlanmış topraklar için tasarlanmış, ekonomik çalışan pasif titreşimli diş kültivatörü.</p>
+          <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </div>
+      <div class="card reveal" data-id="xr" onclick="showProduct('xr')">
+        <div class="card-media">
+          <button class="fav-btn" onclick="toggleFavorite(event,'xr')" aria-label="Favorilere ekle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          </button>
+          <img class="lazy-img" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%23e9f7ef'/%3E%3Ctext x='300' y='210' font-family='Arial, sans-serif' font-size='40' font-weight='800' fill='%2316a34a' text-anchor='middle'%3EXR%3C/text%3E%3Ctext x='300' y='245' font-family='Arial, sans-serif' font-size='15' fill='%235b6b62' text-anchor='middle'%3EFotograf eklenecek%3C/text%3E%3C/svg%3E" alt="SKY XR Diskli Toprak Hazırlama Modülü">
+        </div>
+        <div class="card-body">
+          <span class="tag">XR</span>
+          <h3>Diskli Toprak Hazırlama Modülü</h3>
+          <p>415 mm X şeklinde diskleriyle 3 m genişlikte saatte 3,5 ha kapasite sunan, PTO gerektirmeyen malç hazırlama modülü.</p>
+          <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </div>
+      <div class="card reveal" data-id="faca-roller" onclick="showProduct('faca-roller')">
+        <div class="card-media">
+          <button class="fav-btn" onclick="toggleFavorite(event,'faca-roller')" aria-label="Favorilere ekle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          </button>
+          <img class="lazy-img" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%23e9f7ef'/%3E%3Ctext x='300' y='210' font-family='Arial, sans-serif' font-size='34' font-weight='800' fill='%2316a34a' text-anchor='middle'%3EFACA ROLLER%3C/text%3E%3Ctext x='300' y='245' font-family='Arial, sans-serif' font-size='15' fill='%235b6b62' text-anchor='middle'%3EFotograf eklenecek%3C/text%3E%3C/svg%3E" alt="SKY FACA Roller Malç Ezici Merdane">
+        </div>
+        <div class="card-body">
+          <span class="tag">FACA Roller</span>
+          <h3>Malç Ezici Merdane</h3>
+          <p>Kendinden yönlendirmeli, otomatik hizalanan bağlantısıyla örtü bitkisi ve anızı yatırıp ezen merdane.</p>
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
@@ -870,6 +933,20 @@
           <span class="tag">Easydrill</span>
           <h3>Doğrudan Ekim Mibzeri</h3>
           <p>40 yılı aşkın Ar-Ge birikiminin ürünü; anıza, örtü bitkisi üstüne veya işlenmiş toprağa aynı hassasiyetle ekim yapar.</p>
+          <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </div>
+      <div class="card reveal" data-id="progress-m" onclick="showProduct('progress-m')">
+        <div class="card-media">
+          <button class="fav-btn" onclick="toggleFavorite(event,'progress-m')" aria-label="Favorilere ekle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          </button>
+          <img class="lazy-img" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%23e9f7ef'/%3E%3Ctext x='300' y='210' font-family='Arial, sans-serif' font-size='32' font-weight='800' fill='%2316a34a' text-anchor='middle'%3EPROGRESS M%3C/text%3E%3Ctext x='300' y='245' font-family='Arial, sans-serif' font-size='15' fill='%235b6b62' text-anchor='middle'%3EFotograf eklenecek%3C/text%3E%3C/svg%3E" alt="SKY Progress M Mekanik Kombine Ekim Ünitesi">
+        </div>
+        <div class="card-body">
+          <span class="tag">Progress M</span>
+          <h3>Mekanik Kombine Ekim Ünitesi</h3>
+          <p>Toprak işleme aletiyle kombine çalışan, sağlam ve güvenilir modern tasarımlı mekanik ekim kombinasyonu.</p>
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
@@ -1025,6 +1102,11 @@
         <div class="parts-media"><img id="parts-image" src="" alt=""></div>
         <ul class="parts-list" id="parts-list"></ul>
       </div>
+    </section>
+
+    <section class="highlights-section" id="highlights-section">
+      <h2 class="spec-heading">Öne Çıkan Özellikler</h2>
+      <div id="highlights-container"></div>
     </section>
 
     <div id="related-wrap"></div>
@@ -1206,6 +1288,29 @@ const PRODUCTS = {
       {name:'Konik Makaralı Rulmanlar', desc:'Fabrika ayarlı, takoz gerektirmeyen Walterscheid, Timken ve SKF rulman sistemi.'},
       {name:'Hazne ve Şase Dengesi', desc:'Yüklü haznenin ön ağırlığını traktöre aktararak maksimum çekiş sağlar.'}
     ],
+    highlights:[
+      {
+        title:'Kusursuz Tohum Yatağı',
+        desc:'Metrede 4 rotor, iz veya set bırakmadan daha iyi bir tohum yatağı sağlar; daha düşük çekiş gücü ihtiyacıyla (daha az sürüklenen tırmık) çalışır. Şase güçlendirilmiş çelikten üretilmiştir.',
+        photoHint:'rotor dişli grubu yakın çekim'
+      },
+      {
+        title:'Konik Makaralı Rulmanlar',
+        desc:'Büyük çaplı mille birleştirilmiş, ağır boyutlandırılmış rulmanlar; en zorlu kullanım koşullarında bile adaptörün sabit hizasını korur. Fabrikada ayarlanmış olarak takoz gerektirmez. Bu modern rulman tipi, tahrik edilen aletin ikinci el değerine olumlu katkı sağlar.',
+        bullets:['Birinci sınıf bileşenler: Walterscheid – Timken – SKF'],
+        photoHint:'rulman ve diş grubu'
+      },
+      {
+        title:'Taşıma Güvenliği',
+        desc:'Hidrolik katlama sistemini destekleyen bir ara şase bulunur; iki silindirin her biri güvenlik kılavuz çatallarıyla donatılmıştır. Nakliye kilidi hidrolik olarak çalışır; toplam genişlik 2,95 m (HRW SLIM versiyonlarında 2,50 m). Şase güçlendirilmiş çelikten üretilmiştir.',
+        photoHint:'yolda taşıma konumunda traktör + tırmık'
+      },
+      {
+        title:'280 veya 360 Beygirlik Merkezi Tahrik Ünitesi',
+        desc:'WALTERSCHEID "Power Line" kardan mili tahriki (sadece 250 saatte bir yağlama gerektirir), otomatik sıfırlamalı bir tork limitörüyle donatılmıştır.',
+        photoHint:'merkezi tahrik ünitesi yakın çekim'
+      }
+    ],
     brochure:'https://sky-agriculture.com/pdf/hr-406-507.pdf'
   },
   'methys-hds': {
@@ -1254,6 +1359,23 @@ const PRODUCTS = {
       {name:'Ön ve Arka Teker Sistemi', desc:'Şasiyi her koşulda toprağa paralel tutar.'},
       {name:'Merdane', desc:'Klasik çelik merdaneye göre %20-25 daha az güç tüketimi sağlar.'}
     ],
+    highlights:[
+      {
+        title:'Uzman Bir Anız Kültivatörü',
+        desc:'Amaç, 4-7 cm hassas sığ işleme derinliğine özel bir anız kültivatörü sunmaktı. Bu makine, konservasyon tarımı, dirençli ot sorunu yaşayan çiftçiler ve çok sığ yalancı ekim (false seeding) uygulamaları yapmak isteyen organik üreticiler için idealdir.',
+        photoHint:'tarlada çalışan kültivatör, arkadan görünüm'
+      },
+      {
+        title:'Düzenli Kullanım',
+        desc:'Anız bozma ve örtü bitkisi ekimi için yüksek performanslı bir ünite. 6 m ve 8 m çalışma genişliği seçenekleriyle sunulur.',
+        photoHint:'geniş açı, tarlada makine'
+      },
+      {
+        title:'Son Derece Düşük Güç Tüketimi ve Ödünsüz Sıyırma Kalitesi',
+        desc:'Ön ve arka tekerlekli tandem sistem sayesinde şase her zaman toprağa paralel kalır. Teknik açıdan, daha yumuşak yuvarlandığı için çelik merdaneye kıyasla %20-25 arasında güç tasarrufu gözlemlenmiştir.',
+        photoHint:'traktör + kültivatör, anız tarlasında geniş çekim'
+      }
+    ],
     brochure:'https://sky-agriculture.com/pdf/methys-hds-406-504.pdf'
   },
   'methys-pcs': {
@@ -1300,7 +1422,156 @@ const PRODUCTS = {
       {name:'7 Noktalı Zemin Takip Sistemi', desc:'2-11 cm arası hassas derinlik ayarı sunar.'},
       {name:'Römork Tipi Çeki Oku', desc:'Traktör hareketlerinden etkilenmeden gerçek römork tipi çekiş sağlar.'}
     ],
+    highlights:[
+      {
+        title:'Kusursuz Zemin Takibi İçin Eşsiz Yatay ve Dikey Açıklık',
+        desc:'Sentetik total herbisitlerin yaygınlaşmasından önce de kullanılan bir yöntemdi. Günümüzün enerji ve iklim koşulları değişti. Bir sıyırıcının tamamen yeniden tasarımı, aşağıdaki hedefleri karşılamayı amaçladı:',
+        bullets:['Yakıt tüketimini azaltmak','Tazeliği korumak ve CO2 emisyonunu sınırlamak için tüm genişlik boyunca 3 cm sıyırma','Bitki kalıntılarını yüzeyde tutmak => diş tipi bir aletle tıkanmayı önleyecek bol açıklık','Yoğun bitki örtüsüyle çalışabilme'],
+        photoHint:'SKY sıyırıcı, tarlada yakın çekim'
+      },
+      {
+        title:'Son Derece Düşük Güç Tüketimi ve Ödünsüz Sıyırma Kalitesi',
+        bullets:['7 zemin destek noktasıyla sığ çalışma derinliği kontrolü, kusursuz zemin takibi','12 derinlik kontrol tekerleği','İzostatik olarak desteklenen şase/uzantılarla 3 boyutlu kontrol ve 3D esnek yapı','Traktör hareketlerinden etkilenmeyen gerçek römork tipi çekiş','Düşük yakıt tüketimi (ikinci paso 3 L/ha, ilk paso 6,5 L/ha)'],
+        photoHint:'teknik şema + tarlada traktör-sıyırıcı geniş çekim'
+      },
+      {
+        title:'Konservasyon Tarımına Uygun Bir Sıyırıcı',
+        bullets:['Tıkanmayı önlemek için geniş açıklık: bitki örtüsü imhası, yüksek hasat kalıntısı yönetimi','İlk paso anız sürümü için nüfuz gücü (bol saman miktarında dahi)','2-11 cm arası sığ derinliklerde hassas çalışabilme ile toprak bozulmasını sınırlama'],
+        photoHint:'traktör + sıyırıcı, yeşil örtü bitkisi üzerinde çalışırken'
+      }
+    ],
     brochure:'https://sky-agriculture.com/pdf/methys-pcs-406-503.pdf'
+  },
+  'vr': {
+    category:'Toprak İşleme', anchor:'toprak-isleme', tag:'VR', title:'Vibrokültivatör',
+    lead:'Hafif ve mükemmel hazırlanmış topraklar için tasarlanmış, pasif çalıştığı için ekonomik bir titreşimli diş kültivatörü.',
+    features:[
+      '3 sıra, 32 x 12 mm titreşimli düz dişle toprağı işler',
+      'Kategori I ve II bağlantı; 40 mm rulmanlı merdanede çubuk veya sıyırıcı paker seçeneği',
+      'Sürtünmeli kavramalı tahrik, tek kademeli şanzıman, 6 mm laminat kutu tabanı',
+      'Opsiyonel karbür kaplı diş, arka tesviye tablası ve aşırı yük kavramalı tahrik'
+    ],
+    specGroups:[
+      {
+        columns:['VR 3000','VR 3500','VR 4000'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['3,00','3,50','4,00']},
+          {label:'Diş Sıra Sayısı', values:['3','3','3']},
+          {label:'Diş Sayısı', values:['24','28','32']},
+          {label:'Diş Tipi', values:['Vibro (titreşimli), 32×12 mm','Vibro (titreşimli), 32×12 mm','Vibro (titreşimli), 32×12 mm']},
+          {label:'Güç İhtiyacı (HP)', values:['70-170','90-200','120-260']},
+          {label:'Kafes Merdane Ağırlığı Ø500 mm (kg)', values:['660','740','820']},
+          {label:'Paker Merdane Ağırlığı Ø550 mm (kg)', values:['860','950','1040']},
+          {label:'Tracker Merdane Ağırlığı Ø550 mm (kg)', values:['1048','1181','1297']}
+        ]
+      }
+    ],
+    parts:[
+      {name:'Titreşimli Diş Grubu', desc:'3 sıra, 32 x 12 mm düz titreşimli dişlerle toprağı işler.'},
+      {name:'Merdane', desc:'40 mm rulmanlı, çubuk veya sıyırıcı tip paker seçenekleriyle sunulur.'},
+      {name:'Sürtünmeli Kavrama', desc:'Tek kademeli şanzımanla birlikte aşırı yüke karşı korur.'}
+    ],
+    highlights:[
+      {
+        title:'Öne Çıkan Özellikler',
+        bullets:['Kategori I ve II bağlantı','Kutu tabanında çift kat, 6 mm kalınlığında laminat kaplama','Tek kademeli şanzıman','Sürtünmeli kavramalı tahrik sistemi','Sabit yan saptırıcılar','40 mm rulmanlı merdane; çubuk veya sıyırıcı tip paker seçeneği','Sağlam şase','Kaliteli teknik destek','3 sıra diş'],
+        photoHint:'diş ve rulman grubu yakın çekim'
+      },
+      {
+        title:'Başlıca Opsiyonlar',
+        bullets:['Karbür kaplı dişler (300 x 15 mm)','Arka tesviye tablası','Çok taşlı arazi koşulları için ek taş koruması','Aşırı yük kavramalı tahrik sistemi','Yan destekli tek parça sağlam çeki başı','3 sıra 32 x 12 titreşimli düz diş ile maksimum açıklık'],
+        photoHint:'traktör + VR, bağ arazisinde çalışırken'
+      },
+      {
+        title:'Rakipsiz İşletme Maliyeti',
+        desc:'Pasif bir alet olduğu için kullanımı ekonomiktir. Hafif veya mükemmel hazırlanmış topraklar için idealdir.',
+        bullets:['Sağlam şase','Kaliteli teknik destek','3 sıra diş'],
+        photoHint:'VR ekim kombinasyonu, depo/atölye ortamında'
+      },
+      {
+        title:'Sağlam, Dayanıklı Yapı',
+        bullets:['Yüksek hızda stabilite için çift kirişli destek çerçevesi (100 x 100 x 6,3 mm kalınlık)','Yan destekli sağlam tek parça çeki oku','3 sıra 32 x 12 titreşimli düz diş ile maksimum açıklık'],
+        photoHint:'VR şase alttan görünüm'
+      }
+    ],
+    brochure:'https://sky-agriculture.com/en/documentation/'
+  },
+  'xr': {
+    category:'Toprak İşleme', anchor:'toprak-isleme', tag:'XR', title:'Diskli Toprak Hazırlama Modülü',
+    lead:'415 mm çaplı X şeklinde diskleriyle 3 metre genişlikte saatte 3,5 hektara varan iş kapasitesi sunan, Xeos TF ile kombine çalışabilen PTO\'suz malç hazırlama modülü.',
+    features:[
+      'PTO gerektirmez, düşük motor devrinde çalışarak yakıt tüketimini yarıya indirir',
+      '12-15 km/sa hızlarda malç işlerine uygun yüksek iş kapasitesi (3 m\'de saatte 3,5 ha)',
+      'Xeos TF ile veya SKY HR rotatif tırmığıyla kombine edilebilir modüler yapı',
+      'Tarak tırmık ve merdane (Packer 550, Gravity veya Tracker) ile tohum yatağı hazırlığı'
+    ],
+    specGroups:[
+      {
+        columns:['XR 3000','XR 3500','XR 4000'],
+        rows:[
+          {label:'Çalışma Genişliği (m)', values:['3,00','3,50','4,00']},
+          {label:'Disk Sıra Sayısı', values:['2','2','2']},
+          {label:'Disk Sayısı', values:['22','26','30']},
+          {label:'Disk Tipi', values:['Tırtıklı disk (Niaux 200)','Tırtıklı disk (Niaux 200)','Tırtıklı disk (Niaux 200)']},
+          {label:'Güç İhtiyacı (HP)', values:['150-210 (XEOS Pro ile kombine)','175-240 (XEOS Pro ile kombine)','220-300 (XEOS Pro ile kombine)']}
+        ]
+      }
+    ],
+    parts:[
+      {name:'X Şeklinde Diskler', desc:'415 mm çaplı disklerle 12-15 km/sa hızda malç işleme yapar.'},
+      {name:'Tarak Tırmık', desc:'İki disk sırasının hemen arkasında toprak akışını düzeltir.'},
+      {name:'Merdane', desc:'Packer 550, Gravity veya Tracker seçenekleriyle tohum yatağını sıkılaştırır.'}
+    ],
+    highlights:[
+      {
+        title:'3 Metrede Saatte 3,5 Hektar!',
+        desc:'415 mm çaplı X şeklinde diskleri sayesinde, 12-15 km/sa hızlar arasında malç işlerine uygun yüksek iş kapasitesi sunar. 3 metre genişlikte saatte 3,5 hektar performansa ulaşır. Şase güçlendirilmiş çelikten üretilmiştir.',
+        photoHint:'XR modülü ürün render görseli'
+      },
+      {
+        title:'Rakipsiz İşletme Maliyeti',
+        desc:'PTO gerektirmez ve düşük motor devirlerinde çalışır, böylece yakıt tasarrufu maksimize edilir. XR aleti, animasyonlu bir alete kıyasla uygulama maliyetlerinizi yarıya indirir.',
+        photoHint:'SKY ekim ünitesi, atölye içinde geniş çekim'
+      },
+      {
+        title:'Kusursuz Tohum Yatağı Hazırlığı',
+        desc:'Toprak akışı, iki disk sırasının hemen arkasında bulunan bir tarak tırmık ile düzeltilir. Merdane, ekim üniteleri geçmeden önce toprağın yeniden sıkışmasını sağlar (Packer 550, Gravity veya Tracker merdane seçeneği).',
+        photoHint:'disk + tarak tırmık, tarlada yakın çekim'
+      },
+      {
+        title:'XR, Her Zamankinden Daha Çok Yönlü',
+        desc:'Xeos TF ve Progress artık daha çok yönlü: Xeos TF, XR modülü veya SKY HR rotatif tırmığı ile kombine edilebilir. Sistemin modülerliği, ilk fide çıkışından sezon sonuna kadar, özellikle nemli koşullarda birinci sınıf bir ortak haline getirir.',
+        photoHint:'Xeos TF + HR/XR modül kombinasyon şeması'
+      }
+    ],
+    brochure:'https://sky-agriculture.com/en/documentation/'
+  },
+  'faca-roller': {
+    category:'Toprak İşleme', anchor:'toprak-isleme', tag:'FACA Roller', title:'Malç Ezici Merdane',
+    lead:'Kendinden yönlendirmeli, otomatik hizalanan bağlantısıyla örtü bitkisi ve anızı yatırıp ezen, konservasyon tarımına uygun merdane.',
+    features:[
+      'Kendinden yönlendirmeli bağlantı, otomatik yeniden hizalanma',
+      'Nakliye kilitleme mandalı ve ön monteli küresel mafsal',
+      'Otomatik bağlantı sistemi',
+      'Örtü bitkisi yönetiminde bitkiyi kırmadan yatırıp ezme prensibiyle çalışır'
+    ],
+    parts:[
+      {name:'Kendinden Yönlendirmeli Bağlantı', desc:'Ön monteli küresel mafsalla otomatik olarak yeniden hizalanır.'},
+      {name:'Nakliye Kilitleme Mandalı', desc:'Yol taşımasında merdaneyi güvenli konumda sabitler.'}
+    ],
+    highlights:[
+      {
+        title:'Otomatik Hizalanan Kendinden Yönlendirmeli Bağlantı',
+        bullets:['Nakliye kilitleme mandalı','Ön monteli küresel mafsal','Otomatik bağlantı'],
+        photoHint:'bağlantı mekanizması yakın çekim'
+      },
+      {
+        title:'Önce / Sonra Ürünler',
+        desc:'La Conillais çiftliğinde, farklı türlerin merdaneye duyarlılığını test etmek için bir örtü bitkisi platformu kurduk. Merdaneleme işlemine dayanamayan bazı bitki örnekleri burada görülebilir.',
+        photoHint:'ekim öncesi/sonrası tarla karşılaştırması'
+      }
+    ],
+    brochure:'https://sky-agriculture.com/en/documentation/'
   },
   'sonic': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Sonic', title:'Hassas Ekim Makinesi',
@@ -1370,6 +1641,50 @@ const PRODUCTS = {
       {name:'Paralelogram Ekim Ünitesi', desc:'Elemana kadar 350 kg\'a varan hidrolik baskı ve yük transferi uygular.'},
       {name:'Döner Çöp Temizleyici', desc:'Paralelogram üstünde temiz ve dengeli açma sağlar.'},
       {name:'ISOBUS Kontrol Ünitesi', desc:'TC-SC bölüm kesme ve TC-GEO doz modülasyonunu yönetir.'}
+    ],
+    highlights:[
+      {
+        title:'6\'dan 12 Sıraya Tam Bir Gam',
+        desc:'Teleskopik (6-9 sıra) ve katlanır (8-12 sıra) versiyonlarda sunulan SONIC, standart olarak RowMotion fonksiyonuna sahiptir. Belirli elemanları hidrolik olarak kaldırıp sadece kısmi sıra sayısıyla ekim yapmak da mümkündür.',
+        bullets:['RowMotion ile sıra aralığını mibzer değiştirmeden ayarlayın: akıllı kayar sistem sayesinde 15 dakikadan az sürede, alet gerektirmeden. Diğer mibzerlerin bazen elemanların komple sökülmesiyle bir saatten fazla müdahale gerektirdiği yerde, zaman, hassasiyet ve gerçek teknik özgürlük kazanırsınız.'],
+        photoHint:'RowMotion sıra aralığı değişimi, önce/sonra karşılaştırma'
+      },
+      {
+        title:'Agronomik Olanakların Kapısını Aralayın',
+        desc:'Gerçekten önemli olan yerde basınç! Hidrolik basınçlandırmaya (elemana kadar 350 kg) ek olarak, bir yük transfer silindiri traktörden ekim makinesine bir tondan fazla eforun aktarılmasını sağlar. Silindirler aracılığıyla doğrudan ekim kollarına etki eder, elektronik regülasyon gerektirmez. Bu basit, ayarlanabilir düzenek; kuru topraklarda, doğrudan ekimde veya yoğun bitki kalıntısında dahi eşit basınç sağlar. Sonuç: sabit nüfuziyet, eşit ekim ve optimum çıkış.',
+        photoHint:'traktör + SONIC tarlada, baskı sistemi detay görseli'
+      },
+      {
+        title:'Zorlu Koşullarda Dahi Temiz Açılmış Sıra',
+        desc:'Temiz, bozulmamış ekim sağlamak için paralelogram üstüne monteli döner bir çöp temizleyici sunuyoruz. Bu sistem, bitki kalıntısı ve taşların bulunduğu zeminin rölyefini kusursuz takip eder ve ekim ünitesinde titreşim oluşturmadan sırayı temizler. Hızlı ekimde veya yetersiz sabit modellerin kullanıldığı zorlu koşullarda büyük avantaj sağlar. Bazı rakiplerin bunu tercih etmediği yerde çözümümüz optimum sıra kalitesini garanti eder; bu da düzenli çıkış için vazgeçilmez bir koşuldur.',
+        photoHint:'SKY ekim ünitesi ürün render görseli'
+      },
+      {
+        title:'Yüksek Çok Yönlülük',
+        desc:'SONIC ekim makinesiyle, şaseye entegre 1.400 litrelik gübre haznesi veya SKY Agriculture ön monteli hazne arasında seçim yapabilirsiniz. Progress TF, yüksek performanslı ekimin tüm kutularını işaretler: optimum ağırlık dengesi, kabinden mükemmel görüş ve dolum için kolay erişim. Hızlı, güvenli ve verimli ekim operasyonları için önemli avantajlar.',
+        photoHint:'SKY ön hazneli ekim ünitesi, 70L/20L/20L mikro hazne detayı'
+      },
+      {
+        title:'Micro 1, Micro 2... Çok Önemli Bir Bağımsızlık!',
+        desc:'Yoldaş ekim (companion cropping), verimlilik, toprak örtüsü ve zararlı yönetimi avantajları sayesinde giderek daha fazla çiftçinin tercihi haline geliyor. Micro 2 ile, tek bir pasoda ve iş yerinizi zorlaştırmadan yoldaş bitki kurmak için çift bağımsız dağıtım sistemine sahip olursunuz.',
+        photoHint:'mikro granül hazne detayı'
+      },
+      {
+        title:'Her Rota İçin Tasarlanmış Tam Bir Şase Gamı',
+        desc:'SONIC ile piyasadaki en geniş şase gamlarından birine erişirsiniz: teleskopik, katlanır, gübrelemeli veya gübrelemesiz... Her konfigürasyon, teknik, düzenleyici ve agronomik kısıtlarınıza uyum sağlayacak şekilde tasarlanmıştır. Ayrıca piyasada eşi benzeri olmayan 8 ve 9 sıralı teleskopik versiyonlar sunuyoruz. İşletmeniz ne olursa olsun, sizin için bir SONIC var.',
+        photoHint:'traktör + SONIC, yol üzerinde nakliye konumu'
+      },
+      {
+        title:'Traktörler ve ISOBUS Konsollarıyla Uyumlu!',
+        desc:'SONIC ekim makinesi standart olarak ISOBUS ile gelir ve UT, TC-SC (otomatik bölüm kesme), TC-GEO (doz modülasyonu) ve AUX-N (joystick uyumluluğu) özelliklerine sahiptir. Bölüm kesme, aşırı ekimi sınırlamak ve verimliliği optimize etmek için önemli bir avantajdır. Modülasyon en gelişmiş uygulamalar için kullanılabilir.',
+        photoHint:'traktör + SONIC, tarlada ekim yaparken'
+      },
+      {
+        title:'Maksimum Performans İçin Kapsamlı Donanım',
+        bullets:['Paralelogram üstü monteli, yüzer tip çöp temizleyici','Doğrudan ekim için turbo diskler','Çift dağıtımlı mikro granülatörler (yoldaş ekim için ideal)','Tam ISOBUS uyumluluğu (bölüm kesme, doz modülasyonu, joystick)','Her zemin tipine uyum için 6 farklı kilitleme tekerleği seçeneği'],
+        desc:'Sadece bir mibzerden çok daha fazlası olan SONIC, yüksek performansı, ürün çeşitlendirmesini ve maliyet optimizasyonunu birleştirmek isteyen çiftçiler için stratejik bir araçtır. Bu yeni modelle SKY Agriculture, yarının tarım pratiklerine kararlılıkla odaklanan premium, yenilikçi çözümler sunma hedefini bir kez daha teyit ediyor.',
+        photoHint:'traktör + SONIC, yol üzerinde hareket halinde'
+      }
     ],
     brochure:'https://sky-agriculture.com/content/uploads/2025/10/SONIC_2025_bd.pdf'
   },
@@ -1459,6 +1774,24 @@ const PRODUCTS = {
       {name:'ADS Dozaj Sistemi', desc:'1-450 kg/ha arası rekor genişlikte ayar aralığı sunar.'},
       {name:'Ekim Üniteleri (P20/P30/P100)', desc:'3 farklı gömme ünitesiyle uyumlu çalışır.'}
     ],
+    highlights:[
+      {
+        title:'Kanıtlanmış Bir Konsept İçin Entegre Ekim Ünitesi',
+        bullets:['1. İnceltme (Affinement)','2. Destek (Support)','3. Konumlandırma (Location)','4. Örtme (Cover)'],
+        photoHint:'ekim ünitesi kavramsal ikon şeması'
+      },
+      {
+        title:'SKY Besleyici Ünitelerinin Hassasiyeti',
+        desc:'SKY know-how\'ı ve sağlam malzeme kullanımı sayesinde bu dağıtım sistemi size birçok avantaj sunar:',
+        bullets:['1,5 ile 400 kg/ha arası dozajlama hassasiyeti','Kolzadan bakla fasulyesine çok yönlülük','Mibzer yerdeyken hızlı ve kolay akış testi','Hazne tabanındaki dağıtım eyerleri sayesinde tam hazne boşaltma'],
+        photoHint:'S-PLUS dozajlama ünitesi kesit şeması'
+      },
+      {
+        title:'P20 veya P30, Geleceğe Hazır Gömme',
+        desc:'Yaylar, tohum sıraları üzerine dikey konumlandırılarak, güçlü çift etkili düzenek birçok avantaj sunar:',
+        bullets:['P30 ile 30 kg\'a, P20 ile 20 kg\'a varan ekim ünitesi baskılandırması (baskı yayı)','Sığ ekim için ekim ünitesi rahatlatma (uzatma yayı)','Bitki kalıntılarının üzerinden geçmek için maksimum dikey açıklık','Gömme hattına SKY destek tekerlekleri monte edilebilir']
+      }
+    ],
     brochure:'https://sky-agriculture.com/pdf/tf-406-509.pdf'
   },
   'tramline-se-sx': {
@@ -1504,6 +1837,30 @@ const PRODUCTS = {
       {name:'SKY Lug Dozajlama Ünitesi', desc:'1,5-400 kg/ha hassasiyetinde ekim yapar.'},
       {name:'Çift Kirişli Ağır Hizmet Şasisi', desc:'Tek parça hazneyle uzun ömür sağlar.'},
       {name:'Tahrik Tekerlekleri', desc:'2 büyük teker dozajlama sistemini doğrudan tahrik eder.'}
+    ],
+    highlights:[
+      {
+        title:'SKY Besleyici Ünitelerinin Hassasiyeti',
+        desc:'SKY know-how\'ı ve sağlam malzeme kullanımı sayesinde bu dağıtım sistemi size birçok avantaj sunar:',
+        bullets:['1,5 ile 400 kg/ha arası hassas dozajlama','Kolzadan bakla fasulyesine çok yönlülük','Mibzer yerdeyken hızlı ve kolay akış testi','Hazne tabanındaki dağıtım eyerleri sayesinde tam hazne boşaltma'],
+        photoHint:'S-PLUS dozajlama ünitesi kesit şeması'
+      },
+      {
+        title:'P20 veya P30: Üst Segment Bir Gömme Çözümü',
+        desc:'Yaylar, tohum sıraları üzerine dikey konumlandırılarak, güçlü çift etkili düzenek birçok avantaj sunar:',
+        bullets:['P30 ile 30 kg\'a, P20 ile 20 kg\'a varan ekim ünitesi baskılandırması (baskı yayı)','Sığ ekim için ekim ünitesi rahatlatma (uzatma yayı)','Bitki kalıntılarının üzerinden geçmek için maksimum dikey açıklık','Gömme hattına SKY destek tekerlekleri monte edilebilir'],
+        photoHint:'traktör + Tramline mibzer, sonbahar tarlasında'
+      },
+      {
+        title:'Daha Fazla Hassasiyet İçin 2 Çeker Tekerlek',
+        desc:'Mibzerin 2 büyük tekerleği dağıtım sistemini tahrik eder ve tüm ekim koşullarında, tarla başlarında veya engebeli zeminde bile mükemmel tohum dozaj hassasiyeti sağlar. Parselin kalitesi ne olursa olsun, doz her zaman korunur.',
+        photoHint:'traktör + Tramline mibzer, tarlada geniş çekim'
+      },
+      {
+        title:'Torba veya Big Bag ile Kolay Dolum İçin Geniş Hazne',
+        desc:'Özellikle geniş ağzı sayesinde, TRAMLINE tohum haznesi alçak ve kolay doldurulabilir. Su geçirmez, tozdan korumalı kapak, pnömatik silindirler yardımıyla kolayca açılır. Döküm demir şok emici kama uzatma sistemi sayesinde, TRAMLINE mibzerinizin kapasitesi size daha fazlasını sunacak şekilde genişleyebilir.',
+        photoHint:'kişi Big Bag ile hazne dolduruyor'
+      }
     ],
     brochure:'https://sky-agriculture.com/pdf/tramline-406-506.pdf'
   },
@@ -1596,6 +1953,39 @@ const PRODUCTS = {
       {name:'Üniversal Dozajlama Üniteleri', desc:'%100 SKY teknolojisiyle kolzadan bakla fasulyesine uyum sağlar.'},
       {name:'Gömme Üniteleri (P20/P50/P100)', desc:'Toprak tipine göre 3 farklı seçenek sunar.'},
       {name:'E-Drive Dağıtım Başlığı', desc:'Tam ISOBUS uyumlu otomatik sıra kesme yapar.'}
+    ],
+    highlights:[
+      {
+        title:'Sınırları Zorlamak İçin Bir Motivasyon',
+        desc:'Bir işletme yöneticisi olarak karlılık en büyük önceliğiniz olduğu için, tohum yataklarınızı verimli şekilde yönetmenizi sağlamak amacıyla PROGRESS ekim makinesi gamını geliştirdik.',
+        photoHint:'tarlada tablet ile duran çiftçi'
+      },
+      {
+        title:'Tam Bir Gönül Rahatlığıyla Daha İleri Gidin',
+        desc:'Ekim sırasında berrak bir kafa, başarılı bir kampanyanın olmazsa olmazıdır. Kullanıcı konforuna ve iş yerinde güvenliğe tüm dikkatimizi verdik.',
+        photoHint:'gün batımında tarlada iki kişi silueti'
+      },
+      {
+        title:'İşinizin Mükemmelliğiyle Gurur Duyun',
+        desc:'Talepkarsınız ve iyi yapılmış bir işi seversiniz. Bizim taahhüdümüz, makinenizle ve onun çalışma mükemmelliğiyle sizi gururlandırmak.',
+        photoHint:'tarlada ekim kontrolü yapan kişi, makine arka planda'
+      },
+      {
+        title:'Tek Pasoda 3 Ürün Ekimi',
+        desc:'Yeni tarım pratiklerini benimsemenize yardımcı oluyoruz: PROGRESS ekim makinesi, ara ekim, örtü bitkisi, gübre ve tohum gibi geniş bir kullanım yelpazesine uygun kapasitelerde üç hazneye kadar taşıyabilir. Oluk değiştirmeden her tip tohumu ekmeyi mümkün kılan %100 SKY teknolojili üniversal dozajlama üniteleri. Güvenli yükleme ve hareket için geniş geçit platformuna sahip, erişilebilir ve ergonomik bir ekim makinesi.',
+        photoHint:'SKY hazne ünitesi, 1-2-3 numaralı hazne detayı diyagramı'
+      },
+      {
+        title:'Birçok Toprak Tipi Var, Gömme Tekniklerimiz de Onlara Uyarlanmıştır',
+        desc:'Her şeyi yaptığını iddia eden tek bir hat yerine 3 özel gömme hattı: Tohumu toprağa yerleştirmek ekimin en kritik aşamasıdır; doğru derinlik ve optimum toprak/tohum teması, başarılı bir ekim kampanyasının anahtarıdır. SKY, toprak ve ekim düzeninize göre ihtiyaçlarınıza tam uyum sağlayacak üç farklı ekim ünitesi sunar:',
+        bullets:['Basitlik ve verimlilik için 3 gerçek sıralı P20','Yüksek hassasiyet için paralelogram üzerinde çift diskli P50','Çok yönlülüğü için tek diskli, splined tahrikli P100'],
+        photoHint:'P20/P30/P50/P100 gömme ünitesi ikonları'
+      },
+      {
+        title:'E-Drive, Akıllı Dağıtım Başlığı',
+        desc:'Mibzerinizin kullanım kolaylığı, konforunuz ve ekim başarınız için esastır. Sezgisel, ergonomik ISOBUS arayüzü, Quartz Sky konsolunda veya traktörünüzün ISOBUS konsolunda kullanılabilir. Tek bir pasoda, PROGRESS tüm sıralarda 3 farklı oranda 3 ürün ekebilir veya sıraları alternatif olarak dağıtabilir (2 sırada, 3 sırada, vb. çapalama, özel ritimler...). Ekim sırasına gübreleme yapma seçeneği de mevcuttur. Tramline sırasında, mibzer, püskürtücünüzün genişliği ne olursa olsun sıraları otomatik olarak keser.',
+        photoHint:'E-Drive kesit illüstrasyonu + tablet konsol'
+      }
     ],
     brochure:'https://sky-agriculture.com/pdf/progress-406-505.pdf'
   },
@@ -1692,6 +2082,57 @@ const PRODUCTS = {
       {name:'Çoklu Hazne Yapısı', desc:'4 hazneye kadar genişleyip tek kumandayla yönetilir.'}
     ],
     brochure:'https://sky-agriculture.com/pdf/easydrill-406-501.pdf'
+  },
+  'progress-m': {
+    category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Progress M', title:'Mekanik Kombine Ekim Ünitesi',
+    lead:'Toprak işleme aletiyle kombine çalışan, modern tasarımlı, sağlam ve güvenilir mekanik ekim kombinasyonu.',
+    features:[
+      'Sağlamlık ve dayanıklılık odaklı modern tasarım',
+      'Basit ve güvenilir ayarlarla başarılı ekim kampanyaları',
+      'Ağırlık merkezini traktöre yaklaştıran arka monteli dağıtım başlığı',
+      'Merdane üzerinden desteklenen, zemini kusursuz takip eden ekim üniteleri'
+    ],
+    specs:[
+      {label:'Ekim Ünitesi Seçenekleri', value:'Progress M P20 (2 sıra kayış, 20 kg) veya Progress M P30 (30 kg\'a varan ekim ünitesi baskısı)'}
+    ],
+    parts:[
+      {name:'Arka Monteli Dağıtım Başlığı', desc:'Ağırlık merkezini traktöre yaklaştırarak dengeyi artırır.'},
+      {name:'Merdane Destekli Ekim Üniteleri', desc:'Pnömatik ekim üniteleri merdane üzerinden zemini kusursuz takip eder.'},
+      {name:'Katlanır Merdiven ve Korkuluk', desc:'Hazneye ve dağıtım başlığına güvenli, kolay erişim sağlar.'}
+    ],
+    highlights:[
+      {
+        title:'Her Koşulda Test Edin',
+        desc:'Modern tasarımıyla Progress M ekim kombinasyonunuz sağlam ve güvenilirdir.',
+        photoHint:'yolda ekim ünitesi ayarı yapan kişi'
+      },
+      {
+        title:'Basit, Güvenilir Ayarların Keyfini Çıkarın',
+        desc:'Özenle tasarlanmış fonksiyonlar ve kolay ayarlar sayesinde, Progress M ekim kombinasyonu başarılı ekim kampanyaları garanti eder.',
+        photoHint:'traktör üzerinde hazneye erişen kişi'
+      },
+      {
+        title:'Satın Alımınızı Yıllarca Güvence Altına Alın',
+        desc:'Zamana karşı dayanacak şekilde tasarlanan Progress M ekim kombinasyonu, yıllar boyunca karlı bir yatırım olduğunu kanıtlayacaktır.',
+        photoHint:'kabin içinden konsola bakan kişi'
+      },
+      {
+        title:'Hafif, Kolay Kullanımlı Bir Yapı',
+        desc:'Arka monteli dağıtım başlığı, mibzeri öne doğru hareket ettirerek ağırlık merkezini traktöre olabildiğince yaklaştırır. Hazne tarafından sağlanan boş alan sayesinde ekim ünitesi çalışması tamamen kabinden kontrol edilir.',
+        photoHint:'traktör + Progress M, tarlada yandan görünüm'
+      },
+      {
+        title:'Tekdüze Ekim Derinliği',
+        desc:'Çok yönlü ekim üniteleri: ekim üniteleri, mibzerin merdane üzerindeki desteği sayesinde zemini kusursuz takip eder. Progress M, 2 sıra kayışlı (20 kg) Progress M P20 veya 30 kg\'a varan kayış baskılı Progress M P30 olmak üzere iki versiyonda sunulur.',
+        photoHint:'ekim ünitesi kayış/disk detay çekimi'
+      },
+      {
+        title:'Her Koşulda Verimli Bir Ekim Makinesi',
+        desc:'Gerçek fonksiyonel ergonomi: geniş ve derin hazne şekli, mibzerinizin doldurulmasını kolaylaştırır. Katlanır merdiven, korkuluk, sağlam kapak tutamakları ve geniş yürüme yolu, tohum haznesine ve dağıtım başlığına kolay, güvenli erişim sağlar. Akış hızı testi, mibzerin arkasından tek bir kontrol istasyonundan gerçekleştirilir.',
+        photoHint:'traktör + Progress M, tarlada çalışırken'
+      }
+    ],
+    brochure:'https://sky-agriculture.com/en/documentation/'
   },
   'dx20': {
     category:'Gübreleme', anchor:'gubreleme', tag:'DX20 / DX20+', title:'Askılı Gübre Dağıtıcı',
@@ -2211,6 +2652,8 @@ function showProduct(id, fromPopstate){
     });
     document.getElementById('parts-section').style.display = (p.parts && p.parts.length) ? '' : 'none';
 
+    renderHighlights(p);
+
     document.getElementById('product-brochure-btn').href = p.brochure;
     document.getElementById('sticky-brochure-btn').href = p.brochure;
     updateFavIcon(id);
@@ -2287,6 +2730,26 @@ function renderSpecTables(p){
     table.appendChild(tbody);
     scroll.appendChild(table);
     container.appendChild(scroll);
+  });
+}
+
+function renderHighlights(p){
+  const container = document.getElementById('highlights-container');
+  container.innerHTML = '';
+  const blocks = p.highlights || [];
+  document.getElementById('highlights-section').style.display = blocks.length ? '' : 'none';
+  blocks.forEach(b => {
+    const row = document.createElement('div');
+    row.className = 'highlight-block';
+    let textHtml = '<div class="highlight-text"><h3>' + b.title + '</h3>';
+    if(b.desc) textHtml += '<p>' + b.desc + '</p>';
+    if(b.bullets && b.bullets.length){
+      textHtml += '<ul>' + b.bullets.map(x => '<li>' + x + '</li>').join('') + '</ul>';
+    }
+    textHtml += '</div>';
+    const photoHtml = '<div class="highlight-photo">Fotoğraf eklenecek<br><small>(' + (b.photoHint || 'ilgili görsel') + ')</small></div>';
+    row.innerHTML = photoHtml + textHtml;
+    container.appendChild(row);
   });
 }
 
@@ -2415,8 +2878,8 @@ document.getElementById('search-overlay').addEventListener('click', (e) => {
 
 function buildDrawer(){
   const groups = [
-    {label:'TOPRAK İŞLEME', items:[['hr','Rotatif Tırmık'],['methys-hds','Anız Kültivatörü'],['methys-pcs','Yüzey Sıyırıcı (Scalper)']]},
-    {label:'EKİM SİSTEMLERİ', items:[['sonic','Hassas Ekim Makinesi'],['tf','Ön Hazneli Ekim Ünitesi'],['tramline-se-sx','Mekanik Mibzer'],['tramline-cx','Mekanik Mibzer (Kombine)'],['progress','Kombine Pnömatik Ekim Makinesi'],['maxidrill','Hızlı Ekim Makinesi'],['easydrill','Doğrudan Ekim Mibzeri']]},
+    {label:'TOPRAK İŞLEME', items:[['hr','Rotatif Tırmık'],['methys-hds','Anız Kültivatörü'],['methys-pcs','Yüzey Sıyırıcı (Scalper)'],['vr','Vibrokültivatör (VR)'],['xr','Diskli Toprak Hazırlama Modülü (XR)'],['faca-roller','Malç Ezici Merdane (FACA Roller)']]},
+    {label:'EKİM SİSTEMLERİ', items:[['sonic','Hassas Ekim Makinesi'],['tf','Ön Hazneli Ekim Ünitesi'],['tramline-se-sx','Mekanik Mibzer'],['tramline-cx','Mekanik Mibzer (Kombine)'],['progress','Kombine Pnömatik Ekim Makinesi'],['progress-m','Mekanik Kombine Ekim Ünitesi (Progress M)'],['maxidrill','Hızlı Ekim Makinesi'],['easydrill','Doğrudan Ekim Mibzeri']]},
     {label:'GÜBRELEME', items:[['dx20','Askılı Gübre Dağıtıcı (DX20 / DX20+)'],['dx30','Askılı Gübre Dağıtıcı (DX30+)'],['x40-x50','Askılı Gübre Dağıtıcı (X40+ / X50+)'],['x40-x50-econov','Askılı Gübre Dağıtıcı (Econov)'],['xt100-130-160','Römork Tip Gübre Dağıtıcı'],['xt160h-240h','Römork Tip Gübre Dağıtıcı (Hidrolik)']]}
   ];
   const body = document.getElementById('drawer-body');
