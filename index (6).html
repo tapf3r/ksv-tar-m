@@ -1275,11 +1275,59 @@ const PRODUCTS = {
       'Paralelogram üstü döner çöp temizleyici ile temiz, dengeli açma',
       'ISOBUS UT, TC-SC bölüm kesme ve TC-GEO doz modülasyonu standart'
     ],
-    specs:[
-      {label:'Sıra Sayısı', value:'6-12 sıra'},
-      {label:'Sıra Aralığı Değişimi', value:'Aletsiz, 15 dakikada (RowMotion)'},
-      {label:'Baskı Kuvveti', value:'Elemana kadar 350 kg (hidrolik)'},
-      {label:'Kontrol Sistemi', value:'ISOBUS UT, TC-SC, TC-GEO'}
+    specGroups:[
+      {
+        title:'Katlanır Şase (PPF)',
+        columns:['PPF 300/8','PPF 300/9','PPF 300/12 (12 sıra)','PPF 300/12 (9 sıra)','PPF 300/12 (8 sıra)'],
+        rows:[
+          {label:'Nakliye Genişliği (m)', values:['3','3','3','3','3']},
+          {label:'Sıra Sayısı', values:['8','9','12','9','8']},
+          {label:'Sıra Aralığı (cm)', values:['70-80','60-65','45-50','65','70-80']},
+          {label:'Min. Çalışma Genişliği (m)', values:['5,60','5,40','5,40','5,85','5,60']},
+          {label:'Maks. Çalışma Genişliği (m)', values:['6,40','5,85','6,00','5,85','6,40']},
+          {label:'Şase Lastik Ölçüsü', values:['23 x 10,5','23 x 10,5','23 x 10,5','–','–']},
+          {label:'Güç İhtiyacı (HP)', values:['160','180','180','180','180']}
+        ]
+      },
+      {
+        title:'Teleskopik Şase (PTV) – 300/6-7 Serisi',
+        columns:['PTV 300/6A','PTV 300/6B','PTV 300/7A (6 sıra)','PTV 300/7A (7 sıra)','PTV 300/7B'],
+        rows:[
+          {label:'Nakliye Genişliği (m)', values:['3,00','3,00','3,00','3,00','3,00']},
+          {label:'Sıra Sayısı', values:['6','6','6','7','7']},
+          {label:'Sıra Aralığı (cm)', values:['45-75','50-80','70-80','45-60','50-80']},
+          {label:'Min. Çalışma Genişliği (m)', values:['2,70','3,00','4,20','3,15','3,50']},
+          {label:'Maks. Çalışma Genişliği (m)', values:['4,50','4,80','4,80','4,20','5,60']},
+          {label:'Şase Lastik Ölçüsü', values:['23 x 10,5','23 x 10,5','23 x 10,5','23 x 10,5','23 x 8,5']},
+          {label:'Güç İhtiyacı (HP)', values:['120','120','130','130','140']}
+        ]
+      },
+      {
+        title:'Teleskopik Şase (PTV) – 300/8-9 & 330/8 Serisi',
+        columns:['PTV 300/8','PTV 330/8','PTV 300/9 (9 sıra)','PTV 300/9 (8 sıra)'],
+        rows:[
+          {label:'Nakliye Genişliği (m)', values:['3,00','3,30','3,00','3,00']},
+          {label:'Sıra Sayısı', values:['8','8','9','8']},
+          {label:'Sıra Aralığı (cm)', values:['40-75','45-80','45-55','65-75']},
+          {label:'Min. Çalışma Genişliği (m)', values:['3,20','3,60','4,05','5,20']},
+          {label:'Maks. Çalışma Genişliği (m)', values:['6,00','6,40','4,95','6,00']},
+          {label:'Şase Lastik Ölçüsü', values:['23 x 10,5','23 x 10,5','23 x 10,5','23 x 10,5']},
+          {label:'Güç İhtiyacı (HP)', values:['160','160','160','160']}
+        ]
+      },
+      {
+        title:'Teleskopik Şase (PTV) – 330/9 & 380/9 Serisi',
+        columns:['PTV 330/9 (9 sıra)','PTV 330/9 (8 sıra)','PTV 380/9'],
+        rows:[
+          {label:'Nakliye Genişliği (m)', values:['3,30','3,30','3,80']},
+          {label:'Sıra Sayısı', values:['9','8','9']},
+          {label:'Sıra Aralığı (cm)', values:['40-60','70-80','55-95']},
+          {label:'Min. Çalışma Genişliği (m)', values:['3,60','5,60','4,40']},
+          {label:'Maks. Çalışma Genişliği (m)', values:['5,40','6,40','7,60']},
+          {label:'Şase Lastik Ölçüsü', values:['23 x 10,5','23 x 10,5','23 x 10,5']},
+          {label:'Güç İhtiyacı (HP)', values:['160','160','160']}
+        ]
+      }
     ],
     parts:[
       {name:'RowMotion Sıra Değişim Sistemi', desc:'Aletsiz, 15 dakikada sıra aralığı değişimine imkan tanır.'},
