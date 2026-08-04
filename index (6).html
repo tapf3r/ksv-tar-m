@@ -192,6 +192,26 @@
   .dropdown a:hover, .dropdown a:focus-visible{background:var(--green-pale);color:var(--green-dark);padding-left:17px;}
   .dropdown a span.sub{font-size:.76rem;font-weight:500;color:var(--ink-soft);}
 
+  .subgroup{position:relative;}
+  .subgroup-trigger{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding:11px 13px;border-radius:9px;font-size:.92rem;font-weight:700;color:var(--ink);
+    cursor:default;transition:background .15s;
+  }
+  .subgroup-trigger svg{width:13px;height:13px;flex-shrink:0;color:var(--ink-soft);transform:rotate(-90deg);}
+  .subgroup:hover > .subgroup-trigger{background:var(--green-pale);color:var(--green-dark);}
+  .flyout{
+    position:absolute;top:-9px;left:calc(100% + 8px);
+    min-width:280px;background:var(--card-bg);border:1px solid var(--line);border-radius:13px;
+    box-shadow:var(--shadow-hover);padding:9px;
+    opacity:0;visibility:hidden;transform:translateX(-6px);
+    transition:opacity .18s var(--ease), transform .18s var(--ease), visibility .18s;
+    z-index:61;
+  }
+  .subgroup:hover > .flyout{opacity:1;visibility:visible;transform:translateX(0);}
+  .flyout.flyout-left{left:auto;right:calc(100% + 8px);transform:translateX(6px);}
+  .subgroup:hover > .flyout.flyout-left{transform:translateX(0);}
+
   .header-actions{display:flex;align-items:center;gap:8px;}
   .icon-btn{
     display:flex;align-items:center;justify-content:center;
@@ -647,12 +667,32 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="dropdown" role="menu">
-          <a role="menuitem" onclick="showProduct('hr')"><b>Rotatif Tırmık</b><span class="sub">HR Serisi &middot; Tohum yatağı hazırlama</span></a>
-          <a role="menuitem" onclick="showProduct('methys-hds')"><b>Anız Kültivatörü</b><span class="sub">Methys HDS</span></a>
-          <a role="menuitem" onclick="showProduct('methys-pcs')"><b>Yüzey Sıyırıcı (Scalper)</b><span class="sub">Methys PCS</span></a>
-          <a role="menuitem" onclick="showProduct('vr')"><b>Vibrokültivatör</b><span class="sub">VR</span></a>
-          <a role="menuitem" onclick="showProduct('xr')"><b>Diskli Toprak Hazırlama Modülü</b><span class="sub">XR</span></a>
-          <a role="menuitem" onclick="showProduct('faca-roller')"><b>Malç Ezici Merdane</b><span class="sub">FACA Roller</span></a>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Diskoro<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('methys-pcs')"><b>Yüzey Sıyırıcı (Scalper)</b><span class="sub">Methys PCS &middot; Asılır / Çekilir</span></a>
+              <a role="menuitem" onclick="showProduct('xr')"><b>Diskli Toprak Hazırlama Modülü</b><span class="sub">XR</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Dişli Tırmık<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('methys-hds')"><b>Anız Kültivatörü</b><span class="sub">Methys HDS &middot; Asılır / Çekilir</span></a>
+              <a role="menuitem" onclick="showProduct('vr')"><b>Vibrokültivatör</b><span class="sub">VR</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Bıçaklı Merdane<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('faca-roller')"><b>Malç Ezici Merdane</b><span class="sub">FACA Roller &middot; 7 boy</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Dik Rotovatörler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('hr')"><b>Rotatif Tırmık</b><span class="sub">HR Serisi &middot; 5 kalem</span></a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -661,14 +701,44 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="dropdown" role="menu">
-          <a role="menuitem" onclick="showProduct('sonic')"><b>Hassas Ekim Makinesi</b><span class="sub">Sonic &middot; Pnömatik</span></a>
-          <a role="menuitem" onclick="showProduct('tf')"><b>Ön Hazneli Ekim Ünitesi</b><span class="sub">TF (Xeos)</span></a>
-          <a role="menuitem" onclick="showProduct('tramline-se-sx')"><b>Mekanik Mibzer</b><span class="sub">Tramline SE / SX</span></a>
-          <a role="menuitem" onclick="showProduct('tramline-cx')"><b>Mekanik Mibzer (Kombine)</b><span class="sub">Tramline CX</span></a>
-          <a role="menuitem" onclick="showProduct('progress')"><b>Kombine Pnömatik Ekim Makinesi</b><span class="sub">Progress</span></a>
-          <a role="menuitem" onclick="showProduct('maxidrill')"><b>Hızlı Ekim Makinesi</b><span class="sub">Maxidrill</span></a>
-          <a role="menuitem" onclick="showProduct('easydrill')"><b>Doğrudan Ekim Mibzeri</b><span class="sub">Easydrill &middot; Sıfır toprak işleme</span></a>
-          <a role="menuitem" onclick="showProduct('progress-m')"><b>Mekanik Kombine Ekim Ünitesi</b><span class="sub">Progress M</span></a>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Mekanik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('tramline-se-sx')"><b>Mekanik Mibzer</b><span class="sub">Tramline SE / SX</span></a>
+              <a role="menuitem" onclick="showProduct('tramline-cx')"><b>Mekanik Mibzer (Kombine)</b><span class="sub">Tramline CX</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Pnömatik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('sonic')"><b>Hassas Ekim Makinesi</b><span class="sub">Sonic &middot; Pnömatik</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Kombine Pnömatik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('progress')"><b>Kombine Pnömatik Ekim Makinesi</b><span class="sub">Progress</span></a>
+              <a role="menuitem" onclick="showProduct('progress-m')"><b>Mekanik Kombine Ekim Ünitesi</b><span class="sub">Progress M</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Ön Hazne<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('tf')"><b>Ön Hazneli Ekim Ünitesi</b><span class="sub">TF (Xeos) &middot; Progress TF</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Azaltılmış T.İ. (Min-Till)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('maxidrill')"><b>Hızlı Ekim Makinesi</b><span class="sub">Maxidrill</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Doğrudan Ekim (No-Till)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout" role="menu">
+              <a role="menuitem" onclick="showProduct('easydrill')"><b>Doğrudan Ekim Mibzeri</b><span class="sub">Easydrill &middot; Sıfır toprak işleme</span></a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -677,12 +747,22 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="dropdown" role="menu">
-          <a role="menuitem" onclick="showProduct('dx20')"><b>Askılı Gübre Dağıtıcı</b><span class="sub">DX20 / DX20+</span></a>
-          <a role="menuitem" onclick="showProduct('dx30')"><b>Askılı Gübre Dağıtıcı</b><span class="sub">DX30+</span></a>
-          <a role="menuitem" onclick="showProduct('x40-x50')"><b>Askılı Gübre Dağıtıcı</b><span class="sub">X40+ / X50+</span></a>
-          <a role="menuitem" onclick="showProduct('x40-x50-econov')"><b>Askılı Gübre Dağıtıcı (Econov)</b><span class="sub">X40+ / X50+ Econov</span></a>
-          <a role="menuitem" onclick="showProduct('xt100-130-160')"><b>Römork Tip Gübre Dağıtıcı</b><span class="sub">XT100 / 130 / 160</span></a>
-          <a role="menuitem" onclick="showProduct('xt160h-240h')"><b>Römork Tip Gübre Dağıtıcı (Hidrolik)</b><span class="sub">XT160H / 240H</span></a>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Asılır<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout flyout-left" role="menu">
+              <a role="menuitem" onclick="showProduct('dx20')"><b>Askılı Gübre Dağıtıcı</b><span class="sub">DX20 / DX20+</span></a>
+              <a role="menuitem" onclick="showProduct('dx30')"><b>Askılı Gübre Dağıtıcı</b><span class="sub">DX30+</span></a>
+              <a role="menuitem" onclick="showProduct('x40-x50')"><b>Askılı Gübre Dağıtıcı</b><span class="sub">X40+ / X50+</span></a>
+              <a role="menuitem" onclick="showProduct('x40-x50-econov')"><b>Askılı Gübre Dağıtıcı (Econov)</b><span class="sub">X40+ / X50+ Econov</span></a>
+            </div>
+          </div>
+          <div class="subgroup">
+            <span class="subgroup-trigger">Çekilir<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
+            <div class="flyout flyout-left" role="menu">
+              <a role="menuitem" onclick="showProduct('xt100-130-160')"><b>Römork Tip Gübre Dağıtıcı</b><span class="sub">XT100 / 130 / 160</span></a>
+              <a role="menuitem" onclick="showProduct('xt160h-240h')"><b>Römork Tip Gübre Dağıtıcı (Hidrolik)</b><span class="sub">XT160H / 240H</span></a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -1833,7 +1913,8 @@ const PRODUCTS = {
       {
         title:'Güvenlik ve Konfor',
         desc:'Yeni "Progress TF" ön haznesinin tasarımında kullanıcı güvenliği ve konforu en büyük önceliklerdi. Yolda, bu hazne çiftçilerin gönül rahatlığını artıran özelliklerle öne çıkar. İki yan kamerayla donatılmış olup kavşaklarda optimum görüş sağlayarak kaza riskini azaltır.',
-        photoHint:'traktör + Progress TF, yol üzerinde nakliye konumu'
+        photoHint:'traktör + Progress TF, yol üzerinde nakliye konumu',
+        photo:'images/tf.jpg'
       },
       {
         title:'Daha Yüksek Çok Yönlülük',
