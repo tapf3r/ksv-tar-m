@@ -482,19 +482,6 @@
   .highlight-text ul{margin:8px 0 0;padding-left:18px;}
   .highlight-text ul li{font-size:.9rem;color:var(--ink-soft);margin-bottom:6px;}
 
-  .parts-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center;}
-  @media (max-width:900px){.parts-layout{grid-template-columns:1fr;}}
-  .parts-media{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#f3f6f4;}
-  .parts-media img{width:100%;display:block;object-fit:cover;}
-  .parts-list{display:flex;flex-direction:column;gap:20px;}
-  .parts-list li{display:flex;gap:15px;align-items:flex-start;}
-  .parts-list .num{
-    flex:0 0 30px;height:30px;border-radius:50%;background:var(--green);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;
-  }
-  .parts-list .txt b{font-size:.98rem;}
-  .parts-list .txt p{font-size:.92rem;color:var(--ink-soft);margin-top:3px;}
-
   .sticky-mobile-cta{
     display:none;position:fixed;bottom:0;left:0;right:0;z-index:80;
     background:var(--card-bg);border-top:1px solid var(--line);
@@ -1209,23 +1196,15 @@
       </div>
     </div>
 
+    <section class="highlights-section" id="highlights-section">
+      <h2 class="spec-heading">Öne Çıkan Özellikler</h2>
+      <div id="highlights-container"></div>
+    </section>
+
     <section class="spec-section" id="spec-section">
       <h2 class="spec-heading">Teknik Özellikler</h2>
       <div id="spec-tables-container"></div>
       <p class="spec-note">Sertifikalı tam teknik veri seti için ürünün resmi broşürünü indirebilirsiniz.</p>
-    </section>
-
-    <section class="parts-section" id="parts-section">
-      <h2 class="spec-heading">Ürün Bileşenleri</h2>
-      <div class="parts-layout">
-        <div class="parts-media"><img id="parts-image" src="" alt=""></div>
-        <ul class="parts-list" id="parts-list"></ul>
-      </div>
-    </section>
-
-    <section class="highlights-section" id="highlights-section">
-      <h2 class="spec-heading">Öne Çıkan Özellikler</h2>
-      <div id="highlights-container"></div>
     </section>
 
     <div id="related-wrap"></div>
@@ -3198,17 +3177,6 @@ function showProduct(id, fromPopstate){
 
     renderSpecTables(p);
 
-    document.getElementById('parts-image').src = src;
-    document.getElementById('parts-image').alt = p.title + ' bileşenleri';
-    const partsListEl = document.getElementById('parts-list');
-    partsListEl.innerHTML = '';
-    (p.parts || []).forEach((part, i) => {
-      const li = document.createElement('li');
-      li.innerHTML = '<span class="num">' + (i + 1) + '</span><span class="txt"><b>' + part.name + '</b><p>' + part.desc + '</p></span>';
-      partsListEl.appendChild(li);
-    });
-    document.getElementById('parts-section').style.display = (p.parts && p.parts.length) ? '' : 'none';
-
     renderHighlights(p);
 
     document.getElementById('product-brochure-btn').href = p.brochure;
@@ -3293,11 +3261,11 @@ function renderSpecTables(p){
 function renderHighlights(p){
   const container = document.getElementById('highlights-container');
   container.innerHTML = '';
-  const blocks = p.highlights || [];
+  const partBlocks = (p.parts || []).map(part => ({title: part.name, desc: part.desc}));
+  const blocks = partBlocks.concat(p.highlights || []);
   document.getElementById('highlights-section').style.display = blocks.length ? '' : 'none';
   blocks.forEach(b => {
     const row = document.createElement('div');
-    row.className = 'highlight-block';
     let textHtml = '<div class="highlight-text"><h3>' + b.title + '</h3>';
     if(b.desc) textHtml += '<p>' + b.desc + '</p>';
     if(b.bullets && b.bullets.length){
@@ -3305,10 +3273,18 @@ function renderHighlights(p){
     }
     if(b.desc2) textHtml += '<p>' + b.desc2 + '</p>';
     textHtml += '</div>';
-    const photoHtml = b.photo
-      ? '<div class="highlight-photo highlight-photo-real"><img src="' + b.photo + '" alt="' + (b.title || '').replace(/"/g,'') + '"></div>'
-      : '<div class="highlight-photo">Fotoğraf eklenecek<br><small>(' + (b.photoHint || 'ilgili görsel') + ')</small></div>';
-    row.innerHTML = photoHtml + textHtml;
+    if(b.photo){
+      row.className = 'highlight-block';
+      const photoHtml = '<div class="highlight-photo highlight-photo-real"><img src="' + b.photo + '" alt="' + (b.title || '').replace(/"/g,'') + '"></div>';
+      row.innerHTML = photoHtml + textHtml;
+    } else if(b.photoHint){
+      row.className = 'highlight-block';
+      const photoHtml = '<div class="highlight-photo">Fotoğraf eklenecek<br><small>(' + b.photoHint + ')</small></div>';
+      row.innerHTML = photoHtml + textHtml;
+    } else {
+      row.className = 'highlight-block text-only';
+      row.innerHTML = textHtml;
+    }
     container.appendChild(row);
   });
 }
