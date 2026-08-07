@@ -339,6 +339,19 @@
     margin-top:22px;padding-top:22px;border-top:1px solid var(--line);
   }
   .grid-subheading:first-child{margin-top:0;padding-top:0;border-top:none;}
+  .grid-subheading.clickable{
+    cursor:pointer;display:flex;align-items:center;gap:8px;width:fit-content;
+    transition:color .18s;
+  }
+  .grid-subheading.clickable:hover{color:var(--green-dark);}
+  .grid-subheading.clickable svg{width:16px;height:16px;flex:0 0 16px;opacity:.6;transition:transform .18s, opacity .18s;}
+  .grid-subheading.clickable:hover svg{opacity:1;transform:translateX(3px);}
+  .subgroup-filter-bar{
+    grid-column:1/-1;display:flex;align-items:center;gap:10px;margin-bottom:6px;
+    font-size:.92rem;color:var(--ink-soft);
+  }
+  .subgroup-filter-bar a{color:var(--green-dark);font-weight:700;cursor:pointer;}
+  .subgroup-filter-bar a:hover{text-decoration:underline;}
 
   .card{
     background:var(--card-bg);border:1px solid var(--line);border-radius:var(--radius);
@@ -684,7 +697,6 @@
             <span class="subgroup-trigger">Dişli Tırmık / Çizel<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span>
             <div class="flyout" role="menu">
               <a role="menuitem" onclick="showProduct('methys-pcs')"><b>Yüzey Sıyırıcı (Scalper)</b><span class="sub">Methys PCS &middot; Asılır / Çekilir</span></a>
-              <a role="menuitem" onclick="showProduct('vr')"><b>Vibrokültivatör</b><span class="sub">VR</span></a>
             </div>
           </div>
           <div class="subgroup">
@@ -866,11 +878,11 @@
       <p class="desc">Doğru toprak hazırlığı büyük önem taşır. Toprağı ne kadar rahatsız edersek o da bizi o derece rahatsız eder. Azaltılmış toprak işleme ile mazottan tasarruf ederken toprak sağlığını koruyun.</p>
     </div>
     <div class="grid">
-      <h3 class="grid-subheading" style="order:9">Diskoro</h3>
-      <h3 class="grid-subheading" style="order:19">Dişli Tırmık / Çizel</h3>
-      <h3 class="grid-subheading" style="order:29">Bıçaklı Ön Merdane</h3>
-      <h3 class="grid-subheading" style="order:39">Dik Rotavatörler / Dikfireze</h3>
-      <div class="card reveal" data-id="hr" style="order:40" onclick="showProduct('hr')">
+      <h3 class="grid-subheading clickable" style="order:9" data-subgroup="diskoro" onclick="showSubgroup('toprak-isleme','diskoro','Diskoro')">Diskoro<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:19" data-subgroup="disli-tirmik" onclick="showSubgroup('toprak-isleme','disli-tirmik','Dişli Tırmık / Çizel')">Dişli Tırmık / Çizel<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:29" data-subgroup="bicakli-on-merdane" onclick="showSubgroup('toprak-isleme','bicakli-on-merdane','Bıçaklı Ön Merdane')">Bıçaklı Ön Merdane<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:39" data-subgroup="dik-rotavatorler" onclick="showSubgroup('toprak-isleme','dik-rotavatorler','Dik Rotavatörler / Dikfireze')">Dik Rotavatörler / Dikfireze<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <div class="card reveal" data-id="hr" data-subgroup="dik-rotavatorler" style="order:40" onclick="showProduct('hr')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'hr')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -884,7 +896,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="methys-hds" style="order:10" onclick="showProduct('methys-hds')">
+      <div class="card reveal" data-id="methys-hds" data-subgroup="diskoro" style="order:10" onclick="showProduct('methys-hds')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'methys-hds')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -898,7 +910,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="methys-pcs" style="order:20" onclick="showProduct('methys-pcs')">
+      <div class="card reveal" data-id="methys-pcs" data-subgroup="disli-tirmik" style="order:20" onclick="showProduct('methys-pcs')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'methys-pcs')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -912,21 +924,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="vr" style="order:21" onclick="showProduct('vr')">
-        <div class="card-media">
-          <button class="fav-btn" onclick="toggleFavorite(event,'vr')" aria-label="Favorilere ekle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
-          </button>
-          <img class="lazy-img" data-src="images/vr-render.jpg" alt="SKY VR Vibrokültivatör">
-        </div>
-        <div class="card-body">
-          <span class="tag">VR</span>
-          <h3>Vibrokültivatör</h3>
-          <p>Hafif ve mükemmel hazırlanmış topraklar için tasarlanmış, ekonomik çalışan pasif titreşimli diş kültivatörü.</p>
-          <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-        </div>
-      </div>
-      <div class="card reveal" data-id="xr" style="order:41" onclick="showProduct('xr')">
+      <div class="card reveal" data-id="xr" data-subgroup="dik-rotavatorler" style="order:41" onclick="showProduct('xr')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'xr')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -940,7 +938,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="faca-roller" style="order:30" onclick="showProduct('faca-roller')">
+      <div class="card reveal" data-id="faca-roller" data-subgroup="bicakli-on-merdane" style="order:30" onclick="showProduct('faca-roller')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'faca-roller')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -967,13 +965,13 @@
       <p class="desc">Hassasiyet ve dayanıklılığı bir araya getiren mibzer ve ekim makineleri.</p>
     </div>
     <div class="grid">
-      <h3 class="grid-subheading" style="order:9">Mekanik Mibzerler</h3>
-      <h3 class="grid-subheading" style="order:19">Pnömatik Mibzerler</h3>
-      <h3 class="grid-subheading" style="order:29">Kombine Pnömatik Mibzerler</h3>
-      <h3 class="grid-subheading" style="order:39">Ön Hazne</h3>
-      <h3 class="grid-subheading" style="order:49">Azaltılmış Toprak İşleme (Min-Till)</h3>
-      <h3 class="grid-subheading" style="order:59">Doğrudan Ekim (No-Till)</h3>
-      <div class="card reveal" data-id="sonic" style="order:20" onclick="showProduct('sonic')">
+      <h3 class="grid-subheading clickable" style="order:9" data-subgroup="mekanik-mibzerler" onclick="showSubgroup('ekim-sistemleri','mekanik-mibzerler','Mekanik Mibzerler')">Mekanik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:19" data-subgroup="pnomatik-mibzerler" onclick="showSubgroup('ekim-sistemleri','pnomatik-mibzerler','Pnömatik Mibzerler')">Pnömatik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:29" data-subgroup="kombine-pnomatik-mibzerler" onclick="showSubgroup('ekim-sistemleri','kombine-pnomatik-mibzerler','Kombine Pnömatik Mibzerler')">Kombine Pnömatik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:39" data-subgroup="on-hazne" onclick="showSubgroup('ekim-sistemleri','on-hazne','Ön Hazne')">Ön Hazne<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:49" data-subgroup="min-till" onclick="showSubgroup('ekim-sistemleri','min-till','Azaltılmış Toprak İşleme (Min-Till)')">Azaltılmış Toprak İşleme (Min-Till)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:59" data-subgroup="no-till" onclick="showSubgroup('ekim-sistemleri','no-till','Doğrudan Ekim (No-Till)')">Doğrudan Ekim (No-Till)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <div class="card reveal" data-id="sonic" data-subgroup="pnomatik-mibzerler" style="order:20" onclick="showProduct('sonic')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'sonic')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -987,7 +985,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="tf" style="order:40" onclick="showProduct('tf')">
+      <div class="card reveal" data-id="tf" data-subgroup="on-hazne" style="order:40" onclick="showProduct('tf')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'tf')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1001,7 +999,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="tramline-se-sx" style="order:10" onclick="showProduct('tramline-se-sx')">
+      <div class="card reveal" data-id="tramline-se-sx" data-subgroup="mekanik-mibzerler" style="order:10" onclick="showProduct('tramline-se-sx')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'tramline-se-sx')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1015,7 +1013,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="tramline-cx" style="order:11" onclick="showProduct('tramline-cx')">
+      <div class="card reveal" data-id="tramline-cx" data-subgroup="mekanik-mibzerler" style="order:11" onclick="showProduct('tramline-cx')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'tramline-cx')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1029,7 +1027,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="progress" style="order:30" onclick="showProduct('progress')">
+      <div class="card reveal" data-id="progress" data-subgroup="kombine-pnomatik-mibzerler" style="order:30" onclick="showProduct('progress')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'progress')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1043,7 +1041,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="maxidrill" style="order:50" onclick="showProduct('maxidrill')">
+      <div class="card reveal" data-id="maxidrill" data-subgroup="min-till" style="order:50" onclick="showProduct('maxidrill')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'maxidrill')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1057,7 +1055,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="easydrill" style="order:60" onclick="showProduct('easydrill')">
+      <div class="card reveal" data-id="easydrill" data-subgroup="no-till" style="order:60" onclick="showProduct('easydrill')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'easydrill')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1071,7 +1069,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="progress-m" style="order:31" onclick="showProduct('progress-m')">
+      <div class="card reveal" data-id="progress-m" data-subgroup="kombine-pnomatik-mibzerler" style="order:31" onclick="showProduct('progress-m')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'progress-m')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1098,9 +1096,9 @@
       <p class="desc">Askılı ve römork tip gübre dağıtıcılarla her işletme ölçeğine uygun hassas gübreleme.</p>
     </div>
     <div class="grid">
-      <h3 class="grid-subheading" style="order:9">Asılır</h3>
-      <h3 class="grid-subheading" style="order:19">Çekilir</h3>
-      <div class="card reveal" data-id="dx20" style="order:10" onclick="showProduct('dx20')">
+      <h3 class="grid-subheading clickable" style="order:9" data-subgroup="asilir" onclick="showSubgroup('gubreleme','asilir','Asılır')">Asılır<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <h3 class="grid-subheading clickable" style="order:19" data-subgroup="cekilir" onclick="showSubgroup('gubreleme','cekilir','Çekilir')">Çekilir<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></h3>
+      <div class="card reveal" data-id="dx20" data-subgroup="asilir" style="order:10" onclick="showProduct('dx20')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'dx20')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1114,7 +1112,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="dx30" style="order:11" onclick="showProduct('dx30')">
+      <div class="card reveal" data-id="dx30" data-subgroup="asilir" style="order:11" onclick="showProduct('dx30')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'dx30')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1128,7 +1126,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="x40-x50" style="order:12" onclick="showProduct('x40-x50')">
+      <div class="card reveal" data-id="x40-x50" data-subgroup="asilir" style="order:12" onclick="showProduct('x40-x50')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'x40-x50')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1142,7 +1140,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="x40-x50-econov" style="order:13" onclick="showProduct('x40-x50-econov')">
+      <div class="card reveal" data-id="x40-x50-econov" data-subgroup="asilir" style="order:13" onclick="showProduct('x40-x50-econov')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'x40-x50-econov')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1156,7 +1154,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="xt100-130-160" style="order:20" onclick="showProduct('xt100-130-160')">
+      <div class="card reveal" data-id="xt100-130-160" data-subgroup="cekilir" style="order:20" onclick="showProduct('xt100-130-160')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'xt100-130-160')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1170,7 +1168,7 @@
           <span class="card-link">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </div>
-      <div class="card reveal" data-id="xt160h-240h" style="order:21" onclick="showProduct('xt160h-240h')">
+      <div class="card reveal" data-id="xt160h-240h" data-subgroup="cekilir" style="order:21" onclick="showProduct('xt160h-240h')">
         <div class="card-media">
           <button class="fav-btn" onclick="toggleFavorite(event,'xt160h-240h')" aria-label="Favorilere ekle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
@@ -1261,7 +1259,7 @@
       </div>
       <p style="margin-top:17px;">Toprak işleme ve ekim çözümlerinde çiftçinin güvenilir teknoloji ortağı.</p>
       <div class="social-row">
-        <a href="https://www.instagram.com/kosova_tarim/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.instagram.com/ksvtarim/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
         <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></svg></a>
         <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 13v4"/></svg></a>
       </div>
@@ -1591,63 +1589,6 @@ const PRODUCTS = {
       }
     ],
     brochure:'https://sky-agriculture.com/pdf/methys-pcs-406-503.pdf'
-  },
-  'vr': {
-    category:'Toprak İşleme', anchor:'toprak-isleme', tag:'VR', title:'Vibrokültivatör',
-    lead:'Hafif ve mükemmel hazırlanmış topraklar için tasarlanmış, pasif çalıştığı için ekonomik bir titreşimli diş kültivatörü.',
-    features:[
-      '3 sıra, 32 x 12 mm titreşimli düz dişle toprağı işler',
-      'Kategori I ve II bağlantı; 40 mm rulmanlı merdanede çubuk veya sıyırıcı paker seçeneği',
-      'Sürtünmeli kavramalı tahrik, tek kademeli şanzıman, 6 mm laminat kutu tabanı',
-      'Opsiyonel karbür kaplı diş, arka tesviye tablası ve aşırı yük kavramalı tahrik'
-    ],
-    specGroups:[
-      {
-        columns:['VR 3000','VR 3500','VR 4000'],
-        rows:[
-          {label:'Çalışma Genişliği (m)', values:['3,00','3,50','4,00']},
-          {label:'Diş Sıra Sayısı', values:['3','3','3']},
-          {label:'Diş Sayısı', values:['24','28','32']},
-          {label:'Diş Tipi', values:['Vibro (titreşimli), 32×12 mm','Vibro (titreşimli), 32×12 mm','Vibro (titreşimli), 32×12 mm']},
-          {label:'Güç İhtiyacı (HP)', values:['70-170','90-200','120-260']},
-          {label:'Kafes Merdane Ağırlığı Ø500 mm (kg)', values:['660','740','820']},
-          {label:'Paker Merdane Ağırlığı Ø550 mm (kg)', values:['860','950','1040']},
-          {label:'Tracker Merdane Ağırlığı Ø550 mm (kg)', values:['1048','1181','1297']}
-        ]
-      }
-    ],
-    parts:[
-      {name:'Titreşimli Diş Grubu', desc:'3 sıra, 32 x 12 mm düz titreşimli dişlerle toprağı işler.'},
-      {name:'Merdane', desc:'40 mm rulmanlı, çubuk veya sıyırıcı tip paker seçenekleriyle sunulur.'},
-      {name:'Sürtünmeli Kavrama', desc:'Tek kademeli şanzımanla birlikte aşırı yüke karşı korur.'}
-    ],
-    highlights:[
-      {
-        title:'Öne Çıkan Özellikler',
-        bullets:['Kategori I ve II bağlantı','Kutu tabanında çift kat, 6 mm kalınlığında laminat kaplama','Tek kademeli şanzıman','Sürtünmeli kavramalı tahrik sistemi','Sabit yan saptırıcılar','40 mm rulmanlı merdane; çubuk veya sıyırıcı tip paker seçeneği','Sağlam şase','Kaliteli teknik destek','3 sıra diş'],
-        photoHint:'diş ve rulman grubu yakın çekim',
-        photo:'images/vr-render.jpg'
-      },
-      {
-        title:'Başlıca Opsiyonlar',
-        bullets:['Karbür kaplı dişler (300 x 15 mm)','Arka tesviye tablası','Çok taşlı arazi koşulları için ek taş koruması','Aşırı yük kavramalı tahrik sistemi','Yan destekli tek parça sağlam çeki başı','3 sıra 32 x 12 titreşimli düz diş ile maksimum açıklık'],
-        photoHint:'traktör + VR, bağ arazisinde çalışırken',
-        photo:'images/vr-combo.jpg'
-      },
-      {
-        title:'Rakipsiz İşletme Maliyeti',
-        desc:'Pasif bir alet olduğu için kullanımı ekonomiktir. Hafif veya mükemmel hazırlanmış topraklar için idealdir.',
-        bullets:['Sağlam şase','Kaliteli teknik destek','3 sıra diş'],
-        photoHint:'VR ekim kombinasyonu, depo/atölye ortamında',
-        photo:'images/vr-sulky.jpg'
-      },
-      {
-        title:'Sağlam, Dayanıklı Yapı',
-        bullets:['Yüksek hızda stabilite için çift kirişli destek çerçevesi (100 x 100 x 6,3 mm kalınlık)','Yan destekli sağlam tek parça çeki oku','3 sıra 32 x 12 titreşimli düz diş ile maksimum açıklık'],
-        photoHint:'VR şase alttan görünüm'
-      }
-    ],
-    brochure:'https://sky-agriculture.com/en/documentation/'
   },
   'xr': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'XR', title:'Diskli Toprak Hazırlama Modülü',
@@ -3090,10 +3031,60 @@ const CATEGORY_TITLES = {
   'gubreleme': 'Gübreleme Makineleri'
 };
 
-function showCategory(anchor, fromPopstate){
+const SUBGROUP_LABELS = {
+  'diskoro': 'Diskoro',
+  'disli-tirmik': 'Dişli Tırmık / Çizel',
+  'bicakli-on-merdane': 'Bıçaklı Ön Merdane',
+  'dik-rotavatorler': 'Dik Rotavatörler / Dikfireze',
+  'mekanik-mibzerler': 'Mekanik Mibzerler',
+  'pnomatik-mibzerler': 'Pnömatik Mibzerler',
+  'kombine-pnomatik-mibzerler': 'Kombine Pnömatik Mibzerler',
+  'on-hazne': 'Ön Hazne',
+  'min-till': 'Azaltılmış Toprak İşleme (Min-Till)',
+  'no-till': 'Doğrudan Ekim (No-Till)',
+  'asilir': 'Asılır',
+  'cekilir': 'Çekilir'
+};
+
+function applySubgroupFilter(anchor, subgroupSlug, subgroupLabel){
+  const section = document.getElementById(anchor);
+  if(!section) return;
+  const grid = section.querySelector('.grid');
+  if(!grid) return;
+
+  let bar = grid.querySelector('.subgroup-filter-bar');
+
+  if(!subgroupSlug){
+    grid.querySelectorAll('.grid-subheading').forEach(h => { h.style.display = ''; });
+    grid.querySelectorAll('.card').forEach(c => { c.style.display = ''; });
+    if(bar) bar.remove();
+    return;
+  }
+
+  grid.querySelectorAll('.grid-subheading').forEach(h => { h.style.display = 'none'; });
+  grid.querySelectorAll('.card').forEach(c => {
+    c.style.display = (c.getAttribute('data-subgroup') === subgroupSlug) ? '' : 'none';
+  });
+
+  if(!bar){
+    bar = document.createElement('div');
+    bar.className = 'subgroup-filter-bar';
+    grid.insertBefore(bar, grid.firstChild);
+  }
+  bar.innerHTML = '<a onclick="showCategory(\''+anchor+'\')">' + CATEGORY_TITLES[anchor] + '</a><span>/</span><span>' + subgroupLabel + '</span>';
+}
+
+function showSubgroup(anchor, subgroupSlug, subgroupLabel){
+  showCategory(anchor, false, {slug: subgroupSlug, label: subgroupLabel});
+}
+
+function showCategory(anchor, fromPopstate, subgroup){
   if(!CATEGORY_TITLES[anchor]) return;
-  if(!fromPopstate && !(history.state && history.state.view === 'category' && history.state.anchor === anchor)){
-    history.pushState({view:'category', anchor:anchor}, '', '#kategori-' + anchor);
+  const hash = subgroup ? ('#kategori-' + anchor + '~' + subgroup.slug) : ('#kategori-' + anchor);
+  const alreadyThere = history.state && history.state.view === 'category' && history.state.anchor === anchor &&
+    (history.state.subgroupSlug || null) === (subgroup ? subgroup.slug : null);
+  if(!fromPopstate && !alreadyThere){
+    history.pushState({view:'category', anchor:anchor, subgroupSlug: subgroup ? subgroup.slug : null, subgroupLabel: subgroup ? subgroup.label : null}, '', hash);
   }
   triggerProgressBar();
   closeAllDropdowns();
@@ -3114,7 +3105,8 @@ function showCategory(anchor, fromPopstate){
     document.querySelectorAll('#view-home > section.category').forEach(sec => {
       sec.classList.toggle('active-category', sec.id === anchor);
     });
-    document.getElementById('category-back-title').textContent = CATEGORY_TITLES[anchor];
+    document.getElementById('category-back-title').textContent = subgroup ? (CATEGORY_TITLES[anchor] + ' — ' + subgroup.label) : CATEGORY_TITLES[anchor];
+    applySubgroupFilter(anchor, subgroup ? subgroup.slug : null, subgroup ? subgroup.label : null);
     if(reduceMotion){
       window.scrollTo(0,0);
     } else {
@@ -3508,7 +3500,7 @@ document.getElementById('search-overlay').addEventListener('click', (e) => {
 
 function buildDrawer(){
   const groups = [
-    {label:'TOPRAK İŞLEME', items:[['hr','Rotatif Tırmık'],['methys-hds','Anız Kültivatörü'],['methys-pcs','Yüzey Sıyırıcı (Scalper)'],['vr','Vibrokültivatör (VR)'],['xr','Diskli Toprak Hazırlama Modülü (XR)'],['faca-roller','Malç Ezici Merdane (FACA Roller)']]},
+    {label:'TOPRAK İŞLEME', items:[['hr','Rotatif Tırmık'],['methys-hds','Anız Kültivatörü'],['methys-pcs','Yüzey Sıyırıcı (Scalper)'],['xr','Diskli Toprak Hazırlama Modülü (XR)'],['faca-roller','Malç Ezici Merdane (FACA Roller)']]},
     {label:'EKİM SİSTEMLERİ', items:[['sonic','Hassas Ekim Makinesi'],['tf','Ön Hazneli Ekim Ünitesi'],['tramline-se-sx','Mekanik Mibzer'],['tramline-cx','Mekanik Mibzer (Kombine)'],['progress','Kombine Pnömatik Ekim Makinesi'],['progress-m','Mekanik Kombine Ekim Ünitesi (Progress M)'],['maxidrill','Hızlı Ekim Makinesi'],['easydrill','Doğrudan Ekim Mibzeri']]},
     {label:'GÜBRELEME', items:[['dx20','Askılı Gübre Dağıtıcı (DX20 / DX20+)'],['dx30','Askılı Gübre Dağıtıcı (DX30+)'],['x40-x50','Askılı Gübre Dağıtıcı (X40+ / X50+)'],['x40-x50-econov','Askılı Gübre Dağıtıcı (Econov)'],['xt100-130-160','Römork Tip Gübre Dağıtıcı'],['xt160h-240h','Römork Tip Gübre Dağıtıcı (Hidrolik)']]}
   ];
@@ -3582,7 +3574,7 @@ window.addEventListener('popstate', (e) => {
   if(state && state.view === 'product' && PRODUCTS[state.id]){
     showProduct(state.id, true);
   } else if(state && state.view === 'category' && CATEGORY_TITLES[state.anchor]){
-    showCategory(state.anchor, true);
+    showCategory(state.anchor, true, state.subgroupSlug ? {slug: state.subgroupSlug, label: state.subgroupLabel} : null);
   } else {
     showHome(true);
   }
@@ -3633,10 +3625,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroCarousel();
 
   const initialId = location.hash ? location.hash.slice(1) : '';
-  const initialCategoryAnchor = initialId.indexOf('kategori-') === 0 ? initialId.slice('kategori-'.length) : '';
+  const initialCategoryRaw = initialId.indexOf('kategori-') === 0 ? initialId.slice('kategori-'.length) : '';
+  const subgroupSplit = initialCategoryRaw.split('~');
+  const initialCategoryAnchor = subgroupSplit[0];
+  const initialSubgroupSlug = subgroupSplit[1] || '';
   if(initialId && PRODUCTS[initialId]){
     history.replaceState({view:'product', id:initialId}, '', '#'+initialId);
     showProduct(initialId, true);
+  } else if(initialCategoryAnchor && CATEGORY_TITLES[initialCategoryAnchor] && initialSubgroupSlug && SUBGROUP_LABELS[initialSubgroupSlug]){
+    const subgroup = {slug: initialSubgroupSlug, label: SUBGROUP_LABELS[initialSubgroupSlug]};
+    history.replaceState({view:'category', anchor:initialCategoryAnchor, subgroupSlug: subgroup.slug, subgroupLabel: subgroup.label}, '', '#kategori-'+initialCategoryAnchor+'~'+initialSubgroupSlug);
+    showCategory(initialCategoryAnchor, true, subgroup);
   } else if(initialCategoryAnchor && CATEGORY_TITLES[initialCategoryAnchor]){
     history.replaceState({view:'category', anchor:initialCategoryAnchor}, '', '#kategori-'+initialCategoryAnchor);
     showCategory(initialCategoryAnchor, true);
