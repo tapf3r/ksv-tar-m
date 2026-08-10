@@ -479,6 +479,9 @@
   @media (max-width:760px){.related-grid{grid-template-columns:1fr;}}
 
   .spec-heading{font-size:1.4rem;font-weight:800;margin:76px 0 22px;padding-top:44px;border-top:1px solid var(--line);}
+  .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;}
+  .video-embed{position:relative;width:100%;padding-top:56.25%;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#000;}
+  .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
   .spec-table-scroll{width:100%;overflow-x:auto;margin-bottom:14px;border-radius:12px;border:1px solid var(--line);}
   .spec-table{width:100%;border-collapse:collapse;font-size:.92rem;}
   .spec-table thead th{
@@ -1204,6 +1207,11 @@
       </div>
     </div>
 
+    <section class="spec-section" id="video-section">
+      <h2 class="spec-heading">Tanıtım Videosu</h2>
+      <div class="video-grid" id="video-container"></div>
+    </section>
+
     <section class="highlights-section" id="highlights-section">
       <div id="highlights-container"></div>
     </section>
@@ -1318,6 +1326,7 @@ const PRODUCTS = {
   'hr': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'HR Serisi', title:'Rotatif Tırmık',
     lead:'Daha iyi bir tohum yatağı için metre başına 4 rotor, sürüm izleri veya setler olmadan daha düşük çekiş gereksinimleriyle, güçlendirilmiş çelikten yapılmış şase.',
+    videos:[{id:'7QOt4Sh3CG8', title:'SKY Agriculture - Herse rotative HRW 8000.36'}],
     features:[
       'Aşırı kullanım koşullarında bile adaptörün sürekli hizalanmasını sağlamak için büyük çaplı bir mil ile birlikte ağır hizmet tipi konik makaralı rulmanlar',
       'Verimli ve dayanıklı döner tırmıklar, metre başına 4 rotor.',
@@ -1428,6 +1437,7 @@ const PRODUCTS = {
   'methys-hds': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Diskli Anız Kültivatörü', title:'Methys HDS',
     lead:'Anız bozarken örtü bitkisi ekerek toprak sağlığını ve gelecek verimi korumak mümkün.',
+    videos:[{id:'GMpzvvNYscE', title:'SKY Agriculture - Déchaumeur Methys HDS 5m porté'}],
     features:[
       'Konservasyon tarımı ve yalancı ekim (false seeding) uygulamalarına özel tasarım',
       'Ön ve arka teker sistemiyle şasi her koşulda toprağa paralel kalır',
@@ -1491,6 +1501,7 @@ const PRODUCTS = {
   'methys-pcs': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Methys PCS', title:'Yüzey Sıyırıcı (Scalper)',
     lead:'Sentetik Total Herbisitler çıkmadan önce kullanılıyordu.',
+    videos:[{id:'AHOO4jyXTKo', title:'Methys PCS - dents fines versiyonu'}],
     features:[
       'Düşük mazot tüketimi ile kusursuz işçilik',
       'Aşırı bitki yoğunluğunda bile sorunsuz çalışan tasarım',
@@ -1564,6 +1575,7 @@ const PRODUCTS = {
   'xr': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'XR', title:'Diskli Toprak Hazırlama Modülü',
     lead:'41.5 cm çapındaki X şeklinde disk ve paslanmaz çelik şase ile saatte 15km hıza kadar kusursuz işleme. (35 dekar/saat)',
+    videos:[{id:'sVNozudU-Tw', title:'SKY Agriculture - Progress TF - XR'}],
     features:[
       'Kuyruk miline ihtiyaç duymadan düşük devirlerde kullanım ile yakıt tasarrufu sağlar.',
       'Mibzerle kombine kullanım için idealdir.',
@@ -1613,6 +1625,7 @@ const PRODUCTS = {
   'faca-roller': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'FACA Roller', title:'Malç Ezici Merdane',
     lead:'Toprağı işlemeden örtü bitkisini sonlandırın.',
+    videos:[{id:'4_g2zmxAxyc', title:'SKY Agriculture - Semoir EasyDrill + Rouleau FACA'}],
     features:[
       'Bitki örtüsünü yatırıp toprağa karışıp filizlenmesini engelleyerek toprağa karıştırın.',
       '607 mm çapındaki bir silindir üzerinde 10 adet 100x10 mm bükümlü bıçakla donatılmıştır.',
@@ -1644,6 +1657,7 @@ const PRODUCTS = {
   'sonic': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Sonic', title:'Hassas Ekim Makinesi',
     lead:'SKY Agriculture, yüksek performanslı ve sürdürülebilir tarıma olan bağlılığında en zorlu hassas ekim gereksinimlerini karşılamak üzere tasarlanmış yeni nesil hassas havalı (pnömatik) ekim makinesi SONIC\'in lansmanıyla bir adım daha ileri gitti.',
+    videos:[{id:'nYeeKysxZoI', title:'SKY Agriculture - SONIC + Progress TF Precision Seed Drill'}],
     features:[
       'Bir tohum ekim makinesinden çok daha fazlası olan SONIC, yüksek performans, ürün çeşitliliği ve maliyet optimizasyonunu bir arada sunmak isteyen çiftçiler için stratejik bir araçtır. SKY Agriculture bu yeni modeliyle yarının tarım uygulamalarına kararlılıkla odaklanan, premium ve yenilikçi çözümler sunma hedefini bir kez daha ortaya koymaktadır.',
       'Değişen İhtiyaçlar Gelişen Uygulamalar',
@@ -1770,6 +1784,7 @@ const PRODUCTS = {
   'tf': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'TF', title:'Ön Hazneli Ekim Ünitesi',
     lead:'Traktörün ön hidroliğine bağlanan, tohum veya gübre kapasitesini artırarak arka ekipmanla senkronize çalışan pnömatik ek hazne.',
+    videos:[{id:'sVNozudU-Tw', title:'SKY Agriculture - Progress TF - XR'}, {id:'nYeeKysxZoI', title:'SKY Agriculture - SONIC + Progress TF Precision Seed Drill'}],
     features:[
       'Progress TF piyasadaki, tamamı tek bir ISOBUS arayüzü üzerinden kontrol edilen 4 ayrı hazneyi yönetebilen ilk ön haznedir.',
       'Bu benzersiz yapılandırma, 2 bağımsız hava devresi üzerinden dağıtılan 4 farklı ürünün aynı anda yönetilmesini sağlar.',
@@ -1940,6 +1955,7 @@ const PRODUCTS = {
   'tramline-se-sx': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Tramline SE / SX', title:'Mekanik Mibzer',
     lead:'Kışlık hububat (buğday, arpa, yulaf) ekimi için yerçekimi akışlı, ayarlanabilir sıra arası mesafeli klasik mekanik mibzerler.',
+    videos:[{id:'5qlq3xZSndk', title:'SKY Agriculture - Semoir mécanique Tramline'}],
     features:[
       'İster sürüm yapıyor ister anız bozma işlemi gerçekleştiriyor olun. Sizin için her zaman bir Sky ekim makinesi vardır.',
       'Hassas, kolay ayarlanabilir sıra dozajlama sistemiyle SKY ekim makineleri her koşulda hizmetinizdedir.',
@@ -2061,6 +2077,7 @@ const PRODUCTS = {
   'progress': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Progress', title:'Kombine Pnömatik Ekim Makinesi',
     lead:'Bu ekim makinesi serisinin yüksek hassasiyetli merkezi dozajlama sistemi ve elektronik kontrolü, ekim üzerinde kusursuz kontrol sağlar.',
+    videos:[{id:'EpCnht2F9Lo', title:'SKY Agriculture - Semoir PROGRESS'}, {id:'vG6MbUOCl-M', title:'SKY Agriculture - Progress P30, the pneumatic seed drill of the future'}],
     features:[
       'Progress mibzeri tohum dozajlaması, yüksek iş kapasitesi ve teknolojisi sayesinde veriminizi güvence altına almak için kusursuz ekim hassasiyeti sağlar.',
       'Çalışma genişliği 3 / 3.5 / 4 metre',
@@ -2264,6 +2281,7 @@ const PRODUCTS = {
   'easydrill': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Easydrill', title:'Doğrudan Ekim Mibzeri',
     lead:'40 yılı aşkın Ar-Ge birikiminin ürünü; pancar mibzeri hassasiyetiyle anıza, örtü bitkisi üstüne veya işlenmiş toprağa ekim yapabilen referans makine.',
+    videos:[{id:'4_g2zmxAxyc', title:'SKY Agriculture - Semoir EasyDrill + Rouleau FACA'}],
     features:[
       'Ön ve arka teker ile kontrol edilen ekim derinliği, pancar mibzeri hassasiyetinde',
       'İşlenmiş toprak, doğrudan ekim veya canlı örtü üstünde aynı performans',
@@ -3131,6 +3149,8 @@ function showProduct(id, fromPopstate){
       featuresEl.appendChild(li);
     });
 
+    renderVideos(p);
+
     renderSpecTables(p);
 
     renderHighlights(p);
@@ -3168,6 +3188,20 @@ function showProduct(id, fromPopstate){
       fillAndShow();
     }, 180);
   }
+}
+
+function renderVideos(p){
+  const section = document.getElementById('video-section');
+  const container = document.getElementById('video-container');
+  container.innerHTML = '';
+  const videos = p.videos || [];
+  section.style.display = videos.length ? '' : 'none';
+  videos.forEach(v => {
+    const wrap = document.createElement('div');
+    wrap.className = 'video-embed';
+    wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + v.id + '" title="' + (v.title || '').replace(/"/g,'') + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>';
+    container.appendChild(wrap);
+  });
 }
 
 function renderSpecTables(p){
