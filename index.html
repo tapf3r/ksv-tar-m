@@ -2293,9 +2293,9 @@ const PRODUCTS = {
         photo:'images/maxidrill-wheel-change.jpg'
       },
       {
-        title:'2 Ayrı Hava Devresi',
-        desc:'Birden fazla ürünü farklı yoğunluklarda ekmek için Maxidrill, devrelerde farklı basınçlar ayarlayabilir.',
-        bullets:['Küçük ve büyük tohumlar arasında ayrım yok','Gübre ve tohum arasında tıkanma riski yok','2 farklılaştırılmış derinlik yönetimi','Bazı gübreler için tohum yanma riski yok'],
+        title:'2 Bağımsız Pnömatik (Hava) Hattı',
+        desc:'Farklı yoğunluklara (ağırlıklara) sahip birden fazla ürünü aynı anda kusursuzca ekebilmek için Maxidrill, pnömatik hatlarda birbirinden bağımsız basınç seviyeleri ayarlamanıza olanak tanır.',
+        bullets:['İnce ve iri tohumlar arasında hat içinde ayrışma (homojenlik kaybı) yaşanmaz','Gübre ve tohumun aynı boruda iletilmesinden kaynaklı tıkanma riski tamamen ortadan kalkar','2 farklı tohum/gübre gömme derinliği kusursuz bir şekilde yönetilebilir','Ürünler toprağa ayrı hatlardan bırakıldığı için, bazı agresif gübrelerin tohumla temasından kaynaklanan tohum yanması (kök hasarı) riski önlenir'],
         photoHint:'basınç göstergeleri + hava devresi teknik görseli',
         photo:'images/maxidrill-air-circuit.jpg'
       }
@@ -2304,13 +2304,13 @@ const PRODUCTS = {
   },
   'easydrill': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Doğrudan Ekim Mibzeri', title:'Easydrill',
-    lead:'40 yılı aşkın Ar-Ge birikiminin ürünü; pancar mibzeri hassasiyetiyle anıza, örtü bitkisi üstüne veya işlenmiş toprağa ekim yapabilen referans makine.',
+    lead:'40 yılı aşkın Ar-Ge birikiminin ürünü; pancar mibzeri hassasiyetiyle anıza, örtü bitkisi üzerine veya geleneksel işlenmiş toprağa ekim yapabilen referans (sektör öncüsü) makine.',
     videos:[{id:'esgRaLrWGeM', title:'SKY Agriculture - Semoir direct EasyDrill'}, {id:'4_g2zmxAxyc', title:'SKY Agriculture - Semoir EasyDrill + Rouleau FACA'}],
     features:[
-      'Ön ve arka teker ile kontrol edilen ekim derinliği, pancar mibzeri hassasiyetinde',
-      'İşlenmiş toprak, doğrudan ekim veya canlı örtü üstünde aynı performans',
-      'Disk başına 0-250 kg arası ayarlanabilir baskı gücü',
-      '4 hazneye kadar genişleyebilen, tek kumanda üzerinden yönetilen yapı'
+      'Ön ve arka tekerlekler (tandem sistem) ile kontrol edilen tohum gömme derinliği sayesinde pancar mibzeri standartlarında yüksek ekim hassasiyeti',
+      'İşlenmiş toprak, doğrudan ekim (işlemesiz tarım) veya canlı bitki örtüsü (kanopi) üzerinde aynı üstün performans',
+      'Her bir disk (ekici ayak) başına 0 ile 250 kg arasında kademeli olarak ayarlanabilen baskı kuvveti',
+      '4 bağımsız depoya (tanka) kadar genişletilebilen ve tamamı tek bir kumanda ekranı (terminal) üzerinden yönetilebilen modüler yapı'
     ],
     specGroups:[
       {
@@ -2350,45 +2350,49 @@ const PRODUCTS = {
     ],
     highlights:[
       {
-        title:'4 Hazneye Kadar Kullanılabilir',
-        desc:'Tek pasoda Easydrill, 2 farklı ekim derinliğini ayırarak 4 farklı ürünü 4 farklı dozda ekebilir. 4 hazne, tek bir kontrol ünitesiyle yönetilir: Quartz isobus.',
+        title:'4 Bağımsız Depoya (Tanka) Kadar Kullanım İmkanı',
+        desc:'Easydrill; tek geçişte (tek seferde) 2 farklı tohum gömme derinliği ayarlayarak, 4 farklı ürünü 4 farklı tohum normunda (dozajda) ekebilme kapasitesine sahiptir. Mevcut 4 deponun tamamı tek bir kontrol ünitesi (ekranı) üzerinden kusursuzca yönetilir: Quartz ISOBUS.',
         photoHint:'E-Drive konsol + 4 hazneli dozaj ünitesi render görseli',
         photo:'images/easydrill-4hopper-render.jpg'
       },
       {
         title:'Çok Yönlü Bir Ekim Makinesi',
-        desc:'Canlı organizmalarla ve iklimle çalıştığımız için ekim koşullarını asla önceden kestiremeyiz. Böylesi bir belirsizlik karşısında, uyum sağlayabilen bir ekim makinesine güvenebilmek rahatlatıcıdır. Easydrill ile işlenmiş toprakta, doğrudan ekimde veya canlı örtü üzerinde ekim yapabilirsiniz.',
+        desc:'Tarım, canlı organizmalar ve değişken iklim şartlarıyla yürütüldüğü için ekim koşullarını hiçbir zaman tam olarak önceden kestiremeyiz. Bu denli belirsizlik ve değişkenlik karşısında, her koşula uyum sağlayabilen güvenilir bir ekim makinesine sahip olmak en büyük avantajınızdır.',
+        desc2:'Easydrill ile ister geleneksel olarak işlenmiş toprakta, ister doğrudan ekim (işlemesiz tarım) şartlarında, isterse de canlı örtü (yeşil gübreleme/örtü bitkisi) üzerine kusursuz bir şekilde ekim yapabilirsiniz.',
         photoHint:'ekici ayak grubu teknik illüstrasyon',
         photo:'images/easydrill.jpg'
       },
       {
-        title:'Disk Başına 250 kg Baskı',
-        desc:'Baskı kuru koşullarda esastır, ancak yağmur başladığında bir engele dönüşür. Bu nedenle Easydrill, bir silindire pul ekleyerek baskı seviyesini 0\'dan 250 kg\'a kadar ayarlayabilir.',
+        title:'Disk Başına 250 kg Baskı Kuvveti',
+        desc:'Yeterli baskı kuvveti, özellikle kurak ve sert arazi koşullarında tohum yatağına ulaşmak için esastır; ancak yağış başlayıp toprak nemlendiğinde bu durum tersine dönerek bir engele dönüşebilir. Bu nedenle Easydrill, hidrolik silindire pratik pullar (mesnet elemanları) ekleyerek ekim ayağı baskı seviyesini 0\'dan 250 kg\'a kadar esnek bir şekilde ayarlamanıza olanak tanır.',
         photoHint:'0-250 kg baskı seviyesi bar grafiği',
         photo:'images/easydrill-pressure-chart.jpg'
       },
       {
-        title:'Hassas Dağıtım',
-        desc:'Easydrill, son derece hassas paslanmaz çelik dağıtım sistemine sahiptir: 1\'den 450 kg/ha\'ya kadar. Akış testi otomatiktir ve küçük taneden büyük taneye geçişte sökme gerektirmez.',
+        title:'Hassas Dağıtım Sistemi',
+        desc:'Easydrill; 1 ile 450 kg/ha arasında kusursuz atım yapabilen, son derece hassas, paslanmaz çelik bir dağıtım (dozajlama) sistemine sahiptir.',
+        desc2:'Akış (kalibrasyon) testi tamamen otomatik olarak gerçekleştirilir ve ince tohumdan iri tohuma geçişlerde herhangi bir parça sökme veya donanım değiştirme işlemine gerek duymaz.',
         photoHint:'dozaj ünitesi kesit görseli',
         photo:'images/easydrill-mechanical-cutaway.jpg'
       },
       {
-        title:'Hızlı Hazne Boşaltma',
-        desc:'2 parçalı katlanır sistem sayesinde hazneyi big bag\'e boşaltabilirsiniz: zaman kazandıran bir özellik! Bu sistem, bakım veya disk değişimi için çok kullanışlı olan tohum sıralarına erişim sağlar.',
+        title:'Hızlı Depo (Tank) Boşaltma Sistemi',
+        desc:'2 parçalı katlanabilir sistem sayesinde depodaki (tanktaki) ürünü doğrudan "big bag" çuvallara boşaltabilirsiniz: Operasyon sırasında size ciddi zaman kazandıran bir özellik!',
+        desc2:'Bu özel tasarım aynı zamanda; tarlada periyodik bakım veya disk değişimi işlemleri için son derece kullanışlı olan tohum sıralarına (ekici ayaklara) tam ve rahat erişim imkanı sağlar.',
         photoHint:'katlanır hazne sistemi görseli',
         photo:'images/easydrill-warehouse.jpg'
       },
       {
-        title:'2 Ayrı Hava Devresi',
-        desc:'Birden fazla ürünü farklı yoğunluklarda ekmek için Easydrill, devrelerde farklı basınçlar ayarlayabilir.',
-        bullets:['Küçük ve büyük tohumlar arasında ayrım yok','Gübre ve tohum arasında tıkanma riski yok','2 farklılaştırılmış derinlik yönetimi','Bazı gübreler için tohum yanma riski yok','Gübre tıkanırsa tohum akışı her zaman devam eder'],
+        title:'2 Bağımsız Pnömatik (Hava) Hattı',
+        desc:'Farklı yoğunluklara ve özelliklere sahip birden fazla ürünü aynı anda ekebilmek için Easydrill, pnömatik devrelerinde birbirinden tamamen bağımsız basınç seviyeleri ayarlamanıza olanak tanır.',
+        bullets:['İnce ve iri tohumlar arasında hat içinde ayrışma veya homojenlik kaybı yaşanmaz.','Gübre ve tohumun aynı boruda iletilmesinden kaynaklanan tıkanma riski tamamen ortadan kalkar.','2 farklı ürün için farklılaştırılmış derinlik yönetimi kusursuz bir şekilde sağlanır.','Ürünler toprağa ayrı hatlardan bırakıldığı için, bazı agresif gübrelerin tohumla temasından kaynaklanan tohum yanması riski önlenir.','Olası bir gübre hattı tıkanıklığı durumunda dahi tohum akışı her zaman kesintisiz olarak devam eder.'],
         photoHint:'basınç göstergeleri + hava devresi teknik görseli',
         photo:'images/easydrill-dual-air-circuit.jpg'
       },
       {
-        title:'Mekanik Dağıtım',
-        desc:'Easy Drill gamı, 3m ve 4m sabit modellerde mekanik dağıtımla da sunulur. Bölmeli hazne, 2 farklı oranda ve 2 farklı derinlikte 2 ürün ekilmesine olanak tanır. Bu mibzer, tohum için pim tipi dağıtım, gübre ve tohum için helisel paslanmaz çelik dağıtım kullanır. Ayrıca haznenin tamamen boşaltılmasını sağlayan bir alt vana ile donatılmıştır.',
+        title:'Mekanik Dağıtım Sistemi',
+        desc:'Easydrill serisi, 3 m ve 4 m sabit şasili modellerinde mekanik dağıtım seçeneğiyle de sunulur. Bölmeli depo (hazne), 2 farklı normda (dozajda) ve 2 farklı derinlikte aynı anda 2 ürün ekilmesine olanak tanır.',
+        desc2:'Bu mibzer; tohum uygulamaları için hassas pim tipi dağıtım mekanizması, gübre ve diğer tohum çeşitleri için ise paslanmaz çelik helisel (spiralli) dağıtım sistemi kullanır. Ayrıca deponun tamamen ve zahmetsizce boşaltılmasını sağlayan pratik bir alt tahliye vanası ile donatılmıştır.',
         photoHint:'mekanik dağıtım ünitesi kesit görseli',
         photo:'images/easydrill-helical-cutaway.jpg'
       }
