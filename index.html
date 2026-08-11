@@ -496,6 +496,14 @@
   .spec-subheading{font-size:1rem;font-weight:800;margin:24px 0 12px;color:var(--ink);}
   .spec-subheading:first-child{margin-top:0;}
 
+  .highlights-section{margin-top:52px;}
+  .section-divider{display:flex;align-items:center;justify-content:center;margin:0 0 44px;}
+  .section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--line);}
+  .section-divider span{
+    width:9px;height:9px;border-radius:50%;background:var(--green);margin:0 16px;flex-shrink:0;
+    box-shadow:0 0 0 5px var(--green-pale);
+  }
+
   .highlight-block{
     display:grid;grid-template-columns:1fr 1.3fr;gap:32px;align-items:center;
     margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--line);
@@ -1208,6 +1216,7 @@
     </div>
 
     <section class="highlights-section" id="highlights-section">
+      <div class="section-divider" aria-hidden="true"><span></span></div>
       <div id="highlights-container"></div>
     </section>
 
