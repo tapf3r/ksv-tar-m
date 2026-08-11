@@ -523,8 +523,11 @@
   .highlight-photo-real img{width:100%;height:100%;min-height:170px;object-fit:cover;display:block;}
   .highlight-text h3{font-size:1.05rem;font-weight:800;margin-bottom:8px;}
   .highlight-text p{font-size:.92rem;color:var(--ink-soft);margin-bottom:8px;}
-  .highlight-text ul{margin:8px 0 0;padding-left:18px;}
-  .highlight-text ul li{font-size:.9rem;color:var(--ink-soft);margin-bottom:6px;}
+  .highlight-text ul.highlight-bullets{display:flex;flex-direction:column;gap:9px;margin:10px 0 0;padding:0;}
+  .highlight-text ul.highlight-bullets li{
+    display:flex;align-items:flex-start;gap:9px;font-size:.9rem;color:var(--ink-soft);
+  }
+  .highlight-text ul.highlight-bullets li svg{width:17px;height:17px;flex-shrink:0;margin-top:1px;color:var(--green);}
 
   .sticky-mobile-cta{
     display:none;position:fixed;bottom:0;left:0;right:0;z-index:80;
@@ -1512,14 +1515,14 @@ const PRODUCTS = {
       },
       {
         title:'Son Derece Düşük Güç Tüketimi ve Ödünsüz Sıyırma Kalitesi',
-        desc:'Ön ve arka tekerlekli tandem sistem sayesinde şase her zaman toprağa paralel kalır. Teknik açıdan, daha yumuşak yuvarlandığı için çelik merdaneye kıyasla %20-25 arasında güç tasarrufu gözlemlenmiştir.',
-        desc2:'Ofset lastik merdane, her türlü toprakta, hatta yapışkan koşullarda bile güçlü bir toprak sıkıştırması ve mükemmel geçiş sağlar. 3 sıra halinde konumlandırılmış büyük çaplı lastikleri sayesinde çok hızlıdır ve düşük çekiş gücü gerektirir.',
+        desc:'Ön ve arka tekerleklerden oluşan tandem (çift eksenli) sistem sayesinde, makine şasisi toprak yüzeyine her koşulda tam paralel kalır. Teknik olarak, düşük yuvarlanma direncine sahip olduğu için (toprakta daha rahat akıp gittiğinden), standart çelik merdanelere kıyasla traktörün çeki gücünden %20-25 oranında tasarruf sağlandığı kanıtlanmıştır.',
+        desc2:'Şaşırtmalı (ofset) dizilime sahip lastik tekerlekli merdane, ağır ve yapışkan toprak şartları dahil her türlü arazide tıkanmadan kusursuz bir akışkanlık sunar ve toprağı mükemmel şekilde sıkıştırır (konsolide eder). Üç sıra halinde dizilmiş büyük çaplı lastikleri sayesinde, yüksek ilerleme hızlarında çalışmaya son derece elverişlidir ve çok düşük bir çeki gücü gerektirir.',
         photoHint:'traktör + kültivatör, anız tarlasında geniş çekim',
         photo:'images/methys-hds-stubble-pull.jpg'
       },
       {
         title:'Örtü Bitkisi Ekimi İçin Entegre Tohum Yerleştirme',
-        desc:'Methys HDS üzerine monte edilen dağıtım başlığı ve merdanenin hemen önünde bulunan tohum yerleştirme çubuğu, toprak hazırlama aletinin daha fazla çok yönlülük sunmasını sağlar ve örtü bitkilerinin daha düşük maliyetle ekilmesine olanak tanır (ön hazne gerektirir).'
+        desc:'Methys HDS üzerine entegre edilen tohum dağıtıcı başlık ve merdanenin hemen önüne konumlandırılan ekici bar, bu toprak işleme makinesinin çok yönlülüğünü artırır. Bu donanım, toprak hazırlığı yapılırken aynı anda örtü bitkisi (ara ürün) ekiminin çok daha ekonomik bir şekilde gerçekleştirilmesine olanak tanır (Bu sistemin çalışması için traktör önü tohum tankı gereklidir).'
       }
     ],
     brochure:'https://sky-agriculture.com/pdf/methys-hds-406-504.pdf'
@@ -3267,7 +3270,7 @@ function renderHighlights(p){
     let textHtml = '<div class="highlight-text"><h3>' + b.title + '</h3>';
     if(b.desc) textHtml += '<p>' + b.desc + '</p>';
     if(b.bullets && b.bullets.length){
-      textHtml += '<ul>' + b.bullets.map(x => '<li>' + x + '</li>').join('') + '</ul>';
+      textHtml += '<ul class="highlight-bullets">' + b.bullets.map(x => '<li>' + checkIcon + '<span>' + x + '</span></li>').join('') + '</ul>';
     }
     if(b.desc2) textHtml += '<p>' + b.desc2 + '</p>';
     textHtml += '</div>';
