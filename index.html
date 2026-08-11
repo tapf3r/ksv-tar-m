@@ -1207,13 +1207,13 @@
       </div>
     </div>
 
-    <section class="spec-section" id="video-section">
-      <h2 class="spec-heading">Tanıtım Videosu</h2>
-      <div class="video-grid" id="video-container"></div>
-    </section>
-
     <section class="highlights-section" id="highlights-section">
       <div id="highlights-container"></div>
+    </section>
+
+    <section class="spec-section" id="video-section" style="margin:56px 0;">
+      <h2 class="spec-heading">Tanıtım Videosu</h2>
+      <div class="video-grid" id="video-container"></div>
     </section>
 
     <section class="spec-section" id="spec-section">
@@ -3256,8 +3256,7 @@ function renderSpecTables(p){
 function renderHighlights(p){
   const container = document.getElementById('highlights-container');
   container.innerHTML = '';
-  const partBlocks = (p.parts || []).map(part => ({title: part.name, desc: part.desc}));
-  const blocks = partBlocks.concat(p.highlights || []);
+  const blocks = p.highlights || [];
   document.getElementById('highlights-section').style.display = blocks.length ? '' : 'none';
   blocks.forEach(b => {
     const row = document.createElement('div');
