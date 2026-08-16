@@ -160,12 +160,12 @@
   .brand-text .main{font-weight:700;font-size:1.02rem;color:var(--ink);}
   .brand-text .sub{font-size:.72rem;letter-spacing:1px;color:var(--ink-soft);margin-top:7px;display:block;}
 
-  nav{display:flex;gap:8px;}
+  nav{display:flex;gap:2px;}
   .nav-item{position:relative;}
   .nav-item > .nav-trigger{
-    display:flex;align-items:center;gap:6px;
-    font-size:.98rem;font-weight:600;color:var(--ink);
-    padding:11px 13px;border-radius:9px;background:none;border:none;
+    display:flex;align-items:center;gap:5px;white-space:nowrap;
+    font-size:.9rem;font-weight:600;color:var(--ink);
+    padding:11px 9px;border-radius:9px;background:none;border:none;
     transition:background .2s, color .2s;
   }
   .nav-item > .nav-trigger svg{width:13px;height:13px;transition:transform .25s var(--ease);}
@@ -229,7 +229,7 @@
   html[data-theme="dark"] .theme-toggle .moon{display:none;}
 
   .whatsapp-btn{
-    display:flex;align-items:center;gap:9px;
+    display:flex;align-items:center;gap:9px;flex-shrink:0;white-space:nowrap;
     background:var(--green);color:#fff;font-weight:700;font-size:.95rem;
     padding:11px 19px;border-radius:999px;border:none;
     transition:background .2s, transform .2s var(--ease), box-shadow .2s;
@@ -239,7 +239,7 @@
 
   .mobile-menu-btn{display:none;}
 
-  @media (max-width:960px){
+  @media (max-width:1180px){
     nav{display:none;}
     .whatsapp-btn span.label{display:none;}
     .whatsapp-btn{padding:11px 15px;}
@@ -850,6 +850,18 @@
               <a role="menuitem" href="#xt160h-240h" onclick="event.preventDefault();showProduct('xt160h-240h')"><b>XT160H / 240H</b><span class="sub">Römork Tip Gübre Dağıtıcı (Hidrolik)</span></a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">HİZMETLER
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dropdown" role="menu">
+          <a role="menuitem" href="https://sky-agriculture.com/en/documentation/" target="_blank" rel="noopener"><b>Dokümantasyon</b><span class="sub">Katalog ve teknik dokümanlar</span></a>
+          <a role="menuitem" href="https://parts.burel-group.com/en/" target="_blank" rel="noopener"><b>Yedek Parça</b><span class="sub">Orijinal yedek parça kataloğu</span></a>
+          <a role="menuitem" href="https://app.evalandgo.com/f/313135/4qAivaBmeVyzQb8jaWLDtL" target="_blank" rel="noopener"><b>7 Yıl Delinmeye Karşı Korozyon Garantisi</b><span class="sub">Garanti kaydı</span></a>
+          <a role="menuitem" href="https://sara.sky-agriculture.com/login" target="_blank" rel="noopener"><b>SARA</b><span class="sub">SKY Agriculture Research & Assistance</span></a>
         </div>
       </div>
     </nav>
@@ -3602,7 +3614,13 @@ function buildDrawer(){
   const groups = [
     {label:'TOPRAK İŞLEME', items:[['hr','Rotatif Tırmık'],['methys-hds','Methys HDS'],['methys-pcs','Yüzey Sıyırıcı'],['xr','Diskli Toprak Hazırlama Modülü (XR)'],['faca-roller','Malç Ezici Merdane (FACA Roller)']]},
     {label:'EKİM SİSTEMLERİ', items:[['sonic','Hassas Ekim Makinesi'],['tf','Ön Hazneli Ekim Ünitesi'],['tramline-se-sx','Mekanik Mibzer'],['tramline-cx','Mekanik Mibzer (Kombine)'],['progress','Kombine Pnömatik Ekim Makinesi'],['progress-m','Pnömatik Kombine Ekim Ünitesi (Progress M)'],['maxidrill','Hızlı Ekim Makinesi'],['easydrill','Doğrudan Ekim Mibzeri']]},
-    {label:'GÜBRELEME', items:[['dx30','Asılır Tip Gübre Dağıtıcı (DX30+)'],['x40-x50','Asılır Tip Gübre Dağıtıcı (X40+ / X50+)'],['x40-x50-econov','Asılır Tip Gübre Dağıtıcı (Econov)'],['xt100-130-160','Römork Tip Gübre Dağıtıcı'],['xt160h-240h','Römork Tip Gübre Dağıtıcı (Hidrolik)']]}
+    {label:'GÜBRELEME', items:[['dx30','Asılır Tip Gübre Dağıtıcı (DX30+)'],['x40-x50','Asılır Tip Gübre Dağıtıcı (X40+ / X50+)'],['x40-x50-econov','Asılır Tip Gübre Dağıtıcı (Econov)'],['xt100-130-160','Römork Tip Gübre Dağıtıcı'],['xt160h-240h','Römork Tip Gübre Dağıtıcı (Hidrolik)']]},
+    {label:'HİZMETLER', external:true, items:[
+      ['https://sky-agriculture.com/en/documentation/','Dokümantasyon'],
+      ['https://parts.burel-group.com/en/','Yedek Parça'],
+      ['https://app.evalandgo.com/f/313135/4qAivaBmeVyzQb8jaWLDtL','7 Yıl Delinmeye Karşı Korozyon Garantisi'],
+      ['https://sara.sky-agriculture.com/login','SARA']
+    ]}
   ];
   const body = document.getElementById('drawer-body');
   body.innerHTML = groups.map((g,gi) =>
@@ -3610,7 +3628,10 @@ function buildDrawer(){
     '<button class="drawer-accordion-head" onclick="toggleDrawerAccordion('+gi+')">'+g.label+
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>' +
     '<div class="drawer-accordion-body">' +
-    g.items.map(([id,label]) => '<a href="#'+id+'" onclick="event.preventDefault();selectSearchResult(\''+id+'\')">'+label+'</a>').join('') +
+    g.items.map(([id,label]) => g.external
+      ? '<a href="'+id+'" target="_blank" rel="noopener">'+label+'</a>'
+      : '<a href="#'+id+'" onclick="event.preventDefault();selectSearchResult(\''+id+'\')">'+label+'</a>'
+    ).join('') +
     '</div></div>'
   ).join('');
 }
