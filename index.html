@@ -12,20 +12,20 @@
 <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 <meta name="google-site-verification" content="LTpW60bg9Vv_Tt1Yt6sOcgZKXa-dsYoqCzbtON6_HHo" />
 <!-- SEO ve Arama Motoru Etiketleri -->
-<meta name="description" content="KSV Tarım Teknolojileri | SKY Agriculture Türkiye Resmi Distribütörü. Toprak işleme, pnömatik hassas ekim mibzerleri ve gübreleme makineleri.">
-<meta name="keywords" content="KSV Tarım, KSV Tarım Teknolojileri, Sky Agriculture Türkiye, Edirne tarım makineleri, mibzer, döner tırmık, no-till ekim">
-<meta name="author" content="KSV Tarım Teknolojileri">
+<meta name="description" content="KSV Tarım Makinaları ve Teknolojileri | SKY Agriculture Türkiye Resmi Distribütörü. Toprak işleme, pnömatik hassas ekim mibzerleri ve gübreleme makineleri.">
+<meta name="keywords" content="KSV Tarım, KSV Tarım Makinaları ve Teknolojileri, Sky Agriculture Türkiye, Edirne tarım makineleri, mibzer, döner tırmık, no-till ekim">
+<meta name="author" content="KSV Tarım Makinaları ve Teknolojileri">
 <meta name="robots" content="index, follow">
 
 <!-- Google / Sosyal Medya Paylaşım Etiketleri (Open Graph) -->
-<meta property="og:title" content="KSV Tarım Teknolojileri | SKY Agriculture Türkiye">
+<meta property="og:title" content="KSV Tarım Makinaları ve Teknolojileri | SKY Agriculture Türkiye">
 <meta property="og:description" content="Toprak işleme, ekim sistemleri ve akıllı gübreleme teknolojilerinde Avrupa standartlarında çözümler.">
 <meta property="og:url" content="https://ksvtarim.com">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://ksvtarim.com/android-chrome-512x512.png">
 <meta name="theme-color" content="#16a34a">
 <meta name="color-scheme" content="light dark">
-<title>KSV Tarım Teknolojileri | SKY Agriculture Türkiye Resmi Distribütörü</title>
+<title>KSV Tarım Makinaları ve Teknolojileri | SKY Agriculture Türkiye Resmi Distribütörü</title>
 <style>
   :root{
     --green:#16a34a;
@@ -142,7 +142,7 @@
   .header-inner{
     max-width:1360px;margin:0 auto;
     display:flex;align-items:center;justify-content:space-between;
-    padding:16px 28px;gap:16px;
+    padding:16px 28px;gap:10px;
     position:relative;
   }
   .brand{display:flex;align-items:center;gap:11px;background:none;border:none;}
@@ -163,9 +163,9 @@
   nav{display:flex;gap:2px;}
   .nav-item{position:relative;}
   .nav-item > .nav-trigger{
-    display:flex;align-items:center;gap:5px;white-space:nowrap;
-    font-size:.9rem;font-weight:600;color:var(--ink);
-    padding:11px 9px;border-radius:9px;background:none;border:none;
+    display:flex;align-items:center;gap:4px;white-space:nowrap;
+    font-size:.86rem;font-weight:600;color:var(--ink);
+    padding:10px 6px;border-radius:9px;background:none;border:none;
     transition:background .2s, color .2s;
   }
   .nav-item > .nav-trigger svg{width:13px;height:13px;transition:transform .25s var(--ease);}
@@ -192,6 +192,14 @@
   .dropdown a:hover, .dropdown a:focus-visible{background:var(--green-pale);color:var(--green-dark);padding-left:17px;}
   .dropdown a b{font-weight:700;}
   .dropdown a span.sub{font-size:.76rem;font-weight:500;color:var(--ink-soft);}
+  .dropdown .menuitem-soon{
+    display:flex;flex-direction:column;gap:2px;
+    padding:11px 13px;border-radius:9px;font-size:.92rem;font-weight:600;color:var(--ink-soft);
+    cursor:default;
+  }
+  .dropdown .menuitem-soon b{font-weight:700;display:flex;align-items:center;gap:7px;color:var(--ink-soft);}
+  .dropdown .menuitem-soon b em{font-style:normal;font-size:.66rem;font-weight:700;color:var(--green-dark);background:var(--green-pale);padding:2px 7px;border-radius:20px;letter-spacing:.3px;}
+  .dropdown .menuitem-soon span.sub{font-size:.76rem;font-weight:500;color:var(--ink-soft);}
 
   .subgroup{position:relative;}
   .subgroup > .subgroup-trigger{
@@ -213,7 +221,7 @@
   .flyout.flyout-left{left:auto;right:calc(100% + 8px);transform:translateX(6px);}
   .subgroup:hover > .flyout.flyout-left{transform:translateX(0);}
 
-  .header-actions{display:flex;align-items:center;gap:8px;}
+  .header-actions{display:flex;align-items:center;gap:6px;}
   .icon-btn{
     display:flex;align-items:center;justify-content:center;
     width:42px;height:42px;border-radius:11px;border:1px solid var(--line);
@@ -229,6 +237,20 @@
   html[data-theme="dark"] .theme-toggle .moon{display:none;}
   .lang-toggle{font-size:.8rem;font-weight:800;letter-spacing:.3px;}
 
+  @media (max-width:520px){
+    .header-inner{padding:12px 16px;gap:8px;}
+    .brand{gap:8px;min-width:0;}
+    .brand-badge{width:36px;height:36px;}
+    .brand-badge img{width:36px;height:36px;}
+    .brand-text{max-width:80px;}
+    .brand-text .main{font-size:.66rem;overflow-wrap:break-word;line-height:1.25;}
+    .brand-text .sub{display:none;}
+    .header-actions{gap:4px;}
+    .icon-btn{width:36px;height:36px;border-radius:9px;}
+    .icon-btn svg{width:16px;height:16px;}
+    .whatsapp-btn{padding:8px 10px;}
+  }
+
   .whatsapp-btn{
     display:flex;align-items:center;gap:9px;flex-shrink:0;white-space:nowrap;
     background:var(--green);color:#fff;font-weight:700;font-size:.95rem;
@@ -240,7 +262,7 @@
 
   .mobile-menu-btn{display:none;}
 
-  @media (max-width:1280px){
+  @media (max-width:1360px){
     nav{display:none;}
     .whatsapp-btn span.label{display:none;}
     .whatsapp-btn{padding:11px 15px;}
@@ -714,6 +736,7 @@
   .drawer-accordion.open .drawer-accordion-body{max-height:420px;}
   .drawer-accordion-body a{display:block;padding:12px 15px 12px 24px;font-size:.9rem;color:var(--ink-soft);font-weight:600;}
   .drawer-accordion-body a:hover{color:var(--green-dark);}
+  .drawer-accordion-body .soon{display:block;padding:12px 15px 12px 24px;font-size:.9rem;color:var(--ink-soft);font-weight:600;opacity:.6;}
   .drawer-foot{padding:19px;border-top:1px solid var(--line);}
 
   .toast-container{
@@ -792,9 +815,9 @@
 <header id="site-header">
   <div class="header-inner">
     <button class="brand" onclick="showHome()" aria-label="Ana sayfa" data-i18n-aria-label="breadcrumb.home">
-      <div class="brand-badge"><img src="logo.png" alt="KSV Tarım Teknolojileri logosu" width="46" height="46" loading="lazy"></div>
+      <div class="brand-badge"><img src="logo.png" alt="KSV Tarım Makinaları ve Teknolojileri logosu" width="46" height="46" loading="lazy"></div>
       <div class="brand-text">
-        <div class="main">KSV TARIM TEKNOLOJİLERİ</div>
+        <div class="main">KSV TARIM MAKİNALARI VE TEKNOLOJİLERİ</div>
         <div class="sub" data-i18n="brand.tagline">SKY AGRICULTURE TÜRKİYE RESMİ DİSTRİBÜTÖRÜ</div>
       </div>
     </button>
@@ -808,7 +831,7 @@
           <div class="subgroup">
             <a class="subgroup-trigger" data-subgroup-key="diskoro" href="#methys-hds" onclick="event.preventDefault();showProduct('methys-hds')">Diskli Anız Kültivatörü<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
             <div class="flyout" role="menu">
-              <a role="menuitem" href="#methys-hds" onclick="event.preventDefault();showProduct('methys-hds')"><b>Methys HDS</b><span class="sub" data-i18n="navsub.methys-hds">Diskli Anız Kültivatörü &middot; Asılır / Çekilir</span></a>
+              <a role="menuitem" href="#methys-hds" onclick="event.preventDefault();showProduct('methys-hds')"><b>Methys HDS</b><span class="sub" data-i18n="navsub.methys-hds">Diskli Anız Kültivatörü</span></a>
             </div>
           </div>
           <div class="subgroup">
@@ -903,14 +926,18 @@
       </div>
 
       <div class="nav-item">
+        <a class="nav-trigger" href="#hakkimizda" onclick="event.preventDefault();showAbout()" data-i18n="nav.about">HAKKIMIZDA</a>
+      </div>
+
+      <div class="nav-item">
         <button class="nav-trigger" aria-haspopup="true" aria-expanded="false" data-i18n="nav.hizmetler">HİZMETLER
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="dropdown" role="menu">
           <a role="menuitem" href="https://sky-agriculture.com/en/documentation/" target="_blank" rel="noopener"><b data-i18n="navtitle.docs">Dokümantasyon</b><span class="sub" data-i18n="navsub.docs">Katalog ve teknik dokümanlar</span></a>
           <a role="menuitem" href="https://parts.burel-group.com/en/" target="_blank" rel="noopener"><b data-i18n="navtitle.parts">Yedek Parça</b><span class="sub" data-i18n="navsub.parts">Orijinal yedek parça kataloğu</span></a>
-          <a role="menuitem" href="https://app.evalandgo.com/f/313135/4qAivaBmeVyzQb8jaWLDtL" target="_blank" rel="noopener"><b data-i18n="navtitle.warranty">7 Yıl Delinmeye Karşı Korozyon Garantisi</b><span class="sub" data-i18n="navsub.warranty">Garanti kaydı</span></a>
-          <a role="menuitem" href="https://sara.sky-agriculture.com/login" target="_blank" rel="noopener"><b>SARA</b><span class="sub" data-i18n="navsub.sara">SKY Agriculture Research & Assistance</span></a>
+          <a role="menuitem" href="https://sara.sky-agriculture.com/login" target="_blank" rel="noopener"><b>SARA</b><span class="sub" data-i18n="navsub.sara">Ekipmanınızla ilgili ihtiyacınız olan tüm bilgilere erişebileceğiniz mobil uygulama</span></a>
+          <span role="menuitem" class="menuitem-soon" aria-disabled="true"><b data-i18n="navtitle.contractDrilling">Sözleşmeli Doğrudan Ekim<em data-i18n="navtitle.soonBadge">Yakında</em></b><span class="sub" data-i18n="navsub.contractDrilling">Anıza doğrudan ekim hizmetimiz çok yakında sizlerle</span></span>
         </div>
       </div>
 
@@ -956,7 +983,7 @@
   <section class="hero">
     <span class="eyebrow" data-i18n="hero.eyebrow"><span class="dot"></span>SKY AGRICULTURE TÜRKİYE</span>
     <h1 data-i18n="hero.title">Günümüz tarımının ihtiyaçlarına göre uyarlanmış geniş ürün yelpazesiyle KSV Tarım yarının çiftçilerinin yanında</h1>
-    <p data-i18n="hero.subtitle">KSV Tarım, 4 jenerasyonun tarım tecrübesini uluslararası deneyim ve teknoloji ile birleştiriyor.</p>
+    <p data-i18n="hero.subtitle">KSV Tarım, 4 jenerasyonun tarım mirasını, uluslararası deneyim ve inovasyon ile buluşturuyor.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="#kategori-toprak-isleme" onclick="event.preventDefault();showCategory('toprak-isleme')" data-i18n="hero.cta">
         Ürün Koleksiyonu
@@ -970,6 +997,8 @@
         <div class="hero-slide" style="background-image:url('images/hero-3.jpg')"></div>
         <div class="hero-slide" style="background-image:url('images/hero-4.jpg')"></div>
         <div class="hero-slide" style="background-image:url('images/hero-5.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('images/tf.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('images/tramline-cx.jpg')"></div>
       </div>
       <div class="hero-carousel-dots" id="hero-carousel-dots"></div>
     </div>
@@ -983,13 +1012,24 @@
       </div>
       <p class="desc" data-i18n="intro.desc">İnovasyon, bir makinenin çalışma performansını, enerji tüketimini ve çevresel etkilerini optimize ederek yeniden tasarlamaktır.</p>
     </div>
-    <ul style="max-width:640px;list-style:disc;padding-left:22px;display:flex;flex-direction:column;gap:8px;color:var(--ink);font-size:.98rem;">
-      <li data-i18n="intro.li1">Toprak nemini ve sağlığını korumak</li>
-      <li data-i18n="intro.li2">Mazot tüketimini azaltmak</li>
-      <li data-i18n="intro.li3">Yabancı otları kontrol altına almak</li>
-      <li data-i18n="intro.li4">Örtü bitkileri ile toprağa azot bağlamak.</li>
-    </ul>
-    <p class="desc" style="max-width:900px;margin-top:18px;" data-i18n="intro.p2">En büyük girdilerimizden olan Azot (Üre), ne ironiktir ki gezegenimizin atmosferinde en çok bulunan elementtir (78%). Doğalgazdan üretilmesi sebebiyle enerji bağımlılığı yüksek olan azotu, örtü bitkileri yaprakları aracılığıyla havadan alır köküne iletir ve toprağa bağlar.</p>
+    <div style="max-width:900px;display:flex;flex-direction:column;gap:22px;">
+      <div>
+        <h3 data-i18n="intro.li1" style="font-size:1.05rem;font-weight:800;margin-bottom:6px;">Toprak nemini ve sağlığını korumak</h3>
+        <p class="desc" data-i18n="intro.li1desc">Çıplak bırakılan toprak, güneşin ve rüzgarın yıpratıcı etkilerine karşı savunmasızdır. Örtü bitkileri, yüzeyde adeta canlı bir kalkan oluşturarak buharlaşmayı engeller ve giderek paha biçilemez hale gelen suyu toprakta hapseder; aynı zamanda kök salgılarıyla mikroorganizmaları besleyerek toprağın yitirdiği biyolojik zenginliği ona geri verir.</p>
+      </div>
+      <div>
+        <h3 data-i18n="intro.li2" style="font-size:1.05rem;font-weight:800;margin-bottom:6px;">Mazot tüketimini azaltmak</h3>
+        <p class="desc" data-i18n="intro.li2desc">Geleneksel tarımda toprağı sürekli ve derin işlemek, ağır bir enerji ve yakıt israfıdır. Örtü bitkilerinin güçlü kökleri toprağı mekanik bir müdahaleye gerek kalmadan doğal yollarla gevşetir; azaltılmış veya doğrudan ekim yöntemleriyle birleştiğinde traktörün tarladaki mesaisi azalır ve en büyük gider kalemimiz olan mazot tüketimi ciddi şekilde düşer.</p>
+      </div>
+      <div>
+        <h3 data-i18n="intro.li3" style="font-size:1.05rem;font-weight:800;margin-bottom:6px;">Yabancı otları kontrol altına almak</h3>
+        <p class="desc" data-i18n="intro.li3desc">Yabancı otlarla mücadelede sürekli kimyasallara başvurmak sadece cebinizi değil, toprağınızı da zehirler ve yorar. Yüzeyi hızla kaplayan örtü bitkileri, toprağa ulaşan güneş ışığını kesip biyolojik bir rekabet yaratarak istenmeyen otların çimlenmesini doğal yollarla baskılar; böylece tarlanızı yoğun herbisit (ilaç) yükünden ve yüksek maliyetinden kurtarır.</p>
+      </div>
+      <div>
+        <h3 data-i18n="intro.li4" style="font-size:1.05rem;font-weight:800;margin-bottom:6px;">Örtü bitkileri ile toprağa azot bağlamak</h3>
+        <p class="desc" data-i18n="intro.p2">En büyük girdilerimizden olan Azot (Üre), ne ironiktir ki gezegenimizin atmosferinde en çok bulunan elementtir (78%). Doğalgazdan üretilmesi sebebiyle enerji bağımlılığı yüksek olan azotu, örtü bitkileri yaprakları aracılığıyla havadan alır köküne iletir ve toprağa bağlar.</p>
+      </div>
+    </div>
   </section>
 
   <!-- TOPRAK İŞLEME -->
@@ -1016,7 +1056,7 @@
         <div class="card-body">
           <span class="tag">Rotatif Tırmık</span>
           <h3>HR Serisi</h3>
-          <p>Toprağı devirmeden dikine işleyen, tohum yatağını ideal kıvama getiren ağır hizmet serisi.</p>
+          <p>Başarılı ve yüksek verimli bir hasadın en kritik adımı, tohumun toprakla kusursuz temasını sağlayacak ideal tohum yatağını hazırlamaktır. SKY HR Serisi rotatif tırmıklar en ağır, killi ve zorlu toprak koşullarında bile devasa kesekleri parçalayarak ana ürününüz için mükemmel bir başlangıç zemini yaratır.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1030,7 +1070,7 @@
         <div class="card-body">
           <span class="tag">Diskli Anız Kültivatörü</span>
           <h3>Methys HDS</h3>
-          <p>Hasat sonrası anızı yırtarak işleyen ve zemin hazırlayan, örtü bitkisi ekimine de uygun ağır hizmet kültivatörü.</p>
+          <p>Onarıcı tarım pratiklerinin ilk ve en önemli adımı olan hasat sonrası zemin yönetiminde Methys HDS, ağır hizmet tipi tasarımıyla tarladaki en güçlü yardımcınızdır.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1044,7 +1084,7 @@
         <div class="card-body">
           <span class="tag">Yüzey Sıyırıcı</span>
           <h3>Methys PCS</h3>
-          <p>Düşük yakıt tüketimiyle yüzeyi 2-11 cm arasında sıyırarak ot kontrolü ve anız bozma sağlayan sıyırıcı.</p>
+          <p>Anız bozma ve örtü bitkisi sonlandırmak için tüm genişlik boyunca düşük yakıt tüketimiyle çalışan yüzey sıyırıcı.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1058,7 +1098,7 @@
         <div class="card-body">
           <span class="tag">Diskli Toprak Hazırlama Modülü</span>
           <h3>XR</h3>
-          <p>415 mm X şeklinde diskleriyle 3 m genişlikte saatte 3,5 ha kapasite sunan, PTO gerektirmeyen malç hazırlama modülü.</p>
+          <p>Kuyruk mili gerektirmeyen, kombine ekim için tasarlanmış diskli tohum yatağı hazırlama modülü.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1072,7 +1112,7 @@
         <div class="card-body">
           <span class="tag">Malç Ezici Merdane</span>
           <h3>FACA Roller</h3>
-          <p>Kendinden yönlendirmeli, otomatik hizalanan bağlantısıyla örtü bitkisi ve anızı yatırıp ezen merdane.</p>
+          <p>FACA Roller, tarlanızdaki örtü bitkilerini ve anızları kimyasal (herbisit) kullanmadan sonlandırmanın ve toprağınız için mükemmel bir koruyucu örtüye (malç) dönüştürmenin en doğal yoludur.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1119,7 +1159,7 @@
         <div class="card-body">
           <span class="tag">Ön Hazneli Ekim Ünitesi</span>
           <h3>TF</h3>
-          <p>Traktörün önüne monte edilen, yıl boyu tahıl ekimi, gübreleme ve örtü bitkisi ekiminde kullanılabilen çok amaçlı hazne.</p>
+          <p>Traktörünüzün kapasitesini ve sahadaki operasyonel gücünüzü katlamak için tasarlanan Progress TF ön hazne sistemi, yıl boyu kesintisiz kullanabileceğiniz çok amaçlı bir ekipman. Ekim, gübreleme ve örtü bitkisi uygulamalarında arka ekipmanlarla kusursuz bir uyum içinde çalışır. Tek bir geçişte birden fazla işlem yapmanıza olanak tanıyarak hem zamandan hem de yakıttan ciddi tasarruf sağlarken, çok yönlü yapısıyla işletmenizin vizyonuna güç katar.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1133,7 +1173,7 @@
         <div class="card-body">
           <span class="tag">Mekanik Mibzer</span>
           <h3>Tramline SE / SX</h3>
-          <p>Çift kirişli sağlam şasisiyle uzun ömür ve yeniden satış değeri sunan, ekonomik mekanik tahıl mibzeri.</p>
+          <p>Tramline SE / SX çekilir tip mekanik mibzer, çift kirişli ağır hizmet şasisiyle yıllara meydan okuyan bir dayanıklılık sunar. Her türlü toprak koşulunda istikrarlı bir ekim hassasiyeti sağlar.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1147,7 +1187,7 @@
         <div class="card-body">
           <span class="tag">Mekanik Mibzer (Kombine)</span>
           <h3>Tramline CX</h3>
-          <p>Toprak işleme aletinin üzerine entegre edilen, minimum çıkıntıyla yüksek hazne kapasitesi sunan mekanik mibzer.</p>
+          <p>Toprak hazırlığı ile ekim operasyonunu tek bir geçişte kusursuzca birleştirerek zamandan ve yakıttan maksimum tasarruf sağlayan Tramline CX asılır tip mekanik mibzer, traktörünüzle mükemmel bir denge kurar.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1161,7 +1201,7 @@
         <div class="card-body">
           <span class="tag">Kombine Pnömatik Ekim Makinesi</span>
           <h3>Progress</h3>
-          <p>3 ayrı hazneye kadar genişleyebilen, tek geçişte 3 farklı ürünü farklı dozlarda ekebilen pnömatik mibzer.</p>
+          <p>Geleceğin tarım teknolojilerini bugünün tarlalarına taşıyan SKY Progress, tek geçişte maksimum verim ve hassasiyet arayan profesyoneller için tasarlandı. 3 ayrı bağımsız hazneye kadar genişletilebilen inovatif yapısı sayesinde; ana tohumu, gübreyi ve eşlikçi örtü bitkisini aynı anda, birbirine karıştırmadan ve farklı dozlarda toprağa uygulamanıza olanak tanır.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1175,7 +1215,7 @@
         <div class="card-body">
           <span class="tag">Hızlı Ekim Makinesi</span>
           <h3>Maxidrill</h3>
-          <p>Piyasadaki en geniş açıklığa sahip, yüksek ilerleme hızlarında dahi kesintisiz çalışabilen 4 hazneli hızlı mibzer.</p>
+          <p>Büyük ölçekli arazilerde zamanla yarışan profesyoneller için geliştirilen SKY Maxidrill hızlı ekim makinesi, azaltılmış toprak işleme (Min-Till) sistemlerinin sahadaki en güçlü temsilcisidir. Sınıfının en geniş şasi açıklıklarından birine sahip olan bu devrim niteliğindeki mibzer, tarladaki yoğun anız ve bitki artığı koşullarında bile tıkanma yapmadan, yüksek ilerleme hızlarında kesintisiz bir ekim performansı sunar. 4 ayrı hazneye kadar çıkabilen devasa kapasitesiyle tek geçişte tohum, gübre ve eşlikçi bitki ve mikrogranül kombinasyonlarını kusursuzca toprağa yerleştirir.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1189,7 +1229,7 @@
         <div class="card-body">
           <span class="tag">Doğrudan Ekim Mibzeri</span>
           <h3>Easydrill</h3>
-          <p>40 yılı aşkın Ar-Ge birikiminin ürünü; anıza, örtü bitkisi üstüne veya işlenmiş toprağa aynı hassasiyetle ekim yapar.</p>
+          <p>İşlemesiz (Anıza ekim) tarım devriminin dünya çapındaki sembolü olan Easydrill, 40 yılı aşkın Ar-Ge birikiminin ve sahadaki kusursuz mühendisliğin bir sonucudur. İster yoğun anızda, ister canlı bir örtü bitkisinin üzerine, isterseniz de geleneksel olarak işlenmiş bir tarlada olsun; her koşulda aynı eşsiz hassasiyetle çalışabilen son derece yetenekli ve esnek bir mibzerdir.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1203,7 +1243,7 @@
         <div class="card-body">
           <span class="tag">Pnömatik Kombine Ekim Ünitesi</span>
           <h3>Progress M</h3>
-          <p>Toprak işleme aletiyle kombine çalışan, sağlam ve güvenilir modern tasarımlı mekanik ekim kombinasyonu.</p>
+          <p>Toprak hazırlığı ile pnömatik ekim hassasiyetini kusursuz bir mühendislikle tek bir operasyona dönüştüren Progress M, toprak işleme ekipmanlarının üzerine mükemmel şekilde entegre olur. Hem zamandan hem de yakıttan tasarruf ederken, mükemmel tohum yatağı hazırlığı ve eşit çıkış oranından ödün vermek istemeyen çiftçiler için güvenilir, kompakt bir çözümdür.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1232,7 +1272,7 @@
         <div class="card-body">
           <span class="tag">Asılır Tip Gübre Dağıtıcı</span>
           <h3>DX30+</h3>
-          <p>Sıfır ölü hacimli tam boşaltma ve %100 elektrikli kabin kontrolü sunan 12-36 metrelik gübre dağıtıcı.</p>
+          <p>Orta ve büyük ölçekli işletmelerin hassas gübreleme ihtiyaçları için geliştirilen DX30+ asılır tip gübre dağıtıcı, 12 ila 36 metre arasında mükemmel bir dağılım homojenliği sunar. %100 elektrikli kabin içi kontrol sistemi sayesinde operatöre maksimum kullanım kolaylığı sağlarken, her bir granülün tarlanızda tam olarak olması gereken yere düşmesini garanti ederek bitki besleme kalitenizi artırır.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1246,7 +1286,7 @@
         <div class="card-body">
           <span class="tag">Asılır Tip Gübre Dağıtıcı</span>
           <h3>X40+ / X50+</h3>
-          <p>1.900-4.200 litre hazne seçenekleriyle 12-50 metre arası geniş açıklıkta çalışan yüksek kapasiteli dağıtıcı.</p>
+          <p>Tarımsal üretimde verimlilik sınırlarını zorlayan profesyoneller için tasarlanan X40+ ve X50+ serisi, devasa hazne kapasitesi ve 50 metreye varan iş genişliğiyle sahadaki en büyük operasyonel gücünüzdür. Geniş arazilerde tarlada kalma süresini kısaltan bu makineler, ileri aerodinamik dağıtım teknolojisi sayesinde rüzgarlı koşullarda bile kusursuz bir serpme deseni oluşturur; böylece gübre maliyetlerinizi optimize eder ve tarlanızın her metrekaresinden eşit verim almanızı sağlar.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1260,7 +1300,7 @@
         <div class="card-body">
           <span class="tag">Asılır Tip Gübre Dağıtıcı (Econov)</span>
           <h3>X40+ / X50+ Econov</h3>
-          <p>ECONOV bölüm kesme donanımıyla tarla kenarında gübre tasarrufu ve homojen dağılım sağlayan versiyon.</p>
+          <p>Econov serisi, bitki beslemede "sıfır israf" felsefesiyle çalışır. Benzersiz 3D bölüm kontrolü (Section Control) ve uydu destekli haritalama yetenekleri sayesinde; tarla sınırlarında, kavisli hatlarda ve örtüşen alanlarda gübre atım şeklini santimetre hassasiyetiyle otomatik olarak ayarlar ve gereksiz atımı keser. Sadece bitkinin ihtiyacı olan bölgeye, tam gerektiği dozda uygulama yaparak çevreyi korurken, giderek artan gübre maliyetlerinizde işletmenize devasa bir tasarruf kalemi yaratır.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1274,7 +1314,7 @@
         <div class="card-body">
           <span class="tag">Römork Tip Gübre Dağıtıcı</span>
           <h3>XT100 / 130 / 160</h3>
-          <p>7.200-13.000 litre hazne seçenekleriyle 18-50 metre arası çalışan mekanik römork tip gübre dağıtıcı.</p>
+          <p>Geniş arazilerde operasyonel hız ve kesintisiz performans arayan büyük ölçekli işletmeler için tasarlanan SKY XT mekanik römork tip gübre dağıtıcılar, tarladaki gücünüzü maksimize eder. 7.200 ile 13.000 litre arasındaki devasa hazne seçenekleri ve 50 metreye varan iş genişliği sayesinde dolum için yapılan duraklamaları en aza indirerek zamandan ve işçilikten ciddi tasarruf sağlar.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1288,7 +1328,7 @@
         <div class="card-body">
           <span class="tag">Römork Tip Gübre Dağıtıcı (Hidrolik)</span>
           <h3>XT160H / 240H</h3>
-          <p>13.000-15.500 litre hazne kapasiteli, hidrolik tahrikli, granül gübrede 50 metreye kadar açıklık sunan dağıtıcı.</p>
+          <p>Çekilir tip bitki besleme teknolojisinde gelinen son nokta olan hidrolik tahrikli XT H serisi, devasa operasyonları kusursuz bir hassasiyetle yönetmek için tasarlandı. 15.500 litreye ulaşan hazne kapasitesi ve gücünü kuyruk mili yerine doğrudan hidrolik sistemden alan yapısıyla büyük arazilerde tek bir dolumla çok daha kısa sürede uygulama yapar.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1487,19 +1527,43 @@
   </section>
 </div>
 
+<div id="view-about" class="view-hidden" style="display:none;">
+  <div class="category-back-bar">
+    <button class="back-btn" onclick="showHome()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M19 12H5m0 0 6 6m-6-6 6-6"/></svg>
+      <span data-i18n="breadcrumb.allCategories">Tüm kategoriler</span>
+    </button>
+    <div class="breadcrumb">
+      <a href="./" onclick="event.preventDefault();showHome()" data-i18n="breadcrumb.home">Ana Sayfa</a><span class="sep">/</span><span class="current" data-i18n="nav.about">Hakkımızda</span>
+    </div>
+  </div>
+
+  <section class="contact-hero">
+    <span class="eyebrow"><span class="dot"></span><span data-i18n="about.eyebrow">HAKKIMIZDA</span></span>
+    <h1 data-i18n="about.h1">Hakkımızda</h1>
+    <p data-i18n="about.intro">KSV Tarım, 4 jenerasyonun tarım mirasını, uluslararası deneyim ve inovasyon ile buluşturuyor.</p>
+  </section>
+
+  <section class="category" style="padding-top:0;">
+    <div style="max-width:760px;">
+      <p class="desc" data-i18n="about.placeholder">Bu sayfanın içeriği yakında eklenecektir.</p>
+    </div>
+  </section>
+</div>
+
 </main>
 
 <footer>
   <div class="footer-top">
     <div class="footer-col">
       <div class="brand" style="pointer-events:none;">
-        <div class="brand-badge"><img src="logo.png" alt="KSV Tarım Teknolojileri logosu" width="46" height="46" loading="lazy"></div>
+        <div class="brand-badge"><img src="logo.png" alt="KSV Tarım Makinaları ve Teknolojileri logosu" width="46" height="46" loading="lazy"></div>
         <div class="brand-text">
-          <div class="main">KSV TARIM TEKNOLOJİLERİ</div>
+          <div class="main">KSV TARIM MAKİNALARI VE TEKNOLOJİLERİ</div>
           <div class="sub" data-i18n="brand.tagline">SKY AGRICULTURE TÜRKİYE RESMİ DİSTRİBÜTÖRÜ</div>
         </div>
       </div>
-      <p style="margin-top:17px;" data-i18n="footer.tagline">Toprak işleme ve ekim çözümlerinde çiftçinin güvenilir teknoloji ortağı.</p>
+      <p style="margin-top:17px;" data-i18n="footer.tagline">Toprak işleme ve ekim çözümlerinde çiftçinin güvenilir ekipman ve teknoloji ortağı.</p>
       <div class="social-row">
         <a href="https://www.instagram.com/ksvtarim/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
         <a href="https://www.youtube.com/@SKYAgricultureFrance" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></svg></a>
@@ -1539,7 +1603,7 @@
     </button>
   </div>
   <div class="footer-bottom">
-    <p data-i18n="footer.copyright">&copy; 2026 KSV Tarım Teknolojileri. Tüm hakları saklıdır.</p>
+    <p data-i18n="footer.copyright">&copy; 2026 KSV Tarım Makinaları ve Teknolojileri. Tüm hakları saklıdır.</p>
     <p data-i18n="brand.tagline2">SKY Agriculture Türkiye Resmi Distribütörü</p>
   </div>
 </footer>
@@ -1565,6 +1629,7 @@
   </div>
   <div class="drawer-body" id="drawer-body"></div>
   <div class="drawer-foot">
+    <a class="btn-secondary" href="#hakkimizda" style="width:100%;justify-content:center;margin-bottom:10px;" onclick="event.preventDefault();showAbout();closeDrawer();" data-i18n="nav.about">Hakkımızda</a>
     <a class="btn-primary" href="#iletisim" style="width:100%;justify-content:center;margin-bottom:10px;" onclick="event.preventDefault();showContact();closeDrawer();" data-i18n="nav.contact">Bize Ulaşın</a>
     <button class="whatsapp-btn" style="width:100%;justify-content:center;" onclick="waClick()">WhatsApp: +90 541 859 22 36</button>
   </div>
@@ -1589,31 +1654,16 @@ const WHATSAPP_NUMBER = "905418592236";
 const PRODUCTS = {
   'hr': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Rotatif Tırmık', title:'HR Serisi',
-    lead:'Daha iyi bir tohum yatağı için metre başına 4 rotor, sürüm izleri veya setler olmadan daha düşük çekiş gereksinimleriyle, güçlendirilmiş çelikten yapılmış şase.',
+    lead:'Başarılı ve yüksek verimli bir hasadın en kritik adımı, tohumun toprakla kusursuz temasını sağlayacak ideal tohum yatağını hazırlamaktır. SKY HR Serisi rotatif tırmıklar en ağır, killi ve zorlu toprak koşullarında bile devasa kesekleri parçalayarak ana ürününüz için mükemmel bir başlangıç zemini yaratır. Ağır hizmet tipi mühendislikle tasarlanan bu seri, toprağın yapısına zarar vermeden maksimum verim almanızı sağlar.',
     videos:[{id:'7QOt4Sh3CG8', title:'SKY Agriculture - Herse rotative HRW 8000.36'}],
     features:[
       'Kapsamlı ufalamalı ve kabarık bırakmadan nizamı tesviye.',
       'Tek vitesli şanzıman',
       'Cırcır bıçak modülü',
       '40mm rulmanlı merdane seçenekleri.',
-      '4 metreden 8 metreye kadar iş genişliği ile hızlı ve kaliteli sonuç.'
+      '3 metre ile 8 metre arasında çalışma genişliği seçenekleriyle hızlı ve kaliteli sonuç.'
     ],
     specGroups:[
-      {
-        title:'Kompakt Seri (HRV)',
-        columns:['HRV 100.9','HRV 130.9','HRV 150.9','HRV 180.9','HRV 200.9'],
-        rows:[
-          {label:'Çalışma Genişliği (m)', values:['1,00','1,30','1,50','1,80','2,00']},
-          {label:'Toplam Genişlik (m)', values:['1,13','1,39','1,63','1,88','2,12']},
-          {label:'Rotor Sayısı', values:['4','5','6','7','8']},
-          {label:'Güç İhtiyacı (HP)', values:['30-70','30-75','35-80','40-85','45-90']},
-          {label:'Kardan (PTO) Devri (devir/dk)', values:['540','540','540','540','540']},
-          {label:'Şanzıman Tipi', values:['Tek kademeli','Tek kademeli','Tek kademeli','Tek kademeli','Tek kademeli']},
-          {label:'Rotor Devri (devir/dk)', values:['290','290','290','290','290']},
-          {label:'Kafes Merdane Ağırlığı Ø400 mm (kg)', values:['410','450','490','540','570']},
-          {label:'Paker Merdane Ağırlığı Ø460 mm (kg)', values:['480','535','590','645','700']}
-        ]
-      },
       {
         title:'Orta-Geniş Seri (HRW .28)',
         columns:['HRW 4000.28','HRW 4500.28','HRW 5000.28','HRW 6000.28'],
@@ -1680,29 +1730,31 @@ const PRODUCTS = {
         photo:'images/hr-bearing.jpg'
       },
       {
-        title:'Taşıma Güvenliği',
-        desc:'Hidrolik katlanma sistemini taşıyan sağlam bir orta şasi (merkezi omurga) bulunmaktadır. Katlama işlemini gerçekleştiren iki adet hidrolik pistonun (liftin) her biri, güvenli kapanmayı sağlayan kılavuz çatallarla donatılmıştır. Makinenin yol (nakliye) konumu kilidi tamamen hidrolik kontrollüdür; katlandığında toplam taşıma genişliği 2,95 metredir (HRW SLIM versiyonlarında ise 2,50 metre). Makine şasisi yüksek mukavemetli çelikten imal edilmiştir.',
-        photoHint:'yolda taşıma konumunda traktör + tırmık',
-        photo:'images/hr-transport-safety.jpg'
+        title:'Toprağı Devirmeden İşleyen Dikey Rotor Sistemi',
+        desc:'Geleneksel toprak işleme aletlerinin aksine HR Serisi, toprağı altüst edip devirmez. Dikey eksende dönen güçlü bıçakları sayesinde toprağın sadece tohum ekilecek üst katmanını ince bir şekilde ufalar ve karıştırır. Arkasında yer alan ağır merdane sistemi ise ufalanmış toprağı hafifçe bastırarak sıkıştırır; böylece tohumun çimlenmek için ihtiyaç duyduğu nemli, ince ve hava boşluksuz ideal yatağı tek bir geçişte hazırlar.'
       },
       {
         title:'280 veya 360 Beygirlik Merkezi Tahrik Ünitesi',
         desc:'WALTERSCHEID "Power Line" kardan mili tahriki (sadece 250 saatte bir yağlama gerektirir), otomatik sıfırlamalı bir tork limitörüyle donatılmıştır.',
         photoHint:'merkezi tahrik ünitesi yakın çekim',
         photo:'images/hr-drive-unit.jpg'
+      },
+      {
+        title:'Mükemmel Bir Kombine Platformu',
+        desc:'SKY HR Serisi sadece tek başına bir toprak işleme makinesi değildir; aynı zamanda mükemmel bir kombine platformudur. Üzerine doğrudan entegre edilebilen Progress M (Pnömatik) veya Tramline CX (Mekanik) ekim üniteleriyle kusursuz bir uyum içinde çalışır.',
+        desc2:'Bu kombinasyon sayesinde; traktörünüz tek bir geçişte toprağı ufalar, tohum yatağını hazırlar, tohumu eker ve merdaneyle kapatır. Tarladaki traktör trafiğini (toprak sıkışmasını) azaltan bu sistem; size dar ekim pencerelerinde çok ciddi zaman kazandırırken, işletmenizin mazot ve işçilik maliyetlerinde devasa bir tasarruf yaratır.'
       }
     ],
     brochure:'https://sky-agriculture.com/pdf/hr-406-507.pdf'
   },
   'methys-hds': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Diskli Anız Kültivatörü', title:'Methys HDS',
-    lead:'Anız bozarken örtü bitkisi ekerek toprak sağlığını ve gelecek verimi korumak mümkün.',
+    lead:'Onarıcı tarım pratiklerinin ilk ve en önemli adımı olan hasat sonrası zemin yönetiminde Methys HDS, ağır hizmet tipi tasarımıyla tarladaki en güçlü yardımcınızdır.',
     videos:[{id:'GMpzvvNYscE', title:'SKY Agriculture - Déchaumeur Methys HDS 5m porté'}],
     features:[
-      'Koruyucu tarımı ve sahte ekim (false seeding) uygulamalarına özel tasarım',
-      'Ön ve arka teker sistemiyle şasi her koşulda toprağa paralel kalır',
-      'Klasik çelik merdaneye göre %20-25 daha az güç tüketimi',
-      '6 ve 8 metre çalışma seçenekleri'
+      'Yoğun anız ve bitki artıklarını kusursuzca yırtıp toprağa homojen bir şekilde karıştırarak organik maddenin hızla geri kazanılmasını sağlar.',
+      'Etkili mekanik ot kontrolü yeteneği sayesinde herbisit (ot ilacı) bağımlılığınızı azaltırken; opsiyonel pnömatik tohumlama ünitesiyle donatıldığında tek bir geçişte hem tarlanızı işleyip hem de koruyucu örtü bitkilerinizi ekmenize olanak tanıyarak zamandan, işçilikten ve yakıttan maksimum tasarruf etmenizi sağlar.',
+      '3 metre ile 12 metre arasında çalışma genişliği seçenekleri'
     ],
     specGroups:[
       {
@@ -1751,27 +1803,29 @@ const PRODUCTS = {
       },
       {
         title:'Düzenli Kullanım',
-        desc:'Anız bozma ve örtü bitkisi ekim işlemlerinde üstün performans sunan bir ekipman. 6 metre ve 8 metre iş genişliği seçenekleriyle sunulmaktadır. Methys HDS, anız işlemede 14 km/saat gibi yüksek ilerleme hızlarında çalışmak üzere özel olarak tasarlanmıştır; 8 metrelik modeliyle saatte 100 dekar alan işleme kapasitesine ulaşarak muazzam bir tarla performansı sağlar.',
+        desc:'Anız bozma ve örtü bitkisi ekim işlemlerinde üstün performans sunan bir ekipman. 3 metre ile 12 metre arasında çalışma genişliği seçenekleriyle sunulmaktadır. Methys HDS, anız işlemede 14 km/saat gibi yüksek ilerleme hızlarında çalışmak üzere özel olarak tasarlanmıştır; 8 metrelik modeliyle saatte 100 dekar alan işleme kapasitesine ulaşarak muazzam bir tarla performansı sağlar.',
         photoHint:'geniş açı, tarlada makine',
         photo:'images/methys-hds-wide-field.jpg'
       },
       {
         title:'Son Derece Düşük Güç Tüketimi ve Ödünsüz Sıyırma Kalitesi',
-        desc:'Ön ve arka tekerleklerden oluşan tandem (çift eksenli) sistem sayesinde, makine şasisi toprak yüzeyine her koşulda tam paralel kalır. Teknik olarak, düşük yuvarlanma direncine sahip olduğu için (toprakta daha rahat akıp gittiğinden), standart çelik merdanelere kıyasla traktörün çeki gücünden %20-25 oranında tasarruf sağlandığı kanıtlanmıştır.',
+        desc:'7 farklı konumlu tekerleklerden oluşan tandem (çift eksenli) sistemi sayesinde, makine şasisi toprak yüzeyine her koşulda tam paralel kalır. Teknik olarak, düşük yuvarlanma direncine sahip olduğu için ağır ve yapışkan toprak şartları dahil her türlü arazide tıkanmadan kusursuz bir akışkanlık sunar. Standart çelik merdanelere kıyasla %20-25 daha az traktör gücü (hp) ile üstün performans sunar.',
         desc2:'Şaşırtmalı (ofset) dizilime sahip lastik tekerlekli merdane, ağır ve yapışkan toprak şartları dahil her türlü arazide tıkanmadan kusursuz bir akışkanlık sunar ve toprağı mükemmel şekilde sıkıştırır (konsolide eder). Üç sıra halinde dizilmiş büyük çaplı lastikleri sayesinde, yüksek ilerleme hızlarında çalışmaya son derece elverişlidir ve çok düşük bir çeki gücü gerektirir.',
-        photoHint:'traktör + kültivatör, anız tarlasında geniş çekim',
-        photo:'images/methys-hds-stubble-pull.jpg'
+        photoHint:'7 konumlu tandem teker sisteminin eşit derinlik takibini (1=2=3) gösteren teknik şema',
+        photo:'images/methys-hds-tandem-tracking-scheme.png'
       },
       {
         title:'Örtü Bitkisi Ekimi İçin Entegre Tohum Yerleştirme',
-        desc:'Methys HDS üzerine entegre edilen tohum dağıtıcı başlık ve merdanenin hemen önüne konumlandırılan ekici bar, bu toprak işleme makinesinin çok yönlülüğünü artırır. Bu donanım, toprak hazırlığı yapılırken aynı anda örtü bitkisi (ara ürün) ekiminin çok daha ekonomik bir şekilde gerçekleştirilmesine olanak tanır (Bu sistemin çalışması için traktör önü tohum tankı gereklidir).'
+        desc:'Methys HDS üzerine entegre edilen tohum dağıtıcı başlık ve merdanenin hemen önüne konumlandırılan ekici bar, bu toprak işleme makinesinin çok yönlülüğünü artırır. Bu donanım, toprak hazırlığı yapılırken aynı anda örtü bitkisi (ara ürün) ekiminin çok daha ekonomik bir şekilde gerçekleştirilmesine olanak tanır (Bu sistemin çalışması için traktör önü tohum tankı gereklidir).',
+        photoHint:'traktör + ön hazneli tohum tankı, tarlada',
+        photo:'images/tf.jpg'
       }
     ],
     brochure:'https://sky-agriculture.com/pdf/methys-hds-406-504.pdf'
   },
   'methys-pcs': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Yüzey Sıyırıcı', title:'Methys PCS',
-    lead:'Anız bozma ve bitki örtüsü imhası için tüm genişlik boyunca 3 cm sabit derinlikte, düşük yakıt tüketimiyle çalışan yüzey sıyırıcı.',
+    lead:'Anız bozma ve örtü bitkisi sonlandırmak için tüm genişlik boyunca düşük yakıt tüketimiyle çalışan yüzey sıyırıcı.',
     videos:[{id:'AHOO4jyXTKo', title:'Methys PCS - dents fines versiyonu'}],
     features:[
       '3 bölümlü şase ile bağımsız zemin takibi',
@@ -1815,31 +1869,31 @@ const PRODUCTS = {
     highlights:[
       {
         title:'Kusursuz Zemin Takibi İçin Eşsiz Yatay ve Dikey Açıklık',
-        desc:'Sentetik total herbisitlerin yaygınlaşmasından önce de kullanılan bir yöntemdir. Günümüzün enerji ve iklim koşulları değişiyor. Bir sıyırıcının tamamen yeniden tasarımı, aşağıdaki hedefleri karşılamayı amaçlıyor:',
+        desc:'Sentetik total herbisitlerin (yeşil kurutan) yaygınlaşmasından önce sıklıkla kullanılan bir yöntemdir. Günümüzün enerji ve iklim koşulları değişikliklerine uygun olarak yeniden tasarlandı.',
         bullets:['Yakıt tüketimini azaltmak','Tazeliği korumak ve CO2 emisyonunu sınırlamak için tüm genişlik boyunca 3 cm sıyırma','Bitki kalıntılarını yüzeyde tutmak => diş tipi bir aletle tıkanmayı önleyecek bol açıklık','Yoğun bitki örtüsüyle çalışabilme'],
-        desc2:'Methys PCS\'nin tasarımı, yok edilecek büyük miktardaki bitkilerde bile yüksek hızda çalışabilmesini sağlar. Kesici disklerin üst üste binmesi optimum düzeydedir ve makinenin tüm genişliği boyunca çalışma yapılmasını garanti eder. 750 mm\'lik şasi açıklığı ve tırmık dişleri arasındaki mesafe, yüksek ilerleme hızlarında bile önemli miktarda bitki artıklarının akıp geçmesini sağlar.',
-        photoHint:'SKY sıyırıcı, tarlada yakın çekim',
-        photo:'images/methys-pcs.jpg'
+        desc2:'Methys PCS\'nin geniş açıklıklı tasarımı, yoğun anızda ve sonlandırılacak yoğun miktardaki örtü bitkilerinde bile yüksek hızda çalışabilmesini sağlar. Kesici disklerin üst üste binmesi optimum düzeydedir ve makinenin tüm genişliği boyunca çalışma yapılmasını garanti eder. 750 mm\'lik şasi açıklığı ve tırmık dişleri arasındaki mesafe, yüksek ilerleme hızlarında bile önemli miktarda bitki artıklarının akıp geçmesini sağlar.',
+        photoHint:'traktör + sıyırıcı, yoğun yeşil örtü bitkisi üzerinde çalışırken',
+        photo:'images/methys-pcs-cover-crop.jpg'
       },
       {
         title:'Son Derece Düşük Güç Tüketimi ve Ödünsüz Sıyırma Kalitesi',
-        bullets:['7 zemin destek noktasıyla sığ çalışma derinliği kontrolü, kusursuz zemin takibi','12 derinlik kontrol tekerleği','İzostatik olarak desteklenen şase/uzantılarla 3 boyutlu kontrol ve 3D esnek yapı','Traktör hareketlerinden etkilenmeyen gerçek römork tipi çekiş','Düşük yakıt tüketimi (ikinci paso 3 L/ha, ilk paso 6,5 L/ha)'],
+        bullets:['7 zemin destek noktasıyla sığ çalışma derinliği kontrolü, kusursuz zemin takibi','12 derinlik kontrol tekerleği','İzostatik olarak desteklenen şase/uzantılarla 3 boyutlu kontrol ve 3D esnek yapı','Traktör hareketlerinden etkilenmeyen gerçek römork tipi çekiş','Düşük yakıt tüketimi (0,65 Litre/dekar ilk geçiş, 0,3 Litre/dekar ikinci geçiş)'],
         photoHint:'3 bağımsız şase bölümünde eşit derinlik takibini (1=2=3) ve toprak sağlığını gösteren teknik şema',
         photo:'images/methys-pcs-depth-consistency-scheme.jpg'
       },
       {
-        title:'Koruyucu Tarımına Uygun Bir Sıyırıcı',
+        title:'Koruyucu Tarıma Uygun Bir Sıyırıcı',
         desc:'Amaç, Methys PCS\'den geçtikten sonra herhangi bir yeniden büyümeyi önlemektir. Bitki örtüsünün tamamen yok edilmesinde 2 temel unsur rol oynar:',
-        bullets:['Tıkanmayı önlemek için geniş açıklık: bitki örtüsü imhası, yüksek hasat kalıntısı yönetimi','İlk paso anız sürümü için nüfuz gücü (bol saman miktarında dahi)','2-11 cm arası sığ derinliklerde hassas çalışabilme ile toprak bozulmasını sınırlama','Herhangi bir tekerlek geçişinin ardından bir dişli elemanın çalışması gelir; böylece toprağın bitki örtüsü üzerinde yeniden sıkışması riski ortadan kalkar','3 sıralı, eğimi ayarlanabilir yaylı dişlere (12 mm) sahip arka tırmık, yabancı otların parçalanmasını ve köklerin havaya maruz bırakılmasını sağlayarak yeniden büyümeyi önler'],
-        photoHint:'traktör + sıyırıcı, yeşil örtü bitkisi üzerinde çalışırken',
-        photo:'images/methys-pcs-cover-crop.jpg'
+        bullets:['2-11 cm arası sığ derinliklerde hassas çalışabilme ile toprak bozulmasını sınırlama','Herhangi bir tekerlek geçişinin ardından bir dişli elemanın çalışması gelir; böylece toprağın bitki örtüsü üzerinde yeniden sıkışması riski ortadan kalkar','3 sıralı, eğimi ayarlanabilir yaylı dişlere (12 mm) sahip arka tırmık, yabancı otların parçalanmasını ve köklerin havaya maruz bırakılmasını sağlayarak yeniden büyümeyi önler','Anız bozarken veya örtü bitkisi sonlandırırken yabancı ot tohumlarının çimlenmesini sağlayarak ana ürün ekimi öncesi ve sonrasında yabancı ot ihtiyacını azaltarak toprak sağlığını ve girdi tasarrufunuzu artırır.'],
+        photoHint:'sıyırıcı dişleri, yoğun anız ve bitki artığı içinde yakın çekim',
+        photo:'images/methys-pcs.jpg'
       }
     ],
     brochure:'https://sky-agriculture.com/pdf/methys-pcs-406-503.pdf'
   },
   'xr': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Diskli Toprak Hazırlama Modülü', title:'XR',
-    lead:'41.5 cm çapındaki X şeklinde disk ve paslanmaz çelik şase ile saatte 15km hıza kadar kusursuz işleme. (35 dekar/saat)',
+    lead:'Kuyruk mili gerektirmeyen, kombine ekim için tasarlanmış diskli tohum yatağı hazırlama modülü.',
     videos:[{id:'sVNozudU-Tw', title:'SKY Agriculture - Progress TF - XR'}],
     features:[
       'Kuyruk miline ihtiyaç duymadan düşük devirlerde kullanım ile yakıt tasarrufu sağlar.',
@@ -1855,7 +1909,7 @@ const PRODUCTS = {
           {label:'Disk Sıra Sayısı', values:['2','2','2']},
           {label:'Disk Sayısı', values:['22','26','30']},
           {label:'Disk Tipi', values:['Tırtıklı disk (Niaux 200)','Tırtıklı disk (Niaux 200)','Tırtıklı disk (Niaux 200)']},
-          {label:'Güç İhtiyacı (HP)', values:['150-210 (XEOS Pro ile kombine)','175-240 (XEOS Pro ile kombine)','220-300 (XEOS Pro ile kombine)']}
+          {label:'Güç İhtiyacı (HP)', values:['150-210','175-240','220-300']}
         ]
       }
     ],
@@ -1863,33 +1917,26 @@ const PRODUCTS = {
       {
         title:'3 Metrede Saatte 3,5 Hektar!',
         desc:'415 mm çapındaki X dizilimli (çapraz) disk bataryaları sayesinde, 12-15 km/saat gibi yüksek ilerleme hızlarında malçlı işleme (anız karıştırma) operasyonları için üstün bir alan işleme kapasitesi sunar. 3 metrelik iş genişliğine sahip modeliyle saatte 3,5 hektar (35 dekar) tarla işleme performansına ulaşır. Makine şasisi yüksek mukavemetli çelikten imal edilmiştir.',
-        photoHint:'XR modülü ürün render görseli',
-        photo:'images/xr-disc-diagram.jpg'
-      },
-      {
-        title:'Rakipsiz İşletme Maliyeti',
-        desc:'Kuyruk mili (PTO) bağlantısı gerektirmez ve traktörün düşük motor devirlerinde çalışmasına olanak tanıyarak maksimum yakıt tasarrufu sağlar. XR ekipmanı, kuyruk milinden güç alan (aktif) toprak işleme makinelerine kıyasla operasyon maliyetlerinizi yarı yarıya düşürür.',
         photoHint:'SKY ekim ünitesi, atölye içinde geniş çekim',
         photo:'images/xr-workshop.jpg'
       },
       {
-        title:'Kusursuz Tohum Yatağı Hazırlığı',
-        desc:'Toprak akışı, iki disk sırasının hemen arkasında bulunan bir tarak tırmık ile düzeltilir. Merdane, ekim üniteleri geçmeden önce toprağın yeniden sıkışmasını sağlar (Packer 550, Gravity veya Tracker merdane seçeneği).',
-        photoHint:'disk + tarak tırmık, tarlada yakın çekim',
-        photo:'images/xr-stubble.jpg'
+        title:'Rakipsiz İşletme Maliyeti',
+        desc:'Azaltılmış toprak işleme (Min-Till) sistemlerinin temel prensibi, toprağı yormadan ve ekstra enerji harcamadan yüzeyi ana ürüne hazırlamaktır. XR Diskli Toprak Hazırlama Modülü, tarladaki anızı, örtü bitkilerini ve yabancı otları en verimli şekilde işleyerek kusursuz bir malç tabakası yaratmak için tasarlanmış yüksek hızlı, kompakt ve ekonomik bir çözümdür.',
+        desc2:'Kuyruk mili (PTO) bağlantısı gerektirmez ve traktörün düşük motor devirlerinde çalışmasına olanak tanıyarak maksimum yakıt tasarrufu sağlar. XR ekipmanı, kuyruk milinden güç alan (aktif) toprak işleme makinelerine kıyasla operasyon maliyetlerinizi yarı yarıya düşürür.'
       },
       {
-        title:'XR, Her Zamankinden Daha Çok Yönlü',
-        desc:'TF ve Progress serileri artık çok daha donanımlı ve çok yönlü: Xeos TF modeli, XR toprak işleme modülü veya SKY HR dik frezesi ile entegre (kombine) olarak çalışabilmektedir. Sistemin sunduğu bu modüler tasarım, özellikle nemli ve ağır toprak şartlarında, erken dönem bitki çıkışından sezon sonuna kadar bu makineyi tarladaki en güvenilir çözüm ortağınız haline getirir.',
-        photoHint:'Xeos TF + HR/XR modül kombinasyon şeması',
-        photo:'images/xr-hr-combo.jpg'
+        title:'Mükemmel Anız ve Organik Madde Yönetimi',
+        desc:'Hasat sonrası tarlada kalan yoğun anızı başarıyla parçalar ve toprağın sadece en üst katmanına homojen bir şekilde karıştırır. Bu yüzeysel harmanlama, toprak mikroorganizmaları (solucanlar ve bakteriler) için harika bir besin kaynağı yaratır ve bitki artıklarının hızla çürüyerek organik maddeye dönüşmesini sağlar.',
+        photoHint:'disk + tarak tırmık, tarlada yakın çekim',
+        photo:'images/xr-stubble.jpg'
       }
     ],
     brochure:'https://sky-agriculture.com/en/documentation/'
   },
   'faca-roller': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Malç Ezici Merdane', title:'FACA Roller',
-    lead:'Toprağı işlemeden örtü bitkisini sonlandırır.',
+    lead:'FACA Roller, tarlanızdaki örtü bitkilerini ve anızları kimyasal (herbisit) kullanmadan sonlandırmanın ve toprağınız için mükemmel bir koruyucu örtüye (malç) dönüştürmenin en doğal yoludur.',
     videos:[{id:'4_g2zmxAxyc', title:'SKY Agriculture - Semoir EasyDrill + Rouleau FACA'}],
     features:[
       'Bitki örtüsünü toprağa karıştırmadan yatırır, yeniden filizlenmesini engeller.',
@@ -1906,15 +1953,25 @@ const PRODUCTS = {
     highlights:[
       {
         title:'Otomatik Hizalanan Kendinden Yönlendirmeli Bağlantı',
+        desc:'Tarlayı yıl boyu yeşil tutmak ne kadar önemliyse, üretilen biyokütleyi (örtü bitkilerini) ana ürün ekiminden hemen önce doğru şekilde sonlandırmak da o kadar kritiktir. FACA Roller, örtü bitkilerini ve hasat artığı anızları kimyasal (herbisit) kullanmadan, tamamen mekanik yollarla sonlandırmak ve toprağınız için kusursuz bir koruyucu örtüye (malç) dönüştürmek için tasarlanmıştır.',
         bullets:['Nakliye kilitleme mandalı','Ön monteli küresel mafsal','Otomatik bağlantı'],
         photoHint:'tarlada çalışan traktör + FACA Roller, kuşbakışı görünüm',
         photo:'images/faca-roller-aerial-action.jpg'
       },
       {
         title:'Önce / Sonra Ürünler',
-        desc:'La Conillais çiftliğinde, farklı türlerin merdaneye duyarlılığını test etmek için bir örtü bitkisi platformu kurduk. Merdaneleme işlemine dayanamayan bazı bitki örnekleri burada görülebilir.',
+        desc:'FACA Roller, bitkileri kökünden sökmez veya toprağı devirmez. Özel açılı bıçak tasarımı sayesinde bitkinin gövdesini yatırır, belirli aralıklarla kırar ve ezer. Bu işlem, bitkinin özsu akışını keserek büyüme döngüsünü fiziksel olarak durdururken, köklerin toprak içinde kalarak çürümesini ve toprağı organik maddece zenginleştirmesini sağlar. Tarlanızın üzerine serilen bu ezilmiş bitki örtüsü, ana ürününüz için mükemmel bir "doğal malç" tabakası oluşturur.',
+        desc2:'La Conillais çiftliğinde, farklı türlerin merdaneye duyarlılığını test etmek için bir örtü bitkisi platformu kurduk. Merdaneleme işlemine dayanamayan bazı bitki örnekleri burada görülebilir.',
         photoHint:'ekim öncesi/sonrası tarla karşılaştırması',
         photo:'images/faca-roller-before-after.jpg'
+      },
+      {
+        title:'Kimyasalsız, Ekonomik ve Doğal Sonlandırma',
+        bullets:[
+          'Kimyasal (Herbisit) Maliyetlerini Sıfırlar: Örtü bitkilerini sonlandırmak için glifosat veya benzeri ağır kimyasallara duyulan ihtiyacı ortadan kaldırır. Toprağınızın biyolojik yaşamını zehirlenmekten kurtarırken, işletmenizi ciddi bir ilaç maliyetinden tasarruf ettirir.',
+          'Buharlaşmayı Keser, Nemi Hapseder: Oluşturulan kalın malç tabakası, toprağı güneşin ve rüzgarın yıpratıcı etkilerinden korur. Yüzeydeki buharlaşmayı engelleyerek, giderek daha değerli hale gelen suyu toprakta tutar ve kuraklık stresini azaltır.',
+          'Doğal Yabancı Ot Kontrolü: Yüzeyi tamamen kaplayan ezilmiş biyokütle, güneş ışığının toprağa ulaşmasını engeller. Bu fiziksel bariyer, istenmeyen yabancı ot tohumlarının çimlenmesini doğal yollarla baskılar ve ana ürününüze rekabetsiz bir büyüme alanı sunar.'
+        ]
       }
     ],
     brochure:'https://sky-agriculture.com/en/documentation/'
@@ -2046,7 +2103,7 @@ const PRODUCTS = {
   },
   'tf': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Ön Hazneli Ekim Ünitesi', title:'TF',
-    lead:'Traktörün ön hidrolik kollarına bağlanan; tohum veya gübre kapasitesini artırarak arkadaki ekipmanla (mibzerle) senkronize çalışan pnömatik ön depo (tank) sistemi.',
+    lead:'Traktörünüzün kapasitesini ve sahadaki operasyonel gücünüzü katlamak için tasarlanan Progress TF ön hazne sistemi, yıl boyu kesintisiz kullanabileceğiniz çok amaçlı bir ekipman. Ekim, gübreleme ve örtü bitkisi uygulamalarında arka ekipmanlarla kusursuz bir uyum içinde çalışır. Tek bir geçişte birden fazla işlem yapmanıza olanak tanıyarak hem zamandan hem de yakıttan ciddi tasarruf sağlarken, çok yönlü yapısıyla işletmenizin vizyonuna güç katar.',
     videos:[{id:'sVNozudU-Tw', title:'SKY Agriculture - Progress TF - XR'}, {id:'nYeeKysxZoI', title:'SKY Agriculture - SONIC + Progress TF Precision Seed Drill'}],
     features:[
       'Progress TF, piyasada tamamı tek bir ISOBUS ekranı (arayüzü) üzerinden kontrol edilebilen 4 ayrı depoyu yönetme kapasitesine sahip ilk ön tank sistemidir.',
@@ -2227,7 +2284,7 @@ const PRODUCTS = {
   },
   'tramline-se-sx': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Mekanik Mibzer', title:'Tramline SE / SX',
-    lead:'Kışlık hububat (buğday, arpa, yulaf) ekimi için yerçekimi akışlı, ayarlanabilir sıra arası mesafeli klasik mekanik mibzerler.',
+    lead:'Tramline SE / SX çekilir tip mekanik mibzer, çift kirişli ağır hizmet şasisiyle yıllara meydan okuyan bir dayanıklılık sunar. Her türlü toprak koşulunda istikrarlı bir ekim hassasiyeti sağlar.',
     videos:[{id:'5qlq3xZSndk', title:'SKY Agriculture - Semoir mécanique Tramline'}],
     features:[
       'İster sürüm yapıyor ister anız bozma işlemi gerçekleştiriyor olun. Sizin için her zaman bir Sky ekim makinesi vardır.',
@@ -2300,7 +2357,7 @@ const PRODUCTS = {
   },
   'tramline-cx': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Mekanik Mibzer (Kombine)', title:'Tramline CX',
-    lead:'Kışlık hububat (buğday, arpa, yulaf) ekimi için yerçekimi akışlı, ayarlanabilir sıra arası mesafeli klasik mekanik mibzerler.',
+    lead:'Toprak hazırlığı ile ekim operasyonunu tek bir geçişte kusursuzca birleştirerek zamandan ve yakıttan maksimum tasarruf sağlayan Tramline CX asılır tip mekanik mibzer, traktörünüzle mükemmel bir denge kurar.',
     features:[
       'İster sürüm yapıyor ister anız bozma işlemi gerçekleştiriyor olun. Sizin için her zaman bir Sky ekim makinesi vardır.',
       'Hassas, kolay ayarlanabilir sıra dozajlama sistemiyle SKY ekim makineleri her koşulda hizmetinizdedir.',
@@ -2340,7 +2397,7 @@ const PRODUCTS = {
   },
   'progress': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Kombine Pnömatik Ekim Makinesi', title:'Progress',
-    lead:'Progress mibzer serisi; sahip olduğu yüksek hassasiyetli merkezi dozajlama (tohum dağıtım) sistemi ve gelişmiş elektronik kontrol altyapısı sayesinde, tüm ekim operasyonunuzda kusursuz bir hakimiyet sağlar.',
+    lead:'Geleceğin tarım teknolojilerini bugünün tarlalarına taşıyan SKY Progress, tek geçişte maksimum verim ve hassasiyet arayan profesyoneller için tasarlandı. 3 ayrı bağımsız hazneye kadar genişletilebilen inovatif yapısı sayesinde; ana tohumu, gübreyi ve eşlikçi örtü bitkisini aynı anda, birbirine karıştırmadan ve farklı dozlarda toprağa uygulamanıza olanak tanır.',
     videos:[{id:'EpCnht2F9Lo', title:'SKY Agriculture - Semoir PROGRESS'}, {id:'vG6MbUOCl-M', title:'SKY Agriculture - Progress P30, the pneumatic seed drill of the future'}],
     features:[
       'Üstün tohum dozajlama yeteneği, yüksek alan işleme kapasitesi ve yenilikçi teknolojisiyle donatılan Progress, maksimum tarla veriminizi güvence altına almak için kusursuz bir ekim (tohum atım) hassasiyeti sunar.',
@@ -2435,7 +2492,7 @@ const PRODUCTS = {
   },
   'maxidrill': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Hızlı Ekim Makinesi', title:'Maxidrill',
-    lead:'Toprağı alt üst etmeden, yalnızca tohum yatağı hazırlığı yaparak ekim gerçekleştiren yüksek hızlı Min-Till (Minimum Toprak İşlemeli) mibzer. Anıza ekim ve yüzeysel işlenmiş araziler için en ideal çözüm.',
+    lead:'Büyük ölçekli arazilerde zamanla yarışan profesyoneller için geliştirilen SKY Maxidrill hızlı ekim makinesi, azaltılmış toprak işleme (Min-Till) sistemlerinin sahadaki en güçlü temsilcisidir. Sınıfının en geniş şasi açıklıklarından birine sahip olan bu devrim niteliğindeki mibzer, tarladaki yoğun anız ve bitki artığı koşullarında bile tıkanma yapmadan, yüksek ilerleme hızlarında kesintisiz bir ekim performansı sunar. 4 ayrı hazneye kadar çıkabilen devasa kapasitesiyle tek geçişte tohum, gübre ve eşlikçi bitki ve mikrogranül kombinasyonlarını kusursuzca toprağa yerleştirir.',
     videos:[{id:'dG9fkmHpva4', title:'SKY Agriculture - Semoir rapide MAXIDRILL'}],
     features:[
       '4 bağımsız depo (tank) ile tek geçişte (tek seferde) 4 farklı ürünü, 4 farklı tohum normunda (dozajda) ekebilme imkanı',
@@ -2546,7 +2603,7 @@ const PRODUCTS = {
   },
   'easydrill': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Doğrudan Ekim Mibzeri', title:'Easydrill',
-    lead:'40 yılı aşkın Ar-Ge birikiminin ürünü; pancar mibzeri hassasiyetiyle anıza, örtü bitkisi üzerine veya geleneksel işlenmiş toprağa ekim yapabilen referans (sektör öncüsü) makine.',
+    lead:'İşlemesiz (Anıza ekim) tarım devriminin dünya çapındaki sembolü olan Easydrill, 40 yılı aşkın Ar-Ge birikiminin ve sahadaki kusursuz mühendisliğin bir sonucudur. İster yoğun anızda, ister canlı bir örtü bitkisinin üzerine, isterseniz de geleneksel olarak işlenmiş bir tarlada olsun; her koşulda aynı eşsiz hassasiyetle çalışabilen son derece yetenekli ve esnek bir mibzerdir.',
     videos:[{id:'esgRaLrWGeM', title:'SKY Agriculture - Semoir direct EasyDrill'}, {id:'4_g2zmxAxyc', title:'SKY Agriculture - Semoir EasyDrill + Rouleau FACA'}],
     features:[
       'Ön ve arka tekerlekler (tandem sistem) ile kontrol edilen tohum gömme derinliği sayesinde pancar mibzeri standartlarında yüksek ekim hassasiyeti',
@@ -2643,7 +2700,7 @@ const PRODUCTS = {
   },
   'progress-m': {
     category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Pnömatik Kombine Ekim Ünitesi', title:'Progress M',
-    lead:'Kışlık hububat ve kanola ekimi için özel olarak tasarlanmış, yüksek kapasiteli ve havalı (pnömatik) tohum dağıtım sistemi.',
+    lead:'Toprak hazırlığı ile pnömatik ekim hassasiyetini kusursuz bir mühendislikle tek bir operasyona dönüştüren Progress M, toprak işleme ekipmanlarının üzerine mükemmel şekilde entegre olur. Hem zamandan hem de yakıttan tasarruf ederken, mükemmel tohum yatağı hazırlığı ve eşit çıkış oranından ödün vermek istemeyen çiftçiler için güvenilir, kompakt bir çözümdür.',
     features:[
       'SKY pnömatik mibzerlerinin en ayırt edici özellikleri; sahada sunduğu yüksek performans, yalın tasarım ve üstün kullanım kolaylığıdır. İşletme karlılığınızı maksimuma çıkaran, geleceğin ekim teknolojisi.',
       'Kusursuz bir ekim operasyonu için operatörün stresten uzak olması ve tamamen işine odaklanabilmesi şarttır. Bu nedenle tüm mühendislik odağımızı üst düzey operatör konforuna ve tarladaki çalışma güvenliğine adadık.',
@@ -2729,7 +2786,7 @@ const PRODUCTS = {
   },
   'dx30': {
     category:'Gübreleme', anchor:'gubreleme', tag:'Asılır Tip Gübre Dağıtıcı', title:'DX30+',
-    lead:'12 ile 36 metre arasında çalışma genişliği ve 1.500 ile 3.000 litre arasında depo (hazne) kapasitesiyle; sıfır ölü hacimli tam boşaltma sağlayan ve kabinden tamamen elektrikli kontrol imkanı sunan profesyonel askılı gübre serpme makinesi.',
+    lead:'Orta ve büyük ölçekli işletmelerin hassas gübreleme ihtiyaçları için geliştirilen DX30+ asılır tip gübre dağıtıcı, 12 ila 36 metre arasında mükemmel bir dağılım homojenliği sunar. %100 elektrikli kabin içi kontrol sistemi sayesinde operatöre maksimum kullanım kolaylığı sağlarken, her bir granülün tarlanızda tam olarak olması gereken yere düşmesini garanti ederek bitki besleme kalitenizi artırır.',
     features:[
       'Yüksek kaliteli gübrelerde 36 metreye, her tip gübrede ise 28 metreye kadar kesintisiz çalışma genişliğiyle homojen dağılım',
       '%100 elektrikli kontrol sistemi: Harici hidrolik dağıtıcı gerektirmeden kabinden pratik açma/kapama imkanı ve gübre tanelerinde kırılma riskini ortadan kaldıran özel yapı',
@@ -2822,7 +2879,7 @@ const PRODUCTS = {
   },
   'x40-x50': {
     category:'Gübreleme', anchor:'gubreleme', tag:'Asılır Tip Gübre Dağıtıcı', title:'X40+ / X50+',
-    lead:'12 ile 50 metre arasında çalışma genişliği ve 1.900 ile 4.200 litre arasında değişen devasa hazne (depo) kapasitesiyle; DX serisinin kanıtlanmış akıllı dağıtım teknolojisini büyük ölçekli tarım işletmelerinin yüksek kapasite ihtiyacına uyarlayan profesyonel askılı gübre serpme makinesi.',
+    lead:'Tarımsal üretimde verimlilik sınırlarını zorlayan profesyoneller için tasarlanan X40+ ve X50+ serisi, devasa hazne kapasitesi ve 50 metreye varan iş genişliğiyle sahadaki en büyük operasyonel gücünüzdür. Geniş arazilerde tarlada kalma süresini kısaltan bu makineler, ileri aerodinamik dağıtım teknolojisi sayesinde rüzgarlı koşullarda bile kusursuz bir serpme deseni oluşturur; böylece gübre maliyetlerinizi optimize eder ve tarlanızın her metrekaresinden eşit verim almanızı sağlar.',
     videos:[{id:'JmSYiUdQudA', title:'SKY Agriculture - X50 Fertiliser Spreaders'}],
     features:[
       'Üstün Teknoloji: DX serisiyle aynı başarıyı kanıtlamış olan hassas açıklık (atış genişliği) kontrol sisteminin yüksek kapasiteli ve güçlü versiyonu',
@@ -2918,7 +2975,7 @@ const PRODUCTS = {
   },
   'x40-x50-econov': {
     category:'Gübreleme', anchor:'gubreleme', tag:'Asılır Tip Gübre Dağıtıcı (Econov)', title:'X40+ / X50+ Econov',
-    lead:'X40+ ve X50+ serisinin gelişmiş ECONOV bölüm kesme donanımlı versiyonu; geniş tarla arazilerinde ve köşelerde gübre tasarrufu sağlarken en üst düzeyde homojen dağılım sunar.',
+    lead:'Econov serisi, bitki beslemede "sıfır israf" felsefesiyle çalışır. Benzersiz 3D bölüm kontrolü (Section Control) ve uydu destekli haritalama yetenekleri sayesinde; tarla sınırlarında, kavisli hatlarda ve örtüşen alanlarda gübre atım şeklini santimetre hassasiyetiyle otomatik olarak ayarlar ve gereksiz atımı keser. Sadece bitkinin ihtiyacı olan bölgeye, tam gerektiği dozda uygulama yaparak çevreyi korurken, giderek artan gübre maliyetlerinizde işletmenize devasa bir tasarruf kalemi yaratır.',
     videos:[{id:'JmSYiUdQudA', title:'SKY Agriculture - X50 Fertiliser Spreaders'}],
     features:[
       'Sınır Optimizasyonu: ECONOV bölümlü kesme sistemi sayesinde tarla sınırlarında, kenarlarda ve köşe dönüşlerinde aşırı dozlama (üst üste bindirme) tamamen engellenir.',
@@ -3039,7 +3096,7 @@ const PRODUCTS = {
   },
   'xt100-130-160': {
     category:'Gübreleme', anchor:'gubreleme', tag:'Römork Tip Gübre Dağıtıcı', title:'XT100 / 130 / 160',
-    lead:'18 ile 50 metre arasında çalışma genişliği ve 7.200, 9.500 veya 13.000 litre gibi devasa hazne seçenekleriyle; büyük ölçekli tarım işletmelerinin ve kooperatiflerin kapasite ihtiyaçlarını karşılamak üzere tasarlanmış güçlü mekanik çekilir tip (römorklu) gübre dağıtıcı.',
+    lead:'Geniş arazilerde operasyonel hız ve kesintisiz performans arayan büyük ölçekli işletmeler için tasarlanan SKY XT mekanik römork tip gübre dağıtıcılar, tarladaki gücünüzü maksimize eder. 7.200 ile 13.000 litre arasındaki devasa hazne seçenekleri ve 50 metreye varan iş genişliği sayesinde dolum için yapılan duraklamaları en aza indirerek zamandan ve işçilikten ciddi tasarruf sağlar. Ağır hizmet tipi sağlam şasisi ve dengeli yapısıyla zorlu arazi koşullarında bile traktörünüzü yormadan, yıllarca güvenle hizmet edecek bir yatırımdır.',
     videos:[{id:'YBYWLDJyKtI', title:'SKY Agriculture - Épandeur trainé XT'}],
     features:[
       'Devasa Hazne Kapasitesi: 7.200 litre, 9.500 litre ve 13.000 litre olmak üzere 3 farklı hazne seçeneği sayesinde tarlada dolum aralıklarını maksimum seviyeye çıkararak uzun süreli ve kesintisiz operasyon imkanı sunar.',
@@ -3121,7 +3178,7 @@ const PRODUCTS = {
   },
   'xt160h-240h': {
     category:'Gübreleme', anchor:'gubreleme', tag:'Römork Tip Gübre Dağıtıcı (Hidrolik)', title:'XT160H / 240H',
-    lead:'13.000 ile 15.500 litre arasında devasa hazne kapasitesi ve 12-14 metre bumlu hidrolik tahrikli altyapısıyla; dev ölçekli işletmelerin ve kooperatiflerin ihtiyaçları için tasarlanmış, granül gübrede 50 metreye kadar atım mesafesi sunan profesyonel çekilir tip gübre dağıtıcı.',
+    lead:'Çekilir tip bitki besleme teknolojisinde gelinen son nokta olan hidrolik tahrikli XT H serisi, devasa operasyonları kusursuz bir hassasiyetle yönetmek için tasarlandı. 15.500 litreye ulaşan hazne kapasitesi ve gücünü kuyruk mili yerine doğrudan hidrolik sistemden alan yapısıyla büyük arazilerde tek bir dolumla çok daha kısa sürede uygulama yapar.',
     videos:[{id:'YBYWLDJyKtI', title:'SKY Agriculture - Épandeur trainé XT'}],
     features:[
       'Hidrolik Tahrik Gücü: Disk sisteminde yer alan hidrolik tahrik teknolojisi sayesinde büyük hazne kapasitelerinde dahi kesintisiz ve yüksek performanslı çalışma imkanı.',
@@ -3232,30 +3289,15 @@ const PRODUCTS = {
 const PRODUCTS_EN = {
   'hr': {
     tag:'Power Harrow', title:'HR Series',
-    lead:'For a better seedbed: 4 rotors per metre, no wheel tracks or ridges, lower draft requirements, and a reinforced steel chassis.',
+    lead:'The most critical step to a successful, high-yielding harvest is preparing the ideal seedbed for flawless seed-to-soil contact. The SKY HR Series power harrows break down even the largest clods in the heaviest, most clay-rich, toughest soil conditions, creating a perfect starting ground for your main crop. Engineered to heavy-duty standards, this range delivers maximum yield without damaging soil structure.',
     features:[
       'Thorough crumbling and level finishing without leaving loose ridges.',
       'Single-speed gearbox',
       'Ratchet blade module',
       '40mm bearing roller options.',
-      'Fast, high-quality results with working widths from 4 to 8 metres.'
+      'Fast, high-quality results with working widths from 3 to 8 metres.'
     ],
     specGroups:[
-      {
-        title:'Compact Series (HRV)',
-        columns:['HRV 100.9','HRV 130.9','HRV 150.9','HRV 180.9','HRV 200.9'],
-        rows:[
-          {label:'Working Width (m)', values:['1.00','1.30','1.50','1.80','2.00']},
-          {label:'Total Width (m)', values:['1.13','1.39','1.63','1.88','2.12']},
-          {label:'Number of Rotors', values:['4','5','6','7','8']},
-          {label:'Power Requirement (HP)', values:['30-70','30-75','35-80','40-85','45-90']},
-          {label:'PTO Speed (rpm)', values:['540','540','540','540','540']},
-          {label:'Gearbox Type', values:['Single-speed','Single-speed','Single-speed','Single-speed','Single-speed']},
-          {label:'Rotor Speed (rpm)', values:['290','290','290','290','290']},
-          {label:'Cage Roller Weight Ø400 mm (kg)', values:['410','450','490','540','570']},
-          {label:'Packer Roller Weight Ø460 mm (kg)', values:['480','535','590','645','700']}
-        ]
-      },
       {
         title:'Mid-Wide Series (HRW .28)',
         columns:['HRW 4000.28','HRW 4500.28','HRW 5000.28','HRW 6000.28'],
@@ -3318,24 +3360,28 @@ const PRODUCTS_EN = {
         bullets:['First-class components: Walterscheid – Timken – SKF']
       },
       {
-        title:'Transport Safety',
-        desc:'A sturdy central chassis (backbone) carries the hydraulic folding system. Each of the two hydraulic folding pistons is fitted with guide forks for a secure close. The machine\'s road (transport) position lock is fully hydraulically controlled; folded transport width is 2.95 m (2.50 m on HRW SLIM versions). The machine chassis is built from high-strength steel.'
+        title:'Works the Soil Without Inverting It — Vertical Rotor System',
+        desc:'Unlike conventional tillage implements, the HR Series doesn\'t turn the soil upside down. Its powerful blades, rotating on a vertical axis, finely crumble and mix only the top layer of soil where the seed will be placed. The heavy roller system behind it then lightly presses and consolidates the crumbled soil, preparing the moist, fine, air-pocket-free ideal seedbed the seed needs to germinate — all in a single pass.'
       },
       {
         title:'280 or 360 HP Central Drive Unit',
         desc:'WALTERSCHEID "Power Line" PTO shaft drive (needs greasing only every 250 hours), fitted with an automatic-reset torque limiter.'
+      },
+      {
+        title:'An Outstanding Combi Platform',
+        desc:'The SKY HR Series isn\'t just a standalone tillage machine — it\'s also an outstanding combi platform. It works in flawless harmony with the Progress M (pneumatic) or Tramline CX (mechanical) seeding units, which mount directly onto it.',
+        desc2:'With this combination, your tractor crumbles the soil, prepares the seedbed, drills the seed, and closes it with the roller — all in a single pass. By cutting tractor traffic (soil compaction) in the field, this system saves you serious time in tight drilling windows while creating a massive saving in your operation\'s fuel and labour costs.'
       }
     ]
   },
 
   'methys-hds': {
     tag:'Disc Stubble Cultivator', title:'Methys HDS',
-    lead:'Break down stubble while drilling a cover crop, protecting soil health and future yield in one pass.',
+    lead:'As the first and most important step in regenerative farming practices, the Methys HDS is your most powerful field assistant for post-harvest ground management, built with a heavy-duty design.',
     features:[
-      'Purpose-built for conservation tillage and false-seedbed practices',
-      'Front-and-rear wheel system keeps the chassis parallel to the ground in every condition',
-      '20-25% lower power consumption than a classic steel roller',
-      'Available in 6 m and 8 m working widths'
+      'Cuts through heavy stubble and plant residue flawlessly, mixing it evenly into the soil to speed up the recovery of organic matter.',
+      'Reduces your reliance on herbicides with effective mechanical weed control; when fitted with the optional pneumatic seeding unit, it lets you till the field and drill a protective cover crop in a single pass, delivering maximum savings in time, labour, and fuel.',
+      'Working widths from 3 to 12 metres'
     ],
     specGroups:[
       {
@@ -3380,11 +3426,11 @@ const PRODUCTS_EN = {
       },
       {
         title:'Everyday Use',
-        desc:'Equipment that delivers outstanding performance for stubble breaking and cover-crop drilling, available in 6 m and 8 m working widths. The Methys HDS is purpose-built to work stubble at forward speeds up to 14 km/h; on the 8 m model it reaches a working capacity of 10 hectares per hour, delivering tremendous field output.'
+        desc:'Equipment that delivers outstanding performance for stubble breaking and cover-crop drilling, available in working widths from 3 to 12 metres. The Methys HDS is purpose-built to work stubble at forward speeds up to 14 km/h; on the 8 m model it reaches a working capacity of 10 hectares per hour, delivering tremendous field output.'
       },
       {
         title:'Remarkably Low Power Consumption Without Compromising Scraping Quality',
-        desc:'Thanks to the tandem (dual-axle) front-and-rear wheel system, the chassis stays perfectly parallel to the ground surface in every condition. Because of its low rolling resistance (it moves through the soil more easily), it has been proven to cut tractor draft power requirements by 20-25% compared with standard steel rollers.',
+        desc:'Thanks to a tandem (dual-axle) system with 7 different wheel positions, the chassis stays perfectly parallel to the ground surface in every condition. Because of its low rolling resistance, it delivers flawless flow with no clogging in any field condition, including heavy, sticky soils. It delivers outstanding performance using 20-25% less tractor power (hp) than standard steel rollers.',
         desc2:'The staggered (offset) tyre-wheel roller delivers flawless flow with no clogging in any field condition, including heavy, sticky soils, and consolidates the soil perfectly. Its large-diameter tyres, arranged in three rows, make it extremely well suited to working at high forward speeds while requiring very low draft power.'
       },
       {
@@ -3396,7 +3442,7 @@ const PRODUCTS_EN = {
 
   'methys-pcs': {
     tag:'Stubble Skimmer', title:'Methys PCS',
-    lead:'A stubble skimmer that works at a constant 3 cm depth across the full width for stubble breaking and cover-crop termination, with low fuel consumption.',
+    lead:'A stubble skimmer that works across the full width with low fuel consumption for stubble breaking and cover-crop termination.',
     features:[
       '3-section chassis for independent ground-following',
       'Extended drawbar for trouble-free headland turns'
@@ -3439,25 +3485,25 @@ const PRODUCTS_EN = {
     highlights:[
       {
         title:'Unmatched Horizontal and Vertical Clearance for Flawless Ground-Following',
-        desc:'A method already in use even before synthetic total herbicides became widespread. Today\'s energy and climate conditions are changing. A complete redesign of a skimmer aims to meet the following goals:',
+        desc:'A method already in widespread use before synthetic total herbicides (green-drying agents) became common. Redesigned to match today\'s changing energy and climate conditions.',
         bullets:['Cut fuel consumption','Skim at a constant 3 cm across the full width to preserve freshness and limit CO2 emissions','Keep plant residue on the surface => generous clearance on a tine-type tool to prevent clogging','Ability to work in dense cover crops'],
-        desc2:'The design of the Methys PCS lets it work at high speed even in large volumes of vegetation to be destroyed. Overlap between the cutting discs is optimal and guarantees that work is done across the full width of the machine. The 750 mm chassis clearance and the spacing between the harrow tines let a substantial amount of plant residue flow through cleanly even at high forward speeds.'
+        desc2:'The Methys PCS\'s wide-clearance design lets it work at high speed even in heavy stubble and large volumes of cover crop to be destroyed. Overlap between the cutting discs is optimal and guarantees that work is done across the full width of the machine. The 750 mm chassis clearance and the spacing between the harrow tines let a substantial amount of plant residue flow through cleanly even at high forward speeds.'
       },
       {
         title:'Remarkably Low Power Consumption Without Compromising Scraping Quality',
-        bullets:['Shallow working-depth control via 7 ground-support points for flawless ground-following','12 depth-control wheels','3D control and flexible structure via an isostatically supported chassis/extensions','True trailed towing unaffected by tractor movement','Low fuel consumption (3 L/ha on the second pass, 6.5 L/ha on the first pass)']
+        bullets:['Shallow working-depth control via 7 ground-support points for flawless ground-following','12 depth-control wheels','3D control and flexible structure via an isostatically supported chassis/extensions','True trailed towing unaffected by tractor movement','Low fuel consumption (0.65 litres/decare on the first pass, 0.3 litres/decare on the second pass)']
       },
       {
         title:'A Skimmer Built for Conservation Tillage',
         desc:'The goal is to prevent any regrowth after passing through the Methys PCS. Two key factors play into fully destroying cover:',
-        bullets:['Wide clearance to prevent clogging: cover-crop destruction, high residue-management capacity','Penetration power for the first stubble pass (even in heavy straw volumes)','Limiting soil disturbance thanks to precise working at shallow depths of 2-11 cm','Every wheel pass is followed by a tine element working the soil, eliminating any risk of the ground re-compacting over the cover crop','A 3-row rear harrow with adjustable-angle spring tines (12 mm) shreds weeds and exposes roots to the air, preventing regrowth']
+        bullets:['Limiting soil disturbance thanks to precise working at shallow depths of 2-11 cm','Every wheel pass is followed by a tine element working the soil, eliminating any risk of the ground re-compacting over the cover crop','A 3-row rear harrow with adjustable-angle spring tines (12 mm) shreds weeds and exposes roots to the air, preventing regrowth','By triggering germination of weed seeds while breaking stubble or terminating a cover crop, it reduces weed pressure both before and after main-crop drilling, boosting soil health and input savings.']
       }
     ]
   },
 
   'xr': {
     tag:'Disc Tillage Module', title:'XR',
-    lead:'Flawless tillage at speeds up to 15 km/h with 41.5 cm X-shaped discs and a stainless-steel chassis. (3.5 ha/hour)',
+    lead:'A disc seedbed-preparation module for combined drilling that requires no PTO.',
     features:[
       'No PTO required — run at low engine speed for fuel savings.',
       'Ideal for combined use with a drill.',
@@ -3472,7 +3518,7 @@ const PRODUCTS_EN = {
           {label:'Number of Disc Rows', values:['2','2','2']},
           {label:'Number of Discs', values:['22','26','30']},
           {label:'Disc Type', values:['Notched disc (Niaux 200)','Notched disc (Niaux 200)','Notched disc (Niaux 200)']},
-          {label:'Power Requirement (HP)', values:['150-210 (combined with XEOS Pro)','175-240 (combined with XEOS Pro)','220-300 (combined with XEOS Pro)']}
+          {label:'Power Requirement (HP)', values:['150-210','175-240','220-300']}
         ]
       }
     ],
@@ -3483,22 +3529,19 @@ const PRODUCTS_EN = {
       },
       {
         title:'Unbeatable Running Costs',
-        desc:'Requires no PTO connection and lets the tractor run at low engine speed for maximum fuel savings. The XR equipment cuts your operating costs in half compared with PTO-driven (active) tillage machines.'
+        desc:'The core principle of reduced-tillage (Min-Till) systems is preparing the surface for the main crop without wearing down the soil or burning extra energy. The XR Disc Tillage Module is a high-speed, compact, and economical solution purpose-built to work stubble, cover crops, and weeds in the field as efficiently as possible, creating a flawless mulch layer.',
+        desc2:'Requires no PTO connection and lets the tractor run at low engine speed for maximum fuel savings. The XR equipment cuts your operating costs in half compared with PTO-driven (active) tillage machines.'
       },
       {
-        title:'Flawless Seedbed Preparation',
-        desc:'Soil flow is levelled by a comb harrow positioned right behind the two disc rows. The roller re-consolidates the soil before the seeding units pass over it (Packer 550, Gravity, or Tracker roller option).'
-      },
-      {
-        title:'XR — More Versatile Than Ever',
-        desc:'The TF and Progress ranges are now far better equipped and more versatile: the Xeos TF model can run combined with the XR tillage module or the SKY HR vertical harrow. This modular design makes the machine your most reliable field partner from early crop emergence right through to the end of the season, especially in damp, heavy soil conditions.'
+        title:'Outstanding Stubble and Organic Matter Management',
+        desc:'Successfully breaks down the heavy stubble left in the field after harvest, mixing it evenly into just the top layer of soil. This surface-level blending creates a great food source for soil microorganisms (earthworms and bacteria) and lets plant residue decompose quickly into organic matter.'
       }
     ]
   },
 
   'faca-roller': {
     tag:'Mulch Crimper Roller', title:'FACA Roller',
-    lead:'Terminates a cover crop without tilling the soil.',
+    lead:'FACA Roller is the most natural way to terminate cover crops and stubble in your field without chemicals (herbicides), turning them into a perfect protective mulch for your soil.',
     features:[
       'Lays the cover crop down without mixing it into the soil, preventing regrowth.',
       'Fitted with 10 curved 100x10 mm blades on a 607 mm-diameter drum.',
@@ -3514,11 +3557,21 @@ const PRODUCTS_EN = {
     highlights:[
       {
         title:'Self-Steering, Self-Aligning Hitch',
+        desc:'Keeping a field green year-round matters — and terminating the biomass (cover crop) it produces correctly, right before drilling the main crop, matters just as much. The FACA Roller is designed to terminate cover crops and harvest-residue stubble entirely mechanically, with no chemicals (herbicides), turning them into a flawless protective mulch for your soil.',
         bullets:['Transport locking latch','Front-mounted ball joint','Automatic coupling']
       },
       {
         title:'Before / After',
-        desc:'At the La Conillais farm, we set up a cover-crop trial platform to test how different species respond to the roller. Some of the plant samples that couldn\'t withstand rolling can be seen here.'
+        desc:'The FACA Roller doesn\'t uproot plants or turn the soil over. Its purpose-angled blade design lays the plant\'s stem down, breaking and crimping it at regular intervals. This physically halts the growth cycle by cutting off the plant\'s sap flow, while the roots stay in the soil to decompose and enrich it with organic matter. The crimped cover left across your field forms a perfect "natural mulch" layer for your main crop.',
+        desc2:'At the La Conillais farm, we set up a cover-crop trial platform to test how different species respond to the roller. Some of the plant samples that couldn\'t withstand rolling can be seen here.'
+      },
+      {
+        title:'Chemical-Free, Economical, Natural Termination',
+        bullets:[
+          'Eliminates Chemical (Herbicide) Costs: Removes the need for glyphosate or similar heavy chemicals to terminate cover crops. It spares your soil\'s biological life from being poisoned while saving your operation a serious chemical bill.',
+          'Cuts Evaporation, Locks In Moisture: The thick mulch layer it creates protects the soil from the wearing effects of sun and wind. By blocking surface evaporation, it holds onto increasingly valuable water in the ground and reduces drought stress.',
+          'Natural Weed Control: The crimped biomass fully covering the surface blocks sunlight from reaching the soil. This physical barrier naturally suppresses the germination of unwanted weeds, giving your main crop a competition-free growing area.'
+        ]
       }
     ]
   },
@@ -3633,7 +3686,7 @@ const PRODUCTS_EN = {
 
   'tf': {
     tag:'Front Hopper Seeding Unit', title:'TF',
-    lead:'A pneumatic front tank system mounted on the tractor\'s front hydraulic arms, working in sync with the rear drill to boost seed or fertiliser capacity.',
+    lead:'Designed to double your tractor\'s capacity and operational power in the field, the Progress TF front hopper system is a versatile piece of equipment you can run year-round. It works in flawless harmony with rear-mounted implements for drilling, fertilising, and cover-crop applications. By letting you carry out several operations in a single pass, it delivers serious time and fuel savings while its versatile design adds real power to your farm\'s vision.',
     features:[
       'Progress TF is the first front-tank system on the market able to manage 4 separate hoppers, all controlled from a single ISOBUS terminal (interface).',
       'This unique engineering design lets 4 different products be metered and managed simultaneously and flawlessly across 2 independent air circuits.',
@@ -3787,7 +3840,7 @@ const PRODUCTS_EN = {
 
   'tramline-se-sx': {
     tag:'Mechanical Seed Drill', title:'Tramline SE / SX',
-    lead:'Classic gravity-flow mechanical seed drills with adjustable row spacing, for drilling winter cereals (wheat, barley, oats).',
+    lead:'The Tramline SE / SX trailed mechanical drill delivers durability that defies the years with its twin-beam heavy-duty chassis, keeping drilling precision steady in every soil condition.',
     features:[
       'Whether you\'re ploughing or breaking stubble, there\'s always a Sky seed drill for you.',
       'With a precise, easily adjustable row-metering system, SKY seed drills are there for you in every condition.'
@@ -3852,7 +3905,7 @@ const PRODUCTS_EN = {
 
   'tramline-cx': {
     tag:'Mechanical Seed Drill (Combi)', title:'Tramline CX',
-    lead:'Classic gravity-flow mechanical seed drills with adjustable row spacing, for drilling winter cereals (wheat, barley, oats).',
+    lead:'Flawlessly combining seedbed preparation and drilling in a single pass for maximum time and fuel savings, the Tramline CX mounted mechanical drill strikes a perfect balance with your tractor.',
     features:[
       'Whether you\'re ploughing or breaking stubble, there\'s always a Sky seed drill for you.',
       'With a precise, easily adjustable row-metering system, SKY seed drills are there for you in every condition.',
@@ -3891,7 +3944,7 @@ const PRODUCTS_EN = {
 
   'progress': {
     tag:'Combi Pneumatic Seed Drill', title:'Progress',
-    lead:'With its high-precision central metering (seed-distribution) system and advanced electronic control architecture, the Progress drill range gives you flawless command over your entire drilling operation.',
+    lead:'Bringing tomorrow\'s farming technology to today\'s fields, SKY Progress is built for professionals who want maximum yield and precision in a single pass. Its innovative design, expandable to 3 separate independent hoppers, lets you apply main seed, fertiliser, and a companion cover crop to the soil at the same time, at different rates, without them mixing.',
     features:[
       'Equipped with outstanding seed-metering ability, high field output, and innovative technology, Progress delivers flawless seeding precision to secure maximum field yield.',
       'Seed Hopper (Tank) Capacity: 1250 – 2100 Litres',
@@ -3975,7 +4028,7 @@ const PRODUCTS_EN = {
 
   'maxidrill': {
     tag:'High-Speed Drill', title:'Maxidrill',
-    lead:'A high-speed Min-Till (minimum-tillage) drill that seeds by preparing only the seedbed, without turning the soil over. The ideal solution for direct-into-stubble and shallow-worked land.',
+    lead:'Developed for professionals racing against time on large-scale land, the SKY Maxidrill high-speed drill is the strongest field representative of reduced-tillage (Min-Till) systems. This groundbreaking drill, with one of the widest chassis clearances in its class, delivers uninterrupted drilling performance at high forward speeds without clogging, even in heavy stubble and plant-residue conditions. With a massive capacity of up to 4 separate hoppers, it flawlessly places seed, fertiliser, and companion-crop and microgranule combinations into the soil in a single pass.',
     features:[
       '4 independent hoppers let you drill 4 different products in a single pass, each at its own seeding rate',
       'Purpose-built design separates the transport and ballast (weight) functions, keeping the axle off the ground during operation',
@@ -4067,7 +4120,7 @@ const PRODUCTS_EN = {
 
   'easydrill': {
     tag:'Direct Seed Drill', title:'Easydrill',
-    lead:'The product of over 40 years of R&D, this industry-pioneering reference machine drills into stubble, cover crops, or conventionally tilled soil with sugar-beet-drill precision.',
+    lead:'A worldwide symbol of the direct-drilling (no-till) farming revolution, the Easydrill is the result of over 40 years of R&D and flawless field engineering. Whether working into heavy stubble, over a living cover crop, or on conventionally tilled land, it\'s a remarkably capable, flexible drill that delivers the same unmatched precision in every condition.',
     features:[
       'Sugar-beet-drill-standard seeding precision, with seed-placement depth controlled by front and rear wheels (tandem system)',
       'The same outstanding performance on tilled soil, direct drilling (no-till), or live cover (canopy)',
@@ -4149,7 +4202,7 @@ const PRODUCTS_EN = {
 
   'progress-m': {
     tag:'Pneumatic Combi Seeding Unit', title:'Progress M',
-    lead:'A high-capacity pneumatic seed-distribution system, purpose-built for drilling winter cereals and canola.',
+    lead:'Turning seedbed preparation and pneumatic-drilling precision into a single flawlessly engineered operation, Progress M integrates perfectly onto tillage equipment. It saves both time and fuel while remaining a reliable, compact solution for growers who won\'t compromise on seedbed quality and even emergence.',
     features:[
       'The most distinctive traits of SKY pneumatic drills are their high field performance, clean design, and outstanding ease of use — tomorrow\'s drilling technology, maximising your farm\'s profitability.',
       'For a flawless drilling operation, the operator needs to be free of stress and fully focused on the job. That\'s why we dedicated our entire engineering focus to premium operator comfort and field working safety.',
@@ -4224,7 +4277,7 @@ const PRODUCTS_EN = {
 
   'dx30': {
     tag:'Trailed/Mounted Fertiliser Spreader', title:'DX30+',
-    lead:'A professional mounted fertiliser spreader with a working width of 12 to 36 metres and a hopper capacity from 1,500 to 3,000 litres, delivering zero-dead-volume complete emptying with fully electric in-cab control.',
+    lead:'Developed for the precision-fertilising needs of medium and large-scale operations, the DX30+ mounted fertiliser spreader delivers outstanding spread uniformity from 12 to 36 metres. Its 100% electric in-cab control system gives the operator maximum ease of use, while guaranteeing every granule lands exactly where it should in your field, boosting your crop nutrition quality.',
     features:[
       'Uniform spread across an uninterrupted working width of up to 36 metres with high-quality fertiliser, and up to 28 metres with any fertiliser type',
       '100% electric control system: practical open/close from the cab with no external hydraulic valve required, and a purpose-built design that eliminates the risk of granule damage',
@@ -4299,7 +4352,7 @@ const PRODUCTS_EN = {
 
   'x40-x50': {
     tag:'Trailed/Mounted Fertiliser Spreader', title:'X40+ / X50+',
-    lead:'A professional mounted fertiliser spreader with a working width of 12 to 50 metres and a massive hopper capacity ranging from 1,900 to 4,200 litres, adapting the DX range\'s proven smart distribution technology to the high-capacity needs of large-scale farm operations.',
+    lead:'Designed for professionals pushing the limits of efficiency in farming, the X40+ and X50+ range is your greatest operational power in the field, with a massive hopper capacity and a working width of up to 50 metres. By shortening time spent in the field on large plots, these machines create a flawless spread pattern even in windy conditions thanks to advanced aerodynamic distribution technology — optimising your fertiliser costs and delivering even yield across every square metre of your field.',
     features:[
       'Outstanding Technology: The high-capacity, high-power version of the precision spread-width control system that has proven itself on the DX range',
       'High Uninterrupted Output: Flexible hopper options from 1,900 to 4,200 litres for long, uninterrupted field operation',
@@ -4380,7 +4433,7 @@ const PRODUCTS_EN = {
 
   'x40-x50-econov': {
     tag:'Trailed/Mounted Fertiliser Spreader (Econov)', title:'X40+ / X50+ Econov',
-    lead:'The advanced ECONOV section-control version of the X40+ and X50+ range, delivering the highest level of uniform distribution while saving fertiliser on large fields and at corners.',
+    lead:'The Econov range operates on a "zero waste" philosophy for plant nutrition. Thanks to unique 3D Section Control and satellite-assisted mapping capabilities, it automatically adjusts the fertiliser spread pattern with centimetre precision at field boundaries, curved lines, and overlapping areas, cutting off unnecessary application. By applying exactly the right dose only where the plant needs it, it protects the environment while creating a massive savings item for your operation against your ever-rising fertiliser costs.',
     features:[
       'Border Optimisation: The ECONOV section-control system fully prevents over-dosing (overlap) at field boundaries, edges, and corner turns.',
       'Proven Efficiency: Independent assessment studies show fertiliser savings of 7% and a reduction of more than 20% in under/over-dosed areas.',
@@ -4480,7 +4533,7 @@ const PRODUCTS_EN = {
 
   'xt100-130-160': {
     tag:'Trailed Fertiliser Spreader', title:'XT100 / 130 / 160',
-    lead:'A powerful mechanical trailed fertiliser spreader with a working width of 18 to 50 metres and massive hopper options of 7,200, 9,500, or 13,000 litres, purpose-built to meet the capacity needs of large-scale farms and cooperatives.',
+    lead:'Designed for large-scale operations that need operational speed and uninterrupted performance on wide land, SKY XT mechanical trailed fertiliser spreaders maximise your power in the field. With massive hopper options from 7,200 to 13,000 litres and a working width of up to 50 metres, they minimise refill stops for serious time and labour savings. With a heavy-duty, sturdy chassis and balanced build, it\'s an investment that serves you safely for years without tiring your tractor, even in tough terrain.',
     features:[
       'Massive Hopper Capacity: 3 hopper options — 7,200, 9,500, and 13,000 litres — maximise refill intervals in the field for long, uninterrupted operation.',
       'Rugged Mechanical Build: A sturdy mechanical-drive structure delivers reliability in tough field conditions and stands out for its low maintenance cost.',
@@ -4557,7 +4610,7 @@ const PRODUCTS_EN = {
 
   'xt160h-240h': {
     tag:'Trailed Fertiliser Spreader (Hydraulic)', title:'XT160H / 240H',
-    lead:'A professional trailed fertiliser spreader purpose-built for the needs of very large farms and cooperatives, with a massive hopper capacity of 13,000 to 15,500 litres and a hydraulic-drive structure with a 12-14 metre boom, delivering a spread distance of up to 50 metres with granular fertiliser.',
+    lead:'The pinnacle of trailed plant-nutrition technology, the hydraulic-drive XT H range is built to manage massive operations with flawless precision. With a hopper capacity of up to 15,500 litres and a design that draws its power directly from the hydraulic system instead of the PTO, it applies fertiliser on large plots in far less time with a single fill.',
     features:[
       'Hydraulic Drive Power: Hydraulic drive technology in the disc system delivers uninterrupted, high-performance operation even at large hopper capacities.',
       'Wide Boom and Spread Distance: Backed by a 12 or 14 metre boom width, the structure reaches a record spread distance of up to 50 metres with granular fertiliser application.',
@@ -4884,6 +4937,7 @@ function showCategory(anchor, fromPopstate, subgroup){
   const home = document.getElementById('view-home');
   const detail = document.getElementById('view-product');
   const contact = document.getElementById('view-contact');
+  const about = document.getElementById('view-about');
   detail.classList.remove('mobile-cta-visible');
 
   function fillAndShow(){
@@ -4891,6 +4945,8 @@ function showCategory(anchor, fromPopstate, subgroup){
     detail.style.display = 'none';
     contact.classList.add('view-hidden');
     contact.style.display = 'none';
+    about.classList.add('view-hidden');
+    about.style.display = 'none';
     home.classList.remove('view-hidden');
     home.style.display = 'block';
     home.classList.add('category-mode');
@@ -5032,8 +5088,11 @@ function showProduct(id, fromPopstate){
   const home = document.getElementById('view-home');
   const detail = document.getElementById('view-product');
   const contact = document.getElementById('view-contact');
+  const about = document.getElementById('view-about');
   contact.classList.add('view-hidden');
   contact.style.display = 'none';
+  about.classList.add('view-hidden');
+  about.style.display = 'none';
 
   function fillAndShow(){
     document.getElementById('product-breadcrumb').innerHTML =
@@ -5234,8 +5293,11 @@ function showHome(fromPopstate){
   const home = document.getElementById('view-home');
   const detail = document.getElementById('view-product');
   const contact = document.getElementById('view-contact');
+  const about = document.getElementById('view-about');
   contact.classList.add('view-hidden');
   contact.style.display = 'none';
+  about.classList.add('view-hidden');
+  about.style.display = 'none';
   home.classList.remove('category-mode');
   detail.classList.remove('mobile-cta-visible');
 
@@ -5282,6 +5344,7 @@ function showContact(fromPopstate){
   const home = document.getElementById('view-home');
   const detail = document.getElementById('view-product');
   const contact = document.getElementById('view-contact');
+  const about = document.getElementById('view-about');
   const outgoing = detail.style.display !== 'none' ? detail : home;
 
   function fillAndShow(){
@@ -5289,6 +5352,8 @@ function showContact(fromPopstate){
     home.style.display = 'none';
     detail.classList.add('view-hidden');
     detail.style.display = 'none';
+    about.classList.add('view-hidden');
+    about.style.display = 'none';
     contact.classList.remove('view-hidden');
     contact.style.display = 'block';
     if(reduceMotion){
@@ -5300,6 +5365,56 @@ function showContact(fromPopstate){
         window.scrollTo({top:0, behavior:'auto'});
       });
       setTimeout(() => contact.classList.remove('view-enter','view-enter-active'), 320);
+    }
+  }
+
+  if(reduceMotion){
+    fillAndShow();
+  } else {
+    outgoing.classList.add('view-exit');
+    setTimeout(() => {
+      outgoing.classList.remove('view-exit');
+      fillAndShow();
+    }, 180);
+  }
+}
+
+function showAbout(fromPopstate){
+  if(!fromPopstate && !(history.state && history.state.view === 'about')){
+    history.pushState({view:'about'}, '', '#hakkimizda');
+  }
+  triggerProgressBar();
+  closeAllDropdowns();
+  closeDrawer();
+  closeSearch();
+  currentProductId = null;
+  currentCategoryAnchor = null;
+  currentSubgroupSlug = null;
+
+  const home = document.getElementById('view-home');
+  const detail = document.getElementById('view-product');
+  const contact = document.getElementById('view-contact');
+  const about = document.getElementById('view-about');
+  const outgoing = detail.style.display !== 'none' ? detail : home;
+
+  function fillAndShow(){
+    home.classList.add('view-hidden');
+    home.style.display = 'none';
+    detail.classList.add('view-hidden');
+    detail.style.display = 'none';
+    contact.classList.add('view-hidden');
+    contact.style.display = 'none';
+    about.classList.remove('view-hidden');
+    about.style.display = 'block';
+    if(reduceMotion){
+      window.scrollTo(0,0);
+    } else {
+      about.classList.add('view-enter');
+      requestAnimationFrame(() => {
+        about.classList.add('view-enter-active');
+        window.scrollTo({top:0, behavior:'auto'});
+      });
+      setTimeout(() => about.classList.remove('view-enter','view-enter-active'), 320);
     }
   }
 
@@ -5381,8 +5496,8 @@ function buildDrawer(){
     {label:t('nav.hizmetler'), external:true, items:[
       ['https://sky-agriculture.com/en/documentation/', t('navtitle.docs')],
       ['https://parts.burel-group.com/en/', t('navtitle.parts')],
-      ['https://app.evalandgo.com/f/313135/4qAivaBmeVyzQb8jaWLDtL', t('navtitle.warranty')],
-      ['https://sara.sky-agriculture.com/login','SARA']
+      ['https://sara.sky-agriculture.com/login','SARA'],
+      [null, t('navtitle.contractDrilling')+' ('+t('navtitle.soonBadge')+')']
     ]}
   ];
   const body = document.getElementById('drawer-body');
@@ -5392,7 +5507,7 @@ function buildDrawer(){
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>' +
     '<div class="drawer-accordion-body">' +
     (g.external
-      ? g.items.map(([url,label]) => '<a href="'+url+'" target="_blank" rel="noopener">'+label+'</a>').join('')
+      ? g.items.map(([url,label]) => url ? '<a href="'+url+'" target="_blank" rel="noopener">'+label+'</a>' : '<span class="soon">'+label+'</span>').join('')
       : g.ids.map(id => '<a href="#'+id+'" onclick="event.preventDefault();selectSearchResult(\''+id+'\')">'+PRODUCTS[id].tag+'</a>').join('')
     ) +
     '</div></div>'
@@ -5429,6 +5544,9 @@ const I18N = {
     'cat.fert.desc':'Askılı ve römork tip gübre dağıtıcılarla her işletme ölçeğine uygun hassas gübreleme.',
     'contact.category':'İlgilendiğiniz Ürün Kategorisi', 'contact.categoryChoose':'Seçiniz', 'contact.categoryOther':'Diğer',
     'contact.categoryParts':'Yedek Parça / Servis', 'contact.company':'Firma / Çiftlik Adı', 'contact.emailLabel':'E-posta',
+    'about.eyebrow':'HAKKIMIZDA', 'about.h1':'Hakkımızda',
+    'about.intro':'KSV Tarım, 4 jenerasyonun tarım mirasını, uluslararası deneyim ve inovasyon ile buluşturuyor.',
+    'about.placeholder':'Bu sayfanın içeriği yakında eklenecektir.',
     'contact.eyebrow':'İLETİŞİM', 'contact.formSub':'Aşağıdaki formu doldurun, ihtiyacınıza en uygun çözümü sunalım.',
     'contact.formTitle':'Bilgi ve Teklif Formu', 'contact.h1':'Bize Ulaşın', 'contact.infoTitle':'İletişim Bilgileri',
     'contact.intro':'Ürünlerimiz, fiyatlandırma, bayilik veya servis hakkında sorularınız için buradayız. Formu doldurun, ekibimiz size en kısa sürede dönüş yapsın.',
@@ -5436,13 +5554,13 @@ const I18N = {
     'contact.send':'Gönder', 'contact.statusOk':'Mesajınız alındı, en kısa sürede sizinle iletişime geçeceğiz.', 'contact.toastOk':'Mesajınız gönderildi',
     'drawer.menu':'Menü',
     'footer.catalogsBtn':'Tüm Kataloglar (SKY Agriculture)', 'footer.catalogsQuestion':'Ürünlerin tam teknik dokümanlarına mı ihtiyacınız var?',
-    'footer.categories':'Kategoriler', 'footer.contact':'İletişim', 'footer.copyright':'© 2026 KSV Tarım Teknolojileri. Tüm hakları saklıdır.',
-    'footer.popular':'Popüler Ürünler', 'footer.tagline':'Toprak işleme ve ekim çözümlerinde çiftçinin güvenilir teknoloji ortağı.',
+    'footer.categories':'Kategoriler', 'footer.contact':'İletişim', 'footer.copyright':'© 2026 KSV Tarım Makinaları ve Teknolojileri. Tüm hakları saklıdır.',
+    'footer.popular':'Popüler Ürünler', 'footer.tagline':'Toprak işleme ve ekim çözümlerinde çiftçinin güvenilir ekipman ve teknoloji ortağı.',
     'footer.whatsappSupport':'WhatsApp Destek',
     'form.email':'E-posta Adresiniz *', 'form.fullName':'Adınız Soyadınız *', 'form.message':'Mesajınız',
     'form.phone':'Telefon Numaranız *', 'form.phoneLabel':'Telefon',
     'hero.cta':'Ürün Koleksiyonu', 'hero.eyebrow':'SKY AGRICULTURE TÜRKİYE',
-    'hero.subtitle':'KSV Tarım, 4 jenerasyonun tarım tecrübesini uluslararası deneyim ve teknoloji ile birleştiriyor.',
+    'hero.subtitle':'KSV Tarım, 4 jenerasyonun tarım mirasını, uluslararası deneyim ve inovasyon ile buluşturuyor.',
     'hero.title':'Günümüz tarımının ihtiyaçlarına göre uyarlanmış geniş ürün yelpazesiyle KSV Tarım yarının çiftçilerinin yanında',
     'inquiry.messagePlaceholder':'Mesajınız (İsteğe bağlı)', 'inquiry.or':'veya bizi arayın',
     'inquiry.statusErr':'Gönderilemedi, lütfen tekrar deneyin veya bizi arayın.',
@@ -5453,22 +5571,28 @@ const I18N = {
     'intro.eyebrow':'Yeni nesil tarım ekipmanlarıyla hedefimiz',
     'intro.h2':'Dünyadaki en güncel ve verimli teknolojiyi işimizi daha hassas yapabilmek için sunuyoruz',
     'intro.li1':'Toprak nemini ve sağlığını korumak', 'intro.li2':'Mazot tüketimini azaltmak',
-    'intro.li3':'Yabancı otları kontrol altına almak', 'intro.li4':'Örtü bitkileri ile toprağa azot bağlamak.',
+    'intro.li3':'Yabancı otları kontrol altına almak', 'intro.li4':'Örtü bitkileri ile toprağa azot bağlamak',
+    'intro.li1desc':'Çıplak bırakılan toprak, güneşin ve rüzgarın yıpratıcı etkilerine karşı savunmasızdır. Örtü bitkileri, yüzeyde adeta canlı bir kalkan oluşturarak buharlaşmayı engeller ve giderek paha biçilemez hale gelen suyu toprakta hapseder; aynı zamanda kök salgılarıyla mikroorganizmaları besleyerek toprağın yitirdiği biyolojik zenginliği ona geri verir.',
+    'intro.li2desc':'Geleneksel tarımda toprağı sürekli ve derin işlemek, ağır bir enerji ve yakıt israfıdır. Örtü bitkilerinin güçlü kökleri toprağı mekanik bir müdahaleye gerek kalmadan doğal yollarla gevşetir; azaltılmış veya doğrudan ekim yöntemleriyle birleştiğinde traktörün tarladaki mesaisi azalır ve en büyük gider kalemimiz olan mazot tüketimi ciddi şekilde düşer.',
+    'intro.li3desc':'Yabancı otlarla mücadelede sürekli kimyasallara başvurmak sadece cebinizi değil, toprağınızı da zehirler ve yorar. Yüzeyi hızla kaplayan örtü bitkileri, toprağa ulaşan güneş ışığını kesip biyolojik bir rekabet yaratarak istenmeyen otların çimlenmesini doğal yollarla baskılar; böylece tarlanızı yoğun herbisit (ilaç) yükünden ve yüksek maliyetinden kurtarır.',
     'intro.p2':'En büyük girdilerimizden olan Azot (Üre), ne ironiktir ki gezegenimizin atmosferinde en çok bulunan elementtir (78%). Doğalgazdan üretilmesi sebebiyle enerji bağımlılığı yüksek olan azotu, örtü bitkileri yaprakları aracılığıyla havadan alır köküne iletir ve toprağa bağlar.',
+    'nav.about':'HAKKIMIZDA',
     'nav.contact':'BİZE ULAŞIN', 'nav.fertilisation':'GÜBRELEME', 'nav.hizmetler':'HİZMETLER',
     'nav.soilPrep':'TOPRAK İŞLEME', 'nav.sowing':'EKİM SİSTEMLERİ',
     'navsub.docs':'Katalog ve teknik dokümanlar', 'navsub.dx30':'Asılır Tip Gübre Dağıtıcı',
     'navsub.easydrill':'Doğrudan Ekim Mibzeri · Sıfır toprak işleme', 'navsub.faca-roller':'Malç Ezici Merdane · 2,75-6 m',
     'navsub.hr':'Rotatif Tırmık', 'navsub.maxidrill':'Hızlı Ekim Makinesi',
-    'navsub.methys-hds':'Diskli Anız Kültivatörü · Asılır / Çekilir', 'navsub.methys-pcs':'Yüzey Sıyırıcı · Asılır / Çekilir',
+    'navsub.methys-hds':'Diskli Anız Kültivatörü', 'navsub.methys-pcs':'Yüzey Sıyırıcı · Asılır / Çekilir',
     'navsub.parts':'Orijinal yedek parça kataloğu', 'navsub.progress':'Kombine Pnömatik Ekim Makinesi',
-    'navsub.progress-m':'Pnömatik Kombine Ekim Ünitesi', 'navsub.sara':'SKY Agriculture Research & Assistance',
+    'navsub.progress-m':'Pnömatik Kombine Ekim Ünitesi', 'navsub.sara':'Ekipmanınızla ilgili ihtiyacınız olan tüm bilgilere erişebileceğiniz mobil uygulama',
     'navsub.sonic':'Hassas Ekim Makinesi · Pnömatik', 'navsub.tf':'Ön Hazneli Ekim Ünitesi · Progress TF',
-    'navsub.tramline-cx':'Mekanik Mibzer (Kombine)', 'navsub.tramline-se-sx':'Mekanik Mibzer', 'navsub.warranty':'Garanti kaydı',
+    'navsub.tramline-cx':'Mekanik Mibzer (Kombine)', 'navsub.tramline-se-sx':'Mekanik Mibzer',
     'navsub.x40-x50':'Asılır Tip Gübre Dağıtıcı', 'navsub.x40-x50-econov':'Asılır Tip Gübre Dağıtıcı (Econov)',
     'navsub.xr':'Diskli Toprak Hazırlama Modülü', 'navsub.xt100-130-160':'Römork Tip Gübre Dağıtıcı',
     'navsub.xt160h-240h':'Römork Tip Gübre Dağıtıcı (Hidrolik)',
-    'navtitle.docs':'Dokümantasyon', 'navtitle.parts':'Yedek Parça', 'navtitle.warranty':'7 Yıl Delinmeye Karşı Korozyon Garantisi',
+    'navsub.contractDrilling':'Anıza doğrudan ekim hizmetimiz çok yakında sizlerle',
+    'navtitle.docs':'Dokümantasyon', 'navtitle.parts':'Yedek Parça',
+    'navtitle.contractDrilling':'Sözleşmeli Doğrudan Ekim', 'navtitle.soonBadge':'Yakında',
     'product.getInfo':'Bilgi Al', 'product.specHeading':'Teknik Özellikler', 'product.videoHeading':'Tanıtım Videosu', 'product.backToAll':'Tüm ürünlere dön',
     'product.zoomHint':'Büyütmek için tıkla', 'product.brochurePdf':'Broşür İndir (PDF)', 'product.brochureView':'Broşürü Görüntüle',
     'product.brochureHintPdf':'Broşür, SKY Agriculture\'ın resmi teknik dokümanına yönlendirir (PDF).',
@@ -5490,6 +5614,9 @@ const I18N = {
     'cat.fert.desc':'Precision fertilisation for every farm size, with mounted and trailed spreaders.',
     'contact.category':'Product Category You\'re Interested In', 'contact.categoryChoose':'Choose an option', 'contact.categoryOther':'Other',
     'contact.categoryParts':'Spare Parts / Service', 'contact.company':'Company / Farm Name', 'contact.emailLabel':'Email',
+    'about.eyebrow':'ABOUT US', 'about.h1':'About Us',
+    'about.intro':'KSV Tarım brings together four generations of farming heritage with international expertise and innovation.',
+    'about.placeholder':'The content for this page will be added soon.',
     'contact.eyebrow':'CONTACT', 'contact.formSub':'Fill out the form below and we\'ll match you with the right solution.',
     'contact.formTitle':'Inquiry & Quote Request Form', 'contact.h1':'Contact Us', 'contact.infoTitle':'Contact Information',
     'contact.intro':'Whatever you need to know about our products, pricing, dealership or service, we\'re here to help. Fill out the form and our team will get back to you shortly.',
@@ -5497,13 +5624,13 @@ const I18N = {
     'contact.send':'Send', 'contact.statusOk':'Your message has been received — we\'ll be in touch shortly.', 'contact.toastOk':'Your message has been sent',
     'drawer.menu':'Menu',
     'footer.catalogsBtn':'All Catalogues (SKY Agriculture)', 'footer.catalogsQuestion':'Need the full technical documentation for our products?',
-    'footer.categories':'Categories', 'footer.contact':'Contact', 'footer.copyright':'© 2026 KSV Tarım Teknolojileri. All rights reserved.',
-    'footer.popular':'Popular Products', 'footer.tagline':'Farmers\' trusted technology partner in soil preparation and sowing solutions.',
+    'footer.categories':'Categories', 'footer.contact':'Contact', 'footer.copyright':'© 2026 KSV Tarım Makinaları ve Teknolojileri. All rights reserved.',
+    'footer.popular':'Popular Products', 'footer.tagline':'Farmers\' trusted equipment and technology partner in soil preparation and sowing solutions.',
     'footer.whatsappSupport':'WhatsApp Support',
     'form.email':'Your Email Address *', 'form.fullName':'Your Full Name *', 'form.message':'Your Message',
     'form.phone':'Your Phone Number *', 'form.phoneLabel':'Phone',
     'hero.cta':'Product Collection', 'hero.eyebrow':'SKY AGRICULTURE TÜRKİYE',
-    'hero.subtitle':'KSV Tarım combines four generations of farming experience with international expertise and technology.',
+    'hero.subtitle':'KSV Tarım brings together four generations of farming heritage with international expertise and innovation.',
     'hero.title':'With a wide product range tailored to the needs of modern agriculture, KSV Tarım stands beside tomorrow\'s farmers',
     'inquiry.messagePlaceholder':'Your Message (Optional)', 'inquiry.or':'or call us',
     'inquiry.statusErr':'Couldn\'t send — please try again or call us.',
@@ -5514,22 +5641,28 @@ const I18N = {
     'intro.eyebrow':'Our goal with next-generation farm equipment',
     'intro.h2':'We bring the world\'s most current and efficient technology to make our work more precise',
     'intro.li1':'Preserve soil moisture and health', 'intro.li2':'Reduce diesel consumption',
-    'intro.li3':'Keep weeds under control', 'intro.li4':'Fix nitrogen in the soil with cover crops.',
+    'intro.li3':'Keep weeds under control', 'intro.li4':'Fix nitrogen in the soil with cover crops',
+    'intro.li1desc':'Bare soil is defenceless against the wearing effects of sun and wind. Cover crops form a living shield across the surface that blocks evaporation and holds onto increasingly precious water in the ground, while their root exudates feed soil microorganisms and restore the biological richness the land has lost.',
+    'intro.li2desc':'In conventional farming, tilling the soil constantly and deeply is a heavy waste of energy and fuel. The strong roots of cover crops loosen the soil naturally, with no mechanical intervention needed; combined with reduced-tillage or direct-drilling methods, this cuts your tractor\'s time in the field and brings a serious drop in diesel consumption — our single biggest cost item.',
+    'intro.li3desc':'Constantly reaching for chemicals to fight weeds poisons and exhausts not just your budget, but your soil as well. Cover crops that quickly blanket the surface cut off the sunlight reaching the ground and create biological competition, naturally suppressing the germination of unwanted weeds — freeing your field from a heavy herbicide burden and its high cost.',
     'intro.p2':'Nitrogen (urea), one of our biggest input costs, is ironically the most abundant element in our planet\'s atmosphere (78%). Because it\'s produced from natural gas, it carries a heavy energy footprint — cover crops draw it from the air through their leaves, carry it to their roots and fix it in the soil.',
+    'nav.about':'ABOUT US',
     'nav.contact':'CONTACT US', 'nav.fertilisation':'FERTILISATION', 'nav.hizmetler':'SERVICES',
     'nav.soilPrep':'SOIL PREPARATION', 'nav.sowing':'SOWING SYSTEMS',
     'navsub.docs':'Catalogues and technical documents', 'navsub.dx30':'Mounted Fertiliser Spreader',
     'navsub.easydrill':'Direct Seed Drill · Zero tillage', 'navsub.faca-roller':'Mulch Roller · 2.75-6 m',
     'navsub.hr':'Power Harrow', 'navsub.maxidrill':'Fast Seed Drill',
-    'navsub.methys-hds':'Disc Stubble Cultivator · Mounted / Trailed', 'navsub.methys-pcs':'Surface Scraper · Mounted / Trailed',
+    'navsub.methys-hds':'Disc Stubble Cultivator', 'navsub.methys-pcs':'Surface Scraper · Mounted / Trailed',
     'navsub.parts':'Genuine spare parts catalogue', 'navsub.progress':'Combined Pneumatic Seed Drill',
-    'navsub.progress-m':'Pneumatic Combined Seeding Unit', 'navsub.sara':'SKY Agriculture Research & Assistance',
+    'navsub.progress-m':'Pneumatic Combined Seeding Unit', 'navsub.sara':'A mobile app giving you access to all the information you need about your equipment',
     'navsub.sonic':'Precision Seed Drill · Pneumatic', 'navsub.tf':'Front Hopper Seeding Unit · Progress TF',
-    'navsub.tramline-cx':'Mechanical Seed Drill (Combined)', 'navsub.tramline-se-sx':'Mechanical Seed Drill', 'navsub.warranty':'Warranty registration',
+    'navsub.tramline-cx':'Mechanical Seed Drill (Combined)', 'navsub.tramline-se-sx':'Mechanical Seed Drill',
     'navsub.x40-x50':'Mounted Fertiliser Spreader', 'navsub.x40-x50-econov':'Mounted Fertiliser Spreader (Econov)',
     'navsub.xr':'Disc Seedbed Preparation Module', 'navsub.xt100-130-160':'Trailed Fertiliser Spreader',
     'navsub.xt160h-240h':'Trailed Fertiliser Spreader (Hydraulic)',
-    'navtitle.docs':'Documentation', 'navtitle.parts':'Spare Parts', 'navtitle.warranty':'7-Year Anti-Corrosion Perforation Warranty',
+    'navsub.contractDrilling':'Our contract direct-drilling service is coming very soon',
+    'navtitle.docs':'Documentation', 'navtitle.parts':'Spare Parts',
+    'navtitle.contractDrilling':'Contract Direct Drilling', 'navtitle.soonBadge':'Coming Soon',
     'product.getInfo':'Get Info', 'product.specHeading':'Technical Specifications', 'product.videoHeading':'Product Video', 'product.backToAll':'Back to all products',
     'product.zoomHint':'Click to enlarge', 'product.brochurePdf':'Download Brochure (PDF)', 'product.brochureView':'View Brochure',
     'product.brochureHintPdf':'The brochure links to SKY Agriculture\'s official technical document (PDF).',
@@ -5601,7 +5734,11 @@ function applyProductLanguage(){
     p.specGroups = pick('specGroups');
     p.specs = pick('specs');
     p.specColumns = pick('specColumns');
-    p.highlights = pick('highlights');
+    p.highlights = pick('highlights').map((h, i) => {
+      const trH = p._tr.highlights && p._tr.highlights[i];
+      if(!trH || h.photo !== undefined) return h;
+      return Object.assign({}, h, {photo: trH.photo, photoHint: h.photoHint !== undefined ? h.photoHint : trH.photoHint});
+    });
     p.parts = pick('parts');
   });
 }
@@ -5668,6 +5805,8 @@ window.addEventListener('popstate', (e) => {
     showCategory(state.anchor, true, state.subgroupSlug ? {slug: state.subgroupSlug, label: state.subgroupLabel} : null);
   } else if(state && state.view === 'contact'){
     showContact(true);
+  } else if(state && state.view === 'about'){
+    showAbout(true);
   } else {
     showHome(true);
   }
@@ -5735,6 +5874,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if(initialId === 'iletisim'){
     history.replaceState({view:'contact'}, '', '#iletisim');
     showContact(true);
+  } else if(initialId === 'hakkimizda'){
+    history.replaceState({view:'about'}, '', '#hakkimizda');
+    showAbout(true);
   } else {
     history.replaceState({view:'home'}, '', location.pathname + location.search);
   }
