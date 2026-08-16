@@ -1292,6 +1292,21 @@
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
+      <a class="grid-subheading clickable" style="order:29" data-subgroup="terminal-uyumlulugu" href="#kategori-gubreleme~terminal-uyumlulugu" onclick="event.preventDefault();showSubgroup('gubreleme', 'terminal-uyumlulugu', 'ISOBUS Terminal Uyumluluğu')">ISOBUS Terminal Uyumluluğu<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      <a class="card reveal" data-id="isobus-uyumluluk" data-subgroup="terminal-uyumlulugu" style="order:31" href="#isobus-uyumluluk" onclick="event.preventDefault();showProduct('isobus-uyumluluk')">
+        <div class="card-media">
+          <button class="fav-btn" onclick="toggleFavorite(event,'isobus-uyumluluk')" aria-label="Favorilere ekle" data-i18n-aria-label="aria.addFav">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
+          </button>
+          <img class="lazy-img" data-src="images/dx30-isobus-console.jpg" alt="SKY ISOBUS Terminal Uyumluluğu">
+        </div>
+        <div class="card-body">
+          <span class="tag">ISOBUS Terminal Rehberi</span>
+          <h3>ISOBUS Terminal Uyumluluğu</h3>
+          <p>SKY gübre dağıtıcılarınızı hangi ISOBUS terminalleriyle kullanabileceğinizi; makine kontrolü, GPS destekli değişken dozaj ve otomatik bölüm kesme desteğine göre karşılaştırın.</p>
+          <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -3160,6 +3175,57 @@ const PRODUCTS = {
       }
     ],
     brochure:'https://sky-agriculture.com/en/products/fertilisation/xt160h-240h/'
+  },
+  'isobus-uyumluluk': {
+    category:'Gübreleme', anchor:'gubreleme', tag:'ISOBUS Terminal Rehberi', title:'ISOBUS Terminal Uyumluluğu',
+    lead:'SKY gübre dağıtıcılarınızı hangi ISOBUS terminalleriyle kullanabileceğinizi; makine kontrolü, GPS destekli değişken dozaj ve otomatik bölüm kesme desteğine göre karşılaştırın.',
+    features:[
+      'SKY DX30+, X40+/X50+, X40+/X50+ Econov ve XT serisi gübre dağıtıcılar, ISOBUS standardına sahip tüm traktör ve terminallerle tam uyumlu çalışır.',
+      '13 farklı marka ve modelde terminal ile test edilmiş, kanıtlanmış saha uyumluluğu.',
+      'TC-GEO desteğiyle GPS tabanlı değişken oranlı gübre uygulaması, TC-SC desteğiyle tarla kenarında otomatik bölüm/sıra kesme imkanı.',
+      'Kendi terminal modelinizi listede bulamıyorsanız, güncel uyumluluk bilgisi için bizimle iletişime geçin.'
+    ],
+    specGroups:[
+      {
+        title:'Uyumlu ISOBUS Terminalleri',
+        columns:['Makine Ekran &amp; Kontrolü (UT)','GPS ile Değişken Dozaj (TC-GEO)','Otomatik Bölüm Kesme (Econov / TC-SC)'],
+        rows:[
+          {label:'SKY Quartz 600 (v01.04.07)', values:['Evet','Hayır','Hayır']},
+          {label:'SKY Quartz 800 (v02.39.06)', values:['Evet','Evet (Bağımsız Sol/Sağ)','Evet (Hilal / Eğri Kesim)']},
+          {label:'Müller Touch 800 - 1200 (v02.39.06)', values:['Evet','Evet (Bağımsız Sol/Sağ)','Evet (Hilal / Eğri Kesim)']},
+          {label:'John Deere GreenStar 2630 (3.36.1073)', values:['Evet','Evet (Bağımsız Sol/Sağ)','Evet']},
+          {label:'John Deere CommandCenter 4600 / 4640 (v10.18.3754.94)', values:['Evet','Evet (Bağımsız Sol/Sağ)','Evet']},
+          {label:'CCI 50 (v05.70)', values:['Evet','Hayır','Evet (Hilal / Eğri Kesim)']},
+          {label:'Fendt NT01 (v7.86)', values:['Evet','Evet','Evet (Hilal / Eğri Kesim)']},
+          {label:'CCI 800 / 1200 (v4.0.4)', values:['Evet','Evet (Bağımsız Sol/Sağ)','Evet (Hilal / Eğri Kesim)']},
+          {label:'Trimble TMX2050 / GFX750 (v11.00.900.29.4)', values:['Evet','Evet (Bağımsız Sol/Sağ)','Evet (Hilal / Eğri Kesim)']},
+          {label:'Ag Leader InCommand 800 - 1200 (v6.3)', values:['Evet','Evet','Evet (Hilal / Eğri Kesim)']},
+          {label:'Claas S10 (v04.00.20)', values:['Evet','Evet','Evet']},
+          {label:'Case IH AFS700 (32.1.0.0)', values:['Evet','Evet (Bağımsız Sol/Sağ)','Evet']},
+          {label:'New Holland IntelliView 4 (32.1.0.0)', values:['Evet','Evet (Bağımsız Sol/Sağ)','Evet']}
+        ]
+      }
+    ],
+    highlights:[
+      {
+        title:'Makine Ekranı ve Kontrolü (UT)',
+        desc:'Universal Terminal (UT) desteği, gübre dağıtıcınızın ISOBUS ekranından temel makine kontrolünü (açma/kapama, atım normu, alarm ve durum bilgileri) yönetmenizi sağlar. Tablodaki tüm terminaller bu temel kontrol seviyesini desteklemektedir.',
+        photo:'images/dx30-isobus-console.jpg'
+      },
+      {
+        title:'GPS ile Değişken Dozaj (TC-GEO)',
+        desc:'TC-GEO fonksiyonu, dijital reçete haritalarınızla entegre çalışarak gübre dozunu tarlanın ihtiyacına göre otomatik olarak ayarlar. "Bağımsız Sol/Sağ" ibaresi, sağ ve sol dağıtma diskinin dozunun ayrı ayrı modüle edilebildiği, hassasiyeti iki katına çıkaran gelişmiş bir özelliği ifade eder.'
+      },
+      {
+        title:'Otomatik Bölüm Kesme (Econov / TC-SC)',
+        desc:'TC-SC (bölüm kontrolü), tarla kenarlarında ve köşe dönüşlerinde gübre israfını önlemek için ilgili bölümleri otomatik olarak açıp kapatır. "Hilal / Eğri Kesim" desteği, ECONOV\'un gübre atım şeklinin gerçek eğrisel formunu takip ederek kesim yapabildiği en gelişmiş seviyeyi belirtir.'
+      },
+      {
+        title:'Terminalinizi Listede Göremediniz mi?',
+        desc:'Bu tablo düzenli olarak güncellenmektedir. Sahip olduğunuz terminal modeliyle ilgili güncel uyumluluk bilgisi almak için <a href="#iletisim" onclick="event.preventDefault();showContact()">Bize Ulaşın</a> sayfasından bizimle iletişime geçebilirsiniz.'
+      }
+    ],
+    brochure:'https://sky-agriculture.com/en/documentation/'
   }
 };
 
@@ -4542,6 +4608,56 @@ const PRODUCTS_EN = {
         bullets:['Folding Wide-Boom Technology: The folding wide-boom system, developed specifically for the XT240H model, reaches a record spread width of up to 50 metres in granular fertiliser applications.','Time and Operational Savings: This massive working width dramatically cuts the total number of passes (tractor tracks) across the field, saving time, cutting fuel consumption, and minimising soil compaction.']
       }
     ]
+  },
+  'isobus-uyumluluk': {
+    tag:'ISOBUS Terminal Guide', title:'ISOBUS Terminal Compatibility',
+    lead:'Compare which ISOBUS terminals work with your SKY fertiliser spreader — by machine control, GPS-based variable-rate application, and automatic section-control support.',
+    features:[
+      'SKY\'s DX30+, X40+/X50+, X40+/X50+ Econov, and XT-range fertiliser spreaders work fully with any ISOBUS-compliant tractor or terminal.',
+      'Proven field compatibility, tested across 13 different terminal brands and models.',
+      'GPS-based variable-rate fertiliser application via TC-GEO, and automatic headland/row section control via TC-SC.',
+      'Can\'t find your terminal model in the list? Get in touch with us for the latest compatibility information.'
+    ],
+    specGroups:[
+      {
+        title:'Compatible ISOBUS Terminals',
+        columns:['Machine Screen &amp; Control (UT)','GPS-Based Variable-Rate Application (TC-GEO)','Automatic Section Control (Econov / TC-SC)'],
+        rows:[
+          {label:'SKY Quartz 600 (v01.04.07)', values:['Yes','No','No']},
+          {label:'SKY Quartz 800 (v02.39.06)', values:['Yes','Yes (Independent Left/Right)','Yes (Crescent / Curve Cutting)']},
+          {label:'Müller Touch 800 - 1200 (v02.39.06)', values:['Yes','Yes (Independent Left/Right)','Yes (Crescent / Curve Cutting)']},
+          {label:'John Deere GreenStar 2630 (3.36.1073)', values:['Yes','Yes (Independent Left/Right)','Yes']},
+          {label:'John Deere CommandCenter 4600 / 4640 (v10.18.3754.94)', values:['Yes','Yes (Independent Left/Right)','Yes']},
+          {label:'CCI 50 (v05.70)', values:['Yes','No','Yes (Crescent / Curve Cutting)']},
+          {label:'Fendt NT01 (v7.86)', values:['Yes','Yes','Yes (Crescent / Curve Cutting)']},
+          {label:'CCI 800 / 1200 (v4.0.4)', values:['Yes','Yes (Independent Left/Right)','Yes (Crescent / Curve Cutting)']},
+          {label:'Trimble TMX2050 / GFX750 (v11.00.900.29.4)', values:['Yes','Yes (Independent Left/Right)','Yes (Crescent / Curve Cutting)']},
+          {label:'Ag Leader InCommand 800 - 1200 (v6.3)', values:['Yes','Yes','Yes (Crescent / Curve Cutting)']},
+          {label:'Claas S10 (v04.00.20)', values:['Yes','Yes','Yes']},
+          {label:'Case IH AFS700 (32.1.0.0)', values:['Yes','Yes (Independent Left/Right)','Yes']},
+          {label:'New Holland IntelliView 4 (32.1.0.0)', values:['Yes','Yes (Independent Left/Right)','Yes']}
+        ]
+      }
+    ],
+    highlights:[
+      {
+        title:'Machine Screen and Control (UT)',
+        desc:'Universal Terminal (UT) support lets you manage basic machine control — on/off, application rate, alarms, and status information — directly from your fertiliser spreader\'s ISOBUS screen. Every terminal in the table supports this baseline control level.',
+        photo:'images/dx30-isobus-console.jpg'
+      },
+      {
+        title:'GPS-Based Variable-Rate Application (TC-GEO)',
+        desc:'The TC-GEO function integrates with your digital prescription maps to automatically adjust the fertiliser rate to match the field\'s needs. "Independent Left/Right" refers to an advanced feature that doubles precision by letting the right and left spreading discs be modulated separately.'
+      },
+      {
+        title:'Automatic Section Control (Econov / TC-SC)',
+        desc:'TC-SC (section control) automatically opens and closes the relevant sections to prevent fertiliser waste at field edges and corner turns. "Crescent / Curve Cutting" support marks the most advanced level, where ECONOV can cut following the true curved shape of the actual spread pattern.'
+      },
+      {
+        title:'Can\'t Find Your Terminal in the List?',
+        desc:'This table is updated regularly. For the latest compatibility information on your specific terminal model, get in touch with us via our <a href="#iletisim" onclick="event.preventDefault();showContact()">Contact Us</a> page.'
+      }
+    ]
   }
 };
 
@@ -4690,7 +4806,8 @@ const SUBGROUP_LABELS_TR = {
   'min-till': 'Azaltılmış Toprak İşleme (Min-Till)',
   'no-till': 'Doğrudan Ekim (No-Till)',
   'asilir': 'Asılır',
-  'cekilir': 'Çekilir'
+  'cekilir': 'Çekilir',
+  'terminal-uyumlulugu': 'ISOBUS Terminal Uyumluluğu'
 };
 const SUBGROUP_LABELS_EN = {
   'diskoro': 'Disc Stubble Cultivator',
@@ -4704,7 +4821,8 @@ const SUBGROUP_LABELS_EN = {
   'min-till': 'Reduced Tillage (Min-Till)',
   'no-till': 'Direct Seeding (No-Till)',
   'asilir': 'Mounted',
-  'cekilir': 'Trailed'
+  'cekilir': 'Trailed',
+  'terminal-uyumlulugu': 'ISOBUS Terminal Compatibility'
 };
 const SUBGROUP_LABELS = Object.assign({}, SUBGROUP_LABELS_TR);
 
