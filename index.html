@@ -1545,8 +1545,23 @@
   </section>
 
   <section class="category" style="padding-top:0;">
-    <div style="max-width:760px;">
-      <p class="desc" data-i18n="about.placeholder">Bu sayfanın içeriği yakında eklenecektir.</p>
+    <div style="max-width:760px;display:flex;flex-direction:column;gap:22px;">
+      <h2 data-i18n="about.storyTitle" style="font-size:1.6rem;font-weight:800;">Tarımın Dilinden Anlayanların Hikayesi</h2>
+      <p class="desc" data-i18n="about.p1">KSV Tarım Makinaları ve Teknolojileri, masa başında değil, doğrudan tarlanın kalbinde doğmuş bir vizyonun eseridir. 4 jenerasyondur Türkiye'nin bereketli topraklarını işleyen, tohumla, iklimle ve makineyle yoğrulan bir çiftçi ailesinin, uluslararası mühendislik ve inovasyonla buluşma noktasıdır.</p>
+      <p class="desc" data-i18n="about.p2">Geçmişte 15 yılı aşkın süre boyunca dünyanın önde gelen küresel tarım makineleri markalarından birinin Türkiye distribütörlüğünü başarıyla yürütmüş olmanın verdiği ticari ve operasyonel tecrübe de bu vizyonun en güçlü temellerinden birini oluşturmaktadır.</p>
+      <p class="desc" data-i18n="about.p3">Yıllarca kendi arazilerimizde karşılaştığımız zorluklar, artan girdi maliyetleri ve değişen iklim koşulları, bizi "tarımı nasıl daha verimli, daha sürdürülebilir ve daha kârlı yapabiliriz?" sorusunun cevabını aramaya itti. Bu arayış, bizi sadece Türkiye'nin değil, dünyanın en ileri tarım teknolojilerini (Tarım 5.0) incelemeye ve sahada bizzat test etmeye yönlendirdi.</p>
+      <div>
+        <h3 data-i18n="about.whyTitle" style="font-size:1.05rem;font-weight:800;margin-bottom:8px;">Neden KSV Tarım?</h3>
+        <p class="desc" data-i18n="about.p4">Çünkü biz sadece bir makine distribütörü değiliz, biz de sizin gibi çiftçiyiz. Tarlaya girdiğinizde o toprağın nasıl ufalandığını, anızın nasıl yönetilmesi gerektiğini, traktörün hidroliğine binen yükü ve kuraklıkta o bir damla nemin ne kadar değerli olduğunu yaşayarak biliyoruz. Uluslararası eğitim ve iş birliği tecrübelerimizi Türkiye'nin çiftçilerinin faydasına sunmak istiyoruz.</p>
+      </div>
+      <p class="desc" data-i18n="about.p5">Satışını yaptığımız, bayiliğini üstlendiğimiz her teknolojiyi önce kendi arazilerimizde deniyor, onaylıyor ve ancak ondan sonra siz değerli üreticilerimize sunuyoruz.</p>
+      <div>
+        <h3 data-i18n="about.visionTitle" style="font-size:1.05rem;font-weight:800;margin-bottom:8px;">Vizyonumuz ve SKY Agriculture Ortaklığı</h3>
+        <p class="desc" data-i18n="about.p6">Amacımız Türkiye tarımını alışılagelmiş, toprağı yoran ve maliyeti artıran ezberlerden kurtarmaktır. Bu vizyon doğrultusunda, onarıcı tarımın (regenerative agriculture) ve doğrudan ekim (no-till) teknolojilerinin dünyadaki en prestijli temsilcisi olan SKY Agriculture'ın Türkiye Resmi Distribütörü olmaktan gurur duyuyoruz.</p>
+      </div>
+      <p class="desc" data-i18n="about.p7">Amacımız, mazot tüketiminizi düşürmek, toprak sağlığınızı geri kazandırmak, kimyasal ilaç ve gübre israfınızı önlemek ve nihayetinde çiftçimizin kârlılığını artırmaktır.</p>
+      <p class="desc" data-i18n="about.p8">KSV Tarım olarak, dedelerimizden miras kalan toprak sevgimizi, dünyanın en ileri "Hassas Tarım" teknolojileriyle birleştirerek dünün tecrübesini, bugünün teknolojisiyle yarının tarlalarına taşıyoruz.</p>
+      <p data-i18n="about.closing" style="font-size:1.15rem;font-weight:800;color:var(--green-dark);border-left:3px solid var(--green);padding-left:16px;">Toprağınızı, zamanınızı ve geleceğinizi korumak için yanınızdayız.</p>
     </div>
   </section>
 </div>
@@ -3265,9 +3280,42 @@ const PRODUCTS = {
     ],
     highlights:[
       {
-        title:'Makine Ekranı ve Kontrolü (UT)',
-        desc:'Universal Terminal (UT) desteği, gübre dağıtıcınızın ISOBUS ekranından temel makine kontrolünü (açma/kapama, atım normu, alarm ve durum bilgileri) yönetmenizi sağlar. Tablodaki tüm terminaller bu temel kontrol seviyesini desteklemektedir.',
+        title:'ISOBUS Kontrol Terminalleri: Hassas Tarımın Dijital Zekası',
+        desc:'Makinelerinizle tam bir uyum içinde çalışarak operasyonel verimliliğinizi en üst düzeye çıkaran standart donanımlı AEF sertifikalı terminal seçeneklerimiz:',
         photo:'images/dx30-isobus-console.jpg'
+      },
+      {
+        title:'CCI-800 Konsol (Standart Donanım Özellikleri)',
+        desc:'Kompakt tasarımda yüksek teknoloji arayanlar için ideal kontrol merkezi.',
+        bullets:[
+          'AEF sertifikalı ISOBUS sanal terminal (UT)',
+          '8 inç diyagonal renkli dokunmatik ekran',
+          'GPS ve makine verilerini aynı anda izlemeye olanak tanıyan "Miniview" (Mini Görünüm) özelliği',
+          'USB bağlantı noktası',
+          'Kabin içi montaj braketi',
+          '"NMEA 2000", "J1939" ve "NMEA 0183" formatlı GPS mesajlarıyla tam uyumluluk',
+          'TC-SC: 254 bölüme kadar Otomatik Bölüm Kontrolü (Opsiyonel)',
+          'TC-GEO: 4 farklı dozajlayıcı ile Değişken Oranlı Uygulama (Reçete Haritası) yönetimi (Opsiyonel)',
+          'Çalışma alanlarının görüntülenmesi ve geri manevra tanıma özellikli Kılavuz/Dümenleme sistemi (Opsiyonel)',
+          'D-GPS/RTK destekli mibzerlerle uyumlu, otomatik iz bırakma yönetimini sağlayan Tramline Control (Opsiyonel)',
+          'Kamera bağlantısı için video girişi',
+          'İnternet bağlantısı için dahili Wi-Fi modülü',
+          'Çift UT (Sanal Terminal) desteği, tek ekran görünümü'
+        ]
+      },
+      {
+        title:'CCI-1200 Konsol (Gelişmiş Donanım Özellikleri)',
+        desc:'Büyük operasyonlarda maksimum ekran alanı ve aynı anda çoklu işlem yeteneği isteyen profesyoneller için. CCI-800\'ün tüm temel donanımlarına ek olarak aşağıdaki ekstra özellikleri sunar:',
+        bullets:[
+          '12 inç diyagonal geniş renkli dokunmatik ekran',
+          'Eşzamanlı tam zamanlı çift ekran görünümü (Örn: Makine ve Dümenleme yan yana veya İki farklı Makine yan yana)',
+          'Çoklu "Miniview" (Mini Görünüm) ekran desteği (Örn: Makine bilgileri, GPS ve kamera görüntüsü aynı anda ekranda)',
+          'Veri transferleri (Örn: Reçete haritaları yükleme, RTS Fertitest) için Çift USB bağlantı noktası'
+        ]
+      },
+      {
+        title:'Makine Ekranı ve Kontrolü (UT)',
+        desc:'Universal Terminal (UT) desteği, gübre dağıtıcınızın ISOBUS ekranından temel makine kontrolünü (açma/kapama, atım normu, alarm ve durum bilgileri) yönetmenizi sağlar. Tablodaki tüm terminaller bu temel kontrol seviyesini desteklemektedir.'
       },
       {
         title:'GPS ile Değişken Dozaj (TC-GEO)',
@@ -4694,9 +4742,42 @@ const PRODUCTS_EN = {
     ],
     highlights:[
       {
-        title:'Machine Screen and Control (UT)',
-        desc:'Universal Terminal (UT) support lets you manage basic machine control — on/off, application rate, alarms, and status information — directly from your fertiliser spreader\'s ISOBUS screen. Every terminal in the table supports this baseline control level.',
+        title:'ISOBUS Control Terminals: The Digital Intelligence of Precision Farming',
+        desc:'Our standard-equipment, AEF-certified terminal options work in full harmony with your machines to maximise your operational efficiency:',
         photo:'images/dx30-isobus-console.jpg'
+      },
+      {
+        title:'CCI-800 Console (Standard Equipment)',
+        desc:'An ideal control hub for anyone wanting high technology in a compact design.',
+        bullets:[
+          'AEF-certified ISOBUS universal terminal (UT)',
+          '8-inch diagonal colour touchscreen',
+          '"Miniview" feature for monitoring GPS and machine data simultaneously',
+          'USB port',
+          'In-cab mounting bracket',
+          'Full compatibility with GPS messages in "NMEA 2000", "J1939", and "NMEA 0183" formats',
+          'TC-SC: Automatic Section Control for up to 254 sections (Optional)',
+          'TC-GEO: Variable-Rate Application (prescription-map) management with 4 different meters (Optional)',
+          'Guidance/steering system with work-area display and reverse-manoeuvre recognition (Optional)',
+          'Tramline Control for automatic tramlining, compatible with D-GPS/RTK-equipped drills (Optional)',
+          'Video input for camera connection',
+          'Built-in Wi-Fi module for internet connectivity',
+          'Dual UT (virtual terminal) support with single-screen view'
+        ]
+      },
+      {
+        title:'CCI-1200 Console (Advanced Equipment)',
+        desc:'For professionals who want maximum screen real estate and multitasking capability on large operations. In addition to everything the CCI-800 offers, it adds these extra features:',
+        bullets:[
+          '12-inch diagonal wide colour touchscreen',
+          'Simultaneous full-time dual-screen view (e.g. Machine and Steering side by side, or two different Machines side by side)',
+          'Multiple "Miniview" screen support (e.g. machine data, GPS, and camera feed all on screen at once)',
+          'Dual USB ports for data transfers (e.g. uploading prescription maps, RTS Fertitest)'
+        ]
+      },
+      {
+        title:'Machine Screen and Control (UT)',
+        desc:'Universal Terminal (UT) support lets you manage basic machine control — on/off, application rate, alarms, and status information — directly from your fertiliser spreader\'s ISOBUS screen. Every terminal in the table supports this baseline control level.'
       },
       {
         title:'GPS-Based Variable-Rate Application (TC-GEO)',
@@ -5546,7 +5627,18 @@ const I18N = {
     'contact.categoryParts':'Yedek Parça / Servis', 'contact.company':'Firma / Çiftlik Adı', 'contact.emailLabel':'E-posta',
     'about.eyebrow':'HAKKIMIZDA', 'about.h1':'Hakkımızda',
     'about.intro':'KSV Tarım, 4 jenerasyonun tarım mirasını, uluslararası deneyim ve inovasyon ile buluşturuyor.',
-    'about.placeholder':'Bu sayfanın içeriği yakında eklenecektir.',
+    'about.storyTitle':'Tarımın Dilinden Anlayanların Hikayesi',
+    'about.p1':'KSV Tarım Makinaları ve Teknolojileri, masa başında değil, doğrudan tarlanın kalbinde doğmuş bir vizyonun eseridir. 4 jenerasyondur Türkiye\'nin bereketli topraklarını işleyen, tohumla, iklimle ve makineyle yoğrulan bir çiftçi ailesinin, uluslararası mühendislik ve inovasyonla buluşma noktasıdır.',
+    'about.p2':'Geçmişte 15 yılı aşkın süre boyunca dünyanın önde gelen küresel tarım makineleri markalarından birinin Türkiye distribütörlüğünü başarıyla yürütmüş olmanın verdiği ticari ve operasyonel tecrübe de bu vizyonun en güçlü temellerinden birini oluşturmaktadır.',
+    'about.p3':'Yıllarca kendi arazilerimizde karşılaştığımız zorluklar, artan girdi maliyetleri ve değişen iklim koşulları, bizi "tarımı nasıl daha verimli, daha sürdürülebilir ve daha kârlı yapabiliriz?" sorusunun cevabını aramaya itti. Bu arayış, bizi sadece Türkiye\'nin değil, dünyanın en ileri tarım teknolojilerini (Tarım 5.0) incelemeye ve sahada bizzat test etmeye yönlendirdi.',
+    'about.whyTitle':'Neden KSV Tarım?',
+    'about.p4':'Çünkü biz sadece bir makine distribütörü değiliz, biz de sizin gibi çiftçiyiz. Tarlaya girdiğinizde o toprağın nasıl ufalandığını, anızın nasıl yönetilmesi gerektiğini, traktörün hidroliğine binen yükü ve kuraklıkta o bir damla nemin ne kadar değerli olduğunu yaşayarak biliyoruz. Uluslararası eğitim ve iş birliği tecrübelerimizi Türkiye\'nin çiftçilerinin faydasına sunmak istiyoruz.',
+    'about.p5':'Satışını yaptığımız, bayiliğini üstlendiğimiz her teknolojiyi önce kendi arazilerimizde deniyor, onaylıyor ve ancak ondan sonra siz değerli üreticilerimize sunuyoruz.',
+    'about.visionTitle':'Vizyonumuz ve SKY Agriculture Ortaklığı',
+    'about.p6':'Amacımız Türkiye tarımını alışılagelmiş, toprağı yoran ve maliyeti artıran ezberlerden kurtarmaktır. Bu vizyon doğrultusunda, onarıcı tarımın (regenerative agriculture) ve doğrudan ekim (no-till) teknolojilerinin dünyadaki en prestijli temsilcisi olan SKY Agriculture\'ın Türkiye Resmi Distribütörü olmaktan gurur duyuyoruz.',
+    'about.p7':'Amacımız, mazot tüketiminizi düşürmek, toprak sağlığınızı geri kazandırmak, kimyasal ilaç ve gübre israfınızı önlemek ve nihayetinde çiftçimizin kârlılığını artırmaktır.',
+    'about.p8':'KSV Tarım olarak, dedelerimizden miras kalan toprak sevgimizi, dünyanın en ileri "Hassas Tarım" teknolojileriyle birleştirerek dünün tecrübesini, bugünün teknolojisiyle yarının tarlalarına taşıyoruz.',
+    'about.closing':'Toprağınızı, zamanınızı ve geleceğinizi korumak için yanınızdayız.',
     'contact.eyebrow':'İLETİŞİM', 'contact.formSub':'Aşağıdaki formu doldurun, ihtiyacınıza en uygun çözümü sunalım.',
     'contact.formTitle':'Bilgi ve Teklif Formu', 'contact.h1':'Bize Ulaşın', 'contact.infoTitle':'İletişim Bilgileri',
     'contact.intro':'Ürünlerimiz, fiyatlandırma, bayilik veya servis hakkında sorularınız için buradayız. Formu doldurun, ekibimiz size en kısa sürede dönüş yapsın.',
@@ -5616,7 +5708,18 @@ const I18N = {
     'contact.categoryParts':'Spare Parts / Service', 'contact.company':'Company / Farm Name', 'contact.emailLabel':'Email',
     'about.eyebrow':'ABOUT US', 'about.h1':'About Us',
     'about.intro':'KSV Tarım brings together four generations of farming heritage with international expertise and innovation.',
-    'about.placeholder':'The content for this page will be added soon.',
+    'about.storyTitle':'The Story of People Who Speak the Language of Farming',
+    'about.p1':'KSV Tarım Makinaları ve Teknolojileri wasn\'t built behind a desk — it grew straight out of the heart of the field. It\'s where four generations of a farming family, shaped by seed, climate, and machinery while working Türkiye\'s fertile soil, meet international engineering and innovation.',
+    'about.p2':'The commercial and operational experience gained from successfully running the Turkish distributorship of one of the world\'s leading global farm-machinery brands for over 15 years forms one of the strongest foundations of this vision.',
+    'about.p3':'The challenges we faced on our own land for years, rising input costs, and shifting climate conditions pushed us to search for an answer to one question: "How can we make farming more efficient, more sustainable, and more profitable?" That search led us to study — and test firsthand in the field — not just Türkiye\'s but the world\'s most advanced farming technologies (Agriculture 5.0).',
+    'about.whyTitle':'Why KSV Tarım?',
+    'about.p4':'Because we\'re not just a machinery distributor — we\'re farmers, just like you. We know firsthand how that soil crumbles when you enter a field, how stubble needs to be managed, the load carried by a tractor\'s hydraulics, and just how precious a single drop of moisture is during drought. We want to put our international training and partnership experience to work for Türkiye\'s farmers.',
+    'about.p5':'Every technology we sell or distribute, we test and validate on our own land first — only then do we bring it to you, our valued growers.',
+    'about.visionTitle':'Our Vision and the SKY Agriculture Partnership',
+    'about.p6':'Our goal is to free Turkish farming from the conventional habits that wear down the soil and drive up costs. In line with this vision, we\'re proud to be the Official Türkiye Distributor of SKY Agriculture, the world\'s most prestigious name in regenerative agriculture and no-till technology.',
+    'about.p7':'Our aim is to cut your diesel consumption, restore your soil health, prevent waste in chemicals and fertiliser, and ultimately increase our farmers\' profitability.',
+    'about.p8':'At KSV Tarım, we combine the love of the land passed down from our grandfathers with the world\'s most advanced "Precision Farming" technologies — carrying yesterday\'s experience into tomorrow\'s fields with today\'s technology.',
+    'about.closing':'We\'re here to protect your soil, your time, and your future.',
     'contact.eyebrow':'CONTACT', 'contact.formSub':'Fill out the form below and we\'ll match you with the right solution.',
     'contact.formTitle':'Inquiry & Quote Request Form', 'contact.h1':'Contact Us', 'contact.infoTitle':'Contact Information',
     'contact.intro':'Whatever you need to know about our products, pricing, dealership or service, we\'re here to help. Fill out the form and our team will get back to you shortly.',
