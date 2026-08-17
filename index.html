@@ -839,7 +839,7 @@
           <div class="subgroup">
             <a class="subgroup-trigger" data-subgroup-key="disli-tirmik" href="#methys-pcs" onclick="event.preventDefault();showProduct('methys-pcs')">Dişli Tırmık / Çizel<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
             <div class="flyout" role="menu">
-              <a role="menuitem" href="#methys-pcs" onclick="event.preventDefault();showProduct('methys-pcs')"><b>Methys PCS</b><span class="sub" data-i18n="navsub.methys-pcs">Yüzey Sıyırıcı &middot; Asılır / Çekilir</span></a>
+              <a role="menuitem" href="#methys-pcs" onclick="event.preventDefault();showProduct('methys-pcs')"><b>Methys PCS</b><span class="sub" data-i18n="navsub.methys-pcs">Yüzey Sıyırıcı</span></a>
             </div>
           </div>
           <div class="subgroup">
@@ -1870,7 +1870,6 @@ const PRODUCTS = {
       {
         title:'Kusursuz Zemin Takibi İçin Eşsiz Yatay ve Dikey Açıklık',
         desc:'Sentetik total herbisitlerin (yeşil kurutan) yaygınlaşmasından önce sıklıkla kullanılan bir yöntemdir. Günümüzün enerji ve iklim koşulları değişikliklerine uygun olarak yeniden tasarlandı.',
-        bullets:['Yakıt tüketimini azaltmak','Tazeliği korumak ve CO2 emisyonunu sınırlamak için tüm genişlik boyunca 3 cm sıyırma','Bitki kalıntılarını yüzeyde tutmak => diş tipi bir aletle tıkanmayı önleyecek bol açıklık','Yoğun bitki örtüsüyle çalışabilme'],
         desc2:'Methys PCS\'nin geniş açıklıklı tasarımı, yoğun anızda ve sonlandırılacak yoğun miktardaki örtü bitkilerinde bile yüksek hızda çalışabilmesini sağlar. Kesici disklerin üst üste binmesi optimum düzeydedir ve makinenin tüm genişliği boyunca çalışma yapılmasını garanti eder. 750 mm\'lik şasi açıklığı ve tırmık dişleri arasındaki mesafe, yüksek ilerleme hızlarında bile önemli miktarda bitki artıklarının akıp geçmesini sağlar.',
         photoHint:'traktör + sıyırıcı, yoğun yeşil örtü bitkisi üzerinde çalışırken',
         photo:'images/methys-pcs-cover-crop.jpg'
@@ -1882,8 +1881,8 @@ const PRODUCTS = {
         photo:'images/methys-pcs-depth-consistency-scheme.jpg'
       },
       {
-        title:'Koruyucu Tarıma Uygun Bir Sıyırıcı',
-        desc:'Amaç, Methys PCS\'den geçtikten sonra herhangi bir yeniden büyümeyi önlemektir. Bitki örtüsünün tamamen yok edilmesinde 2 temel unsur rol oynar:',
+        title:'Onarıcı Tarıma Uygun Bir Sıyırıcı',
+        desc:'Amaç, Methys PCS ile geçtikten sonra herhangi bir yeniden büyümeyi önlemektir.',
         bullets:['2-11 cm arası sığ derinliklerde hassas çalışabilme ile toprak bozulmasını sınırlama','Herhangi bir tekerlek geçişinin ardından bir dişli elemanın çalışması gelir; böylece toprağın bitki örtüsü üzerinde yeniden sıkışması riski ortadan kalkar','3 sıralı, eğimi ayarlanabilir yaylı dişlere (12 mm) sahip arka tırmık, yabancı otların parçalanmasını ve köklerin havaya maruz bırakılmasını sağlayarak yeniden büyümeyi önler','Anız bozarken veya örtü bitkisi sonlandırırken yabancı ot tohumlarının çimlenmesini sağlayarak ana ürün ekimi öncesi ve sonrasında yabancı ot ihtiyacını azaltarak toprak sağlığını ve girdi tasarrufunuzu artırır.'],
         photoHint:'sıyırıcı dişleri, yoğun anız ve bitki artığı içinde yakın çekim',
         photo:'images/methys-pcs.jpg'
@@ -3520,7 +3519,6 @@ const PRODUCTS_EN = {
       {
         title:'Unmatched Horizontal and Vertical Clearance for Flawless Ground-Following',
         desc:'A method already in widespread use before synthetic total herbicides (green-drying agents) became common. Redesigned to match today\'s changing energy and climate conditions.',
-        bullets:['Cut fuel consumption','Skim at a constant 3 cm across the full width to preserve freshness and limit CO2 emissions','Keep plant residue on the surface => generous clearance on a tine-type tool to prevent clogging','Ability to work in dense cover crops'],
         desc2:'The Methys PCS\'s wide-clearance design lets it work at high speed even in heavy stubble and large volumes of cover crop to be destroyed. Overlap between the cutting discs is optimal and guarantees that work is done across the full width of the machine. The 750 mm chassis clearance and the spacing between the harrow tines let a substantial amount of plant residue flow through cleanly even at high forward speeds.'
       },
       {
@@ -3528,8 +3526,8 @@ const PRODUCTS_EN = {
         bullets:['Shallow working-depth control via 7 ground-support points for flawless ground-following','12 depth-control wheels','3D control and flexible structure via an isostatically supported chassis/extensions','True trailed towing unaffected by tractor movement','Low fuel consumption (0.65 litres/decare on the first pass, 0.3 litres/decare on the second pass)']
       },
       {
-        title:'A Skimmer Built for Conservation Tillage',
-        desc:'The goal is to prevent any regrowth after passing through the Methys PCS. Two key factors play into fully destroying cover:',
+        title:'A Skimmer Built for Regenerative Farming',
+        desc:'The goal is to prevent any regrowth after passing through the Methys PCS.',
         bullets:['Limiting soil disturbance thanks to precise working at shallow depths of 2-11 cm','Every wheel pass is followed by a tine element working the soil, eliminating any risk of the ground re-compacting over the cover crop','A 3-row rear harrow with adjustable-angle spring tines (12 mm) shreds weeds and exposes roots to the air, preventing regrowth','By triggering germination of weed seeds while breaking stubble or terminating a cover crop, it reduces weed pressure both before and after main-crop drilling, boosting soil health and input savings.']
       }
     ]
@@ -5659,7 +5657,7 @@ const I18N = {
     'navsub.docs':'Katalog ve teknik dokümanlar', 'navsub.dx30':'Asılır Tip Gübre Dağıtıcı',
     'navsub.easydrill':'Doğrudan Ekim Mibzeri · Sıfır toprak işleme', 'navsub.faca-roller':'Malç Ezici Merdane · 2,75-6 m',
     'navsub.hr':'Rotatif Tırmık', 'navsub.maxidrill':'Hızlı Ekim Makinesi',
-    'navsub.methys-hds':'Diskli Anız Kültivatörü', 'navsub.methys-pcs':'Yüzey Sıyırıcı · Asılır / Çekilir',
+    'navsub.methys-hds':'Diskli Anız Kültivatörü', 'navsub.methys-pcs':'Yüzey Sıyırıcı',
     'navsub.parts':'Orijinal yedek parça kataloğu', 'navsub.progress':'Kombine Pnömatik Ekim Makinesi',
     'navsub.progress-m':'Pnömatik Kombine Ekim Ünitesi', 'navsub.sara':'Ekipmanınızla ilgili ihtiyacınız olan tüm bilgilere erişebileceğiniz mobil uygulama',
     'navsub.sonic':'Hassas Ekim Makinesi · Pnömatik', 'navsub.tf':'Ön Hazneli Ekim Ünitesi',
@@ -5741,7 +5739,7 @@ const I18N = {
     'navsub.docs':'Catalogues and technical documents', 'navsub.dx30':'Mounted Fertiliser Spreader',
     'navsub.easydrill':'Direct Seed Drill · Zero tillage', 'navsub.faca-roller':'Mulch Roller · 2.75-6 m',
     'navsub.hr':'Power Harrow', 'navsub.maxidrill':'Fast Seed Drill',
-    'navsub.methys-hds':'Disc Stubble Cultivator', 'navsub.methys-pcs':'Surface Scraper · Mounted / Trailed',
+    'navsub.methys-hds':'Disc Stubble Cultivator', 'navsub.methys-pcs':'Surface Scraper',
     'navsub.parts':'Genuine spare parts catalogue', 'navsub.progress':'Combined Pneumatic Seed Drill',
     'navsub.progress-m':'Pneumatic Combined Seeding Unit', 'navsub.sara':'A mobile app giving you access to all the information you need about your equipment',
     'navsub.sonic':'Precision Seed Drill · Pneumatic', 'navsub.tf':'Front Hopper Seeding Unit',
