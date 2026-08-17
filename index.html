@@ -142,7 +142,7 @@
   .header-inner{
     max-width:1360px;margin:0 auto;
     display:flex;align-items:center;justify-content:space-between;
-    padding:16px 28px;gap:10px;
+    padding:16px 28px;gap:8px;
     position:relative;
   }
   .brand{display:flex;align-items:center;gap:11px;background:none;border:none;}
@@ -163,9 +163,9 @@
   nav{display:flex;gap:2px;}
   .nav-item{position:relative;}
   .nav-item > .nav-trigger{
-    display:flex;align-items:center;gap:4px;white-space:nowrap;
-    font-size:.86rem;font-weight:600;color:var(--ink);
-    padding:10px 6px;border-radius:9px;background:none;border:none;
+    display:flex;align-items:center;gap:3px;white-space:nowrap;
+    font-size:.82rem;font-weight:600;color:var(--ink);
+    padding:10px 4px;border-radius:9px;background:none;border:none;
     transition:background .2s, color .2s;
   }
   .nav-item > .nav-trigger svg{width:13px;height:13px;transition:transform .25s var(--ease);}
@@ -356,16 +356,18 @@
     margin-bottom:38px;gap:20px;flex-wrap:wrap;
     border-bottom:1px solid var(--line);padding-bottom:24px;
   }
-  .category-head .eyebrow-sm{
+  .eyebrow-sm{
     color:var(--green-dark);font-weight:700;font-size:.78rem;letter-spacing:2px;
     text-transform:uppercase;margin-bottom:9px;display:flex;align-items:center;
   }
-  .category-head .eyebrow-sm::before{
+  .eyebrow-sm::before{
     content:'';display:inline-block;width:22px;height:2px;background:var(--green);
     margin-right:9px;flex-shrink:0;border-radius:2px;
   }
   .category-head h2{font-size:clamp(25px,3.4vw,34px);font-weight:800;}
   .category-head .desc{color:var(--ink-soft);font-size:.98rem;max-width:440px;}
+  .intro-head-centered{flex-direction:column;align-items:center;text-align:center;}
+  .intro-head-centered .desc{max-width:640px;}
 
   .grid{
     display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
@@ -869,7 +871,7 @@
             </div>
           </div>
           <div class="subgroup">
-            <a class="subgroup-trigger" data-subgroup-key="pnomatik-mibzerler" href="#sonic" onclick="event.preventDefault();showProduct('sonic')">Pnömatik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+            <a class="subgroup-trigger" data-subgroup-key="pnomatik-mibzerler" href="#sonic" onclick="event.preventDefault();showProduct('sonic')">Pnömatik (Havalı) Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
             <div class="flyout" role="menu">
               <a role="menuitem" href="#sonic" onclick="event.preventDefault();showProduct('sonic')"><b>Sonic</b><span class="sub" data-i18n="navsub.sonic">Hassas Ekim Makinesi &middot; Pnömatik</span></a>
             </div>
@@ -882,9 +884,9 @@
             </div>
           </div>
           <div class="subgroup">
-            <a class="subgroup-trigger" data-subgroup-key="on-hazne" href="#tf" onclick="event.preventDefault();showProduct('tf')">Ön Hazne<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+            <a class="subgroup-trigger" data-subgroup-key="on-hazne" href="#tf" onclick="event.preventDefault();showProduct('tf')">Çok Amaçlı Ön Hazne<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
             <div class="flyout" role="menu">
-              <a role="menuitem" href="#tf" onclick="event.preventDefault();showProduct('tf')"><b>TF</b><span class="sub" data-i18n="navsub.tf">Ön Hazneli Ekim Ünitesi &middot; Progress TF</span></a>
+              <a role="menuitem" href="#tf" onclick="event.preventDefault();showProduct('tf')"><b>Progress TF</b><span class="sub" data-i18n="navsub.tf">Ön Hazneli Ekim Ünitesi</span></a>
             </div>
           </div>
           <div class="subgroup">
@@ -923,6 +925,10 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-trigger" href="#isobus-uyumluluk" onclick="event.preventDefault();showProduct('isobus-uyumluluk')" data-i18n="nav.isobus">ISOBUS</a>
       </div>
 
       <div class="nav-item">
@@ -984,12 +990,6 @@
     <span class="eyebrow" data-i18n="hero.eyebrow"><span class="dot"></span>SKY AGRICULTURE TÜRKİYE</span>
     <h1 data-i18n="hero.title">Günümüz tarımının ihtiyaçlarına göre uyarlanmış geniş ürün yelpazesiyle KSV Tarım yarının çiftçilerinin yanında</h1>
     <p data-i18n="hero.subtitle">KSV Tarım, 4 jenerasyonun tarım mirasını, uluslararası deneyim ve inovasyon ile buluşturuyor.</p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="#kategori-toprak-isleme" onclick="event.preventDefault();showCategory('toprak-isleme')" data-i18n="hero.cta">
-        Ürün Koleksiyonu
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg>
-      </a>
-    </div>
     <div class="hero-carousel" id="hero-carousel">
       <div class="hero-carousel-track" id="hero-carousel-track">
         <div class="hero-slide active" style="background-image:url('images/hero-1.jpg')"></div>
@@ -1005,14 +1005,12 @@
   </section>
 
   <section class="category" style="padding-top:0;">
-    <div class="category-head reveal">
-      <div>
-        <span class="eyebrow-sm" data-i18n="intro.eyebrow">Yeni nesil tarım ekipmanlarıyla hedefimiz</span>
-        <h2 data-i18n="intro.h2">Dünyadaki en güncel ve verimli teknolojiyi işimizi daha hassas yapabilmek için sunuyoruz</h2>
-      </div>
+    <div class="category-head intro-head-centered reveal">
+      <h2 data-i18n="intro.h2">Dünyadaki en güncel ve verimli teknolojiyi işimizi daha hassas yapabilmek için sunuyoruz</h2>
       <p class="desc" data-i18n="intro.desc">İnovasyon, bir makinenin çalışma performansını, enerji tüketimini ve çevresel etkilerini optimize ederek yeniden tasarlamaktır.</p>
     </div>
     <div style="max-width:900px;display:flex;flex-direction:column;gap:22px;">
+      <span class="eyebrow-sm" data-i18n="intro.eyebrow">Yeni nesil tarım ekipmanlarıyla hedefimiz:</span>
       <div>
         <h3 data-i18n="intro.li1" style="font-size:1.05rem;font-weight:800;margin-bottom:6px;">Toprak nemini ve sağlığını korumak</h3>
         <p class="desc" data-i18n="intro.li1desc">Çıplak bırakılan toprak, güneşin ve rüzgarın yıpratıcı etkilerine karşı savunmasızdır. Örtü bitkileri, yüzeyde adeta canlı bir kalkan oluşturarak buharlaşmayı engeller ve giderek paha biçilemez hale gelen suyu toprakta hapseder; aynı zamanda kök salgılarıyla mikroorganizmaları besleyerek toprağın yitirdiği biyolojik zenginliği ona geri verir.</p>
@@ -1023,7 +1021,7 @@
       </div>
       <div>
         <h3 data-i18n="intro.li3" style="font-size:1.05rem;font-weight:800;margin-bottom:6px;">Yabancı otları kontrol altına almak</h3>
-        <p class="desc" data-i18n="intro.li3desc">Yabancı otlarla mücadelede sürekli kimyasallara başvurmak sadece cebinizi değil, toprağınızı da zehirler ve yorar. Yüzeyi hızla kaplayan örtü bitkileri, toprağa ulaşan güneş ışığını kesip biyolojik bir rekabet yaratarak istenmeyen otların çimlenmesini doğal yollarla baskılar; böylece tarlanızı yoğun herbisit (ilaç) yükünden ve yüksek maliyetinden kurtarır.</p>
+        <p class="desc" data-i18n="intro.li3desc">Yabancı otlarla mücadelede sürekli kimyasallara başvurmak sadece cebinizi değil, toprağınızı da zehirler ve yorar. Yüzeyi hızla kaplayan örtü bitkileri, toprağa ulaşan güneş ışığını kesip biyolojik bir rekabet yaratarak istenmeyen otların çimlenmesini doğal yollarla baskılar; böylece tarlanızı yoğun herbisit (ot ilacı) yükünden ve yüksek maliyetinden kurtarır.</p>
       </div>
       <div>
         <h3 data-i18n="intro.li4" style="font-size:1.05rem;font-weight:800;margin-bottom:6px;">Örtü bitkileri ile toprağa azot bağlamak</h3>
@@ -1036,7 +1034,7 @@
   <section class="category" id="toprak-isleme">
     <div class="category-head reveal">
       <div>
-        <span class="eyebrow-sm">Soil Preparation</span>
+        <span class="eyebrow-sm" data-i18n="cat.soilPrep.eyebrow">Toprak Hazırlığı</span>
         <h2 data-category-key="toprak-isleme">Toprak İşleme Makineleri</h2>
       </div>
       <p class="desc" data-i18n="cat.soilPrep.desc">Doğru toprak hazırlığı büyük önem taşır. Toprağı ne kadar rahatsız edersek o da bizi o derece rahatsız eder. Azaltılmış toprak işleme ile mazottan tasarruf ederken toprak sağlığını koruyun.</p>
@@ -1084,7 +1082,7 @@
         <div class="card-body">
           <span class="tag">Yüzey Sıyırıcı</span>
           <h3>Methys PCS</h3>
-          <p>Anız bozma ve örtü bitkisi sonlandırmak için tüm genişlik boyunca düşük yakıt tüketimiyle çalışan yüzey sıyırıcı.</p>
+          <p>Anız bozma ve örtü bitkisi sonlandırmak için düşük yakıt tüketimiyle çalışan yüzey sıyırıcı.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1112,7 +1110,7 @@
         <div class="card-body">
           <span class="tag">Malç Ezici Merdane</span>
           <h3>FACA Roller</h3>
-          <p>FACA Roller, tarlanızdaki örtü bitkilerini ve anızları kimyasal (herbisit) kullanmadan sonlandırmanın ve toprağınız için mükemmel bir koruyucu örtüye (malç) dönüştürmenin en doğal yoludur.</p>
+          <p>FACA Roller, tarlanızdaki örtü bitkilerini ve anızları kimyasal (ot ilacı) kullanmadan sonlandırmanın ve toprağınız için mükemmel bir koruyucu örtüye (malç) dönüştürmenin en doğal yoludur.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1123,16 +1121,16 @@
   <section class="category" id="ekim-sistemleri">
     <div class="category-head reveal">
       <div>
-        <span class="eyebrow-sm">Sowing</span>
+        <span class="eyebrow-sm" data-i18n="cat.sowing.eyebrow">Ekim</span>
         <h2 data-category-key="ekim-sistemleri">Ekim Sistemleri</h2>
       </div>
       <p class="desc" data-i18n="cat.sowing.desc">Hassasiyet ve dayanıklılığı bir araya getiren mibzer ve ekim makineleri.</p>
     </div>
     <div class="grid">
       <a class="grid-subheading clickable" style="order:9" data-subgroup="mekanik-mibzerler" href="#kategori-ekim-sistemleri~mekanik-mibzerler" onclick="event.preventDefault();showSubgroup('ekim-sistemleri', 'mekanik-mibzerler', 'Mekanik Mibzerler')">Mekanik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-      <a class="grid-subheading clickable" style="order:19" data-subgroup="pnomatik-mibzerler" href="#kategori-ekim-sistemleri~pnomatik-mibzerler" onclick="event.preventDefault();showSubgroup('ekim-sistemleri', 'pnomatik-mibzerler', 'Pnömatik Mibzerler')">Pnömatik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      <a class="grid-subheading clickable" style="order:19" data-subgroup="pnomatik-mibzerler" href="#kategori-ekim-sistemleri~pnomatik-mibzerler" onclick="event.preventDefault();showSubgroup('ekim-sistemleri', 'pnomatik-mibzerler', 'Pnömatik (Havalı) Mibzerler')">Pnömatik (Havalı) Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
       <a class="grid-subheading clickable" style="order:29" data-subgroup="kombine-pnomatik-mibzerler" href="#kategori-ekim-sistemleri~kombine-pnomatik-mibzerler" onclick="event.preventDefault();showSubgroup('ekim-sistemleri', 'kombine-pnomatik-mibzerler', 'Kombine Pnömatik Mibzerler')">Kombine Pnömatik Mibzerler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-      <a class="grid-subheading clickable" style="order:39" data-subgroup="on-hazne" href="#kategori-ekim-sistemleri~on-hazne" onclick="event.preventDefault();showSubgroup('ekim-sistemleri', 'on-hazne', 'Ön Hazne')">Ön Hazne<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      <a class="grid-subheading clickable" style="order:39" data-subgroup="on-hazne" href="#kategori-ekim-sistemleri~on-hazne" onclick="event.preventDefault();showSubgroup('ekim-sistemleri', 'on-hazne', 'Çok Amaçlı Ön Hazne')">Çok Amaçlı Ön Hazne<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
       <a class="grid-subheading clickable" style="order:49" data-subgroup="min-till" href="#kategori-ekim-sistemleri~min-till" onclick="event.preventDefault();showSubgroup('ekim-sistemleri', 'min-till', 'Azaltılmış Toprak İşleme (Min-Till)')">Azaltılmış Toprak İşleme (Min-Till)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
       <a class="grid-subheading clickable" style="order:59" data-subgroup="no-till" href="#kategori-ekim-sistemleri~no-till" onclick="event.preventDefault();showSubgroup('ekim-sistemleri', 'no-till', 'Doğrudan Ekim (No-Till)')">Doğrudan Ekim (No-Till)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
       <a class="card reveal" data-id="sonic" data-subgroup="pnomatik-mibzerler" style="order:20" href="#sonic" onclick="event.preventDefault();showProduct('sonic')">
@@ -1158,7 +1156,7 @@
         </div>
         <div class="card-body">
           <span class="tag">Ön Hazneli Ekim Ünitesi</span>
-          <h3>TF</h3>
+          <h3>Progress TF</h3>
           <p>Traktörünüzün kapasitesini ve sahadaki operasyonel gücünüzü katlamak için tasarlanan Progress TF ön hazne sistemi, yıl boyu kesintisiz kullanabileceğiniz çok amaçlı bir ekipman. Ekim, gübreleme ve örtü bitkisi uygulamalarında arka ekipmanlarla kusursuz bir uyum içinde çalışır. Tek bir geçişte birden fazla işlem yapmanıza olanak tanıyarak hem zamandan hem de yakıttan ciddi tasarruf sağlarken, çok yönlü yapısıyla işletmenizin vizyonuna güç katar.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
@@ -1254,7 +1252,7 @@
   <section class="category" id="gubreleme">
     <div class="category-head reveal">
       <div>
-        <span class="eyebrow-sm">Fertilisation</span>
+        <span class="eyebrow-sm" data-i18n="cat.fert.eyebrow">Gübreleme</span>
         <h2 data-category-key="gubreleme">Gübreleme Makineleri</h2>
       </div>
       <p class="desc" data-i18n="cat.fert.desc">Askılı ve römork tip gübre dağıtıcılarla her işletme ölçeğine uygun hassas gübreleme.</p>
@@ -1329,21 +1327,6 @@
           <span class="tag">Römork Tip Gübre Dağıtıcı (Hidrolik)</span>
           <h3>XT160H / 240H</h3>
           <p>Çekilir tip bitki besleme teknolojisinde gelinen son nokta olan hidrolik tahrikli XT H serisi, devasa operasyonları kusursuz bir hassasiyetle yönetmek için tasarlandı. 15.500 litreye ulaşan hazne kapasitesi ve gücünü kuyruk mili yerine doğrudan hidrolik sistemden alan yapısıyla büyük arazilerde tek bir dolumla çok daha kısa sürede uygulama yapar.</p>
-          <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <a class="grid-subheading clickable" style="order:29" data-subgroup="terminal-uyumlulugu" href="#kategori-gubreleme~terminal-uyumlulugu" onclick="event.preventDefault();showSubgroup('gubreleme', 'terminal-uyumlulugu', 'ISOBUS Terminal Uyumluluğu')">ISOBUS Terminal Uyumluluğu<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-      <a class="card reveal" data-id="isobus-uyumluluk" data-subgroup="terminal-uyumlulugu" style="order:31" href="#isobus-uyumluluk" onclick="event.preventDefault();showProduct('isobus-uyumluluk')">
-        <div class="card-media">
-          <button class="fav-btn" onclick="toggleFavorite(event,'isobus-uyumluluk')" aria-label="Favorilere ekle" data-i18n-aria-label="aria.addFav">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.4 4c2.1-.3 4 .8 6.6 3.4C14.6 4.8 16.5 3.7 18.6 4c3.4.5 5 4 3.4 7.7-2.5 4.7-10 9.3-10 9.3Z"/></svg>
-          </button>
-          <img class="lazy-img" data-src="images/dx30-isobus-console.jpg" alt="SKY ISOBUS Terminal Uyumluluğu">
-        </div>
-        <div class="card-body">
-          <span class="tag">ISOBUS Terminal Rehberi</span>
-          <h3>ISOBUS Terminal Uyumluluğu</h3>
-          <p>SKY gübre dağıtıcılarınızı hangi ISOBUS terminalleriyle kullanabileceğinizi; makine kontrolü, GPS destekli değişken dozaj ve otomatik bölüm kesme desteğine göre karşılaştırın.</p>
           <span class="card-link" data-i18n="card.viewDetails">Detayları Gör <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -1644,6 +1627,7 @@
   </div>
   <div class="drawer-body" id="drawer-body"></div>
   <div class="drawer-foot">
+    <a class="btn-secondary" href="#isobus-uyumluluk" style="width:100%;justify-content:center;margin-bottom:10px;" onclick="event.preventDefault();showProduct('isobus-uyumluluk');closeDrawer();" data-i18n="nav.isobus">ISOBUS</a>
     <a class="btn-secondary" href="#hakkimizda" style="width:100%;justify-content:center;margin-bottom:10px;" onclick="event.preventDefault();showAbout();closeDrawer();" data-i18n="nav.about">Hakkımızda</a>
     <a class="btn-primary" href="#iletisim" style="width:100%;justify-content:center;margin-bottom:10px;" onclick="event.preventDefault();showContact();closeDrawer();" data-i18n="nav.contact">Bize Ulaşın</a>
     <button class="whatsapp-btn" style="width:100%;justify-content:center;" onclick="waClick()">WhatsApp: +90 541 859 22 36</button>
@@ -1840,7 +1824,7 @@ const PRODUCTS = {
   },
   'methys-pcs': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Yüzey Sıyırıcı', title:'Methys PCS',
-    lead:'Anız bozma ve örtü bitkisi sonlandırmak için tüm genişlik boyunca düşük yakıt tüketimiyle çalışan yüzey sıyırıcı.',
+    lead:'Anız bozma ve örtü bitkisi sonlandırmak için düşük yakıt tüketimiyle çalışan yüzey sıyırıcı.',
     videos:[{id:'AHOO4jyXTKo', title:'Methys PCS - dents fines versiyonu'}],
     features:[
       '3 bölümlü şase ile bağımsız zemin takibi',
@@ -1951,7 +1935,7 @@ const PRODUCTS = {
   },
   'faca-roller': {
     category:'Toprak İşleme', anchor:'toprak-isleme', tag:'Malç Ezici Merdane', title:'FACA Roller',
-    lead:'FACA Roller, tarlanızdaki örtü bitkilerini ve anızları kimyasal (herbisit) kullanmadan sonlandırmanın ve toprağınız için mükemmel bir koruyucu örtüye (malç) dönüştürmenin en doğal yoludur.',
+    lead:'FACA Roller, tarlanızdaki örtü bitkilerini ve anızları kimyasal (ot ilacı) kullanmadan sonlandırmanın ve toprağınız için mükemmel bir koruyucu örtüye (malç) dönüştürmenin en doğal yoludur.',
     videos:[{id:'4_g2zmxAxyc', title:'SKY Agriculture - Semoir EasyDrill + Rouleau FACA'}],
     features:[
       'Bitki örtüsünü toprağa karıştırmadan yatırır, yeniden filizlenmesini engeller.',
@@ -2117,7 +2101,7 @@ const PRODUCTS = {
     brochure:'https://sky-agriculture.com/content/uploads/2025/10/SONIC_2025_bd.pdf'
   },
   'tf': {
-    category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Ön Hazneli Ekim Ünitesi', title:'TF',
+    category:'Ekim Sistemleri', anchor:'ekim-sistemleri', tag:'Ön Hazneli Ekim Ünitesi', title:'Progress TF',
     lead:'Traktörünüzün kapasitesini ve sahadaki operasyonel gücünüzü katlamak için tasarlanan Progress TF ön hazne sistemi, yıl boyu kesintisiz kullanabileceğiniz çok amaçlı bir ekipman. Ekim, gübreleme ve örtü bitkisi uygulamalarında arka ekipmanlarla kusursuz bir uyum içinde çalışır. Tek bir geçişte birden fazla işlem yapmanıza olanak tanıyarak hem zamandan hem de yakıttan ciddi tasarruf sağlarken, çok yönlü yapısıyla işletmenizin vizyonuna güç katar.',
     videos:[{id:'sVNozudU-Tw', title:'SKY Agriculture - Progress TF - XR'}, {id:'nYeeKysxZoI', title:'SKY Agriculture - SONIC + Progress TF Precision Seed Drill'}],
     features:[
@@ -3490,7 +3474,7 @@ const PRODUCTS_EN = {
 
   'methys-pcs': {
     tag:'Stubble Skimmer', title:'Methys PCS',
-    lead:'A stubble skimmer that works across the full width with low fuel consumption for stubble breaking and cover-crop termination.',
+    lead:'A stubble skimmer that works with low fuel consumption for stubble breaking and cover-crop termination.',
     features:[
       '3-section chassis for independent ground-following',
       'Extended drawbar for trouble-free headland turns'
@@ -3733,7 +3717,7 @@ const PRODUCTS_EN = {
   },
 
   'tf': {
-    tag:'Front Hopper Seeding Unit', title:'TF',
+    tag:'Front Hopper Seeding Unit', title:'Progress TF',
     lead:'Designed to double your tractor\'s capacity and operational power in the field, the Progress TF front hopper system is a versatile piece of equipment you can run year-round. It works in flawless harmony with rear-mounted implements for drilling, fertilising, and cover-crop applications. By letting you carry out several operations in a single pass, it delivers serious time and fuel savings while its versatile design adds real power to your farm\'s vision.',
     features:[
       'Progress TF is the first front-tank system on the market able to manage 4 separate hoppers, all controlled from a single ISOBUS terminal (interface).',
@@ -4934,14 +4918,13 @@ const SUBGROUP_LABELS_TR = {
   'bicakli-on-merdane': 'Bıçaklı Ön Merdane',
   'dik-rotavatorler': 'Dik Rotavatörler / Dikfireze',
   'mekanik-mibzerler': 'Mekanik Mibzerler',
-  'pnomatik-mibzerler': 'Pnömatik Mibzerler',
+  'pnomatik-mibzerler': 'Pnömatik (Havalı) Mibzerler',
   'kombine-pnomatik-mibzerler': 'Kombine Pnömatik Mibzerler',
-  'on-hazne': 'Ön Hazne',
+  'on-hazne': 'Çok Amaçlı Ön Hazne',
   'min-till': 'Azaltılmış Toprak İşleme (Min-Till)',
   'no-till': 'Doğrudan Ekim (No-Till)',
   'asilir': 'Asılır',
-  'cekilir': 'Çekilir',
-  'terminal-uyumlulugu': 'ISOBUS Terminal Uyumluluğu'
+  'cekilir': 'Çekilir'
 };
 const SUBGROUP_LABELS_EN = {
   'diskoro': 'Disc Stubble Cultivator',
@@ -4951,12 +4934,11 @@ const SUBGROUP_LABELS_EN = {
   'mekanik-mibzerler': 'Mechanical Seed Drills',
   'pnomatik-mibzerler': 'Pneumatic Seed Drills',
   'kombine-pnomatik-mibzerler': 'Combined Pneumatic Seed Drills',
-  'on-hazne': 'Front Hopper',
+  'on-hazne': 'Multi-Purpose Front Hopper',
   'min-till': 'Reduced Tillage (Min-Till)',
   'no-till': 'Direct Seeding (No-Till)',
   'asilir': 'Mounted',
-  'cekilir': 'Trailed',
-  'terminal-uyumlulugu': 'ISOBUS Terminal Compatibility'
+  'cekilir': 'Trailed'
 };
 const SUBGROUP_LABELS = Object.assign({}, SUBGROUP_LABELS_TR);
 
@@ -5623,6 +5605,7 @@ const I18N = {
     'cat.soilPrep.desc':'Doğru toprak hazırlığı büyük önem taşır. Toprağı ne kadar rahatsız edersek o da bizi o derece rahatsız eder. Azaltılmış toprak işleme ile mazottan tasarruf ederken toprak sağlığını koruyun.',
     'cat.sowing.desc':'Hassasiyet ve dayanıklılığı bir araya getiren mibzer ve ekim makineleri.',
     'cat.fert.desc':'Askılı ve römork tip gübre dağıtıcılarla her işletme ölçeğine uygun hassas gübreleme.',
+    'cat.soilPrep.eyebrow':'Toprak Hazırlığı', 'cat.sowing.eyebrow':'Ekim', 'cat.fert.eyebrow':'Gübreleme',
     'contact.category':'İlgilendiğiniz Ürün Kategorisi', 'contact.categoryChoose':'Seçiniz', 'contact.categoryOther':'Diğer',
     'contact.categoryParts':'Yedek Parça / Servis', 'contact.company':'Firma / Çiftlik Adı', 'contact.emailLabel':'E-posta',
     'about.eyebrow':'HAKKIMIZDA', 'about.h1':'Hakkımızda',
@@ -5660,15 +5643,15 @@ const I18N = {
     'inquiry.sub':'Formu doldurun, size hemen dönelim.', 'inquiry.submit':'Bilgi Talep Et',
     'inquiry.title':'Bu Ürün Hakkında Bilgi Alın', 'inquiry.toastOk':'Bilgi talebiniz gönderildi',
     'intro.desc':'İnovasyon, bir makinenin çalışma performansını, enerji tüketimini ve çevresel etkilerini optimize ederek yeniden tasarlamaktır.',
-    'intro.eyebrow':'Yeni nesil tarım ekipmanlarıyla hedefimiz',
+    'intro.eyebrow':'Yeni nesil tarım ekipmanlarıyla hedefimiz:',
     'intro.h2':'Dünyadaki en güncel ve verimli teknolojiyi işimizi daha hassas yapabilmek için sunuyoruz',
     'intro.li1':'Toprak nemini ve sağlığını korumak', 'intro.li2':'Mazot tüketimini azaltmak',
     'intro.li3':'Yabancı otları kontrol altına almak', 'intro.li4':'Örtü bitkileri ile toprağa azot bağlamak',
     'intro.li1desc':'Çıplak bırakılan toprak, güneşin ve rüzgarın yıpratıcı etkilerine karşı savunmasızdır. Örtü bitkileri, yüzeyde adeta canlı bir kalkan oluşturarak buharlaşmayı engeller ve giderek paha biçilemez hale gelen suyu toprakta hapseder; aynı zamanda kök salgılarıyla mikroorganizmaları besleyerek toprağın yitirdiği biyolojik zenginliği ona geri verir.',
     'intro.li2desc':'Geleneksel tarımda toprağı sürekli ve derin işlemek, ağır bir enerji ve yakıt israfıdır. Örtü bitkilerinin güçlü kökleri toprağı mekanik bir müdahaleye gerek kalmadan doğal yollarla gevşetir; azaltılmış veya doğrudan ekim yöntemleriyle birleştiğinde traktörün tarladaki mesaisi azalır ve en büyük gider kalemimiz olan mazot tüketimi ciddi şekilde düşer.',
-    'intro.li3desc':'Yabancı otlarla mücadelede sürekli kimyasallara başvurmak sadece cebinizi değil, toprağınızı da zehirler ve yorar. Yüzeyi hızla kaplayan örtü bitkileri, toprağa ulaşan güneş ışığını kesip biyolojik bir rekabet yaratarak istenmeyen otların çimlenmesini doğal yollarla baskılar; böylece tarlanızı yoğun herbisit (ilaç) yükünden ve yüksek maliyetinden kurtarır.',
+    'intro.li3desc':'Yabancı otlarla mücadelede sürekli kimyasallara başvurmak sadece cebinizi değil, toprağınızı da zehirler ve yorar. Yüzeyi hızla kaplayan örtü bitkileri, toprağa ulaşan güneş ışığını kesip biyolojik bir rekabet yaratarak istenmeyen otların çimlenmesini doğal yollarla baskılar; böylece tarlanızı yoğun herbisit (ot ilacı) yükünden ve yüksek maliyetinden kurtarır.',
     'intro.p2':'En büyük girdilerimizden olan Azot (Üre), ne ironiktir ki gezegenimizin atmosferinde en çok bulunan elementtir (78%). Doğalgazdan üretilmesi sebebiyle enerji bağımlılığı yüksek olan azotu, örtü bitkileri yaprakları aracılığıyla havadan alır köküne iletir ve toprağa bağlar.',
-    'nav.about':'HAKKIMIZDA',
+    'nav.about':'HAKKIMIZDA', 'nav.isobus':'ISOBUS',
     'nav.contact':'BİZE ULAŞIN', 'nav.fertilisation':'GÜBRELEME', 'nav.hizmetler':'HİZMETLER',
     'nav.soilPrep':'TOPRAK İŞLEME', 'nav.sowing':'EKİM SİSTEMLERİ',
     'navsub.docs':'Katalog ve teknik dokümanlar', 'navsub.dx30':'Asılır Tip Gübre Dağıtıcı',
@@ -5677,7 +5660,7 @@ const I18N = {
     'navsub.methys-hds':'Diskli Anız Kültivatörü', 'navsub.methys-pcs':'Yüzey Sıyırıcı · Asılır / Çekilir',
     'navsub.parts':'Orijinal yedek parça kataloğu', 'navsub.progress':'Kombine Pnömatik Ekim Makinesi',
     'navsub.progress-m':'Pnömatik Kombine Ekim Ünitesi', 'navsub.sara':'Ekipmanınızla ilgili ihtiyacınız olan tüm bilgilere erişebileceğiniz mobil uygulama',
-    'navsub.sonic':'Hassas Ekim Makinesi · Pnömatik', 'navsub.tf':'Ön Hazneli Ekim Ünitesi · Progress TF',
+    'navsub.sonic':'Hassas Ekim Makinesi · Pnömatik', 'navsub.tf':'Ön Hazneli Ekim Ünitesi',
     'navsub.tramline-cx':'Mekanik Mibzer (Kombine)', 'navsub.tramline-se-sx':'Mekanik Mibzer',
     'navsub.x40-x50':'Asılır Tip Gübre Dağıtıcı', 'navsub.x40-x50-econov':'Asılır Tip Gübre Dağıtıcı (Econov)',
     'navsub.xr':'Diskli Toprak Hazırlama Modülü', 'navsub.xt100-130-160':'Römork Tip Gübre Dağıtıcı',
@@ -5704,6 +5687,7 @@ const I18N = {
     'cat.soilPrep.desc':'Proper soil preparation matters enormously — the more we disturb the soil, the more it disturbs us back. Save on fuel with reduced tillage while protecting soil health.',
     'cat.sowing.desc':'Seed drills and sowing machines that combine precision with durability.',
     'cat.fert.desc':'Precision fertilisation for every farm size, with mounted and trailed spreaders.',
+    'cat.soilPrep.eyebrow':'Soil Preparation', 'cat.sowing.eyebrow':'Sowing', 'cat.fert.eyebrow':'Fertilisation',
     'contact.category':'Product Category You\'re Interested In', 'contact.categoryChoose':'Choose an option', 'contact.categoryOther':'Other',
     'contact.categoryParts':'Spare Parts / Service', 'contact.company':'Company / Farm Name', 'contact.emailLabel':'Email',
     'about.eyebrow':'ABOUT US', 'about.h1':'About Us',
@@ -5741,7 +5725,7 @@ const I18N = {
     'inquiry.sub':'Fill out the form and we\'ll get right back to you.', 'inquiry.submit':'Request Information',
     'inquiry.title':'Get Information About This Product', 'inquiry.toastOk':'Your request has been sent',
     'intro.desc':'Innovation means redesigning a machine by optimising its working performance, energy consumption and environmental impact.',
-    'intro.eyebrow':'Our goal with next-generation farm equipment',
+    'intro.eyebrow':'Our goal with next-generation farm equipment:',
     'intro.h2':'We bring the world\'s most current and efficient technology to make our work more precise',
     'intro.li1':'Preserve soil moisture and health', 'intro.li2':'Reduce diesel consumption',
     'intro.li3':'Keep weeds under control', 'intro.li4':'Fix nitrogen in the soil with cover crops',
@@ -5749,7 +5733,7 @@ const I18N = {
     'intro.li2desc':'In conventional farming, tilling the soil constantly and deeply is a heavy waste of energy and fuel. The strong roots of cover crops loosen the soil naturally, with no mechanical intervention needed; combined with reduced-tillage or direct-drilling methods, this cuts your tractor\'s time in the field and brings a serious drop in diesel consumption — our single biggest cost item.',
     'intro.li3desc':'Constantly reaching for chemicals to fight weeds poisons and exhausts not just your budget, but your soil as well. Cover crops that quickly blanket the surface cut off the sunlight reaching the ground and create biological competition, naturally suppressing the germination of unwanted weeds — freeing your field from a heavy herbicide burden and its high cost.',
     'intro.p2':'Nitrogen (urea), one of our biggest input costs, is ironically the most abundant element in our planet\'s atmosphere (78%). Because it\'s produced from natural gas, it carries a heavy energy footprint — cover crops draw it from the air through their leaves, carry it to their roots and fix it in the soil.',
-    'nav.about':'ABOUT US',
+    'nav.about':'ABOUT US', 'nav.isobus':'ISOBUS',
     'nav.contact':'CONTACT US', 'nav.fertilisation':'FERTILISATION', 'nav.hizmetler':'SERVICES',
     'nav.soilPrep':'SOIL PREPARATION', 'nav.sowing':'SOWING SYSTEMS',
     'navsub.docs':'Catalogues and technical documents', 'navsub.dx30':'Mounted Fertiliser Spreader',
@@ -5758,7 +5742,7 @@ const I18N = {
     'navsub.methys-hds':'Disc Stubble Cultivator', 'navsub.methys-pcs':'Surface Scraper · Mounted / Trailed',
     'navsub.parts':'Genuine spare parts catalogue', 'navsub.progress':'Combined Pneumatic Seed Drill',
     'navsub.progress-m':'Pneumatic Combined Seeding Unit', 'navsub.sara':'A mobile app giving you access to all the information you need about your equipment',
-    'navsub.sonic':'Precision Seed Drill · Pneumatic', 'navsub.tf':'Front Hopper Seeding Unit · Progress TF',
+    'navsub.sonic':'Precision Seed Drill · Pneumatic', 'navsub.tf':'Front Hopper Seeding Unit',
     'navsub.tramline-cx':'Mechanical Seed Drill (Combined)', 'navsub.tramline-se-sx':'Mechanical Seed Drill',
     'navsub.x40-x50':'Mounted Fertiliser Spreader', 'navsub.x40-x50-econov':'Mounted Fertiliser Spreader (Econov)',
     'navsub.xr':'Disc Seedbed Preparation Module', 'navsub.xt100-130-160':'Trailed Fertiliser Spreader',
