@@ -160,12 +160,12 @@
   .brand-text .main{font-weight:700;font-size:1.05rem;color:var(--ink);white-space:nowrap;}
   .brand-text .sub{font-size:.72rem;letter-spacing:.5px;color:var(--ink-soft);margin-top:5px;display:block;white-space:nowrap;}
 
-  nav{display:flex;gap:3px;}
+  nav{display:flex;gap:2px;}
   .nav-item{position:relative;}
   .nav-item > .nav-trigger{
     display:flex;align-items:center;gap:2px;white-space:nowrap;
     font-size:.98rem;font-weight:600;color:var(--ink);
-    padding:10px 4px;border-radius:9px;background:none;border:none;
+    padding:10px 3px;border-radius:9px;background:none;border:none;
     transition:background .2s, color .2s;
   }
   .nav-item > .nav-trigger svg{width:12px;height:12px;transition:transform .25s var(--ease);}
@@ -221,7 +221,7 @@
   .flyout.flyout-left{left:auto;right:calc(100% + 8px);transform:translateX(6px);}
   .subgroup:hover > .flyout.flyout-left{transform:translateX(0);}
 
-  .header-actions{display:flex;align-items:center;gap:2px;}
+  .header-actions{display:flex;align-items:center;gap:6px;}
   .icon-btn{
     display:flex;align-items:center;justify-content:center;
     width:42px;height:42px;border-radius:11px;border:1px solid var(--line);
@@ -248,24 +248,24 @@
     .header-actions{gap:4px;}
     .icon-btn{width:36px;height:36px;border-radius:9px;}
     .icon-btn svg{width:16px;height:16px;}
-    .whatsapp-btn{padding:8px 10px;}
+    .contact-btn{padding:8px 10px;}
   }
 
-  .whatsapp-btn{
+  .contact-btn{
     display:flex;align-items:center;gap:6px;flex-shrink:0;white-space:nowrap;
     background:var(--green);color:#fff;font-weight:700;font-size:.95rem;
-    padding:11px 6px;border-radius:999px;border:none;
+    padding:11px 4px;border-radius:999px;border:none;
     transition:background .2s, transform .2s var(--ease), box-shadow .2s;
   }
-  .whatsapp-btn:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:0 8px 18px rgba(var(--green-rgb),.3);}
-  .whatsapp-btn:active{transform:translateY(0) scale(.97);}
+  .contact-btn:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:0 8px 18px rgba(var(--green-rgb),.3);}
+  .contact-btn:active{transform:translateY(0) scale(.97);}
 
   .mobile-menu-btn{display:none;}
 
   @media (max-width:1720px){
     nav{display:none;}
-    .whatsapp-btn span.label{display:none;}
-    .whatsapp-btn{padding:11px 15px;}
+    .contact-btn span.label{display:none;}
+    .contact-btn{padding:11px 15px;}
     .mobile-menu-btn{display:flex;}
   }
 
@@ -964,10 +964,10 @@
       <button class="icon-btn mobile-menu-btn" onclick="openDrawer()" aria-label="Menü" data-i18n-aria-label="drawer.menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
-      <button class="whatsapp-btn" onclick="waClick()">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Z"/></svg>
-        <span class="label">+90 541 859 22 36</span>
-      </button>
+      <a class="contact-btn" href="mailto:info@ksvtarim.com">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>
+        <span class="label">info@ksvtarim.com</span>
+      </a>
     </div>
   </div>
 </header>
@@ -1630,7 +1630,10 @@
     <a class="btn-secondary" href="#isobus-uyumluluk" style="width:100%;justify-content:center;margin-bottom:10px;" onclick="event.preventDefault();showProduct('isobus-uyumluluk');closeDrawer();" data-i18n="nav.isobus">ISOBUS</a>
     <a class="btn-secondary" href="#hakkimizda" style="width:100%;justify-content:center;margin-bottom:10px;" onclick="event.preventDefault();showAbout();closeDrawer();" data-i18n="nav.about">Hakkımızda</a>
     <a class="btn-primary" href="#iletisim" style="width:100%;justify-content:center;margin-bottom:10px;" onclick="event.preventDefault();showContact();closeDrawer();" data-i18n="nav.contact">Bize Ulaşın</a>
-    <button class="whatsapp-btn" style="width:100%;justify-content:center;" onclick="waClick()">WhatsApp: +90 541 859 22 36</button>
+    <a class="contact-btn" style="width:100%;justify-content:center;" href="mailto:info@ksvtarim.com">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>
+      info@ksvtarim.com
+    </a>
   </div>
 </div>
 
