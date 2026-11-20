@@ -260,6 +260,48 @@
   .contact-btn:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:0 8px 18px rgba(var(--green-rgb),.3);}
   .contact-btn:active{transform:translateY(0) scale(.97);}
 
+  /* ===== Header: büyük logo (sola yakın, kenara yapışık değil) + ortalanmış büyük menü ===== */
+  @media (min-width:521px){
+    .header-inner{max-width:none;padding:14px 40px 14px 36px;gap:28px;}
+    .brand{gap:14px;}
+    .brand-badge{width:78px;height:78px;}
+    .brand-badge img{width:78px;height:78px;}
+    .brand-text{max-width:300px;}
+    .brand-text .main{font-size:1.02rem;white-space:normal;line-height:1.2;}
+    .brand-text .sub{font-size:.7rem;white-space:normal;line-height:1.3;margin-top:5px;}
+  }
+  @media (min-width:1361px){
+    .header-inner{gap:clamp(14px,1.6vw,28px);padding-right:clamp(20px,2.2vw,40px);}
+    nav{flex:1;justify-content:center;gap:clamp(0px,.4vw,6px);}
+    .nav-item > .nav-trigger{font-size:clamp(.88rem,.78vw + .25rem,1.02rem);padding:11px clamp(7px,.85vw,14px);gap:5px;}
+    .nav-item > .nav-trigger svg{width:12px;height:12px;}
+    .header-actions{gap:6px;}
+  }
+  @media (min-width:1361px) and (max-width:1899px){
+    .contact-btn span.label{display:none;}
+    .contact-btn{padding:11px 15px;}
+  }
+  @media (min-width:1361px) and (max-width:1799px){
+    .brand{flex:none;}
+    .brand-badge, .brand-badge img{width:68px;height:68px;}
+    .brand-text{max-width:215px;}
+    .brand-text .main{font-size:.9rem;}
+    .brand-text .sub{font-size:.62rem;}
+    .nav-item > .nav-trigger{font-size:.88rem;padding:10px 7px;}
+  }
+  @media (min-width:1361px) and (max-width:1439px){
+    .header-inner{padding-left:28px;padding-right:20px;gap:12px;}
+    .brand{gap:10px;}
+    .brand-badge, .brand-badge img{width:62px;height:62px;}
+    .brand-text{max-width:165px;}
+    .brand-text .main{font-size:.82rem;}
+    .brand-text .sub{font-size:.58rem;}
+    .nav-item > .nav-trigger{font-size:.84rem;padding:10px 5px;}
+    .header-actions{gap:4px;}
+  }
+  @media (min-width:1800px){
+    .brand{flex:none;}
+  }
   .mobile-menu-btn{display:none;}
 
   @media (max-width:1360px){
@@ -267,6 +309,51 @@
     .contact-btn span.label{display:none;}
     .contact-btn{padding:11px 15px;}
     .mobile-menu-btn{display:flex;}
+  }
+
+  /* Header butonları: eşit boyut ve rahat aralık */
+  .header-actions{gap:10px;}
+  .contact-btn{height:37px;padding:0 18px;gap:8px;font-size:.78rem;justify-content:center;}
+  @media (min-width:1361px) and (max-width:1899px){
+    .contact-btn{width:37px;padding:0;}
+  }
+  @media (max-width:1360px){
+    .header-actions{gap:8px;}
+    .contact-btn{width:37px;padding:0;}
+  }
+  @media (max-width:520px){
+    .header-actions{gap:6px;}
+    .contact-btn{width:36px;height:36px;padding:0;}
+  }
+
+  /* Logo büyütme */
+  .brand-badge, .brand-badge img{width:50px;height:50px;}
+  @media (min-width:521px){
+    .brand-badge, .brand-badge img{width:94px;height:94px;}
+  }
+  @media (min-width:1361px) and (max-width:1799px){
+    .brand-badge, .brand-badge img{width:82px;height:82px;}
+  }
+  @media (min-width:1361px) and (max-width:1439px){
+    .brand-badge, .brand-badge img{width:74px;height:74px;}
+  }
+  @media (min-width:1800px){
+    .brand-badge, .brand-badge img{width:94px;height:94px;}
+  }
+
+  /* Marka adı tek satırda */
+  @media (min-width:640px){
+    .brand-text{max-width:none;}
+    .brand-text .main{white-space:nowrap;font-size:clamp(.72rem,1.9vw,1.02rem);}
+  }
+  @media (min-width:1361px) and (max-width:1439px){
+    .brand-text .main{font-size:.7rem;}
+  }
+  @media (min-width:1440px) and (max-width:1799px){
+    .brand-text .main{font-size:.78rem;}
+  }
+  @media (min-width:1800px){
+    .brand-text .main{font-size:1.02rem;}
   }
 
   .hero{
@@ -312,6 +399,21 @@
     transition:background .25s, transform .25s;
   }
   .hero-carousel-dots span.active{background:#fff;transform:scale(1.25);}
+  .hero-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+    width:56px;height:72px;border:none;cursor:pointer;padding:0;
+    display:flex;align-items:center;justify-content:center;
+    background:transparent;color:#fff;
+    filter:drop-shadow(0 2px 5px rgba(0,0,0,.6));
+    opacity:.85;
+    transition:transform .2s, opacity .2s;
+  }
+  .hero-arrow svg{width:38px;height:38px;}
+  .hero-arrow:hover{opacity:1;transform:translateY(-50%) scale(1.15);}
+  .hero-arrow:active{transform:translateY(-50%) scale(.94);}
+  .hero-arrow-prev{left:8px;}
+  .hero-arrow-next{right:8px;}
+  @media (max-width:640px){.hero-arrow{width:40px;height:56px;}.hero-arrow svg{width:30px;height:30px;}.hero-arrow-prev{left:8px;}.hero-arrow-next{right:8px;}}
   @media (max-width:640px){.hero-carousel{margin-top:32px;border-radius:16px;}}
   .btn-primary{
     background:linear-gradient(135deg, var(--green), var(--green-dark));color:#fff;font-weight:700;font-size:.98rem;
@@ -1000,6 +1102,12 @@
         <div class="hero-slide" style="background-image:url('images/tf.jpg')"></div>
         <div class="hero-slide" style="background-image:url('images/tramline-cx.jpg')"></div>
       </div>
+      <button type="button" class="hero-arrow hero-arrow-prev" id="hero-prev" aria-label="Önceki fotoğraf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button type="button" class="hero-arrow hero-arrow-next" id="hero-next" aria-label="Sonraki fotoğraf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
       <div class="hero-carousel-dots" id="hero-carousel-dots"></div>
     </div>
   </section>
@@ -3114,7 +3222,7 @@ const PRODUCTS = {
     brochure:'brosurler/xt406508.pdf'
   },
   'isobus-uyumluluk': {
-    category:'Gübreleme', anchor:'gubreleme', tag:'ISOBUS Terminal Rehberi', title:'ISOBUS Terminal Uyumluluğu',
+    category:'Gübreleme', anchor:'gubreleme', mainPhoto:'images/dx30-isobus-console.jpg', tag:'ISOBUS Terminal Rehberi', title:'ISOBUS Terminal Uyumluluğu',
     lead:'SKY gübre dağıtıcılarınızı hangi ISOBUS terminalleriyle kullanabileceğinizi; makine kontrolü, GPS destekli değişken dozaj ve otomatik bölüm kesme desteğine göre karşılaştırın.',
     features:[
       'SKY DX30+, X40+/X50+, X40+/X50+ Econov ve XT serisi gübre dağıtıcılar, ISOBUS standardına sahip tüm traktör ve terminallerle tam uyumlu çalışır.',
@@ -3147,7 +3255,7 @@ const PRODUCTS = {
       {
         title:'ISOBUS Kontrol Terminalleri: Hassas Tarımın Dijital Zekası',
         desc:'Makinelerinizle tam bir uyum içinde çalışarak operasyonel verimliliğinizi en üst düzeye çıkaran standart donanımlı AEF sertifikalı terminal seçeneklerimiz:',
-        photo:'images/dx30-isobus-console.jpg'
+        photo:'images/isobus-traktor-baglanti.jpg'
       },
       {
         title:'CCI-800 Konsol (Standart Donanım Özellikleri)',
@@ -4461,7 +4569,7 @@ const PRODUCTS_EN = {
     ]
   },
   'isobus-uyumluluk': {
-    tag:'ISOBUS Terminal Guide', title:'ISOBUS Terminal Compatibility',
+    mainPhoto:'images/dx30-isobus-console.jpg', tag:'ISOBUS Terminal Guide', title:'ISOBUS Terminal Compatibility',
     lead:'Compare which ISOBUS terminals work with your SKY fertiliser spreader — by machine control, GPS-based variable-rate application, and automatic section-control support.',
     features:[
       'SKY\'s DX30+, X40+/X50+, X40+/X50+ Econov, and XT-range fertiliser spreaders work fully with any ISOBUS-compliant tractor or terminal.',
@@ -4494,7 +4602,7 @@ const PRODUCTS_EN = {
       {
         title:'ISOBUS Control Terminals: The Digital Intelligence of Precision Farming',
         desc:'Our standard-equipment, AEF-certified terminal options work in full harmony with your machines to maximise your operational efficiency:',
-        photo:'images/dx30-isobus-console.jpg'
+        photo:'images/isobus-traktor-baglanti.jpg'
       },
       {
         title:'CCI-800 Console (Standard Equipment)',
@@ -4932,7 +5040,7 @@ function showProduct(id, fromPopstate){
     document.getElementById('product-title').textContent = p.title;
     document.getElementById('product-lead').textContent = p.lead;
 
-    const src = imgSrcFor(id);
+    const src = p.mainPhoto || imgSrcFor(id);
     const productImg = document.getElementById('product-image');
     productImg.src = src;
     productImg.alt = p.title;
@@ -5694,6 +5802,19 @@ function initHeroCarousel(){
   }
 
   carousel.addEventListener('click', () => {
+    goTo(current + 1);
+    startTimer();
+  });
+
+  const prevBtn = document.getElementById('hero-prev');
+  const nextBtn = document.getElementById('hero-next');
+  if(prevBtn) prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    goTo(current - 1);
+    startTimer();
+  });
+  if(nextBtn) nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     goTo(current + 1);
     startTimer();
   });
